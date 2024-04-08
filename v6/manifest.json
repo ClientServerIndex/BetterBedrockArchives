@@ -1,0 +1,28 @@
+{
+    "format_version": 2,
+    "header":
+    {
+        "name": "§2Better Bedrock Client §fv6.0§2",
+        "description": "©2022-2023 Better Bedrock\n§7(1.19.60+)",
+        "uuid": "1a5d3ed3-081c-4176-9cce-b53b03b247b2",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 19, 60 ]
+    },
+    "modules": [
+    {
+        "type": "resources",
+        "uuid": "15077a13-b482-423f-b777-42ebea388552",
+        "version": [ 0, 0, 1 ]
+    } ],
+    "subpacks": [
+    {
+        "folder_name": "2",
+        "name": "§2Controller Mode §7(In this mode you can access to mod menu by controller! But unfortunately keystrokes are not working in this mode)\n\n§2IMPORTANT! §7Due unfixable issues with mod menu (sometimes when you double click on any screen menu opens) We recommend to edit config and use Default Mode",
+        "memory_tier": 1
+    },
+    {
+        "folder_name": "0",
+        "name": "§2Default Mode §7(Recommended for MnK and touch users)",
+        "memory_tier": 1
+    } ]
+}

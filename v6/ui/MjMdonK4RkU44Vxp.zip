@@ -1,0 +1,1114 @@
+{
+    "all_presets@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_1",
+                "$texture": "AMBRO/tui/crosshairs/presets/1"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_2",
+                "$texture": "AMBRO/tui/crosshairs/presets/2"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_3",
+                "$texture": "AMBRO/tui/crosshairs/presets/3"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_4",
+                "$texture": "AMBRO/tui/crosshairs/presets/4"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_5",
+                "$texture": "AMBRO/tui/crosshairs/presets/5"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_6",
+                "$texture": "AMBRO/tui/crosshairs/presets/6"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_7",
+                "$texture": "AMBRO/tui/crosshairs/presets/c1"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_8",
+                "$texture": "AMBRO/tui/crosshairs/presets/c2"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_image_template":
+            {
+                "$control": "bb_crosshair_preset_9",
+                "$texture": "AMBRO/tui/crosshairs/presets/c3"
+            }
+        } ],
+        "size": [ 256, 256 ]
+    },
+    "button_presets_tab_content@bb.img":
+    {
+        "color": [ 0, 0, 0 ],
+        "layer": 3,
+        "size": [ 16, 16 ],
+        "texture": "$texture"
+    },
+    "button_presets@bb_hbui_buttons.tab":
+    {
+        "$default_selector_toggle_index": "$crosshair_default_preset_index",
+        "$radio_toggle_group": true,
+        "$tab_crosshair_content": "bb_mod_crosshair.button_presets_tab_content",
+        "$tab_text": "",
+        "$toggle_name": "bb_crosshair_presets_navigation_tab",
+        "$use_tab_crosshair_content": true,
+        "size": [ "9.325%", 32 ],
+        "variables": [
+        {
+            "$focus_id": "first_crosshair",
+            "$focus_override_down": "crosshair",
+            "$focus_override_left": "last_crosshair",
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_0",
+            "$texture": "AMBRO/tui/crosshairs/presets/0",
+            "$toggle_group_forced_index": 0,
+            "requires": "($index = '0')"
+        },
+        {
+            "$focus_override_down": "crosshair_size_slider",
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_1",
+            "$texture": "AMBRO/tui/crosshairs/presets/1",
+            "$toggle_group_forced_index": 1,
+            "requires": "($index = '1')"
+        },
+        {
+            "$focus_override_down": "crosshair_size_slider",
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_2",
+            "$texture": "AMBRO/tui/crosshairs/presets/2",
+            "$toggle_group_forced_index": 2,
+            "requires": "($index = '2')"
+        },
+        {
+            "$focus_override_down": "crosshair_size_slider",
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_3",
+            "$texture": "AMBRO/tui/crosshairs/presets/3",
+            "$toggle_group_forced_index": 3,
+            "requires": "($index = '3')"
+        },
+        {
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_4",
+            "$texture": "AMBRO/tui/crosshairs/presets/4",
+            "$toggle_group_forced_index": 4,
+            "requires": "($index = '4')"
+        },
+        {
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_5",
+            "$texture": "AMBRO/tui/crosshairs/presets/5",
+            "$toggle_group_forced_index": 5,
+            "requires": "($index = '5')"
+        },
+        {
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_6",
+            "$texture": "AMBRO/tui/crosshairs/presets/6",
+            "$toggle_group_forced_index": 6,
+            "requires": "($index = '6')"
+        },
+        {
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_7",
+            "$texture": "AMBRO/tui/crosshairs/presets/c1",
+            "$toggle_group_forced_index": 7,
+            "requires": "($index = '7')"
+        },
+        {
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_8",
+            "$texture": "AMBRO/tui/crosshairs/presets/c2",
+            "$toggle_group_forced_index": 8,
+            "requires": "($index = '8')"
+        },
+        {
+            "$focus_id": "last_crosshair",
+            "$focus_override_right": "first_crosshair",
+            "$focus_override_up": "taiga",
+            "$tab_view_binding_name": "bb_crosshair_preset_9",
+            "$texture": "AMBRO/tui/crosshairs/presets/c3",
+            "$toggle_group_forced_index": 9,
+            "requires": "($index = '9')"
+        } ]
+    },
+    "crosshair_button@bb.p":
+    {
+        "$blank|default": false,
+        "$default_selector_toggle_index|default": 0,
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$tab_panel": "bb_mod_crosshair.tab_panel",
+        "$tab_view_binding_name|default": "hbui_tab",
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "button.menu_ok"
+        },
+        {
+            "from_button_id": "button.controller_back",
+            "ignored": "(not $allow_controller_back_button_mapping)",
+            "mapping_type": "focused",
+            "to_button_id": "button.controller_back"
+        },
+        {
+            "from_button_id": "button.menu_left",
+            "ignored": "(not $enable_directional_toggling)",
+            "input_mode_condition": "gamepad_and_not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$toggle_off_button"
+        },
+        {
+            "from_button_id": "button.menu_right",
+            "ignored": "(not $enable_directional_toggling)",
+            "input_mode_condition": "gamepad_and_not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$toggle_on_button"
+        } ],
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_tab",
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$tab_panel":
+                    {
+                        "$show_crosshairs": true,
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$tab_panel":
+                    {
+                        "$visible_hover_panel": true,
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$tab_panel":
+                    {
+                        "$show_crosshairs": true,
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$tab_panel":
+                    {
+                        "$visible_hover_panel": true,
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "size": [ "100%", 32 ]
+    },
+    "crosshair_image_template@bb.p":
+    {
+        "controls": [
+        {
+            "default@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_slider_crosshair_opacity",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_size_slider",
+                    "source_property_name": "(#slider_value / 64)",
+                    "target_property_name": "#size_binding_x"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_size_slider",
+                    "source_property_name": "(#slider_value / 64)",
+                    "target_property_name": "#size_binding_y"
+                },
+                {
+                    "$control|default": "",
+                    "binding_type": "view",
+                    "source_control_name": "$control",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#toggle_state1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_option_rgb_color",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#toggle_state2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#toggle_state1 and #toggle_state2)",
+                    "target_property_name": "#visible"
+                } ],
+                "size": [ 16, 16 ],
+                "texture": "$texture"
+            }
+        },
+        {
+            "rgb@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_slider_crosshair_opacity",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_size_slider",
+                    "source_property_name": "(#slider_value / 64)",
+                    "target_property_name": "#size_binding_x"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_size_slider",
+                    "source_property_name": "(#slider_value / 64)",
+                    "target_property_name": "#size_binding_y"
+                },
+                {
+                    "$control|default": "",
+                    "binding_type": "view",
+                    "source_control_name": "$control",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#toggle_state1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_option_rgb_color",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#toggle_state2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#toggle_state1 and #toggle_state2)",
+                    "target_property_name": "#visible"
+                } ],
+                "color": "@bb_anims.chroma_color_01",
+                "size": [ 16, 16 ],
+                "texture": "$texture"
+            }
+        } ]
+    },
+    "crosshair_index_label@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_0",
+                "$text": "0 default"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_1",
+                "$text": "1"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_2",
+                "$text": "2"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_3",
+                "$text": "3"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_4",
+                "$text": "4"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_5",
+                "$text": "5 hd"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_6",
+                "$text": "6 hd"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_7",
+                "$text": "1 custom"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_8",
+                "$text": "2 custom"
+            }
+        },
+        {
+            "@bb_mod_crosshair.line_title_text":
+            {
+                "$control": "bb_crosshair_preset_9",
+                "$text": "3 custom"
+            }
+        } ],
+        "layer": 12,
+        "size": [ "100%", 10 ]
+    },
+    "crosshair_presets_button_content@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_mod_crosshair.crosshair_preview_image_template":
+            {
+                "$control": "bb_image_1",
+                "$texture": "1"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_preview_image_template":
+            {
+                "$control": "bb_image_2",
+                "$texture": "2"
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_preview_image_template":
+            {
+                "$control": "bb_image_3",
+                "$texture": "3"
+            }
+        },
+        {
+            "crosshairs@bb.b":
+            {
+                "clips_children": true,
+                "controls": [
+                {
+                    "hover@bb.b":
+                    {
+                        "always_handle_pointer": true,
+                        "consume_hover_events": false,
+                        "controls": [
+                        {
+                            "@bb_mod_crosshair.all_presets":
+                            {}
+                        } ],
+                        "follows_cursor": true,
+                        "layer": 1
+                    }
+                },
+                {
+                    "default@bb_mod_crosshair.all_presets":
+                    {}
+                } ],
+                "default_control": "default",
+                "hover_control": "hover"
+            }
+        },
+        {
+            "error_bg@bb.img":
+            {
+                "alpha": 0.4,
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_preset_0",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "texture": "AMBRO/tui/common/black"
+            }
+        },
+        {
+            "error_label_sp@bb.sp":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_crosshair_preset_0",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "controls": [
+                {
+                    "@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.label":
+                            {
+                                "shadow": false,
+                                "text": "Default crosshair can't be rendered here.",
+                                "text_alignment": "center"
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.label":
+                            {
+                                "shadow": false,
+                                "text": "§7Settings are not working as well.",
+                                "text_alignment": "center"
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "crosshair_presets@bb.spv":
+    {
+        "controls": [
+        {
+            "crosshair_preset_1@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "sph@bb.sph":
+                            {
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "controls": [
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "0"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "1"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "2"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "3"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "4"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "5"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "6"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "7"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "8"
+                                    }
+                                },
+                                {
+                                    "@bb.yp":
+                                    {
+                                        "$yps": [ "0.75%", 32 ]
+                                    }
+                                },
+                                {
+                                    "@bb_mod_crosshair.button_presets":
+                                    {
+                                        "$index": "9"
+                                    }
+                                } ],
+                                "size": [ "100%", 31 ]
+                            }
+                        } ],
+                        "size": [ "100% - 6.5px", "100%c" ]
+                    }
+                } ],
+                "size": [ "100%", "100%c" ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        } ]
+    },
+    "crosshair_preview_button_template@bb_hbui_buttons.tab":
+    {
+        "$default_selector_toggle_index": 0,
+        "$radio_toggle_group": true,
+        "$toggle_name": "bb_crosshair_preview_navigation_tab",
+        "size": [ "100%", 32 ]
+    },
+    "crosshair_preview_image_template@bb.img":
+    {
+        "bindings": [
+        {
+            "$control|default": "",
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "fill": true,
+        "texture": "('AMBRO/tui/crosshairs/preview/' + $texture)"
+    },
+    "crosshair_preview_image@bb.sph":
+    {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                {
+                    "@bb.img":
+                    {
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "clips_children": true,
+                        "controls": [
+                        {
+                            "@bb_mod_crosshair.crosshair_presets_button_content":
+                            {}
+                        } ],
+                        "offset": [ 3, 0 ],
+                        "size": [ "100% - 9.5px", "100% - 2px" ],
+                        "texture": "AMBRO/tui/common/dark_outline"
+                    }
+                } ],
+                "size": [ "75%", "100%" ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "controls": [
+                {
+                    "@bb.sp":
+                    {
+                        "anchor_from": "right_middle",
+                        "anchor_to": "right_middle",
+                        "controls": [
+                        {
+                            "@bb_mod_crosshair.crosshair_preview_button_template":
+                            {
+                                "$focus_id": "taiga",
+                                "$tab_text": "Taiga",
+                                "$tab_view_binding_name": "bb_image_1",
+                                "$toggle_group_forced_index": 0
+                            }
+                        },
+                        {
+                            "@bb_mod_crosshair.crosshair_preview_button_template":
+                            {
+                                "$focus_id": "nether",
+                                "$tab_text": "Nether",
+                                "$tab_view_binding_name": "bb_image_2",
+                                "$toggle_group_forced_index": 1
+                            }
+                        },
+                        {
+                            "@bb_mod_crosshair.crosshair_preview_button_template":
+                            {
+                                "$focus_id": "forest",
+                                "$tab_text": "Forest",
+                                "$tab_view_binding_name": "bb_image_3",
+                                "$toggle_group_forced_index": 2
+                            }
+                        } ],
+                        "offset": [ -3, -1 ],
+                        "size": [ "100%", 96 ]
+                    }
+                } ],
+                "size": [ "25%", "100%" ]
+            }
+        } ],
+        "size": [ "100%", 96 ]
+    },
+    "crosshair_settings@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_crosshair_preset_0",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.spv":
+            {
+                "controls": [
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 1 ]
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "bb_crosshair_size_slider@bb_hbui_buttons.long_option_slider":
+                            {
+                                "$focus_id": "crosshair_size_slider",
+                                "$focus_override_up": "first_crosshair",
+                                "$slider_control_text_0|default": "Size: 0x0 §70.0",
+                                "$slider_control_text_1|default": "Size: 4x4 §70.1",
+                                "$slider_control_text_2|default": "Size: 8x8 §70.2",
+                                "$slider_control_text_3|default": "Size: 12x12 §70.3",
+                                "$slider_control_text_4|default": "Size: 16x16 §70.4",
+                                "$slider_control_text_5|default": "Size: 20x20 §70.5",
+                                "$slider_control_text_6|default": "Size: 24x24 §70.6",
+                                "$slider_control_text_7|default": "Size: 28x28 §70.7",
+                                "$slider_control_text_8|default": "Size: 32x32 §70.8",
+                                "$slider_control_text_9|default": "Size: 36x36 §70.9",
+                                "$slider_control_text_10|default": "Size: 40x40 §71.0",
+                                "$slider_control_text_11|default": "Size: 44x44 §71.1",
+                                "$slider_control_text_12|default": "Size: 48x48 §71.2",
+                                "$slider_control_text_13|default": "Size: 52x52 §71.3",
+                                "$slider_control_text_14|default": "Size: 56x56 §71.4",
+                                "$slider_control_text_15|default": "Size: 60x60 §71.5",
+                                "$slider_control_text_16|default": "Size: 64x64 §71.6",
+                                "$slider_control_text_17|default": "Size: 68x68 §71.7",
+                                "$slider_control_text_18|default": "Size: 72x72 §71.8",
+                                "$slider_control_text_19|default": "Size: 76x76 §71.9",
+                                "$slider_control_text_20|default": "Size: 80x80 §72.0",
+                                "$slider_control_text_21|default": "Size: 84x84 §72.1",
+                                "$slider_control_text_22|default": "Size: 88x88 §72.2",
+                                "$slider_control_text_23|default": "Size: 92x92 §72.3",
+                                "$slider_control_text_24|default": "Size: 96x96 §72.4",
+                                "$slider_control_text_25|default": "Size: 100x100 §72.5",
+                                "$slider_source_property_name": "((#slider_value + $crosshair_size_slider) * 10)",
+                                "$slider_text_source_control_name": "bb_crosshair_size_slider",
+                                "property_bag":
+                                {
+                                    "#slider_steps": 26
+                                }
+                            }
+                        } ],
+                        "size": [ "100%", 16 ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 2 ]
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "bb_crosshair_slider_crosshair_opacity@bb_hbui_buttons.option_slider":
+                            {
+                                "$slider_control_text_0|default": "Opacity: 0% §70.0",
+                                "$slider_control_text_1|default": "Opacity: 10% §70.1",
+                                "$slider_control_text_2|default": "Opacity: 20% §70.2",
+                                "$slider_control_text_3|default": "Opacity: 30% §70.3",
+                                "$slider_control_text_4|default": "Opacity: 40% §70.4",
+                                "$slider_control_text_5|default": "Opacity: 50% §70.5",
+                                "$slider_control_text_6|default": "Opacity: 60% §70.6",
+                                "$slider_control_text_7|default": "Opacity: 70% §70.7",
+                                "$slider_control_text_8|default": "Opacity: 80% §70.8",
+                                "$slider_control_text_9|default": "Opacity: 90% §70.9",
+                                "$slider_control_text_10|default": "Opacity: 100% §71.0",
+                                "$slider_source_property_name": "((#slider_value + $crosshair_opacity_slider) * 10)",
+                                "$slider_text_source_control_name": "bb_crosshair_slider_crosshair_opacity",
+                                "property_bag":
+                                {
+                                    "#slider_steps": 11
+                                }
+                            }
+                        } ],
+                        "size": [ "100%", 16 ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 1 ]
+                    }
+                },
+                {
+                    "@bb_hbui_buttons.toggle":
+                    {
+                        "$toggle_default_state": "$crosshair_chroma_color",
+                        "$toggle_text": "Chroma Color",
+                        "$toggle_view_binding_name": "bb_crosshair_option_rgb_color"
+                    }
+                } ],
+                "size": [ "100% - 6px", "100%c" ]
+            }
+        } ],
+        "size": [ "100%", "100%c" ]
+    },
+    "crosshair@bb_mod_menu.section_spv":
+    {
+        "$control": "bb_button_crosshair",
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_index_label":
+            {}
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_mod_crosshair.crosshair_preview_image":
+            {}
+        },
+        {
+            "@bb_mod_crosshair.crosshair_presets":
+            {}
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 1 ]
+            }
+        },
+        {
+            "@bb_mod_menu.line_padding":
+            {}
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_mod_crosshair.custom_crosshairs_stack_panel":
+            {}
+        },
+        {
+            "@bb_mod_crosshair.crosshair_settings":
+            {}
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 5 ]
+            }
+        } ]
+    },
+    "custom_crosshairs_stack_panel@bb.sp":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_crosshair_preset_0",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 1 ]
+            }
+        },
+        {
+            "custom_crosshairs_panel@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb.spv":
+                    {
+                        "controls": [
+                        {
+                            "@bb.l":
+                            {
+                                "shadow": false,
+                                "text": "How to add custom crosshairs?"
+                            }
+                        },
+                        {
+                            "@bb.l":
+                            {
+                                "shadow": false,
+                                "size": [ "100%", "default" ],
+                                "text": "§7Just add images named c1/c2/c3 in pack/AMBRO/tui/crosshairs/presets"
+                            }
+                        } ],
+                        "size": [ "100% - 6px", "100%c" ]
+                    }
+                } ],
+                "size": [ "100%", "100%c" ]
+            }
+        } ]
+    },
+    "line_title_text@bb.sp":
+    {
+        "bindings": [
+        {
+            "$control|default": "",
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "sph@bb.sph":
+            {
+                "controls": [
+                {
+                    "p1@bb.p":
+                    {
+                        "size": [ 3.5, 0 ]
+                    }
+                },
+                {
+                    "label@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "label@bb.label":
+                            {
+                                "font_type": "MinecraftTen",
+                                "offset": [ 0, -1.25 ],
+                                "shadow": false,
+                                "text": "('Crosshair ' + $text)"
+                            }
+                        } ],
+                        "size": [ "100%c", 10 ]
+                    }
+                },
+                {
+                    "p2@bb.p":
+                    {
+                        "size": [ 3, 0 ]
+                    }
+                },
+                {
+                    "renderer@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "renderer":
+                            {
+                                "color1": [ 1, 1, 1, 0.2 ],
+                                "color2": [ 1, 1, 1, 0.2 ],
+                                "renderer": "gradient_renderer",
+                                "size": [ "100%", 1 ],
+                                "type": "custom"
+                            }
+                        } ],
+                        "size": [ "fill", 10 ]
+                    }
+                } ],
+                "size": [ "100%", 10 ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        } ]
+    },
+    "namespace": "bb_mod_crosshair",
+    "tab_panel@bb.p":
+    {
+        "$show_crosshairs|default": false,
+        "$tab_content|default": "common_tabs.empty_tab_content",
+        "$visible_hover_panel|default": false,
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "tab_content@$tab_content":
+                    {
+                        "layer": 1
+                    }
+                },
+                {
+                    "@bb_mod_crosshair.all_presets":
+                    {
+                        "ignored": "(not $show_crosshairs)",
+                        "layer": 2
+                    }
+                },
+                {
+                    "hover_panel@bb.b":
+                    {
+                        "always_handle_pointer": true,
+                        "consume_hover_events": false,
+                        "controls": [
+                        {
+                            "@bb_mod_crosshair.all_presets":
+                            {}
+                        } ],
+                        "default_control": "",
+                        "follows_cursor": true,
+                        "hover_control": "hover",
+                        "ignored": "(not $visible_hover_panel)",
+                        "layer": 3,
+                        "size": [ 24, 24 ]
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    }
+}

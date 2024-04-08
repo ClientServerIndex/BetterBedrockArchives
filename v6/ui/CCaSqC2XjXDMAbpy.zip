@@ -1,0 +1,2207 @@
+{
+    "3x9_inventory_hud_content@bb.sp":
+    {
+        "$bg": false,
+        "$durability_bar_required|default": true,
+        "$stack_count_required|default": true,
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_inventory_hud",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "p@bb.p":
+            {
+                "clips_children": true,
+                "controls": [
+                {
+                    "@bb_hud_features.3x9_inventory_hud_hotbar_numbers":
+                    {
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_inventory_hud_hotbar_numbers",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ],
+                        "layer": 20
+                    }
+                },
+                {
+                    "inventory_grid@bb.g":
+                    {
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "collection_name": "hotbar_items",
+                        "grid_dimensions": [ 3, 12 ],
+                        "grid_item_template": "bb_hud_features.inventory_hud_grid_item",
+                        "offset": [ 0, -54 ]
+                    }
+                },
+                {
+                    "@bb.img":
+                    {
+                        "alpha": 0.5,
+                        "texture": "AMBRO/tui/common/black",
+                        "visible": "$bg"
+                    }
+                } ]
+            }
+        } ],
+        "layer": 49,
+        "size": [ 54, 162 ]
+    },
+    "3x9_inventory_hud_hotbar_numbers@bb.sp":
+    {
+        "$panel_control|default": "bb_hud_features.inventory_hud_hotbar_numbers_sph",
+        "$text_control|default": "bb_hud_features.inventory_hud_hotbar_numbers_control",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "1@$panel_control":
+            {
+                "controls": [
+                {
+                    "9@$text_control":
+                    {
+                        "$text": "1"
+                    }
+                },
+                {
+                    "10@$text_control":
+                    {
+                        "$text": "2"
+                    }
+                },
+                {
+                    "11@$text_control":
+                    {
+                        "$text": "3"
+                    }
+                } ]
+            }
+        },
+        {
+            "2@$panel_control":
+            {
+                "controls": [
+                {
+                    "12@$text_control":
+                    {
+                        "$text": "4"
+                    }
+                },
+                {
+                    "13@$text_control":
+                    {
+                        "$text": "5"
+                    }
+                },
+                {
+                    "14@$text_control":
+                    {
+                        "$text": "6"
+                    }
+                } ]
+            }
+        },
+        {
+            "3@$panel_control":
+            {
+                "controls": [
+                {
+                    "15@$text_control":
+                    {
+                        "$text": "7"
+                    }
+                },
+                {
+                    "16@$text_control":
+                    {
+                        "$text": "8"
+                    }
+                },
+                {
+                    "17@$text_control":
+                    {
+                        "$text": "9"
+                    }
+                } ]
+            }
+        },
+        {
+            "4@$panel_control":
+            {
+                "controls": [
+                {
+                    "18@$text_control":
+                    {
+                        "$text": "10"
+                    }
+                },
+                {
+                    "19@$text_control":
+                    {
+                        "$text": "11"
+                    }
+                },
+                {
+                    "20@$text_control":
+                    {
+                        "$text": "12"
+                    }
+                } ]
+            }
+        },
+        {
+            "5@$panel_control":
+            {
+                "controls": [
+                {
+                    "21@$text_control":
+                    {
+                        "$text": "13"
+                    }
+                },
+                {
+                    "22@$text_control":
+                    {
+                        "$text": "14"
+                    }
+                },
+                {
+                    "23@$text_control":
+                    {
+                        "$text": "15"
+                    }
+                } ]
+            }
+        },
+        {
+            "6@$panel_control":
+            {
+                "controls": [
+                {
+                    "24@$text_control":
+                    {
+                        "$text": "16"
+                    }
+                },
+                {
+                    "25@$text_control":
+                    {
+                        "$text": "17"
+                    }
+                },
+                {
+                    "26@$text_control":
+                    {
+                        "$text": "18"
+                    }
+                } ]
+            }
+        },
+        {
+            "7@$panel_control":
+            {
+                "controls": [
+                {
+                    "27@$text_control":
+                    {
+                        "$text": "19"
+                    }
+                },
+                {
+                    "28@$text_control":
+                    {
+                        "$text": "20"
+                    }
+                },
+                {
+                    "29@$text_control":
+                    {
+                        "$text": "21"
+                    }
+                } ]
+            }
+        },
+        {
+            "8@$panel_control":
+            {
+                "controls": [
+                {
+                    "30@$text_control":
+                    {
+                        "$text": "22"
+                    }
+                },
+                {
+                    "31@$text_control":
+                    {
+                        "$text": "23"
+                    }
+                },
+                {
+                    "32@$text_control":
+                    {
+                        "$text": "24"
+                    }
+                } ]
+            }
+        },
+        {
+            "9@$panel_control":
+            {
+                "controls": [
+                {
+                    "33@$text_control":
+                    {
+                        "$text": "25"
+                    }
+                },
+                {
+                    "34@$text_control":
+                    {
+                        "$text": "26"
+                    }
+                },
+                {
+                    "35@$text_control":
+                    {
+                        "$text": "27"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "9x3_inventory_hud_content@bb.sp":
+    {
+        "$bg": false,
+        "$durability_bar_required|default": true,
+        "$stack_count_required|default": true,
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_inventory_hud",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "p@bb.p":
+            {
+                "clips_children": true,
+                "controls": [
+                {
+                    "@bb_hud_features.9x3_inventory_hud_hotbar_numbers":
+                    {
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_inventory_hud_hotbar_numbers",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ],
+                        "layer": 20
+                    }
+                },
+                {
+                    "inventory_grid@bb.g":
+                    {
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "collection_name": "hotbar_items",
+                        "grid_dimensions": [ 9, 4 ],
+                        "grid_item_template": "bb_hud_features.inventory_hud_grid_item",
+                        "offset": [ 0, -18 ]
+                    }
+                },
+                {
+                    "@bb.img":
+                    {
+                        "alpha": 0.5,
+                        "texture": "AMBRO/tui/common/black",
+                        "visible": "$bg"
+                    }
+                } ]
+            }
+        } ],
+        "layer": 49,
+        "size": [ 162, 54 ]
+    },
+    "9x3_inventory_hud_hotbar_numbers@bb.sp":
+    {
+        "$panel_control|default": "bb_hud_features.inventory_hud_hotbar_numbers_sph",
+        "$text_control|default": "bb_hud_features.inventory_hud_hotbar_numbers_control",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "1@$panel_control":
+            {
+                "controls": [
+                {
+                    "9@$text_control":
+                    {
+                        "$text": "1"
+                    }
+                },
+                {
+                    "10@$text_control":
+                    {
+                        "$text": "2"
+                    }
+                },
+                {
+                    "11@$text_control":
+                    {
+                        "$text": "3"
+                    }
+                },
+                {
+                    "12@$text_control":
+                    {
+                        "$text": "4"
+                    }
+                },
+                {
+                    "13@$text_control":
+                    {
+                        "$text": "5"
+                    }
+                },
+                {
+                    "14@$text_control":
+                    {
+                        "$text": "6"
+                    }
+                },
+                {
+                    "15@$text_control":
+                    {
+                        "$text": "7"
+                    }
+                },
+                {
+                    "16@$text_control":
+                    {
+                        "$text": "8"
+                    }
+                },
+                {
+                    "17@$text_control":
+                    {
+                        "$text": "9"
+                    }
+                } ]
+            }
+        },
+        {
+            "2@$panel_control":
+            {
+                "controls": [
+                {
+                    "18@$text_control":
+                    {
+                        "$text": "10"
+                    }
+                },
+                {
+                    "19@$text_control":
+                    {
+                        "$text": "11"
+                    }
+                },
+                {
+                    "20@$text_control":
+                    {
+                        "$text": "12"
+                    }
+                },
+                {
+                    "21@$text_control":
+                    {
+                        "$text": "13"
+                    }
+                },
+                {
+                    "22@$text_control":
+                    {
+                        "$text": "14"
+                    }
+                },
+                {
+                    "23@$text_control":
+                    {
+                        "$text": "15"
+                    }
+                },
+                {
+                    "24@$text_control":
+                    {
+                        "$text": "16"
+                    }
+                },
+                {
+                    "25@$text_control":
+                    {
+                        "$text": "17"
+                    }
+                },
+                {
+                    "26@$text_control":
+                    {
+                        "$text": "18"
+                    }
+                } ]
+            }
+        },
+        {
+            "3@$panel_control":
+            {
+                "controls": [
+                {
+                    "27@$text_control":
+                    {
+                        "$text": "19"
+                    }
+                },
+                {
+                    "28@$text_control":
+                    {
+                        "$text": "20"
+                    }
+                },
+                {
+                    "29@$text_control":
+                    {
+                        "$text": "21"
+                    }
+                },
+                {
+                    "30@$text_control":
+                    {
+                        "$text": "22"
+                    }
+                },
+                {
+                    "31@$text_control":
+                    {
+                        "$text": "23"
+                    }
+                },
+                {
+                    "32@$text_control":
+                    {
+                        "$text": "24"
+                    }
+                },
+                {
+                    "33@$text_control":
+                    {
+                        "$text": "25"
+                    }
+                },
+                {
+                    "34@$text_control":
+                    {
+                        "$text": "26"
+                    }
+                },
+                {
+                    "35@$text_control":
+                    {
+                        "$text": "27"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "armor_hud_content@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_hud_features.c":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_armor_hud",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "offset": [ 1.5, 1222.5 ],
+                "renderer": "live_player_renderer",
+                "size": [ 17, 17 ]
+            }
+        } ],
+        "size": [ 14, 53 ]
+    },
+    "arrow_texture_panel@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_controller_keystrokes_arrow_style",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "default@bb.img":
+            {
+                "$arrow_color|default": [ 1, 1, 1 ],
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes_chroma_color",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                } ],
+                "color": "$arrow_color",
+                "offset": "$arrow_offset",
+                "size": [ 7, 7 ],
+                "texture": "$arrow"
+            }
+        },
+        {
+            "rgb@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes_chroma_color",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "color": "@bb_anims.chroma_color_01",
+                "offset": "$arrow_offset",
+                "size": [ 7, 7 ],
+                "texture": "$arrow"
+            }
+        } ],
+        "layer": 10
+    },
+    "bb_day_time@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_day_time_viewer",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.label":
+            {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "localize": false,
+                "offset": [ 18, -17.5 ],
+                "shadow": false,
+                "text": "%"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_day_time_viewer_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "layer": -1,
+                "offset": [ 2, -16 ],
+                "size": [ 65, 14 ],
+                "texture": "AMBRO/tui/common/rounded"
+            }
+        },
+        {
+            "@bb_hud_features.c":
+            {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 15.5, 4381.5 ],
+                "renderer": "live_player_renderer",
+                "size": [ 16, 16 ]
+            }
+        } ],
+        "size": [ "100%", 16 ]
+    },
+    "bb_day@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_day_counter",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.label":
+            {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 6, -17.5 ],
+                "shadow": false,
+                "text": "Day:"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_day_counter_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "layer": -1,
+                "offset": [ 2, -16 ],
+                "size": [ 47, 14 ],
+                "texture": "AMBRO/tui/common/rounded"
+            }
+        },
+        {
+            "@bb_hud_features.c":
+            {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 37.5, 4916 ],
+                "renderer": "live_player_renderer",
+                "size": [ 16, 16 ]
+            }
+        } ],
+        "size": [ "100%", 16 ]
+    },
+    "bb_direction_hud@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_direction",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "bb_direction_hud@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_direction_hud_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "controls": [
+                {
+                    "@bb_hud_features.c":
+                    {
+                        "anchor_from": "bottom_middle",
+                        "anchor_to": "bottom_middle",
+                        "offset": [ 80.75, 934 ],
+                        "renderer": "paper_doll_renderer",
+                        "size": [ 39, 39 ]
+                    }
+                } ],
+                "layer": -1,
+                "offset": [ 0, 4 ],
+                "size": [ 123, 23.5 ],
+                "texture": "AMBRO/tui/common/black"
+            }
+        } ]
+    },
+    "bb_effects_icons@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_effects_icons",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "1":
+            {
+                "layer": 1,
+                "renderer": "mob_effects_renderer",
+                "type": "custom"
+            }
+        } ],
+        "offset": [ 0, 24 ],
+        "size": [ "100%", "75%" ]
+    },
+    "bb_session_timer@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_session_timer",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.label":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -30, -1.5 ],
+                "shadow": false,
+                "text": "Session:"
+            }
+        },
+        {
+            "@bb.label":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -4, -1.5 ],
+                "shadow": false,
+                "text": "m"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_session_timer_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "layer": -1,
+                "size": [ 73, 14 ],
+                "texture": "AMBRO/tui/common/rounded"
+            }
+        },
+        {
+            "@bb_hud_features.c":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -1, 3852 ],
+                "renderer": "live_player_renderer",
+                "size": [ 16, 16 ]
+            }
+        } ],
+        "size": [ "100%", 16 ]
+    },
+    "bb_speed@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_speed_counter",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_speed_counter_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "layer": -1,
+                "size": [ 47, 14 ],
+                "texture": "AMBRO/tui/common/rounded"
+            }
+        },
+        {
+            "@bb.label":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -4, -1.5 ],
+                "shadow": false,
+                "text": "M/S"
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb.label":
+                    {
+                        "anchor_from": "bottom_right",
+                        "anchor_to": "bottom_right",
+                        "offset": [ -10, -1.5 ],
+                        "shadow": false,
+                        "text": "."
+                    }
+                },
+                {
+                    "@bb_hud_features.c":
+                    {
+                        "anchor_from": "bottom_right",
+                        "anchor_to": "bottom_right",
+                        "offset": [ 4.5, 2794.5 ],
+                        "renderer": "live_player_renderer",
+                        "size": [ 16, 16 ]
+                    }
+                } ],
+                "offset": [ -20, 0 ]
+            }
+        } ],
+        "size": [ "100%", 16 ]
+    },
+    "bb_vignette":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_vignette",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "layer": 5,
+        "renderer": "vignette_renderer",
+        "type": "custom"
+    },
+    "c":
+    {
+        "type": "custom"
+    },
+    "compact_tab_list_grid_template@bb.p":
+    {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "outline@bb.img":
+            {
+                "color": [ 0, 0, 0 ],
+                "size": [ "100%sm", "100%sm" ],
+                "texture": "AMBRO/tui/common/outline"
+            }
+        },
+        {
+            "grid_element@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_tab_list_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "controls": [
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "grid_avatar@bb.img":
+                            {
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "bindings": [
+                                {
+                                    "binding_collection_name": "players_collection",
+                                    "binding_name": "#texture",
+                                    "binding_type": "collection"
+                                },
+                                {
+                                    "binding_collection_name": "players_collection",
+                                    "binding_name": "#texture_source",
+                                    "binding_name_override": "#texture_file_system",
+                                    "binding_type": "collection"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bb_players_avatars",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#visible"
+                                } ],
+                                "offset": [ 1.666666666, 0 ],
+                                "size": [ 5.25, 5.25 ],
+                                "texture": "#texture",
+                                "texture_file_system": "#texture_source"
+                            }
+                        } ],
+                        "layer": 1,
+                        "size": [ "100%", "100%" ]
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "@bb_hud_features.tab_list_custom_elements":
+                            {
+                                "$font_scale_factor": 0.66666666666
+                            }
+                        } ],
+                        "offset": [ 0, 1.5 ],
+                        "size": [ "100% - 12px", 6 ]
+                    }
+                } ],
+                "size": [ "400% + 1px", 9 ],
+                "texture": "AMBRO/tui/common/black"
+            }
+        } ],
+        "size": [ "25%", 8 ]
+    },
+    "compact_tab_list@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_tab_list",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#contition1"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_tab_list_compact_mode",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#contition2"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#contition1 and #contition2)",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "player_list_grid":
+            {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                {
+                    "binding_condition": "always",
+                    "binding_name": "#players_grid_dimension"
+                } ],
+                "collection_name": "players_collection",
+                "grid_dimension_binding": "#players_grid_dimension",
+                "grid_item_template": "bb_hud_features.compact_tab_list_grid_template",
+                "offset": [ "-117%", 0 ],
+                "size": [ "100% + 4px", "100%c" ],
+                "type": "grid"
+            }
+        } ],
+        "layer": 50,
+        "offset": [ 0, 3 ],
+        "size": [ "14% + 3px", "85%" ]
+    },
+    "default_tab_list@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_tab_list",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#contition1"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_tab_list_compact_mode",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#contition2"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#contition1 and #contition2)",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "player_list_grid":
+            {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "bindings": [
+                {
+                    "binding_condition": "always",
+                    "binding_name": "#players_grid_dimension"
+                } ],
+                "collection_name": "players_collection",
+                "grid_dimension_binding": "#players_grid_dimension",
+                "grid_item_template": "bb_hud_features.tab_list_grid_template",
+                "offset": [ "-101% - 0.75px", 0 ],
+                "size": [ "90%", "100%c" ],
+                "type": "grid"
+            }
+        } ],
+        "layer": 50,
+        "offset": [ 0, 3 ],
+        "size": [ "25%", "85%" ]
+    },
+    "inventory_hud_grid_item_controls@bb.p":
+    {
+        "controls": [
+        {
+            "item_icon@hud.hotbar_hud_item_icon":
+            {
+                "$glass_image_renderer": [ 15.5, 15.5 ],
+                "layer": 3,
+                "size": [ 16, 16 ]
+            }
+        },
+        {
+            "stack_count@bb.p":
+            {
+                "controls": [
+                {
+                    "item_count_default@bb.p":
+                    {
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbar_numbers_stack_count_in_gm1",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                        } ],
+                        "controls": [
+                        {
+                            "default_size@bb_hud.stack_count_label":
+                            {
+                                "bindings": [
+                                {
+                                    "binding_collection_name": "$stack_count_collection_name",
+                                    "binding_name": "#inventory_stack_count",
+                                    "binding_type": "collection"
+                                },
+                                {
+                                    "binding_collection_name": "$stack_count_collection_name",
+                                    "binding_name": "#stack_count_visible",
+                                    "binding_name_override": "#visible",
+                                    "binding_type": "collection"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "item_count@bb.p":
+                    {
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbar_numbers_stack_count_in_gm1",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ],
+                        "controls": [
+                        {
+                            "default_size@bb_hud.stack_count_label":
+                            {
+                                "bindings": [
+                                {
+                                    "binding_collection_name": "$stack_count_collection_name",
+                                    "binding_name": "#inventory_stack_count",
+                                    "binding_type": "collection"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "item_dura@hud.item_durability":
+            {
+                "layer": 5
+            }
+        } ],
+        "layer": 1,
+        "size": [ 18, 18 ]
+    },
+    "inventory_hud_grid_item@bb.p":
+    {
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "bindings": [
+        {
+            "binding_collection_name": "hotbar_items",
+            "binding_type": "collection_details"
+        } ],
+        "controls": [
+        {
+            "p@bb_hud_features.inventory_hud_grid_item_controls":
+            {}
+        },
+        {
+            "@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_inventory_hud_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "size": [ "100% -1px", "100% -1px" ],
+                "texture": "AMBRO/tui/common/black"
+            }
+        } ],
+        "size": [ 18, 18 ]
+    },
+    "inventory_hud_hotbar_numbers_control@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_inventory_hud_text_opacity_slider",
+            "source_property_name": "(#slider_value / 10)",
+            "target_property_name": "#alpha"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_hotbar_numbers",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#condition1"
+        },
+        {
+            "binding_name": "#show_survival_ui",
+            "binding_name_override": "#condition2"
+        },
+        {
+            "binding_name": "#is_creative_mode",
+            "binding_name_override": "#condition3"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "((#condition1) and (#condition2 or #condition3))",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "small@bb.p":
+            {
+                "$small_font": 1,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "controls": [
+                {
+                    "hotbar_numbers_panel_control@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "label@bb.label":
+                            {
+                                "$anchor": "top_left",
+                                "anchor_from": "$anchor",
+                                "anchor_to": "$anchor",
+                                "font_scale_factor": 0.66666666666666,
+                                "shadow": false,
+                                "text": "$text"
+                            }
+                        } ]
+                    }
+                } ],
+                "offset": [ 1.75, 0.75 ],
+                "size": [ "100% - 3px", "100% - 1.5px" ]
+            }
+        } ],
+        "propagate_alpha": true,
+        "size": [ 18, 18 ]
+    },
+    "inventory_hud_hotbar_numbers_sph@bb.sph":
+    {
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "size": [ "100%", 18 ]
+    },
+    "ip_display@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_server_display",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_server_display_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "controls": [
+                {
+                    "@bb.sph":
+                    {
+                        "controls": [
+                        {
+                            "ip@bb.l":
+                            {
+                                "shadow": false,
+                                "text": "IP:"
+                            }
+                        },
+                        {
+                            "@bb.p":
+                            {
+                                "size": [ 3, 0 ]
+                            }
+                        },
+                        {
+                            "unavailable@bb.l":
+                            {
+                                "bindings": [
+                                {
+                                    "binding_name": "#player_list_title"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "((#player_list_title - 'Zeqa Network' - 'NetherGames Network' - '§bHyper§fLands §aNetwork' - 'Vasar') = #player_list_title))",
+                                    "target_property_name": "#visible"
+                                } ],
+                                "ignored": "$is_on_3p_server",
+                                "shadow": false,
+                                "text": "§cUnavailable"
+                            }
+                        },
+                        {
+                            "hive@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Hive Games",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§chivebedrock.network"
+                            }
+                        },
+                        {
+                            "cubecraft@bb_hud_features.ip_label":
+                            {
+                                "$ip": "CubeCraft Games",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§cplay.cubecraft.net"
+                            }
+                        },
+                        {
+                            "lifeboat@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Lifeboat Network",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§cmco.lbsg.net"
+                            }
+                        },
+                        {
+                            "mineplex@bb.l":
+                            {
+                                "bindings": [
+                                {
+                                    "binding_name": "#player_list_title"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#player_list_title = '')",
+                                    "target_property_name": "#visible"
+                                } ],
+                                "ignored": "(not $is_on_3p_server)",
+                                "shadow": false,
+                                "text": "§cmco.mineplex.com"
+                            }
+                        },
+                        {
+                            "galaxite@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Galaxite",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§cplay.galaxite.net"
+                            }
+                        },
+                        {
+                            "mineville@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Mineville City",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§cplay.inpvp.net"
+                            }
+                        },
+                        {
+                            "pixelparadise@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Pixel Paradise",
+                                "ignored": "(not $is_on_3p_server)",
+                                "text": "§cplay.pixelparadise.gg"
+                            }
+                        },
+                        {
+                            "zeqa@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Zeqa Network",
+                                "text": "§czeqa.net"
+                            }
+                        },
+                        {
+                            "nethergames@bb_hud_features.ip_label":
+                            {
+                                "$ip": "NetherGames Network",
+                                "text": "§cplay.nethergames.org"
+                            }
+                        },
+                        {
+                            "hyperlands@bb_hud_features.ip_label":
+                            {
+                                "$ip": "§bHyper§fLands §aNetwork",
+                                "text": "§cplay.hyperlandsmc.net"
+                            }
+                        },
+                        {
+                            "vasar@bb_hud_features.ip_label":
+                            {
+                                "$ip": "Vasar",
+                                "text": "§cvasar.land"
+                            }
+                        } ],
+                        "size": [ "100%c", "100%cm" ]
+                    }
+                } ],
+                "layer": -1,
+                "size": [ "100%c + 8px", 14 ],
+                "texture": "AMBRO/tui/common/rounded"
+            }
+        } ],
+        "size": [ "100%", 16 ]
+    },
+    "ip_label@bb.l":
+    {
+        "$ip|default": "",
+        "bindings": [
+        {
+            "binding_name": "#player_list_title"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(not ((#player_list_title - $ip) = #player_list_title))",
+            "target_property_name": "#visible"
+        } ],
+        "shadow": false
+    },
+    "item_renderer":
+    {
+        "$size|default": [ 14, 14 ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "renderer": "inventory_item_renderer",
+        "size": "$size",
+        "type": "custom"
+    },
+    "keystrokes_bg_textures@bb.p":
+    {
+        "controls": [
+        {
+            "default@bb.p":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes_rounded_texture",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                } ],
+                "controls": [
+                {
+                    "selected@bb.img":
+                    {
+                        "$selected|default": "",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_controller_keystrokes_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        } ],
+                        "layer": 1,
+                        "texture": "$selected"
+                    }
+                },
+                {
+                    "deselected@bb.img":
+                    {
+                        "$deselected|default": "",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_controller_keystrokes_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        } ],
+                        "texture": "$deselected"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "keystrokes_button_template@bb.pxyc":
+    {
+        "controls": [
+        {
+            "@bb_hbui_buttons.pressed":
+            {
+                "$default_button": "AMBRO/tui/common/empty",
+                "$hover_button": "AMBRO/tui/common/empty",
+                "$pressed_button": "AMBRO/tui/common/empty",
+                "$pressed_content": "bb_hud_features.keystrokes_icon_panel",
+                "$pressed_text": "",
+                "button_mappings": [ ],
+                "focus_change_down": "S",
+                "focus_change_left": "D",
+                "focus_change_right": "A",
+                "focus_change_up": "W",
+                "size": [ 25, 25 ]
+            }
+        } ]
+    },
+    "keystrokes_icon_panel@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_hud_features.keystrokes_bg_textures":
+            {}
+        },
+        {
+            "@bb_hud_features.text_texture_panel":
+            {}
+        },
+        {
+            "@bb_hud_features.arrow_texture_panel":
+            {}
+        } ],
+        "variables": [
+        {
+            "$deselected": "AMBRO/tui/common/rounded",
+            "requires": "$default_state"
+        },
+        {
+            "$arrow_color": [ 0, 0, 0 ],
+            "$selected": "AMBRO/tui/common/wrounded",
+            "$text_color": [ 0, 0, 0 ],
+            "requires": "$hover_state"
+        } ]
+    },
+    "keystrokes_panel@bb_subpack.ambro":
+    {
+        "controls": [
+        {
+            "default@bb.p":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_mod_option_19",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_mod_menu",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                } ],
+                "controls": [
+                {
+                    "w@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/W",
+                        "$arrow_offset": [ 0, 0.5 ],
+                        "$focus_id": "W",
+                        "$text": "AMBRO/tui/keystrokes/WL",
+                        "offset": [ 0, -13.25 ]
+                    }
+                },
+                {
+                    "s@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/S",
+                        "$arrow_offset": [ 0, 0.5 ],
+                        "$focus_id": "S",
+                        "$text": "AMBRO/tui/keystrokes/SL",
+                        "offset": [ 0, 13.5 ]
+                    }
+                },
+                {
+                    "a@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/A",
+                        "$arrow_offset": [ 0.5, 0 ],
+                        "$focus_id": "A",
+                        "$text": "AMBRO/tui/keystrokes/AL",
+                        "offset": [ -27, 13.5 ]
+                    }
+                },
+                {
+                    "d@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/D",
+                        "$arrow_offset": [ 0.5, 0 ],
+                        "$focus_id": "D",
+                        "$text": "AMBRO/tui/keystrokes/DL",
+                        "offset": [ 27, 13.5 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "gamepad@bb.p":
+            {
+                "bindings": [
+                {
+                    "binding_name": "#is_using_gamepad",
+                    "binding_name_override": "#condition1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                } ],
+                "controls": [
+                {
+                    "w@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/W",
+                        "$arrow_offset": [ 0, 0.5 ],
+                        "$focus_id": "W",
+                        "$text": "AMBRO/tui/keystrokes/WL",
+                        "offset": [ 0, -13.25 ]
+                    }
+                },
+                {
+                    "s@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/S",
+                        "$arrow_offset": [ 0, 0.5 ],
+                        "$focus_id": "S",
+                        "$text": "AMBRO/tui/keystrokes/SL",
+                        "offset": [ 0, 13.5 ]
+                    }
+                },
+                {
+                    "a@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/A",
+                        "$arrow_offset": [ 0.5, 0 ],
+                        "$focus_id": "A",
+                        "$text": "AMBRO/tui/keystrokes/AL",
+                        "offset": [ -27, 13.5 ]
+                    }
+                },
+                {
+                    "d@bb_hud_features.keystrokes_button_template":
+                    {
+                        "$arrow": "AMBRO/tui/keystrokes/D",
+                        "$arrow_offset": [ 0.5, 0 ],
+                        "$focus_id": "D",
+                        "$text": "AMBRO/tui/keystrokes/DL",
+                        "offset": [ 27, 13.5 ]
+                    }
+                } ]
+            }
+        } ],
+        "enabled": "(not $ignore_keystrokes)",
+        "size": [ 79, 52 ],
+        "type": "panel",
+        "variables": [
+        {
+            "$ignore_keystrokes": false,
+            "requires": "($subpack = '1')"
+        },
+        {
+            "$ignore_keystrokes": true,
+            "requires": "($subpack = '2')"
+        } ],
+        "visible": "(not $ignore_keystrokes)"
+    },
+    "movable_elements_y_sp_control@bb.sp":
+    {
+        "$binding_x_child_source_control_name|default": "",
+        "$binding_x_child_sph|default": "bb.p",
+        "$binding_y_child_source_control_name|default": "",
+        "$debug_alpha|default": 0,
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+        {
+            "binding_y_img_test@bb.img":
+            {
+                "alpha": "$debug_alpha",
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "$binding_y_child_source_control_name",
+                    "source_property_name": "(#slider_value / 40)",
+                    "target_property_name": "#size_binding_y"
+                } ],
+                "color": [ 1, 0, 0 ],
+                "size": "$binding_y_child_size",
+                "texture": "AMBRO/tui/common/white"
+            }
+        },
+        {
+            "binding_x_sph@bb.sph":
+            {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                {
+                    "binding_x_img_test@bb.img":
+                    {
+                        "alpha": "$debug_alpha",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$binding_x_child_source_control_name",
+                            "source_property_name": "(#slider_value / 40)",
+                            "target_property_name": "#size_binding_x"
+                        } ],
+                        "size": "$binding_x_child_size",
+                        "texture": "AMBRO/tui/common/white"
+                    }
+                },
+                {
+                    "content@$content":
+                    {}
+                } ],
+                "size": "$binding_x_sp_control_size"
+            }
+        } ],
+        "size": "$binding_y_sp_control_size"
+    },
+    "movable_elements@bb.p":
+    {
+        "controls": [
+        {
+            "armor_hud@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb_hud_features.movable_elements_y_sp_control":
+                    {
+                        "$binding_x_child_size": [ 0, 53 ],
+                        "$binding_x_child_source_control_name": "bb_armor_hud_x_offset",
+                        "$binding_x_sp_control_size|default": [ "100% - 14px", "100%" ],
+                        "$binding_y_child_size": [ 14, 0 ],
+                        "$binding_y_child_source_control_name": "bb_armor_hud_y_offset",
+                        "$binding_y_sp_control_size": [ "100%", "100% - 53px" ],
+                        "$content": "bb_hud_features.armor_hud_content"
+                    }
+                } ]
+            }
+        },
+        {
+            "inventory_hud@bb.p":
+            {
+                "controls": [
+                {
+                    "9x3@bb_hud_features.movable_elements_y_sp_control":
+                    {
+                        "$binding_x_child_size": [ 0, 54 ],
+                        "$binding_x_child_source_control_name": "bb_inventory_hud_x_offset",
+                        "$binding_x_sp_control_size": [ "100% - 162px", "100%" ],
+                        "$binding_y_child_size": [ 162, 0 ],
+                        "$binding_y_child_source_control_name": "bb_inventory_hud_y_offset",
+                        "$binding_y_sp_control_size": [ "100%", "100% - 54px" ],
+                        "$content": "bb_hud_features.9x3_inventory_hud_content",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_9x3_grid_style",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#condition1"
+                        },
+                        {
+                            "binding_name": "#show_survival_ui",
+                            "binding_name_override": "#condition2"
+                        },
+                        {
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#condition3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_debug",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#condition4"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#condition1 and #condition4 and (#condition2 or #condition3))",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "3x9@bb_hud_features.movable_elements_y_sp_control":
+                    {
+                        "$binding_x_child_size": [ 0, 162 ],
+                        "$binding_x_child_source_control_name": "bb_inventory_hud_x_offset",
+                        "$binding_x_sp_control_size": [ "100% - 54px", "100%" ],
+                        "$binding_y_child_size": [ 54, 0 ],
+                        "$binding_y_child_source_control_name": "bb_inventory_hud_y_offset",
+                        "$binding_y_sp_control_size": [ "100%", "100% - 162px" ],
+                        "$content": "bb_hud_features.3x9_inventory_hud_content",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_9x3_grid_style",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#condition1"
+                        },
+                        {
+                            "binding_name": "#show_survival_ui",
+                            "binding_name_override": "#condition2"
+                        },
+                        {
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#condition3"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_debug",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#condition4"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#condition1 and #condition4 and (#condition2 or #condition3))",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "keystrokes@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb_hud_features.movable_elements_y_sp_control":
+                    {
+                        "$binding_x_child_size": [ 0, 52 ],
+                        "$binding_x_child_source_control_name": "bb_keystrokes_x_offset",
+                        "$binding_x_sp_control_size": [ "100% - 79px", "100%" ],
+                        "$binding_y_child_size": [ 79, 0 ],
+                        "$binding_y_child_source_control_name": "bb_keystrokes_y_offset",
+                        "$binding_y_sp_control_size": [ "100%", "100% - 52px" ],
+                        "$content": "bb_hud_features.keystrokes_panel",
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_debug",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "paper_doll@bb.p":
+            {
+                "controls": [
+                {
+                    "@bb_hud_features.movable_elements_y_sp_control":
+                    {
+                        "$binding_x_child_size": [ 0, 36 ],
+                        "$binding_x_child_source_control_name": "bb_paper_doll_x_offset",
+                        "$binding_x_sp_control_size": [ "100% - 40px", "100%" ],
+                        "$binding_y_child_size": [ 40, 0 ],
+                        "$binding_y_child_source_control_name": "bb_paper_doll_y_offset",
+                        "$binding_y_sp_control_size": [ "100%", "100% - 36px" ],
+                        "$content": "bb_hud_features.paper_doll"
+                    }
+                } ]
+            }
+        } ],
+        "size": [ "100% - 8px", "100% - 8px" ]
+    },
+    "namespace": "bb_hud_features",
+    "paper_doll@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_paper_doll",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#condition1"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_debug",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#condition2"
+        },
+        {
+            "binding_name": "#show_survival_ui",
+            "binding_name_override": "#condition3"
+        },
+        {
+            "binding_name": "#is_creative_mode",
+            "binding_name_override": "#condition4"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#condition1 and #condition2 and (#condition3 or #condition4))",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "hud_player_renderer":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_paper_doll_live_model",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                } ],
+                "offset": [ 0, -8.75 ],
+                "renderer": "hud_player_renderer",
+                "size": [ 18, 18 ],
+                "type": "custom"
+            }
+        },
+        {
+            "live_player_renderer":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_paper_doll_live_model",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "offset": [ 0, -8.75 ],
+                "renderer": "live_player_renderer",
+                "size": [ 18, 18 ],
+                "type": "custom"
+            }
+        } ],
+        "layer": 40,
+        "size": [ 40, 36 ]
+    },
+    "tab_list_custom_elements_label@bb.l":
+    {
+        "$b|default": "",
+        "$font_scale_factor|default": 1,
+        "$target_property_name|default": "#visible",
+        "bindings": [
+        {
+            "binding_collection_name": "players_collection",
+            "binding_name": "#gamertag",
+            "binding_type": "collection"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "$b",
+            "target_property_name": "$target_property_name"
+        } ],
+        "font_scale_factor": "$font_scale_factor",
+        "layer": 2,
+        "size": [ "100%", 10 ],
+        "text": "$t",
+        "text_alignment": "center"
+    },
+    "tab_list_custom_elements@bb.p":
+    {
+        "$custom_tag_1": "§cAxmBro §8[§cBB OWNER§8]",
+        "$custom_tag_2": "§ciDarkQ §8[§cBB OWNER§8]",
+        "$custom_tag_3": "§eBeetleNehaal §8[§e30k!§8]",
+        "$custom_tag_4": "§bPatarHD123 §8[§bPatar§8]",
+        "$custom_tag_5": "§bPada iOS §8[§bYT+§8]",
+        "$custom_tag_6": "§bitzGreggYT §8[§bYT+§8]",
+        "$label_control": "bb_hud_features.tab_list_custom_elements_label",
+        "$tag1": "AxmBro",
+        "$tag2": "iDarkQ",
+        "$tag3": "BeetleNehaal",
+        "$tag4": "PatarHD123",
+        "$tag5": "Pada iOS",
+        "$tag6": "itzGreggYT",
+        "controls": [
+        {
+            "list@bb_hud_features.tab_list_custom_elements_label":
+            {
+                "$b": "(#gamertag - $tag1 - $tag2 - $tag3 - $tag4 - $tag5 - $tag6)",
+                "$t": "#text",
+                "$target_property_name": "#text",
+                "layer": 1
+            }
+        },
+        {
+            "1@$label_control":
+            {
+                "$b": "(#gamertag = $tag1)",
+                "$t": "$custom_tag_1"
+            }
+        },
+        {
+            "2@$label_control":
+            {
+                "$b": "(#gamertag = $tag2)",
+                "$t": "$custom_tag_2"
+            }
+        },
+        {
+            "3@$label_control":
+            {
+                "$b": "(#gamertag = $tag3)",
+                "$t": "$custom_tag_3"
+            }
+        },
+        {
+            "4@$label_control":
+            {
+                "$b": "(#gamertag = $tag4)",
+                "$t": "$custom_tag_4"
+            }
+        },
+        {
+            "3@$label_control":
+            {
+                "$b": "(#gamertag = $tag5)",
+                "$t": "$custom_tag_5"
+            }
+        },
+        {
+            "3@$label_control":
+            {
+                "$b": "(#gamertag = $tag6)",
+                "$t": "$custom_tag_6"
+            }
+        } ],
+        "size": [ "100%", "100%" ]
+    },
+    "tab_list_grid_template@bb.p":
+    {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "outline@bb.img":
+            {
+                "color": [ 0, 0, 0 ],
+                "size": [ "100%sm", "100%sm" ],
+                "texture": "AMBRO/tui/common/outline"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "alpha": 0.6,
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_tab_list_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "controls": [
+                {
+                    "grid_avatar@bb.img":
+                    {
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "bindings": [
+                        {
+                            "binding_collection_name": "players_collection",
+                            "binding_name": "#texture",
+                            "binding_type": "collection"
+                        },
+                        {
+                            "binding_collection_name": "players_collection",
+                            "binding_name": "#texture_source",
+                            "binding_name_override": "#texture_file_system",
+                            "binding_type": "collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_players_avatars",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ],
+                        "layer": 2,
+                        "offset": [ 2, 0 ],
+                        "size": [ 8, 8 ],
+                        "texture": "#texture",
+                        "texture_file_system": "#texture_source"
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "@bb_hud_features.tab_list_custom_elements":
+                            {}
+                        } ],
+                        "size": [ "100% - 22px", 10 ]
+                    }
+                } ],
+                "size": [ "400% + 0.9px", 12 ],
+                "texture": "AMBRO/tui/common/black"
+            }
+        } ],
+        "size": [ "25%", 11 ]
+    },
+    "tab_list_panel_template@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_hud_features.default_tab_list":
+            {}
+        },
+        {
+            "@bb_hud_features.compact_tab_list":
+            {}
+        } ]
+    },
+    "tab_list@bb.p":
+    {
+        "controls": [
+        {
+            "default_tab_list@bb_hud_features.tab_list_panel_template":
+            {
+                "bindings": [
+                {
+                    "binding_name": "#paper_doll_visible",
+                    "binding_name_override": "#condition1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_tab_list_hold_mode",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#condition2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        },
+        {
+            "hold_tab_list@bb.b":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_tab_list_hold_mode",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "button_mappings": [
+                {
+                    "from_button_id": "button.scoreboard",
+                    "mapping_type": "global",
+                    "to_button_id": "buttom.scoreboard"
+                } ],
+                "controls": [
+                {
+                    "pressed@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "@bb_hud_features.tab_list_panel_template":
+                            {}
+                        } ]
+                    }
+                } ],
+                "default_control": "",
+                "hover_control": "",
+                "pressed_control": "pressed"
+            }
+        } ],
+        "layer": 200
+    },
+    "text_texture_panel@bb.p":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_controller_keystrokes_arrow_style",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "default@bb.img":
+            {
+                "$text_color|default": [ 1, 1, 1 ],
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes_chroma_color",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#visible"
+                } ],
+                "color": "$text_color",
+                "size": [ 5, 7 ],
+                "texture": "$text"
+            }
+        },
+        {
+            "rgb@bb.img":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_controller_keystrokes_chroma_color",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "color": "@bb_anims.chroma_color_01",
+                "size": [ 5, 7 ],
+                "texture": "$text"
+            }
+        } ],
+        "layer": 10
+    }
+}

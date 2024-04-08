@@ -1,0 +1,44 @@
+{
+    "namespace": "anvil",
+    "anvil_screen":
+    {
+        "force_render_below": true
+    },
+    "anvil_title_and_text_panel":
+    {
+        "type": "panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [ "80%", "100%" ],
+        "offset": [ "20%", 0 ],
+        "controls": [
+        {
+            "text_edit_panel@anvil.text_edit_panel":
+            {}
+        } ]
+    },
+    "text_edit_panel":
+    {
+        "type": "panel",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "size": [ "100%", "70%" ],
+        "offset": [ 0, 2 ],
+        "controls": [
+        {
+            "text_edit_control@anvil.text_edit_control2":
+            {}
+        } ]
+    },
+    "text_edit_control2@common.multiline_text_edit_box":
+    {
+        "size": [ "83% + 1px", 37.5 ],
+        "offset": [ 3.5, -16 ],
+        "$text_edit_box_label_anchor_point": "top_left",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "max_length": 1028,
+        "$text_edit_binding_name": "#text_box_item_name",
+        "$text_edit_box_label_size": [ "default", 40 ]
+    }
+}

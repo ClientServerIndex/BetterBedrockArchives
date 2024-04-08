@@ -1,0 +1,8 @@
+{
+    "start_screen":
+    {
+        "$screen_content": "bb_start.start_screen_main_panel",
+        "$screen_bg_content": "bb_common.screen_background",
+        "button_mappings": [ ]
+    }
+}

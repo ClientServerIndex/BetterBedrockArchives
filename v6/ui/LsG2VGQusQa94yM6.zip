@@ -1,0 +1,607 @@
+{
+    "close_mod_menu_button@bb_mod_menu.menu_buttons":
+    {
+        "$blank": "$blank_menu_close_button",
+        "$focus_override_down": "back_to_game",
+        "$focus_override_left": "back_to_game",
+        "$focus_override_right": "back_to_game",
+        "$focus_override_up": "back_to_game",
+        "$ignore_button_label": true,
+        "$ignore_button_texture": true,
+        "$offset|default": [ -2, 2 ],
+        "$tab_content": "bb_mod_menu.exit_button_content",
+        "$toggle_focus_enabled": false,
+        "$toggle_group_forced_index": 0,
+        "$use_exit_texture": true,
+        "$use_tab_content": true,
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_mod_menu",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "offset": "$offset",
+        "size": [ 22, 22 ],
+        "variables": [
+        {
+            "$toggle_button_mappings_control": [
+            {
+                "from_button_id": "button.menu_select",
+                "mapping_type": "pressed",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "mapping_type": "pressed",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_cancel",
+                "mapping_type": "global",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_exit",
+                "mapping_type": "global",
+                "to_button_id": "button.menu_ok"
+            } ],
+            "requires": "($subpack = '1')"
+        },
+        {
+            "$toggle_button_mappings_control": [
+            {
+                "from_button_id": "button.menu_select",
+                "ignored": "$game_pad",
+                "mapping_type": "pressed",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "ignored": "$game_pad",
+                "mapping_type": "pressed",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_cancel",
+                "mapping_type": "global",
+                "to_button_id": "button.menu_ok"
+            },
+            {
+                "from_button_id": "button.menu_exit",
+                "mapping_type": "global",
+                "to_button_id": "button.menu_ok"
+            } ],
+            "requires": "($subpack = '2')"
+        } ]
+    },
+    "exit_button_content@bb.p":
+    {
+        "controls": [
+        {
+            "close_button_image@bb.img":
+            {
+                "$exit_button_texture|default": "AMBRO/tui/common/empty",
+                "layer": 1,
+                "size": [ 22, 22 ],
+                "texture": "$exit_button_texture"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 2,
+                "size": [ 20, 20 ],
+                "texture": "AMBRO/tui/buttons/close/exit"
+            }
+        } ],
+        "size": [ 22, 22 ]
+    },
+    "general_buttons_bg@bb.img":
+    {
+        "$alpha|default": 0,
+        "alpha": "$alpha",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "layer": -2,
+        "offset": [ -1, -1 ],
+        "size": [ "24%", "100% - 32px" ],
+        "texture": "AMBRO/tui/common/black"
+    },
+    "jump_to_top_content@bb.img":
+    {
+        "alpha": 0,
+        "controls": [
+        {
+            "jump_to_top_content@bb.img":
+            {
+                "size": [ 13, 13 ],
+                "texture": "AMBRO/tui/chat_previous2"
+            }
+        } ],
+        "texture": "AMBRO/tui/common/black"
+    },
+    "jumpToTopAnim":
+    {
+        "anim_type": "size",
+        "duration": 0.05,
+        "from": [ 0, 0 ],
+        "next": "@bb_mod_menu.jumpToTopAnim2",
+        "reset_event": "bb.jump_to_top",
+        "to": [ 0, -10000 ]
+    },
+    "jumpToTopAnim2":
+    {
+        "anim_type": "size",
+        "duration": 0,
+        "from": [ 0, 0 ],
+        "to": [ 0, 0 ]
+    },
+    "line_padding":
+    {
+        "$color|default": [ 1, 1, 1, 1 ],
+        "$offset|default": [ 0, 0 ],
+        "alpha": 0.2,
+        "color1": "$color",
+        "color2": "$color",
+        "offset": "$offset",
+        "renderer": "gradient_renderer",
+        "size": [ "100%", 1 ],
+        "type": "custom"
+    },
+    "main_scroll_content@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.gameplay":
+            {}
+        },
+        {
+            "@bb_mod_crosshair.crosshair":
+            {}
+        },
+        {
+            "@bb_mod_elements.elements":
+            {}
+        },
+        {
+            "@bb_mod_more.more":
+            {}
+        },
+        {
+            "@bb.p":
+            {
+                "animation_reset_name": "bb.jump_to_top",
+                "anims": [ "@bb_mod_menu.jumpToTopAnim" ],
+                "size": [ 0, 0 ]
+            }
+        } ]
+    },
+    "menu_buttons@bb_pause.tab":
+    {
+        "$default_selector_toggle_index": 0,
+        "$radio_toggle_group": true,
+        "$tab_text": "M",
+        "$tab_view_binding_name": "bb_mod_menu",
+        "$toggle_name": "menu_buttons",
+        "$unchecked_hover_text_color": [ 1, 1, 1 ],
+        "$unchecked_text_color": [ 1, 1, 1 ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": [ 3, -27 ],
+        "size": [ 24, 24 ]
+    },
+    "mod_menu_open_buttons@bb_subpack.ambro":
+    {
+        "bindings": "$bindings",
+        "controls": [
+        {
+            "@bb_mod_menu.open_mod_menu_button":
+            {}
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "screen_header@bb.p":
+                    {
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "controls": [
+                        {
+                            "@bb_mod_menu.close_mod_menu_button":
+                            {}
+                        } ],
+                        "offset": [ 0, 3 ],
+                        "size": [ "100% - 6px", 28 ]
+                    }
+                } ],
+                "size": "$menu_size",
+                "variables": [
+                {
+                    "$menu_size": [ 380, "100% - 84px" ],
+                    "requires": "$desktop_screen"
+                },
+                {
+                    "$menu_size": [ 380, "100% - 44px" ],
+                    "requires": "($pocket_screen or $pocket_edition or $apple_os or $google_os or $is_ios or $is_android)"
+                } ]
+            }
+        } ],
+        "layer": 1000,
+        "type": "panel",
+        "variables": [
+        {
+            "$bindings": [
+            {
+                "binding_name": "(not #is_using_gamepad)",
+                "binding_name_override": "#visible",
+                "binding_type": "global"
+            } ],
+            "requires": "($subpack = '1')"
+        },
+        {
+            "$bindings": [ ],
+            "requires": "($subpack = '2')"
+        } ]
+    },
+    "mod_menu@bb.p":
+    {
+        "$menu_content_background_alpha": 0.5,
+        "$menu_main_background_alpha": 0.65,
+        "controls": [
+        {
+            "hover_panel@bb_common.button":
+            {
+                "$pressed_button_name": "",
+                "allow_clipping": false,
+                "always_handle_pointer": true,
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_accessibility_crosshair",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition1"
+                },
+                {
+                    "binding_name": "#is_using_gamepad",
+                    "binding_name_override": "#condition2",
+                    "binding_type": "global"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 and #condition2)",
+                    "target_property_name": "#visible"
+                } ],
+                "consume_hover_events": false,
+                "controls": [
+                {
+                    "pointer@bb.img":
+                    {
+                        "size": [ 28, 28 ],
+                        "texture": "textures/ui/pointer"
+                    }
+                } ],
+                "follows_cursor": true,
+                "layer": 100000,
+                "size": [ 0, "100%c" ]
+            }
+        },
+        {
+            "menu@bb.p":
+            {
+                "controls": [
+                {
+                    "buttons@bb.p":
+                    {
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_transparency_mode",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ],
+                        "controls": [
+                        {
+                            "sph@bb.sph":
+                            {
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "controls": [
+                                {
+                                    "@bb_mod_menu.navigation_button_template":
+                                    {
+                                        "$button_text": "Mods",
+                                        "$focus_id": "mods",
+                                        "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_up": "first_mod",
+                                        "$tab_view_binding_name": "bb_button_gameplay",
+                                        "$toggle_group_forced_index": 0
+                                    }
+                                },
+                                {
+                                    "@bb_mod_menu.navigation_button_template":
+                                    {
+                                        "$button_text": "Crosshair",
+                                        "$focus_id": "crosshair",
+                                        "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_up": "first_crosshair",
+                                        "$tab_view_binding_name": "bb_button_crosshair",
+                                        "$toggle_group_forced_index": 1
+                                    }
+                                },
+                                {
+                                    "@bb_mod_menu.navigation_button_template":
+                                    {
+                                        "$button_text": "Settings",
+                                        "$focus_id": "settings",
+                                        "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_up": "first_settings_checkbox",
+                                        "$tab_view_binding_name": "bb_button_elements",
+                                        "$toggle_group_forced_index": 2
+                                    }
+                                },
+                                {
+                                    "@bb_mod_menu.navigation_button_template":
+                                    {
+                                        "$button_text": "More",
+                                        "$focus_id": "more",
+                                        "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_up": "first_more_label",
+                                        "$tab_view_binding_name": "bb_button_more",
+                                        "$toggle_group_forced_index": 3
+                                    }
+                                } ],
+                                "size": [ "100% - 7px", 32 ]
+                            }
+                        } ],
+                        "layer": 10000,
+                        "offset": [ 0, -2 ],
+                        "propagate_alpha": true
+                    }
+                },
+                {
+                    "menu_image_control_panel@bb.img":
+                    {
+                        "alpha": "$menu_main_background_alpha",
+                        "texture": "AMBRO/tui/common/black"
+                    }
+                },
+                {
+                    "menu@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "screen_header@bb.p":
+                            {
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_mod_options.options_close_button":
+                                            {}
+                                        },
+                                        {
+                                            "@bb.label":
+                                            {
+                                                "color": [ 0, 0, 0 ],
+                                                "font_scale_factor": 1.6,
+                                                "font_type": "MinecraftTen",
+                                                "layer": 2,
+                                                "offset": [ 0, -2 ],
+                                                "shadow": false,
+                                                "text": "Better Bedrock Client"
+                                            }
+                                        } ],
+                                        "texture": "AMBRO/tui/header"
+                                    }
+                                } ],
+                                "offset": [ 0, 3 ],
+                                "propagate_alpha": true,
+                                "size": [ "100% - 6px", 28 ]
+                            }
+                        },
+                        {
+                            "menu_content@bb.p":
+                            {
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "alpha": "$menu_content_background_alpha",
+                                        "anchor_from": "top_middle",
+                                        "anchor_to": "top_middle",
+                                        "size": [ "100% - 2px", "100%" ],
+                                        "texture": "AMBRO/tui/common/black"
+                                    }
+                                },
+                                {
+                                    "control_panel@bb.p":
+                                    {
+                                        "anchor_from": "top_middle",
+                                        "anchor_to": "top_middle",
+                                        "controls": [
+                                        {
+                                            "scroll@common.scrolling_panel":
+                                            {
+                                                "$scroll_bar_right_padding_size|default": [ 4, 0 ],
+                                                "$scroll_size": [ 3, "100% - 7px" ],
+                                                "$scroll_track_offset": [ 1, -1.25 ],
+                                                "$scrolling_content": "bb_mod_menu.main_scroll_content",
+                                                "$show_background": false,
+                                                "propagate_alpha": false,
+                                                "size": [ "100%", "100%" ]
+                                            }
+                                        },
+                                        {
+                                            "@bb_subpack.ambro":
+                                            {
+                                                "bindings": "$bindings",
+                                                "controls": [
+                                                {
+                                                    "@bb_hbui_buttons.pressed":
+                                                    {
+                                                        "$hover_text": "Back To Top",
+                                                        "$hover_text_offset": [ 20, 0 ],
+                                                        "$ignore_hover_panel": false,
+                                                        "$ignore_pressed_text": true,
+                                                        "$pressed_button_name": "bb.jump_to_top",
+                                                        "$pressed_content": "bb_mod_menu.jump_to_top_content",
+                                                        "$pressed_text": "Back To Top",
+                                                        "anchor_from": "bottom_right",
+                                                        "anchor_to": "bottom_right",
+                                                        "bindings": [
+                                                        {
+                                                            "binding_type": "view",
+                                                            "source_control_name": "bb_button_crosshair",
+                                                            "source_property_name": "(not #toggle_state)",
+                                                            "target_property_name": "#condition1"
+                                                        },
+                                                        {
+                                                            "binding_type": "view",
+                                                            "source_control_name": "bb_show_back_to_top_button",
+                                                            "source_property_name": "#toggle_state",
+                                                            "target_property_name": "#condition2"
+                                                        },
+                                                        {
+                                                            "binding_type": "view",
+                                                            "source_control_name": "bb_mod_option_0",
+                                                            "source_property_name": "#toggle_state",
+                                                            "target_property_name": "#condition3"
+                                                        },
+                                                        {
+                                                            "binding_type": "view",
+                                                            "source_property_name": "(#condition1 and #condition2 and #condition3)",
+                                                            "target_property_name": "#visible"
+                                                        } ],
+                                                        "layer": 120,
+                                                        "offset": [ -7, -4 ],
+                                                        "size": [ 20, 20 ]
+                                                    }
+                                                } ],
+                                                "type": "panel",
+                                                "variables": [
+                                                {
+                                                    "$bindings": [ ],
+                                                    "requires": "($subpack = '1')"
+                                                },
+                                                {
+                                                    "$bindings": [
+                                                    {
+                                                        "binding_name": "(not #is_using_gamepad)",
+                                                        "binding_name_override": "#visible",
+                                                        "binding_type": "global"
+                                                    } ],
+                                                    "requires": "($subpack = '2')"
+                                                } ]
+                                            }
+                                        } ],
+                                        "layer": 1,
+                                        "size": [ "100% - 2px", "100%" ]
+                                    }
+                                } ],
+                                "offset": [ 0, -30 ],
+                                "size": [ "100% - 4px", "100% - 64px" ]
+                            }
+                        } ],
+                        "layer": 1
+                    }
+                },
+                {
+                    "option_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "size": [ 0, 0 ],
+                        "visible": false
+                    }
+                } ],
+                "size": "$menu_size"
+            }
+        } ],
+        "layer": 1000,
+        "variables": [
+        {
+            "$menu_size": [ 380, "100% - 84px" ],
+            "requires": "$desktop_screen"
+        },
+        {
+            "$menu_size": [ 380, "100% - 44px" ],
+            "requires": "($pocket_screen or $pocket_edition or $apple_os or $google_os or $is_ios or $is_android)"
+        } ]
+    },
+    "namespace": "bb_mod_menu",
+    "navigation_button_template@bb_hbui_buttons.tab2":
+    {
+        "$radio_toggle_group": true,
+        "$texture_size": [ "100% + 0.5px", "100% - 2px" ],
+        "size": [ "25%", 32 ]
+    },
+    "open_mod_menu_button@bb_mod_menu.menu_buttons":
+    {
+        "$blank": "$blank_menu_open_button",
+        "$checked_default_image": "AMBRO/tui/hbui/button/green/button_pressed",
+        "$checked_hover_image": "AMBRO/tui/hbui/button/green/button_pressed_hover",
+        "$focus_id": "mod_open",
+        "$focus_override_up": "back_to_game",
+        "$hover_text": "Open Mod Menu §c(Press 2x)",
+        "$ignore_hover_panel": false,
+        "$toggle_button_mappings_control": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "double_pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "double_pressed",
+            "to_button_id": "button.menu_ok"
+        } ],
+        "$toggle_group_forced_index": 1,
+        "$unchecked_default_image": "AMBRO/tui/hbui/button/green/button_default",
+        "$unchecked_hover_image": "AMBRO/tui/hbui/button/green/button_hover",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_mod_menu",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "section_spv@bb.spv":
+    {
+        "bindings": [
+        {
+            "$control|default": "",
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "title_text@bb.p":
+    {
+        "controls": [
+        {
+            "text@bb.label":
+            {
+                "$color|default": [ 1, 1, 1 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "color": "$color",
+                "font_type": "MinecraftTen",
+                "offset": [ 3.5, 0 ],
+                "shadow": false,
+                "text": "$title_text"
+            }
+        } ],
+        "size": [ "100%", 6 ]
+    }
+}

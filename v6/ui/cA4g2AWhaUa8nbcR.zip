@@ -1,0 +1,886 @@
+{
+    "namespace": "bb_pause",
+    "main_panel@bb.p":
+    {
+        "$blank_menu_open_button": false,
+        "$blank_menu_close_button": true,
+        "controls": [
+        {
+            "@bb_pause.root_panel":
+            {}
+        },
+        {
+            "@bb_mod_menu.mod_menu_open_buttons":
+            {}
+        } ]
+    },
+    "root_panel@bb.pb":
+    {
+        "controls": [
+        {
+            "@bb_pause.main_buttons":
+            {}
+        },
+        {
+            "@bb_pause.bottom_buttons":
+            {}
+        },
+        {
+            "@bb_pause.player_list":
+            {}
+        },
+        {
+            "@bb.label":
+            {
+                "shadow": true,
+                "text": "Game Menu",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, "12%" ]
+            }
+        } ],
+        "$not_name2": "bb_mod_menu"
+    },
+    "player_list@bb.img":
+    {
+        "texture": "AMBRO/tui/common/black",
+        "alpha": 0.55,
+        "size": [ "24%", "100%" ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "controls": [
+        {
+            "@bb_pause.info_panel_content_list":
+            {}
+        } ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_button_list",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "info_panel_content_list@bb.sp":
+    {
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [ "100%", "100%" ],
+        "controls": [
+        {
+            "@bb_pause.player_list_scrolling_panel":
+            {}
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 8 ]
+            }
+        } ]
+    },
+    "player_list_scrolling_panel@common.scrolling_panel":
+    {
+        "size": [ "100%", "100%" ],
+        "$scroll_size": [ 3, "100% - 6px" ],
+        "$scrolling_pane_size": [ "100%", "100%" ],
+        "$scroll_track_size": [ 5, "100%" ],
+        "$scroll_bar_left_padding_size": [ 1, 0 ],
+        "$show_background": false,
+        "$scrolling_content": "bb_pause.player_lists"
+    },
+    "player_lists@bb.pyc":
+    {
+        "controls": [
+        {
+            "player_lists@bb.sp":
+            {
+                "size": [ "100% - 4px", "100%c" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "focus_container": true,
+                "use_last_focus": true,
+                "focus_navigation_mode_right": "contained",
+                "controls": [
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 3 ]
+                    }
+                },
+                {
+                    "@bb_pause.players_grid":
+                    {}
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 2 ]
+                    }
+                },
+                {
+                    "invite_players_button@bb_hbui_buttons.pressed":
+                    {
+                        "size": [ "100%", 24 ],
+                        "$pressed_texture_size": [ "100%", "100%" ],
+                        "$pressed_button_name": "button.menu_invite_players",
+                        "$pressed_text": "pauseScreen.invite",
+                        "focus_change_down": "FOCUS_OVERRIDE_STOP",
+                        "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                        "bindings": [
+                        {
+                            "binding_name": "#invite_button_visible",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        },
+                        {
+                            "binding_name": "#invite_button_enabled",
+                            "binding_name_override": "#enabled"
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 3 ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "players_grid":
+    {
+        "type": "grid",
+        "size": [ "100%", "default" ],
+        "grid_item_template": "bb_pause.player_grid_item",
+        "grid_dimension_binding": "#players_grid_dimension",
+        "collection_name": "players_collection",
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "bindings": [
+        {
+            "binding_name": "#players_grid_dimension",
+            "binding_condition": "always"
+        } ]
+    },
+    "player_grid_item@bb.p":
+    {
+        "size": [ "100%", 25 ],
+        "controls": [
+        {
+            "player_button_panel@bb.sph":
+            {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 24 ],
+                "controls": [
+                {
+                    "player_button_banner":
+                    {
+                        "type": "panel",
+                        "size": [ "fill", "100%" ],
+                        "controls": [
+                        {
+                            "@bb_pause.player_root":
+                            {}
+                        },
+                        {
+                            "@bb_pause.player_players":
+                            {}
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ -1, 0 ]
+                    }
+                },
+                {
+                    "player_permission_button@bb_hbui_buttons.pressed":
+                    {
+                        "$default_button": "AMBRO/tui/hbui/button/dark/d/button_default",
+                        "$hover_button": "AMBRO/tui/hbui/button/dark/d/button_hover",
+                        "$pressed_button": "AMBRO/tui/hbui/button/dark/d/button_pressed",
+                        "size": [ 24, "100%" ],
+                        "$pressed_content": "pause.player_permission_button_content",
+                        "$pressed_texture_size": [ "100%", "100%" ],
+                        "$pressed_text": "",
+                        "button_mappings": [
+                        {
+                            "from_button_id": "button.menu_select",
+                            "to_button_id": "button.menu_permission",
+                            "mapping_type": "pressed"
+                        },
+                        {
+                            "from_button_id": "button.menu_ok",
+                            "to_button_id": "button.menu_permission",
+                            "mapping_type": "focused"
+                        } ],
+                        "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "players_collection"
+                        },
+                        {
+                            "binding_name": "#permissions_button_visible",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "player_players@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", "100%" ],
+        "$pressed_texture_size": [ "100%", "100%" ],
+        "$default_button": "AMBRO/tui/hbui/button/dark/d/button_default",
+        "$hover_button": "AMBRO/tui/hbui/button/dark/d/button_hover",
+        "$pressed_button": "AMBRO/tui/hbui/button/dark/d/button_pressed",
+        "$pressed_content": "bb_pause.player_button_content",
+        "$pressed_text": "",
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.player_profile_card",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.player_profile_card",
+            "mapping_type": "focused"
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#button_enabled",
+            "binding_type": "collection",
+            "binding_collection_name": "players_collection",
+            "binding_name_override": "#visible"
+        },
+        {
+            "binding_type": "collection_details",
+            "binding_collection_name": "players_collection"
+        } ]
+    },
+    "player_root@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", "100%" ],
+        "$pressed_texture_size": [ "100%", "100%" ],
+        "$default_button": "AMBRO/tui/hbui/button/dark/d/button_default",
+        "$hover_button": "AMBRO/tui/hbui/button/dark/d/button_hover",
+        "$pressed_button": "AMBRO/tui/hbui/button/dark/d/button_pressed",
+        "$pressed_content": "bb_pause.player_root_content",
+        "$pressed_text": ""
+    },
+    "player_root_content@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_pause.player_button_content":
+            {}
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#button_disabled",
+            "binding_type": "collection",
+            "binding_collection_name": "players_collection",
+            "binding_name_override": "#visible"
+        } ]
+    },
+    "player_button_content@bb.sph":
+    {
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "size": [ "100%", "100%" ],
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 4, 0 ]
+            }
+        },
+        {
+            "@bb.pxc":
+            {
+                "controls": [
+                {
+                    "player_gamer_pic@bb.img":
+                    {
+                        "offset": [ 0, -1 ],
+                        "texture": "#texture",
+                        "size": [ 14, 14 ],
+                        "layer": 1,
+                        "texture_file_system": "#texture_source",
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "bindings": [
+                        {
+                            "binding_name": "#texture",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                        },
+                        {
+                            "binding_name": "#texture_source",
+                            "binding_name_override": "#texture_file_system",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                        },
+                        {
+                            "binding_name": "#gamerpic_visible",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection",
+                            "binding_name_override": "#visible"
+                        } ],
+                        "controls": [
+                        {
+                            "player_panel_black_border@pause.pause_screen_border":
+                            {
+                                "size": [ "100% + 2px", "100% + 2px" ],
+                                "color": [ 0, 0, 0 ],
+                                "anchor_from": "center",
+                                "anchor_to": "center"
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 4, 0 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "size": [ "fill", "100%" ],
+                "controls": [
+                {
+                    "player_gamertag@bb.l":
+                    {
+                        "layer": 2,
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "text": "#gamertag",
+                        "color": "$main_header_text_color",
+                        "size": [ "100%", 10 ],
+                        "offset": [ 0, -0.25 ],
+                        "shadow": false,
+                        "bindings": [
+                        {
+                            "binding_name": "#gamertag",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "bottom_buttons@bb.sph":
+    {
+        "size": [ "100%", 24 ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": [ 3, -3 ],
+        "controls": [
+        {
+            "feedback_button@bb_hbui_buttons.pressed2":
+            {
+                "$pressed_button_name": "button.menu_open_uri",
+                "$button_text": "F",
+                "$hover_text": "Open Feedback Website §c(Press 2x)",
+                "size": [ 24, 24 ],
+                "property_bag":
+                {
+                    "#hyperlink": "https://aka.ms/minecraftfb"
+                },
+                "button_mappings": [
+                {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "double_pressed"
+                },
+                {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "$pressed_button_name",
+                    "mapping_type": "focused"
+                } ]
+            }
+        },
+        {
+            "achievements_button@bb_hbui_buttons.pressed2":
+            {
+                "$pressed_button_name": "button.menu_achievements",
+                "$button_text": "A",
+                "$hover_text": "Open Achievements",
+                "size": [ 24, 24 ]
+            }
+        },
+        {
+            "marketplace_button@bb_hbui_buttons.pressed2":
+            {
+                "$pressed_button_name": "button.menu_store",
+                "$button_text": "M",
+                "$hover_text": "Open Marketplace",
+                "size": [ 24, 24 ]
+            }
+        } ]
+    },
+    "world_info@bb.sph":
+    {
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [ 3, 3 ],
+        "controls": [
+        {
+            "@bb_pause.featured_servers_imgs":
+            {}
+        },
+        {
+            "default_bg@bb.p":
+            {
+                "size": [ 24, 24 ],
+                "controls": [
+                {
+                    "@bb.img":
+                    {
+                        "texture": "AMBRO/tui/common/white",
+                        "size": [ "100% - 2px", "100% - 2px" ],
+                        "color": [ 0.1176470588235294, 0.1176470588235294, 0.1215686274509804 ]
+                    }
+                },
+                {
+                    "@bb.img":
+                    {
+                        "layer": 1,
+                        "texture": "textures/blocks/grass_side_carried",
+                        "size": [ "100% - 4px", "100% - 4px" ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#worldname"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "((#worldname - 'Hive Games' - 'CubeCraft Games' - 'Galaxite' - 'Lifeboat Network' - 'Mineville City' - 'Pixel Paradise') = #worldname)",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 3, 0 ]
+            }
+        },
+        {
+            "world_labels@bb.pyc":
+            {
+                "controls": [
+                {
+                    "@bb.sp":
+                    {
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "controls": [
+                        {
+                            "@bb.yp":
+                            {
+                                "$yps": [ 0, 2 ]
+                            }
+                        },
+                        {
+                            "@bb.l":
+                            {
+                                "text": "§lFeatured Server",
+                                "bindings": [
+                                {
+                                    "binding_name": "#worldname"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#worldname - 'Hive Games' - 'CubeCraft Games' - 'Galaxite' - 'Lifeboat Network' - 'Mineville City' - 'Pixel Paradise') = #worldname))",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "@bb.yp":
+                            {
+                                "$yps": [ 0, 5 ],
+                                "bindings": [
+                                {
+                                    "binding_name": "#worldname"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "((#worldname - 'Hive Games' - 'CubeCraft Games' - 'Galaxite' - 'Lifeboat Network' - 'Mineville City' - 'Pixel Paradise') = #worldname)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "@bb.l":
+                            {
+                                "text": "#worldname",
+                                "bindings": [
+                                {
+                                    "binding_name": "#worldname"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "featured_servers_imgs@bb.p":
+    {
+        "size": [ 24, 24 ],
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "layer": -1,
+                "texture": "AMBRO/tui/common/white",
+                "size": [ "100% - 2px", "100% - 2px" ],
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1215686274509804 ],
+                "bindings": [
+                {
+                    "binding_name": "#worldname"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "((#worldname - 'CubeCraft Games') = #worldname)",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        },
+        {
+            "pack_icon@bb.img":
+            {
+                "texture": "pack_icon",
+                "size": [ "100% - 4px", "100% - 4px" ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#worldname"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(not ((#worldname - 'Hive Games' - 'CubeCraft Games' - 'Galaxite' - 'Lifeboat Network' - 'Mineville City' - 'Pixel Paradise') = #worldname))",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "main_buttons@bb.sp":
+    {
+        "size": [ "40%", "100%c" ],
+        "offset": [ 0, "-2%" ],
+        "controls": [
+        {
+            "@bb_pause.button_play":
+            {}
+        },
+        {
+            "@bb_pause.button_options":
+            {}
+        },
+        {
+            "@bb.sph":
+            {
+                "size": [ "100%", 24 ],
+                "controls": [
+                {
+                    "@bb_pause.button_profile":
+                    {
+                        "size": [ "50%", 24 ]
+                    }
+                },
+                {
+                    "@bb_pause.button_list":
+                    {
+                        "size": [ "50%", 24 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb_pause.button_quit":
+            {}
+        } ]
+    },
+    "button_play@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", 24 ],
+        "$pressed_text": "Back to Game",
+        "$pressed_button_name": "button.menu_continue",
+        "$button_focus_precedence": 10,
+        "$focus_id": "back_to_game",
+        "$focus_override_up": "mod_open",
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.menu_continue",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.menu_continue",
+            "mapping_type": "focused"
+        },
+        {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_continue",
+            "mapping_type": "global"
+        } ]
+    },
+    "button_options@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", 24 ],
+        "$pressed_text": "Options",
+        "$pressed_button_name": "button.menu_settings"
+    },
+    "button_profile@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", 24 ],
+        "$pressed_text": "Profile",
+        "$pressed_button_name": "button.to_profile_or_skins_screen"
+    },
+    "button_list@bb_hbui_buttons.tab":
+    {
+        "size": [ "100%", 24 ],
+        "$tab_text": "List",
+        "$tab_view_binding_name": "bb_button_list"
+    },
+    "button_quit@bb_hbui_buttons.pressed":
+    {
+        "size": [ "100%", 24 ],
+        "$pressed_text": "Save and Quit to Title",
+        "$pressed_button_name": "button.menu_quit"
+    },
+    "tab@bb_subpack.ambro":
+    {
+        "type": "panel",
+        "size": [ "100%", 32 ],
+        "$blank|default": false,
+        "$tab_panel": "bb_pause.tab_panel",
+        "$unchecked_default_image": "AMBRO/tui/hbui/button_default",
+        "$unchecked_hover_image": "AMBRO/tui/hbui/button_hover",
+        "$checked_default_image": "AMBRO/tui/hbui/button_pressed",
+        "$checked_hover_image": "AMBRO/tui/hbui/button_pressed_hover",
+        "$tab_texture_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$tab_text_unchecked|default": "$tab_text",
+        "$tab_text_unchecked_hover|default": "$tab_text",
+        "$tab_text_checked|default": "$tab_text",
+        "$tab_text_checked_hover|default": "$tab_text",
+        "$tab_text_offset_pressed|default": [ 0, 1 ],
+        "$img_checked_hover_state|default": [ 0, 0 ],
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$default_selector_toggle_index|default": 0,
+        "$tab_view_binding_name|default": "hbui_tab",
+        "$toggle_name|default": "hbui_tab",
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.menu_select",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.menu_ok",
+            "mapping_type": "focused"
+        },
+        {
+            "from_button_id": "button.controller_back",
+            "to_button_id": "button.controller_back",
+            "mapping_type": "focused",
+            "ignored": "(not $allow_controller_back_button_mapping)"
+        },
+        {
+            "ignored": "(not $enable_directional_toggling)",
+            "from_button_id": "button.menu_left",
+            "to_button_id": "$toggle_off_button",
+            "mapping_type": "pressed",
+            "input_mode_condition": "gamepad_and_not_gaze"
+        },
+        {
+            "ignored": "(not $enable_directional_toggling)",
+            "from_button_id": "button.menu_right",
+            "to_button_id": "$toggle_on_button",
+            "mapping_type": "pressed",
+            "input_mode_condition": "gamepad_and_not_gaze"
+        } ],
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "default_focus_precedence": "$default_focus_precedence",
+                "$default_focus_precedence|default": 1,
+                "reset_on_focus_lost": false,
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$tab_panel":
+                    {
+                        "$exit_texture": "AMBRO/tui/common/empty",
+                        "layer": 1,
+                        "$tab_text_control": "$tab_text_unchecked",
+                        "$tab_text_color": "$unchecked_text_color",
+                        "$tab_texture": "$unchecked_default_image",
+                        "$tab_state": "unchecked"
+                    }
+                },
+                {
+                    "unchecked_hover@$tab_panel":
+                    {
+                        "$exit_texture": "AMBRO/tui/buttons/close/hover_no_icon",
+                        "layer": 1,
+                        "$tab_text_control": "$tab_text_unchecked_hover",
+                        "$tab_text_color": "$unchecked_hover_text_color",
+                        "$tab_texture": "$unchecked_hover_image",
+                        "$tab_state": "unchecked_hover",
+                        "$is_hover_state": true,
+                        "$visible_hover_panel": true
+                    }
+                },
+                {
+                    "checked@$tab_panel":
+                    {
+                        "layer": 2,
+                        "$tab_text_control": "$tab_text_checked",
+                        "$tab_text_color": "$checked_text_color",
+                        "$tab_texture": "$checked_default_image",
+                        "$tab_state": "checked",
+                        "$is_checked_state": true,
+                        "$tab_text_offset": "$tab_text_offset_pressed",
+                        "$img_offset": "$img_checked_hover_state"
+                    }
+                },
+                {
+                    "checked_hover@$tab_panel":
+                    {
+                        "layer": 2,
+                        "$tab_text_control": "$tab_text_checked_hover",
+                        "$tab_text_color": "$checked_hover_text_color",
+                        "$tab_texture": "$checked_hover_image",
+                        "$tab_state": "checked_hover",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_text_offset": "$tab_text_offset_pressed",
+                        "$img_offset": "$img_checked_hover_state"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "tab_panel@bb.p":
+    {
+        "$use_exit_texture|default": false,
+        "$use_tab_content|default": false,
+        "$ignore_button_texture|default": false,
+        "$ignore_button_label|default": false,
+        "$tab_content|default": "common_tabs.empty_tab_content",
+        "$ignore_hover_panel|default": true,
+        "$visible_hover_panel|default": false,
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "visible": "(not $blank)",
+                "controls": [
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "allow_clipping": false,
+                        "layer": 1000000,
+                        "size": [ "100%", "100%" ],
+                        "visible": "$is_hover_state",
+                        "$hover_text|default": "",
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ]
+                    }
+                },
+                {
+                    "button_texture@bb.img":
+                    {
+                        "layer": 1,
+                        "ignored": "$ignore_button_texture",
+                        "size": "$tab_texture_size",
+                        "texture": "$tab_texture"
+                    }
+                },
+                {
+                    "use_img@bb.img":
+                    {
+                        "layer": 4,
+                        "visible": "$use_img",
+                        "$use_img|default": false,
+                        "texture": "$texture",
+                        "$texture|default": "",
+                        "size": "$img_size",
+                        "$img_size|default": [ "100%", "100%" ],
+                        "offset": "$img_offset",
+                        "$img_offset|default": [ 0, 0 ]
+                    }
+                },
+                {
+                    "exit_texture@bb.img":
+                    {
+                        "layer": 1,
+                        "visible": "$use_exit_texture",
+                        "texture": "$exit_texture",
+                        "$exit_texture|default": "AMBRO/tui/common/empty"
+                    }
+                },
+                {
+                    "tab_content@$tab_content":
+                    {
+                        "ignored": "(not $use_tab_content)",
+                        "layer": 2
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "ignored": "$ignore_button_label",
+                        "offset": "$tab_text_panel_offset",
+                        "$tab_text_panel_offset|default": [ 0, 0 ],
+                        "controls": [
+                        {
+                            "button_label@bb.label":
+                            {
+                                "layer": 2,
+                                "text": "$tab_text_control",
+                                "shadow": "$tab_text_shadow",
+                                "$tab_text_shadow|default": false,
+                                "color": "$tab_text_color",
+                                "offset": "$tab_text_offset",
+                                "$tab_text_offset|default": [ 0, 0 ],
+                                "bindings": "$tab_text_bindings",
+                                "$tab_text_bindings|default": [ ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    }
+}

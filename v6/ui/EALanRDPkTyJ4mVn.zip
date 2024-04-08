@@ -1,0 +1,204 @@
+{
+    "namespace": "bb_add_server",
+    "bg@bb.img":
+    {
+        "size": [ "120%", "120%" ],
+        "texture": "AMBRO/tui/common/black",
+        "alpha": 0.55,
+        "controls": [
+        {
+            "line_padding":
+            {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": -2,
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "size": [ "100%", "50%" ],
+                "color1": [ 1, 1, 1, 0 ],
+                "color2": [ 1, 1, 1, 0.125 ]
+            }
+        } ]
+    },
+    "add_server_main_panel@bb.p":
+    {
+        "$dialog_size": [ "100%", "100%" ],
+        "controls": [
+        {
+            "@bb_common.screen_header":
+            {
+                "$screen_header_text": "Add external server"
+            }
+        },
+        {
+            "root_panel@bb.p":
+            {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [ "56%+ 0.5px", "100% - 28px" ],
+                "controls": [
+                {
+                    "main_panel":
+                    {
+                        "type": "input_panel",
+                        "size": "$dialog_size",
+                        "controls": [
+                        {
+                            "content_panel@bb.sp":
+                            {
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "size": [ "100% - 2px", "100%" ],
+                                "offset": [ 0, 3 ],
+                                "controls": [
+                                {
+                                    "name_edit@add_external_server.text_edit_group":
+                                    {
+                                        "$header": "addExternalServerScreen.nameTextBoxLabel",
+                                        "$placeholder_label": "addExternalServerScreen.namePlaceholder",
+                                        "$text_box_name": "#name_text_box",
+                                        "$max_length": 16,
+                                        "$content_binding_name": "#name_text_box_content",
+                                        "$text_box_tts_header": "addExternalServerScreen.nameTextBoxLabel",
+                                        "$focus_id": "0_name",
+                                        "$focus_override_right": "1_ip_edit"
+                                    }
+                                },
+                                {
+                                    "ip_edit@add_external_server.text_edit_group":
+                                    {
+                                        "$header": "addExternalServerScreen.ipTextBoxLabel",
+                                        "$placeholder_label": "addExternalServerScreen.ipPlaceholder",
+                                        "$text_box_name": "#ip_text_box",
+                                        "$max_length": 256,
+                                        "$content_binding_name": "#ip_text_box_content",
+                                        "$text_box_tts_header": "addExternalServerScreen.ipTextBoxLabel",
+                                        "$focus_id": "1_ip_edit",
+                                        "$focus_override_right": "2_port"
+                                    }
+                                },
+                                {
+                                    "port_edit@add_external_server.text_edit_group":
+                                    {
+                                        "$header": "addExternalServerScreen.portTextBoxLabel",
+                                        "$placeholder_label": "",
+                                        "$max_length": 6,
+                                        "$text_type": "NumberChars",
+                                        "$text_box_name": "#port_text_box",
+                                        "$content_binding_name": "#port_text_box_content",
+                                        "$text_box_tts_header": "addExternalServerScreen.portTextBoxLabel",
+                                        "$focus_id": "2_port",
+                                        "$focus_override_right": "0_name"
+                                    }
+                                } ]
+                            }
+                        },
+                        {
+                            "button_panel@bb.p":
+                            {
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "size": [ "100% - 3.25px", 32 ],
+                                "controls": [
+                                {
+                                    "play@bb_add_server.button_template":
+                                    {
+                                        "anchor_from": "bottom_left",
+                                        "anchor_to": "bottom_left",
+                                        "$pressed_button_name": "button.play_button",
+                                        "$pressed_text": "addExternalServerScreen.playButtonLabel",
+                                        "ignored": "$edit_mode",
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#play_button_enabled",
+                                            "binding_name_override": "#visible"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "play_disabled@bb_add_server.button_template":
+                                    {
+                                        "sound_volume": 0,
+                                        "$default_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$hover_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$pressed_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$default_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "$hover_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "$pressed_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "anchor_from": "bottom_left",
+                                        "anchor_to": "bottom_left",
+                                        "$pressed_button_name": "",
+                                        "$pressed_text": "addExternalServerScreen.playButtonLabel",
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#play_button_disabled",
+                                            "binding_name_override": "#visible"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "remove@bb_add_server.button_template":
+                                    {
+                                        "anchor_from": "bottom_left",
+                                        "anchor_to": "bottom_left",
+                                        "$pressed_button_name": "button.remove_button",
+                                        "$pressed_text": "addExternalServerScreen.removeButtonLabel",
+                                        "ignored": "(not $edit_mode)",
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#save_button_enabled",
+                                            "binding_name_override": "#visible"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "save@bb_add_server.button_template":
+                                    {
+                                        "layer": 2,
+                                        "anchor_from": "bottom_right",
+                                        "anchor_to": "bottom_right",
+                                        "$pressed_button_name": "button.save_button",
+                                        "$pressed_text": "addExternalServerScreen.saveButtonLabel",
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#save_button_enabled",
+                                            "binding_name_override": "#visible"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "save_disabled@bb_add_server.button_template":
+                                    {
+                                        "layer": 2,
+                                        "sound_volume": 0,
+                                        "$default_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$hover_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$pressed_button|default": "AMBRO/tui/hbui/button_locked",
+                                        "$default_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "$hover_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "$pressed_text_color|default": [ 0.3490196078431373, 0.3490196078431373, 0.3490196078431373 ],
+                                        "anchor_from": "bottom_right",
+                                        "anchor_to": "bottom_right",
+                                        "$pressed_button_name": "",
+                                        "$pressed_text": "addExternalServerScreen.saveButtonLabel",
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#save_button_disabled",
+                                            "binding_name_override": "#visible"
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "button_template@bb_hbui_buttons.pressed":
+    {
+        "$pressed_texture_size|default": [ "100% + 1px", "100% - 2px" ],
+        "size": [ "50%", 32 ],
+        "offset": [ 0, -2 ]
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "namespace": "bb_effect_screen",
+    "main_panel@bb.p":
+    {
+        "controls": [
+        {
+            "grid@bb_effect_screen.effects_grid":
+            {}
+        } ]
+    },
+    "effects_grid":
+    {
+        "type": "grid",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 0, -10 ],
+        "size": [ 300, "default" ],
+        "grid_item_template": "bb_effect_screen.effects_content",
+        "grid_dimension_binding": "#mob_effect_grid_size",
+        "collection_name": "mob_effects_collection",
+        "bindings": [
+        {
+            "binding_name": "#mob_effect_grid_size"
+        } ]
+    },
+    "effects_content@bb.p":
+    {
+        "size": [ 240, 20 ],
+        "controls": [
+        {
+            "name@bb_effect_screen.effect_name":
+            {}
+        },
+        {
+            "timer@bb_effect_screen.effect_timer":
+            {}
+        },
+        {
+            "icon@bb_effect_screen.effect_icon":
+            {}
+        } ],
+        "bindings": [
+        {
+            "source_control_name": "bb_button_effects",
+            "binding_type": "view",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "effect_name@bb_effect_screen.label":
+    {
+        "text": "#mob_effect_name",
+        "offset": [ 24, -6 ],
+        "$binding_name": "#mob_effect_name"
+    },
+    "effect_timer@bb_effect_screen.label":
+    {
+        "text": "#mob_effect_timer",
+        "offset": [ 24, 4 ],
+        "color": [ 0.8156862745098039, 0.8156862745098039, 0.8156862745098039 ],
+        "$binding_name": "#mob_effect_timer"
+    },
+    "effect_icon@bb_effect_screen.img":
+    {
+        "texture": "#texture",
+        "size": [ "90%", "90%" ],
+        "offset": [ -108, -1 ],
+        "$binding_name": "#texture"
+    },
+    "label@bb.label":
+    {
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "text_alignment": "left",
+        "bindings": [
+        {
+            "binding_type": "collection",
+            "binding_name": "$binding_name",
+            "$binding_name|default": "",
+            "binding_collection_name": "mob_effects_collection",
+            "binding_condition": "always"
+        } ]
+    },
+    "img@bb.img":
+    {
+        "bindings": [
+        {
+            "binding_type": "collection",
+            "binding_name": "$binding_name",
+            "$binding_name|default": "",
+            "binding_collection_name": "mob_effects_collection",
+            "binding_condition": "always"
+        } ]
+    }
+}

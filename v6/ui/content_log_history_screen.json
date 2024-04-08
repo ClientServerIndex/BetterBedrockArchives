@@ -1,0 +1,6 @@
+{
+    "content_log_history_screen":
+    {
+        "$screen_content": "bb_content_log.content_log_history_main_panel"
+    }
+}

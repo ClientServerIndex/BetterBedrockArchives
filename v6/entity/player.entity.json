@@ -1,0 +1,266 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity":
+    {
+        "description":
+        {
+            "identifier": "minecraft:player",
+            "materials":
+            {
+                "default": "entity_alphatest_one_sided",
+                "cape": "entity_alphatest",
+                "animated": "player_animated",
+                "normal": "entity_alphatest",
+                "blend": "slime_outer",
+                "ui_blend": "entity_alphablend",
+                "alpha": "multitexture_alpha",
+                "alpha_uv": "multitexture_alpha_uv"
+            },
+            "textures":
+            {
+                "empty2": "AMBRO/entity/numbers/empty2",
+                "num1_0": "AMBRO/entity/numbers/num1_0",
+                "num1_1": "AMBRO/entity/numbers/num1_1",
+                "num1_2": "AMBRO/entity/numbers/num1_2",
+                "num1_3": "AMBRO/entity/numbers/num1_3",
+                "num1_4": "AMBRO/entity/numbers/num1_4",
+                "num1_5": "AMBRO/entity/numbers/num1_5",
+                "num1_6": "AMBRO/entity/numbers/num1_6",
+                "num1_7": "AMBRO/entity/numbers/num1_7",
+                "num1_8": "AMBRO/entity/numbers/num1_8",
+                "num1_9": "AMBRO/entity/numbers/num1_9",
+                "num2_0": "AMBRO/entity/numbers/num2_0",
+                "num2_1": "AMBRO/entity/numbers/num2_1",
+                "num2_2": "AMBRO/entity/numbers/num2_2",
+                "num2_3": "AMBRO/entity/numbers/num2_3",
+                "num2_4": "AMBRO/entity/numbers/num2_4",
+                "num2_5": "AMBRO/entity/numbers/num2_5",
+                "num2_6": "AMBRO/entity/numbers/num2_6",
+                "num2_7": "AMBRO/entity/numbers/num2_7",
+                "num2_8": "AMBRO/entity/numbers/num2_8",
+                "num2_9": "AMBRO/entity/numbers/num2_9",
+                "num3_0": "AMBRO/entity/numbers/num3_0",
+                "num3_1": "AMBRO/entity/numbers/num3_1",
+                "num3_2": "AMBRO/entity/numbers/num3_2",
+                "num3_3": "AMBRO/entity/numbers/num3_3",
+                "num3_4": "AMBRO/entity/numbers/num3_4",
+                "num3_5": "AMBRO/entity/numbers/num3_5",
+                "num3_6": "AMBRO/entity/numbers/num3_6",
+                "num3_7": "AMBRO/entity/numbers/num3_7",
+                "num3_8": "AMBRO/entity/numbers/num3_8",
+                "num3_9": "AMBRO/entity/numbers/num3_9",
+                "dh2num_0": "AMBRO/entity/numbers/d2/num1_0",
+                "dh2num_1": "AMBRO/entity/numbers/d2/num1_1",
+                "dh2num_2": "AMBRO/entity/numbers/d2/num1_2",
+                "dh2num_3": "AMBRO/entity/numbers/d2/num1_3",
+                "dh2num_4": "AMBRO/entity/numbers/d2/num1_4",
+                "dh2num_5": "AMBRO/entity/numbers/d2/num1_5",
+                "dh2num_6": "AMBRO/entity/numbers/d2/num1_6",
+                "dh2num_7": "AMBRO/entity/numbers/d2/num1_7",
+                "dh2num_8": "AMBRO/entity/numbers/d2/num1_8",
+                "dh2num_9": "AMBRO/entity/numbers/d2/num1_9",
+                "dhnum_0": "AMBRO/entity/numbers/d/num_0",
+                "dhnum_1": "AMBRO/entity/numbers/d/num_1",
+                "dhnum_2": "AMBRO/entity/numbers/d/num_2",
+                "dhnum_3": "AMBRO/entity/numbers/d/num_3",
+                "dhnum_4": "AMBRO/entity/numbers/d/num_4",
+                "dhnum_5": "AMBRO/entity/numbers/d/num_5",
+                "dhnum_6": "AMBRO/entity/numbers/d/num_6",
+                "dhnum_7": "AMBRO/entity/numbers/d/num_7",
+                "dhnum_8": "AMBRO/entity/numbers/d/num_8",
+                "dhnum_9": "AMBRO/entity/numbers/d/num_9",
+                "dhnum_10": "AMBRO/entity/numbers/d/num_10",
+                "dhnum_11": "AMBRO/entity/numbers/d/num_11",
+                "dhnum_12": "AMBRO/entity/numbers/d/num_12",
+                "dhnum_13": "AMBRO/entity/numbers/d/num_13",
+                "dhnum_14": "AMBRO/entity/numbers/d/num_14",
+                "dhnum_15": "AMBRO/entity/numbers/d/num_15",
+                "dhnum_16": "AMBRO/entity/numbers/d/num_16",
+                "dhnum_17": "AMBRO/entity/numbers/d/num_17",
+                "dhnum_18": "AMBRO/entity/numbers/d/num_18",
+                "dhnum_19": "AMBRO/entity/numbers/d/num_19",
+                "dhnum_20": "AMBRO/entity/numbers/d/num_20",
+                "dhnum_21": "AMBRO/entity/numbers/d/num_21",
+                "dhnum_22": "AMBRO/entity/numbers/d/num_22",
+                "dhnum_23": "AMBRO/entity/numbers/d/num_23",
+                "dhnum_24": "AMBRO/entity/numbers/d/num_24",
+                "dhnum_25": "AMBRO/entity/numbers/d/num_25",
+                "dhnum_26": "AMBRO/entity/numbers/d/num_26",
+                "dhnum_27": "AMBRO/entity/numbers/d/num_27",
+                "dhnum_28": "AMBRO/entity/numbers/d/num_28",
+                "dhnum_29": "AMBRO/entity/numbers/d/num_29",
+                "dhnum_30": "AMBRO/entity/numbers/d/num_30",
+                "dhnum_31": "AMBRO/entity/numbers/d/num_31",
+                "dhnum_32": "AMBRO/entity/numbers/d/num_32",
+                "dhnum_33": "AMBRO/entity/numbers/d/num_33",
+                "dhnum_34": "AMBRO/entity/numbers/d/num_34",
+                "dhnum_35": "AMBRO/entity/numbers/d/num_35",
+                "default": "textures/entity/steve",
+                "cape": "textures/entity/cape_invisible",
+                "helmet_leather": "AMBRO/entity/armor_hud/leather_helmet",
+                "helmet_chain": "textures/items/chainmail_helmet",
+                "helmet_iron": "textures/items/iron_helmet",
+                "helmet_diamond": "textures/items/diamond_helmet",
+                "helmet_gold": "textures/items/gold_helmet",
+                "helmet_turtle": "textures/items/turtle_helmet",
+                "helmet_netherite": "textures/items/netherite_helmet",
+                "helmet_empty": "textures/ui/empty_armor_slot_helmet",
+                "chestplate_leather": "AMBRO/entity/armor_hud/leather_chestplate",
+                "chestplate_chain": "textures/items/chainmail_chestplate",
+                "chestplate_iron": "textures/items/iron_chestplate",
+                "chestplate_diamond": "textures/items/diamond_chestplate",
+                "chestplate_gold": "textures/items/gold_chestplate",
+                "elytra": "textures/items/elytra",
+                "chestplate_netherite": "textures/items/netherite_chestplate",
+                "chestplate_empty": "textures/ui/empty_armor_slot_chestplate",
+                "leggings_leather": "AMBRO/entity/armor_hud/leather_leggings",
+                "leggings_chain": "textures/items/chainmail_leggings",
+                "leggings_iron": "textures/items/iron_leggings",
+                "leggings_diamond": "textures/items/diamond_leggings",
+                "leggings_gold": "textures/items/gold_leggings",
+                "leggings_netherite": "textures/items/netherite_leggings",
+                "leggings_empty": "textures/ui/empty_armor_slot_leggings",
+                "boots_netherite": "textures/items/netherite_boots",
+                "boots_gold": "textures/items/gold_boots",
+                "boots_diamond": "textures/items/diamond_boots",
+                "boots_chain": "textures/items/chainmail_boots",
+                "boots_iron": "textures/items/iron_boots",
+                "boots_leather": "AMBRO/entity/armor_hud/leather_boots",
+                "boots_empty": "textures/ui/empty_armor_slot_boots",
+                "midnight": "AMBRO/entity/day_event/midnight",
+                "sunrise": "AMBRO/entity/day_event/sunrise",
+                "day": "AMBRO/entity/day_event/day",
+                "noon": "AMBRO/entity/day_event/noon",
+                "sunset": "AMBRO/entity/day_event/sunset",
+                "night": "AMBRO/entity/day_event/night",
+                "direction_hud": "AMBRO/entity/direction_hud"
+            },
+            "geometry":
+            {
+                "default": "geometry.humanoid.custom",
+                "cape": "geometry.cape",
+                "custom": "geometry.custom",
+                "armor_hud_helmet": "geometry.armor_hud_helmet",
+                "armor_hud_chestplate": "geometry.armor_hud_chestplate",
+                "armor_hud_leggings": "geometry.armor_hud_leggings",
+                "armor_hud_boots": "geometry.armor_hud_boots",
+                "day": "geometry.day",
+                "day_time": "geometry.day_time",
+                "session_timer": "geometry.session_timer",
+                "speed_counter": "geometry.speed_counter",
+                "direction_hud_value": "geometry.direction_hud_value",
+                "direction_hud": "geometry.direction_hud"
+            },
+            "scripts":
+            {
+                "scale": "0.9375",
+                "animate": [ "root",
+                {
+                    "bb": "q.is_in_ui && q.is_local_player"
+                } ],
+                "initialize": [ "v.is_holding_right = 0.0;", "v.is_blinking = 0.0;", "v.last_blink_time = 0.0;", "v.hand_bob = 0.0;", "v.render = 0.0;", "v.hud_render = 0.0;", "v.helmet = 0.0;", "v.chestplate = 0.0;", "v.leggings = 0.0;", "v.boots = 0.0;" ],
+                "pre_animation": [ "v.helmet_layer_visible = 1.0;", "v.leg_layer_visible = 1.0;", "v.boot_layer_visible = 1.0;", "v.chest_layer_visible = 1.0;", "v.attack_body_rot_y = Math.sin(360*Math.sqrt(v.attack_time)) * 5.0;", "v.tcos0 = (math.cos(q.modified_distance_moved * 38.17) * q.modified_move_speed / v.gliding_speed_value) * 57.3;", "v.first_person_rotation_factor = math.sin((1 - v.attack_time) * 180.0);", "v.hand_bob = !q.is_alive && q.life_time > 0.01 ? 0.0 : v.hand_bob + ((q.is_on_ground && q.is_alive ? math.clamp(math.sqrt(math.pow(q.position_delta(0), 2.0) + math.pow(q.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - v.hand_bob) * 0.02;", "v.map_angle = math.clamp(1 - v.player_x_rotation / 45.1, 0.0, 1.0);", "v.item_use_normalized = q.main_hand_item_use_duration / q.main_hand_item_max_duration;", "v.hud_render = q.is_in_ui && !q.is_gliding && q.is_local_player;", "v.helmet = q.armor_material_slot(0) == 1 || q.armor_material_slot(0) == 3;", "v.chestplate = q.armor_material_slot(1) == 1 || q.armor_material_slot(1) == 3;", "v.leggings = q.armor_material_slot(2) == 1 || q.armor_material_slot(2) == 3;", "v.boots = q.armor_material_slot(3) == 1 || q.armor_material_slot(3) == 3;" ]
+            },
+            "animations":
+            {
+                "bb": "animation.bb.bb",
+                "cape": "animation.bb.cape",
+                "root": "controller.animation.player.root",
+                "base_controller": "controller.animation.player.base",
+                "hudplayer": "controller.animation.player.hudplayer",
+                "humanoid_base_pose": "animation.humanoid.base_pose",
+                "look_at_target": "controller.animation.humanoid.look_at_target",
+                "look_at_target_ui": "animation.player.look_at_target.ui",
+                "look_at_target_default": "animation.humanoid.look_at_target.default",
+                "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+                "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+                "look_at_target_inverted": "animation.player.look_at_target.inverted",
+                "move.arms": "animation.player.move.arms",
+                "move.legs": "animation.player.move.legs",
+                "swimming": "animation.player.swim",
+                "swimming.legs": "animation.player.swim.legs",
+                "riding.arms": "animation.player.riding.arms",
+                "riding.legs": "animation.player.riding.legs",
+                "holding": "animation.player.holding",
+                "brandish_spear": "animation.humanoid.brandish_spear",
+                "holding_spyglass": "animation.humanoid.holding_spyglass",
+                "charging": "animation.humanoid.charging",
+                "attack.positions": "animation.player.attack.positions",
+                "attack.rotations": "animation.player.attack.rotations",
+                "sneaking": "animation.player.sneaking",
+                "bob": "animation.player.bob",
+                "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+                "bow_and_arrow": "animation.humanoid.bow_and_arrow",
+                "use_item_progress": "animation.humanoid.use_item_progress",
+                "skeleton_attack": "animation.skeleton.attack",
+                "sleeping": "animation.player.sleeping",
+                "first_person_base_pose": "animation.player.first_person.base_pose",
+                "first_person_empty_hand": "animation.player.first_person.empty_hand",
+                "first_person_swap_item": "animation.player.first_person.swap_item",
+                "first_person_shield_block": "animation.player.first_person.shield_block",
+                "first_person_attack_controller": "controller.animation.player.first_person_attack",
+                "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
+                "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
+                "first_person_walk": "animation.player.first_person.walk",
+                "first_person_map_controller": "controller.animation.player.first_person_map",
+                "first_person_map_hold": "animation.player.first_person.map_hold",
+                "first_person_map_hold_attack": "animation.player.first_person.map_hold_attack",
+                "first_person_map_hold_off_hand": "animation.player.first_person.map_hold_off_hand",
+                "first_person_map_hold_main_hand": "animation.player.first_person.map_hold_main_hand",
+                "first_person_crossbow_equipped": "animation.player.first_person.crossbow_equipped",
+                "third_person_crossbow_equipped": "animation.player.crossbow_equipped",
+                "third_person_bow_equipped": "animation.player.bow_equipped",
+                "crossbow_hold": "animation.player.crossbow_hold",
+                "crossbow_controller": "controller.animation.player.crossbow",
+                "shield_block_main_hand": "animation.player.shield_block_main_hand",
+                "shield_block_off_hand": "animation.player.shield_block_off_hand",
+                "blink": "controller.animation.persona.blink",
+                "tooting_goat_horn": "animation.humanoid.tooting_goat_horn"
+            },
+            "render_controllers": [
+            {
+                "controller.render.player.bb.direction_hud_value": "!q.is_in_ui && v.is_paperdoll"
+            },
+            {
+                "controller.render.player.bb.direction_hud": "!q.is_in_ui && v.is_paperdoll"
+            },
+            {
+                "controller.render.player.bb.speed_counter": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.session_timer": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.day_time": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.day": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.armor_hud_helmet": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.armor_hud_chestplate": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.armor_hud_leggings": "v.hud_render"
+            },
+            {
+                "controller.render.player.bb.armor_hud_boots": "v.hud_render"
+            },
+            {
+                "controller.render.bb.cape": "q.armor_texture_slot(1) != 5 && (v.is_paperdoll || v.render == 1.0) && !q.is_emoting"
+            },
+            {
+                "controller.render.player.first_person": "v.is_first_person && q.is_local_player"
+            },
+            {
+                "controller.render.player.third_person": "!v.is_first_person && !v.map_face_icon"
+            },
+            {
+                "controller.render.player.map": "v.map_face_icon"
+            } ],
+            "enable_attachables": true
+        }
+    }
+}

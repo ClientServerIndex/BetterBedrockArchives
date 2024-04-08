@@ -1,0 +1,206 @@
+{
+    "format_version": "1.8.0",
+    "animations":
+    {
+        "animation.bb.bb":
+        {
+            "loop": true,
+            "bones":
+            {
+                "bb":
+                {
+                    "position": [ 0, "3000 + (q.is_swimming ? -21.3)", 0 ],
+                    "scale": [ 1, 0.94, 1 ],
+                    "rotation": [ 0, "(q.is_riding ? q.target_y_rotation : 0)", 0 ]
+                },
+                "bb2":
+                {
+                    "position": [ 0, "3000 + (q.is_swimming ? -21.3)", 0 ],
+                    "scale": [ 1, 0.95, 1 ],
+                    "rotation": [ 0, "(q.is_riding ? q.target_y_rotation : 0)", 0 ]
+                },
+                "bb3":
+                {
+                    "position": [ 0, "3000 + (q.is_swimming ? -21.3)", 0 ],
+                    "scale": [ 1, 1, 1 ],
+                    "rotation": [ 0, "(q.is_riding ? q.target_y_rotation : 0)", 0 ]
+                },
+                "armor_hud":
+                {
+                    "position": [ 0, "(q.is_swimming ? -20)", 0 ],
+                    "rotation": [ 0, "(q.is_riding ? q.target_y_rotation : 0)", 0 ]
+                }
+            }
+        },
+        "animation.bb.cape":
+        {
+            "loop": true,
+            "bones":
+            {
+                "root":
+                {
+                    "rotation": [ "v.render = 1.0;", 0, 0 ]
+                },
+                "cape":
+                {
+                    "rotation": [ "math.clamp(math.lerp(0, -110, q.cape_flap_amount) - (13 * q.modified_move_speed), -70, 0)", "q.modified_move_speed * math.pow(math.sin(q.body_y_rotation - q.head_y_rotation(0)), 3) * 55", 0 ],
+                    "position": [ 0, 0, "q.get_root_locator_offset('armor_offset.default_neck', 1)" ]
+                }
+            }
+        },
+        "animation.player.holding":
+        {
+            "loop": true,
+            "bones":
+            {
+                "leftarm":
+                {
+                    "rotation": [ "v.is_holding_left ? (-this * 0.5 - 18.0) : 0.0", 0, 0 ]
+                },
+                "rightarm":
+                {
+                    "rotation": [ "v.is_holding_right ? (-this * 0.5 - 18.0) : 0.0", 0, 0 ]
+                },
+                "rightItem":
+                {
+                    "rotation": [ 20, 0, 0 ]
+                }
+            }
+        },
+        "animation.player.sneaking":
+        {
+            "loop": true,
+            "bones":
+            {
+                "body":
+                {
+                    "position": [ 0, -1.5, 0 ],
+                    "rotation": [ 2.5, 0, 0 ]
+                },
+                "head":
+                {
+                    "position": [ 0, -1, 0 ]
+                },
+                "leftarm":
+                {
+                    "rotation": [ -5.7, 0, 0 ]
+                },
+                "leftleg":
+                {
+                    "rotation": [ -26, 0, 0 ]
+                },
+                "rightarm":
+                {
+                    "rotation": [ -5.7, 0, 0 ]
+                },
+                "rightleg":
+                {
+                    "rotation": [ -26, 0, 0 ]
+                },
+                "root":
+                {
+                    "position": [ 0, 1.25, 9 ],
+                    "rotation": [ "28.0 - this", 0, 0 ]
+                }
+            }
+        },
+        "animation.arrow.move":
+        {
+            "loop": true,
+            "bones":
+            {
+                "body":
+                {
+                    "rotation": [ "v.shake_power - q.target_x_rotation", "-q.target_y_rotation", 0 ],
+                    "position": [ 0, -2, 0 ],
+                    "scale": [ 0.7, 0.7, 0.9 ]
+                }
+            }
+        },
+        "animation.actor.billboard":
+        {
+            "loop": true,
+            "bones":
+            {
+                "body":
+                {
+                    "rotation": [ "q.camera_rotation(0)", "q.camera_rotation(1)", 0 ],
+                    "position": [ 0, -2, 0 ],
+                    "scale": 0.8
+                }
+            }
+        },
+        "animation.shield.wield_main_hand_first_person":
+        {
+            "loop": true,
+            "bones":
+            {
+                "shield":
+                {
+                    "position": [ "v.main_hand_first_person_pos_x", "v.main_hand_first_person_pos_y + 13", "v.main_hand_first_person_pos_z" ],
+                    "rotation": [ "v.main_hand_first_person_rot_x", "v.main_hand_first_person_rot_y", "v.main_hand_first_person_rot_z" ],
+                    "scale": [ -1, 1, 1 ]
+                }
+            }
+        },
+        "animation.shield.wield_off_hand_first_person":
+        {
+            "loop": true,
+            "bones":
+            {
+                "shield":
+                {
+                    "position": [ "v.off_hand_first_person_pos_x", "v.off_hand_first_person_pos_y", "v.is_using_bow ? v.off_hand_first_person_with_bow_pos_z : v.off_hand_first_person_pos_z" ],
+                    "rotation": [ "v.off_hand_first_person_rot_x", "v.off_hand_first_person_rot_y", "v.off_hand_first_person_rot_z" ],
+                    "scale": [ 0.5, 1, 1 ]
+                }
+            }
+        },
+        "animation.shield.wield_main_hand_first_person_blocking":
+        {
+            "loop": "hold_on_last_frame",
+            "bones":
+            {
+                "shield":
+                {
+                    "position":
+                    {
+                        "0": [ "v.main_hand_first_person_pos_x - 5.5", "v.main_hand_first_person_pos_y + 13", "v.main_hand_first_person_pos_z" ],
+                        "0.1": [ "v.main_hand_first_person_pos_x - 5.5", "v.main_hand_first_person_pos_y + 11", "v.main_hand_first_person_pos_z - 2" ]
+                    },
+                    "rotation": [ "v.main_hand_first_person_rot_x", "v.main_hand_first_person_rot_y - 12.0", "v.main_hand_first_person_rot_z" ],
+                    "scale": [ 0.5, 1, 1 ]
+                }
+            }
+        },
+        "animation.shield.wield_off_hand_first_person_blocking":
+        {
+            "loop": "hold_on_last_frame",
+            "bones":
+            {
+                "shield":
+                {
+                    "position":
+                    {
+                        "0": [ "v.off_hand_first_person_pos_x + 0.5", "v.off_hand_first_person_pos_y", "v.is_using_bow ? v.off_hand_first_person_with_bow_pos_z : v.off_hand_first_person_pos_z" ],
+                        "0.1": [ "v.off_hand_first_person_pos_x + 0.5", "v.off_hand_first_person_pos_y + 3.2", "v.is_using_bow ? v.off_hand_first_person_with_bow_pos_z : v.off_hand_first_person_pos_z + 1.5" ]
+                    },
+                    "rotation": [ "v.off_hand_first_person_rot_x", "v.off_hand_first_person_rot_y", "v.off_hand_first_person_rot_z + 10.0" ]
+                }
+            }
+        },
+        "animation.shield.wield_third_person":
+        {
+            "loop": true,
+            "bones":
+            {
+                "shield":
+                {
+                    "position": [ "c.item_slot == 'main_hand' ? -0.4 : -1.6", 9, "c.item_slot == 'main_hand' ? 9.3 : -15.7" ],
+                    "rotation": [ -90, 0, 90 ],
+                    "scale": [ 1, "c.item_slot == 'main_hand' ? -1.0 : 1.0", "c.item_slot == 'main_hand' ? -1.0 : 1.0" ]
+                }
+            }
+        }
+    }
+}

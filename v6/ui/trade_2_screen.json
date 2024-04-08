@@ -1,0 +1,1646 @@
+{
+    "blue_percentages_control@bb.label":
+    {
+        "text": "('§z' + $text + '%')",
+        "color": "$title_text_color",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "shadow": false,
+        "localize": false,
+        "bindings": [
+        {
+            "binding_name": "#exp_progress",
+            "binding_name_override": "#clip_ratio",
+            "binding_condition": "always"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(((1 - #clip_ratio) * 100 > ($in_range - 1)) and ((1 - #clip_ratio) * 100 < $in_range) or ((1 - #clip_ratio) * 100 = $in_range))",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "white_percentages_control@bb.label":
+    {
+        "text": "('§z+' + $text + '%')",
+        "color": "$title_text_color",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "shadow": false,
+        "localize": false,
+        "bindings": [
+        {
+            "binding_name": "#exp_possible_progress",
+            "binding_name_override": "#clip_ratio",
+            "binding_condition": "always"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(((1 - #clip_ratio) * 100 > ($in_range - 1)) and ((1 - #clip_ratio) * 100 < $in_range) or ((1 - #clip_ratio) * 100 = $in_range))",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "exp_progress_bar":
+    {
+        "type": "panel",
+        "size": [ 153, 5 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [ 0, 17 ],
+        "bindings": [
+        {
+            "binding_name": "#exp_bar_visible",
+            "binding_name_override": "#visible"
+        } ],
+        "controls": [
+        {
+            "empty_progress_bar@trade2.empty_progress_bar":
+            {
+                "layer": 1,
+                "controls": [
+                {
+                    "progress_bar_nub@trade2.progress_bar_nub":
+                    {
+                        "layer": 3,
+                        "size": [ "100% - 10px", "100%" ]
+                    }
+                },
+                {
+                    "blue_progress_bar@trade2.blue_progress_bar":
+                    {
+                        "layer": 2,
+                        "bindings": [
+                        {
+                            "binding_name": "#exp_progress",
+                            "binding_name_override": "#clip_ratio",
+                            "binding_type": "global",
+                            "binding_condition": "always_when_visible"
+                        } ]
+                    }
+                },
+                {
+                    "blue_percentages@trade2.blue_percentages":
+                    {}
+                },
+                {
+                    "white_progress_bar@trade2.white_progress_bar":
+                    {
+                        "layer": 1,
+                        "bindings": [
+                        {
+                            "binding_name": "#exp_possible_progress",
+                            "binding_name_override": "#clip_ratio",
+                            "binding_type": "global",
+                            "binding_condition": "always_when_visible"
+                        } ]
+                    }
+                },
+                {
+                    "white_percentages@trade2.white_percentages":
+                    {}
+                } ]
+            }
+        } ]
+    },
+    "hover_button":
+    {
+        "type": "button",
+        "layer": 1,
+        "default_focus_precedence": 1,
+        "hover_control": "hover_text",
+        "consume_event": false,
+        "button_mappings": [
+        {
+            "to_button_id": "button.container_slot_hovered",
+            "mapping_type": "pressed",
+            "consume_event": false
+        } ],
+        "controls": [
+        {
+            "hover_text@common.hover_text":
+            {
+                "bindings": [
+                {
+                    "binding_type": "collection_details"
+                },
+                {
+                    "binding_name": "#hover_text",
+                    "binding_condition": "visible"
+                } ]
+            }
+        } ],
+        "bindings": [ ]
+    },
+    "trade_icons@trade2.toggle_content":
+    {
+        "layer": 11,
+        "offset": [ 0, 4 ],
+        "$template_toggle": "trade2.toggle_content"
+    },
+    "trade_toggle_holder":
+    {
+        "type": "panel",
+        "size": [ "100%", "60%c - 1px" ],
+        "controls": [
+        {
+            "trade_toggle@trade2.trade_toggle":
+            {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+            }
+        },
+        {
+            "trade_icons@trade2.trade_icons":
+            {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle"
+            }
+        } ]
+    },
+    "top_half_stack_panel":
+    {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [ "100%c", "100%cm" ],
+        "controls": [
+        {
+            "item_slots_holder":
+            {
+                "type": "panel",
+                "size": [ "100%c", "100%c" ],
+                "inherit_max_sibling_height": true,
+                "controls": [
+                {
+                    "item_slots_stack_panel@trade2.item_slots_stack_panel":
+                    {}
+                } ]
+            }
+        },
+        {
+            "padding_1":
+            {
+                "type": "panel",
+                "size": [ 1, 0 ]
+            }
+        },
+        {
+            "trade_button_holder":
+            {
+                "type": "panel",
+                "size": [ "100%c", 0 ],
+                "inherit_max_sibling_height": true,
+                "controls": [
+                {
+                    "trade_button@trade2.trade_button":
+                    {}
+                } ]
+            }
+        },
+        {
+            "how_to_play_button_holder":
+            {
+                "ignored": true,
+                "type": "panel",
+                "size": [ "100%c - 1px", 0 ],
+                "inherit_max_sibling_height": true,
+                "controls": [
+                {
+                    "how_to_play_button@trade2.how_to_play_button":
+                    {
+                        "anchor_from": "right_middle",
+                        "anchor_to": "right_middle"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "trade_screen":
+    {
+        "force_render_below": true
+    },
+    "blue_percentages@bb.p":
+    {
+        "size": [ 60, 10 ],
+        "offset": [ -46.5, 8.5 ],
+        "controls": [
+        {
+            "0@trade2.blue_percentages_control":
+            {
+                "$in_range": 0,
+                "$text": "0"
+            }
+        },
+        {
+            "1@trade2.blue_percentages_control":
+            {
+                "$in_range": 1,
+                "$text": "1"
+            }
+        },
+        {
+            "2@trade2.blue_percentages_control":
+            {
+                "$in_range": 2,
+                "$text": "2"
+            }
+        },
+        {
+            "3@trade2.blue_percentages_control":
+            {
+                "$in_range": 3,
+                "$text": "3"
+            }
+        },
+        {
+            "4@trade2.blue_percentages_control":
+            {
+                "$in_range": 4,
+                "$text": "4"
+            }
+        },
+        {
+            "5@trade2.blue_percentages_control":
+            {
+                "$in_range": 5,
+                "$text": "5"
+            }
+        },
+        {
+            "6@trade2.blue_percentages_control":
+            {
+                "$in_range": 6,
+                "$text": "6"
+            }
+        },
+        {
+            "7@trade2.blue_percentages_control":
+            {
+                "$in_range": 7,
+                "$text": "7"
+            }
+        },
+        {
+            "8@trade2.blue_percentages_control":
+            {
+                "$in_range": 8,
+                "$text": "8"
+            }
+        },
+        {
+            "9@trade2.blue_percentages_control":
+            {
+                "$in_range": 9,
+                "$text": "9"
+            }
+        },
+        {
+            "10@trade2.blue_percentages_control":
+            {
+                "$in_range": 10,
+                "$text": "10"
+            }
+        },
+        {
+            "11@trade2.blue_percentages_control":
+            {
+                "$in_range": 11,
+                "$text": "11"
+            }
+        },
+        {
+            "12@trade2.blue_percentages_control":
+            {
+                "$in_range": 12,
+                "$text": "12"
+            }
+        },
+        {
+            "13@trade2.blue_percentages_control":
+            {
+                "$in_range": 13,
+                "$text": "13"
+            }
+        },
+        {
+            "14@trade2.blue_percentages_control":
+            {
+                "$in_range": 14,
+                "$text": "14"
+            }
+        },
+        {
+            "15@trade2.blue_percentages_control":
+            {
+                "$in_range": 15,
+                "$text": "15"
+            }
+        },
+        {
+            "16@trade2.blue_percentages_control":
+            {
+                "$in_range": 16,
+                "$text": "16"
+            }
+        },
+        {
+            "17@trade2.blue_percentages_control":
+            {
+                "$in_range": 17,
+                "$text": "17"
+            }
+        },
+        {
+            "18@trade2.blue_percentages_control":
+            {
+                "$in_range": 18,
+                "$text": "18"
+            }
+        },
+        {
+            "19@trade2.blue_percentages_control":
+            {
+                "$in_range": 19,
+                "$text": "19"
+            }
+        },
+        {
+            "20@trade2.blue_percentages_control":
+            {
+                "$in_range": 20,
+                "$text": "20"
+            }
+        },
+        {
+            "21@trade2.blue_percentages_control":
+            {
+                "$in_range": 21,
+                "$text": "21"
+            }
+        },
+        {
+            "22@trade2.blue_percentages_control":
+            {
+                "$in_range": 22,
+                "$text": "22"
+            }
+        },
+        {
+            "23@trade2.blue_percentages_control":
+            {
+                "$in_range": 23,
+                "$text": "23"
+            }
+        },
+        {
+            "24@trade2.blue_percentages_control":
+            {
+                "$in_range": 24,
+                "$text": "24"
+            }
+        },
+        {
+            "25@trade2.blue_percentages_control":
+            {
+                "$in_range": 25,
+                "$text": "25"
+            }
+        },
+        {
+            "26@trade2.blue_percentages_control":
+            {
+                "$in_range": 26,
+                "$text": "26"
+            }
+        },
+        {
+            "27@trade2.blue_percentages_control":
+            {
+                "$in_range": 27,
+                "$text": "27"
+            }
+        },
+        {
+            "28@trade2.blue_percentages_control":
+            {
+                "$in_range": 28,
+                "$text": "28"
+            }
+        },
+        {
+            "29@trade2.blue_percentages_control":
+            {
+                "$in_range": 29,
+                "$text": "29"
+            }
+        },
+        {
+            "30@trade2.blue_percentages_control":
+            {
+                "$in_range": 30,
+                "$text": "30"
+            }
+        },
+        {
+            "31@trade2.blue_percentages_control":
+            {
+                "$in_range": 31,
+                "$text": "31"
+            }
+        },
+        {
+            "32@trade2.blue_percentages_control":
+            {
+                "$in_range": 32,
+                "$text": "32"
+            }
+        },
+        {
+            "33@trade2.blue_percentages_control":
+            {
+                "$in_range": 33,
+                "$text": "33"
+            }
+        },
+        {
+            "34@trade2.blue_percentages_control":
+            {
+                "$in_range": 34,
+                "$text": "34"
+            }
+        },
+        {
+            "35@trade2.blue_percentages_control":
+            {
+                "$in_range": 35,
+                "$text": "35"
+            }
+        },
+        {
+            "36@trade2.blue_percentages_control":
+            {
+                "$in_range": 36,
+                "$text": "36"
+            }
+        },
+        {
+            "37@trade2.blue_percentages_control":
+            {
+                "$in_range": 37,
+                "$text": "37"
+            }
+        },
+        {
+            "38@trade2.blue_percentages_control":
+            {
+                "$in_range": 38,
+                "$text": "38"
+            }
+        },
+        {
+            "39@trade2.blue_percentages_control":
+            {
+                "$in_range": 39,
+                "$text": "39"
+            }
+        },
+        {
+            "40@trade2.blue_percentages_control":
+            {
+                "$in_range": 40,
+                "$text": "40"
+            }
+        },
+        {
+            "41@trade2.blue_percentages_control":
+            {
+                "$in_range": 41,
+                "$text": "41"
+            }
+        },
+        {
+            "42@trade2.blue_percentages_control":
+            {
+                "$in_range": 42,
+                "$text": "42"
+            }
+        },
+        {
+            "43@trade2.blue_percentages_control":
+            {
+                "$in_range": 43,
+                "$text": "43"
+            }
+        },
+        {
+            "44@trade2.blue_percentages_control":
+            {
+                "$in_range": 44,
+                "$text": "44"
+            }
+        },
+        {
+            "45@trade2.blue_percentages_control":
+            {
+                "$in_range": 45,
+                "$text": "45"
+            }
+        },
+        {
+            "46@trade2.blue_percentages_control":
+            {
+                "$in_range": 46,
+                "$text": "46"
+            }
+        },
+        {
+            "47@trade2.blue_percentages_control":
+            {
+                "$in_range": 47,
+                "$text": "47"
+            }
+        },
+        {
+            "48@trade2.blue_percentages_control":
+            {
+                "$in_range": 48,
+                "$text": "48"
+            }
+        },
+        {
+            "49@trade2.blue_percentages_control":
+            {
+                "$in_range": 49,
+                "$text": "49"
+            }
+        },
+        {
+            "50@trade2.blue_percentages_control":
+            {
+                "$in_range": 50,
+                "$text": "50"
+            }
+        },
+        {
+            "51@trade2.blue_percentages_control":
+            {
+                "$in_range": 51,
+                "$text": "51"
+            }
+        },
+        {
+            "52@trade2.blue_percentages_control":
+            {
+                "$in_range": 52,
+                "$text": "52"
+            }
+        },
+        {
+            "53@trade2.blue_percentages_control":
+            {
+                "$in_range": 53,
+                "$text": "53"
+            }
+        },
+        {
+            "54@trade2.blue_percentages_control":
+            {
+                "$in_range": 54,
+                "$text": "54"
+            }
+        },
+        {
+            "55@trade2.blue_percentages_control":
+            {
+                "$in_range": 55,
+                "$text": "55"
+            }
+        },
+        {
+            "56@trade2.blue_percentages_control":
+            {
+                "$in_range": 56,
+                "$text": "56"
+            }
+        },
+        {
+            "57@trade2.blue_percentages_control":
+            {
+                "$in_range": 57,
+                "$text": "57"
+            }
+        },
+        {
+            "58@trade2.blue_percentages_control":
+            {
+                "$in_range": 58,
+                "$text": "58"
+            }
+        },
+        {
+            "59@trade2.blue_percentages_control":
+            {
+                "$in_range": 59,
+                "$text": "59"
+            }
+        },
+        {
+            "60@trade2.blue_percentages_control":
+            {
+                "$in_range": 60,
+                "$text": "60"
+            }
+        },
+        {
+            "61@trade2.blue_percentages_control":
+            {
+                "$in_range": 61,
+                "$text": "61"
+            }
+        },
+        {
+            "62@trade2.blue_percentages_control":
+            {
+                "$in_range": 62,
+                "$text": "62"
+            }
+        },
+        {
+            "63@trade2.blue_percentages_control":
+            {
+                "$in_range": 63,
+                "$text": "63"
+            }
+        },
+        {
+            "64@trade2.blue_percentages_control":
+            {
+                "$in_range": 64,
+                "$text": "64"
+            }
+        },
+        {
+            "65@trade2.blue_percentages_control":
+            {
+                "$in_range": 65,
+                "$text": "65"
+            }
+        },
+        {
+            "66@trade2.blue_percentages_control":
+            {
+                "$in_range": 66,
+                "$text": "66"
+            }
+        },
+        {
+            "67@trade2.blue_percentages_control":
+            {
+                "$in_range": 67,
+                "$text": "67"
+            }
+        },
+        {
+            "68@trade2.blue_percentages_control":
+            {
+                "$in_range": 68,
+                "$text": "68"
+            }
+        },
+        {
+            "69@trade2.blue_percentages_control":
+            {
+                "$in_range": 69,
+                "$text": "69"
+            }
+        },
+        {
+            "70@trade2.blue_percentages_control":
+            {
+                "$in_range": 70,
+                "$text": "70"
+            }
+        },
+        {
+            "71@trade2.blue_percentages_control":
+            {
+                "$in_range": 71,
+                "$text": "71"
+            }
+        },
+        {
+            "72@trade2.blue_percentages_control":
+            {
+                "$in_range": 72,
+                "$text": "72"
+            }
+        },
+        {
+            "73@trade2.blue_percentages_control":
+            {
+                "$in_range": 73,
+                "$text": "73"
+            }
+        },
+        {
+            "74@trade2.blue_percentages_control":
+            {
+                "$in_range": 74,
+                "$text": "74"
+            }
+        },
+        {
+            "75@trade2.blue_percentages_control":
+            {
+                "$in_range": 75,
+                "$text": "75"
+            }
+        },
+        {
+            "76@trade2.blue_percentages_control":
+            {
+                "$in_range": 76,
+                "$text": "76"
+            }
+        },
+        {
+            "77@trade2.blue_percentages_control":
+            {
+                "$in_range": 77,
+                "$text": "77"
+            }
+        },
+        {
+            "78@trade2.blue_percentages_control":
+            {
+                "$in_range": 78,
+                "$text": "78"
+            }
+        },
+        {
+            "79@trade2.blue_percentages_control":
+            {
+                "$in_range": 79,
+                "$text": "79"
+            }
+        },
+        {
+            "80@trade2.blue_percentages_control":
+            {
+                "$in_range": 80,
+                "$text": "80"
+            }
+        },
+        {
+            "81@trade2.blue_percentages_control":
+            {
+                "$in_range": 81,
+                "$text": "81"
+            }
+        },
+        {
+            "82@trade2.blue_percentages_control":
+            {
+                "$in_range": 82,
+                "$text": "82"
+            }
+        },
+        {
+            "83@trade2.blue_percentages_control":
+            {
+                "$in_range": 83,
+                "$text": "83"
+            }
+        },
+        {
+            "84@trade2.blue_percentages_control":
+            {
+                "$in_range": 84,
+                "$text": "84"
+            }
+        },
+        {
+            "85@trade2.blue_percentages_control":
+            {
+                "$in_range": 85,
+                "$text": "85"
+            }
+        },
+        {
+            "86@trade2.blue_percentages_control":
+            {
+                "$in_range": 86,
+                "$text": "86"
+            }
+        },
+        {
+            "87@trade2.blue_percentages_control":
+            {
+                "$in_range": 87,
+                "$text": "87"
+            }
+        },
+        {
+            "88@trade2.blue_percentages_control":
+            {
+                "$in_range": 88,
+                "$text": "88"
+            }
+        },
+        {
+            "89@trade2.blue_percentages_control":
+            {
+                "$in_range": 89,
+                "$text": "89"
+            }
+        },
+        {
+            "90@trade2.blue_percentages_control":
+            {
+                "$in_range": 90,
+                "$text": "90"
+            }
+        },
+        {
+            "91@trade2.blue_percentages_control":
+            {
+                "$in_range": 91,
+                "$text": "91"
+            }
+        },
+        {
+            "92@trade2.blue_percentages_control":
+            {
+                "$in_range": 92,
+                "$text": "92"
+            }
+        },
+        {
+            "93@trade2.blue_percentages_control":
+            {
+                "$in_range": 93,
+                "$text": "93"
+            }
+        },
+        {
+            "94@trade2.blue_percentages_control":
+            {
+                "$in_range": 94,
+                "$text": "94"
+            }
+        },
+        {
+            "95@trade2.blue_percentages_control":
+            {
+                "$in_range": 95,
+                "$text": "95"
+            }
+        },
+        {
+            "96@trade2.blue_percentages_control":
+            {
+                "$in_range": 96,
+                "$text": "96"
+            }
+        },
+        {
+            "97@trade2.blue_percentages_control":
+            {
+                "$in_range": 97,
+                "$text": "97"
+            }
+        },
+        {
+            "98@trade2.blue_percentages_control":
+            {
+                "$in_range": 98,
+                "$text": "98"
+            }
+        },
+        {
+            "99@trade2.blue_percentages_control":
+            {
+                "$in_range": 99,
+                "$text": "99"
+            }
+        },
+        {
+            "100@trade2.blue_percentages_control":
+            {
+                "$in_range": 100,
+                "$text": "100"
+            }
+        } ]
+    },
+    "white_percentages@bb.p":
+    {
+        "size": [ 60, 10 ],
+        "offset": [ 46.5, 8.5 ],
+        "controls": [
+        {
+            "0@trade2.white_percentages_control":
+            {
+                "$in_range": 0,
+                "$text": "0"
+            }
+        },
+        {
+            "1@trade2.white_percentages_control":
+            {
+                "$in_range": 1,
+                "$text": "1"
+            }
+        },
+        {
+            "2@trade2.white_percentages_control":
+            {
+                "$in_range": 2,
+                "$text": "2"
+            }
+        },
+        {
+            "3@trade2.white_percentages_control":
+            {
+                "$in_range": 3,
+                "$text": "3"
+            }
+        },
+        {
+            "4@trade2.white_percentages_control":
+            {
+                "$in_range": 4,
+                "$text": "4"
+            }
+        },
+        {
+            "5@trade2.white_percentages_control":
+            {
+                "$in_range": 5,
+                "$text": "5"
+            }
+        },
+        {
+            "6@trade2.white_percentages_control":
+            {
+                "$in_range": 6,
+                "$text": "6"
+            }
+        },
+        {
+            "7@trade2.white_percentages_control":
+            {
+                "$in_range": 7,
+                "$text": "7"
+            }
+        },
+        {
+            "8@trade2.white_percentages_control":
+            {
+                "$in_range": 8,
+                "$text": "8"
+            }
+        },
+        {
+            "9@trade2.white_percentages_control":
+            {
+                "$in_range": 9,
+                "$text": "9"
+            }
+        },
+        {
+            "10@trade2.white_percentages_control":
+            {
+                "$in_range": 10,
+                "$text": "10"
+            }
+        },
+        {
+            "11@trade2.white_percentages_control":
+            {
+                "$in_range": 11,
+                "$text": "11"
+            }
+        },
+        {
+            "12@trade2.white_percentages_control":
+            {
+                "$in_range": 12,
+                "$text": "12"
+            }
+        },
+        {
+            "13@trade2.white_percentages_control":
+            {
+                "$in_range": 13,
+                "$text": "13"
+            }
+        },
+        {
+            "14@trade2.white_percentages_control":
+            {
+                "$in_range": 14,
+                "$text": "14"
+            }
+        },
+        {
+            "15@trade2.white_percentages_control":
+            {
+                "$in_range": 15,
+                "$text": "15"
+            }
+        },
+        {
+            "16@trade2.white_percentages_control":
+            {
+                "$in_range": 16,
+                "$text": "16"
+            }
+        },
+        {
+            "17@trade2.white_percentages_control":
+            {
+                "$in_range": 17,
+                "$text": "17"
+            }
+        },
+        {
+            "18@trade2.white_percentages_control":
+            {
+                "$in_range": 18,
+                "$text": "18"
+            }
+        },
+        {
+            "19@trade2.white_percentages_control":
+            {
+                "$in_range": 19,
+                "$text": "19"
+            }
+        },
+        {
+            "20@trade2.white_percentages_control":
+            {
+                "$in_range": 20,
+                "$text": "20"
+            }
+        },
+        {
+            "21@trade2.white_percentages_control":
+            {
+                "$in_range": 21,
+                "$text": "21"
+            }
+        },
+        {
+            "22@trade2.white_percentages_control":
+            {
+                "$in_range": 22,
+                "$text": "22"
+            }
+        },
+        {
+            "23@trade2.white_percentages_control":
+            {
+                "$in_range": 23,
+                "$text": "23"
+            }
+        },
+        {
+            "24@trade2.white_percentages_control":
+            {
+                "$in_range": 24,
+                "$text": "24"
+            }
+        },
+        {
+            "25@trade2.white_percentages_control":
+            {
+                "$in_range": 25,
+                "$text": "25"
+            }
+        },
+        {
+            "26@trade2.white_percentages_control":
+            {
+                "$in_range": 26,
+                "$text": "26"
+            }
+        },
+        {
+            "27@trade2.white_percentages_control":
+            {
+                "$in_range": 27,
+                "$text": "27"
+            }
+        },
+        {
+            "28@trade2.white_percentages_control":
+            {
+                "$in_range": 28,
+                "$text": "28"
+            }
+        },
+        {
+            "29@trade2.white_percentages_control":
+            {
+                "$in_range": 29,
+                "$text": "29"
+            }
+        },
+        {
+            "30@trade2.white_percentages_control":
+            {
+                "$in_range": 30,
+                "$text": "30"
+            }
+        },
+        {
+            "31@trade2.white_percentages_control":
+            {
+                "$in_range": 31,
+                "$text": "31"
+            }
+        },
+        {
+            "32@trade2.white_percentages_control":
+            {
+                "$in_range": 32,
+                "$text": "32"
+            }
+        },
+        {
+            "33@trade2.white_percentages_control":
+            {
+                "$in_range": 33,
+                "$text": "33"
+            }
+        },
+        {
+            "34@trade2.white_percentages_control":
+            {
+                "$in_range": 34,
+                "$text": "34"
+            }
+        },
+        {
+            "35@trade2.white_percentages_control":
+            {
+                "$in_range": 35,
+                "$text": "35"
+            }
+        },
+        {
+            "36@trade2.white_percentages_control":
+            {
+                "$in_range": 36,
+                "$text": "36"
+            }
+        },
+        {
+            "37@trade2.white_percentages_control":
+            {
+                "$in_range": 37,
+                "$text": "37"
+            }
+        },
+        {
+            "38@trade2.white_percentages_control":
+            {
+                "$in_range": 38,
+                "$text": "38"
+            }
+        },
+        {
+            "39@trade2.white_percentages_control":
+            {
+                "$in_range": 39,
+                "$text": "39"
+            }
+        },
+        {
+            "40@trade2.white_percentages_control":
+            {
+                "$in_range": 40,
+                "$text": "40"
+            }
+        },
+        {
+            "41@trade2.white_percentages_control":
+            {
+                "$in_range": 41,
+                "$text": "41"
+            }
+        },
+        {
+            "42@trade2.white_percentages_control":
+            {
+                "$in_range": 42,
+                "$text": "42"
+            }
+        },
+        {
+            "43@trade2.white_percentages_control":
+            {
+                "$in_range": 43,
+                "$text": "43"
+            }
+        },
+        {
+            "44@trade2.white_percentages_control":
+            {
+                "$in_range": 44,
+                "$text": "44"
+            }
+        },
+        {
+            "45@trade2.white_percentages_control":
+            {
+                "$in_range": 45,
+                "$text": "45"
+            }
+        },
+        {
+            "46@trade2.white_percentages_control":
+            {
+                "$in_range": 46,
+                "$text": "46"
+            }
+        },
+        {
+            "47@trade2.white_percentages_control":
+            {
+                "$in_range": 47,
+                "$text": "47"
+            }
+        },
+        {
+            "48@trade2.white_percentages_control":
+            {
+                "$in_range": 48,
+                "$text": "48"
+            }
+        },
+        {
+            "49@trade2.white_percentages_control":
+            {
+                "$in_range": 49,
+                "$text": "49"
+            }
+        },
+        {
+            "50@trade2.white_percentages_control":
+            {
+                "$in_range": 50,
+                "$text": "50"
+            }
+        },
+        {
+            "51@trade2.white_percentages_control":
+            {
+                "$in_range": 51,
+                "$text": "51"
+            }
+        },
+        {
+            "52@trade2.white_percentages_control":
+            {
+                "$in_range": 52,
+                "$text": "52"
+            }
+        },
+        {
+            "53@trade2.white_percentages_control":
+            {
+                "$in_range": 53,
+                "$text": "53"
+            }
+        },
+        {
+            "54@trade2.white_percentages_control":
+            {
+                "$in_range": 54,
+                "$text": "54"
+            }
+        },
+        {
+            "55@trade2.white_percentages_control":
+            {
+                "$in_range": 55,
+                "$text": "55"
+            }
+        },
+        {
+            "56@trade2.white_percentages_control":
+            {
+                "$in_range": 56,
+                "$text": "56"
+            }
+        },
+        {
+            "57@trade2.white_percentages_control":
+            {
+                "$in_range": 57,
+                "$text": "57"
+            }
+        },
+        {
+            "58@trade2.white_percentages_control":
+            {
+                "$in_range": 58,
+                "$text": "58"
+            }
+        },
+        {
+            "59@trade2.white_percentages_control":
+            {
+                "$in_range": 59,
+                "$text": "59"
+            }
+        },
+        {
+            "60@trade2.white_percentages_control":
+            {
+                "$in_range": 60,
+                "$text": "60"
+            }
+        },
+        {
+            "61@trade2.white_percentages_control":
+            {
+                "$in_range": 61,
+                "$text": "61"
+            }
+        },
+        {
+            "62@trade2.white_percentages_control":
+            {
+                "$in_range": 62,
+                "$text": "62"
+            }
+        },
+        {
+            "63@trade2.white_percentages_control":
+            {
+                "$in_range": 63,
+                "$text": "63"
+            }
+        },
+        {
+            "64@trade2.white_percentages_control":
+            {
+                "$in_range": 64,
+                "$text": "64"
+            }
+        },
+        {
+            "65@trade2.white_percentages_control":
+            {
+                "$in_range": 65,
+                "$text": "65"
+            }
+        },
+        {
+            "66@trade2.white_percentages_control":
+            {
+                "$in_range": 66,
+                "$text": "66"
+            }
+        },
+        {
+            "67@trade2.white_percentages_control":
+            {
+                "$in_range": 67,
+                "$text": "67"
+            }
+        },
+        {
+            "68@trade2.white_percentages_control":
+            {
+                "$in_range": 68,
+                "$text": "68"
+            }
+        },
+        {
+            "69@trade2.white_percentages_control":
+            {
+                "$in_range": 69,
+                "$text": "69"
+            }
+        },
+        {
+            "70@trade2.white_percentages_control":
+            {
+                "$in_range": 70,
+                "$text": "70"
+            }
+        },
+        {
+            "71@trade2.white_percentages_control":
+            {
+                "$in_range": 71,
+                "$text": "71"
+            }
+        },
+        {
+            "72@trade2.white_percentages_control":
+            {
+                "$in_range": 72,
+                "$text": "72"
+            }
+        },
+        {
+            "73@trade2.white_percentages_control":
+            {
+                "$in_range": 73,
+                "$text": "73"
+            }
+        },
+        {
+            "74@trade2.white_percentages_control":
+            {
+                "$in_range": 74,
+                "$text": "74"
+            }
+        },
+        {
+            "75@trade2.white_percentages_control":
+            {
+                "$in_range": 75,
+                "$text": "75"
+            }
+        },
+        {
+            "76@trade2.white_percentages_control":
+            {
+                "$in_range": 76,
+                "$text": "76"
+            }
+        },
+        {
+            "77@trade2.white_percentages_control":
+            {
+                "$in_range": 77,
+                "$text": "77"
+            }
+        },
+        {
+            "78@trade2.white_percentages_control":
+            {
+                "$in_range": 78,
+                "$text": "78"
+            }
+        },
+        {
+            "79@trade2.white_percentages_control":
+            {
+                "$in_range": 79,
+                "$text": "79"
+            }
+        },
+        {
+            "80@trade2.white_percentages_control":
+            {
+                "$in_range": 80,
+                "$text": "80"
+            }
+        },
+        {
+            "81@trade2.white_percentages_control":
+            {
+                "$in_range": 81,
+                "$text": "81"
+            }
+        },
+        {
+            "82@trade2.white_percentages_control":
+            {
+                "$in_range": 82,
+                "$text": "82"
+            }
+        },
+        {
+            "83@trade2.white_percentages_control":
+            {
+                "$in_range": 83,
+                "$text": "83"
+            }
+        },
+        {
+            "84@trade2.white_percentages_control":
+            {
+                "$in_range": 84,
+                "$text": "84"
+            }
+        },
+        {
+            "85@trade2.white_percentages_control":
+            {
+                "$in_range": 85,
+                "$text": "85"
+            }
+        },
+        {
+            "86@trade2.white_percentages_control":
+            {
+                "$in_range": 86,
+                "$text": "86"
+            }
+        },
+        {
+            "87@trade2.white_percentages_control":
+            {
+                "$in_range": 87,
+                "$text": "87"
+            }
+        },
+        {
+            "88@trade2.white_percentages_control":
+            {
+                "$in_range": 88,
+                "$text": "88"
+            }
+        },
+        {
+            "89@trade2.white_percentages_control":
+            {
+                "$in_range": 89,
+                "$text": "89"
+            }
+        },
+        {
+            "90@trade2.white_percentages_control":
+            {
+                "$in_range": 90,
+                "$text": "90"
+            }
+        },
+        {
+            "91@trade2.white_percentages_control":
+            {
+                "$in_range": 91,
+                "$text": "91"
+            }
+        },
+        {
+            "92@trade2.white_percentages_control":
+            {
+                "$in_range": 92,
+                "$text": "92"
+            }
+        },
+        {
+            "93@trade2.white_percentages_control":
+            {
+                "$in_range": 93,
+                "$text": "93"
+            }
+        },
+        {
+            "94@trade2.white_percentages_control":
+            {
+                "$in_range": 94,
+                "$text": "94"
+            }
+        },
+        {
+            "95@trade2.white_percentages_control":
+            {
+                "$in_range": 95,
+                "$text": "95"
+            }
+        },
+        {
+            "96@trade2.white_percentages_control":
+            {
+                "$in_range": 96,
+                "$text": "96"
+            }
+        },
+        {
+            "97@trade2.white_percentages_control":
+            {
+                "$in_range": 97,
+                "$text": "97"
+            }
+        },
+        {
+            "98@trade2.white_percentages_control":
+            {
+                "$in_range": 98,
+                "$text": "98"
+            }
+        },
+        {
+            "99@trade2.white_percentages_control":
+            {
+                "$in_range": 99,
+                "$text": "99"
+            }
+        },
+        {
+            "100@trade2.white_percentages_control":
+            {
+                "$in_range": 100,
+                "$text": "100"
+            }
+        } ]
+    }
+}

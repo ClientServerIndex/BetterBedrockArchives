@@ -1,0 +1,7 @@
+{
+    "namespace": "bb_subpack",
+    "ambro":
+    {
+        "$subpack": "2"
+    }
+}

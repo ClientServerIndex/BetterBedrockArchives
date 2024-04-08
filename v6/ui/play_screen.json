@@ -1,0 +1,23 @@
+{
+    "play_screen@common.base_screen":
+    {
+        "$screen_content": "bb_play.play_screen_main_panel",
+        "$screen_bg_content": "bb_common.screen_background",
+        "button_mappings": [ ]
+    },
+    "lan_servers_scroll_content@play.label_content_template":
+    {
+        "$label_content_label": "networkWorld.lan_label",
+        "$label_content_content": "play.network_world_item_grid",
+        "$network_world_grid_item_template": "play.network_world_item",
+        "$network_world_icon": "play.lan_icon",
+        "$network_world_item_grid_dimension_binding": "#lan_network_world_item_grid_dimension",
+        "$collection_name": "lan_network_worlds",
+        "$tts_section_header": "$label_content_label",
+        "bindings": [
+        {
+            "binding_name": "#lan_grid_visible",
+            "binding_name_override": "#visible"
+        } ]
+    }
+}

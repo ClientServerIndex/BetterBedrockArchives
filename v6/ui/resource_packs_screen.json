@@ -1,0 +1,30 @@
+{
+    "selected_stack_panel":
+    {
+        "modifications": [
+        {
+            "control_name": "world_template_option_lock_panel",
+            "operation": "insert_before",
+            "value": [
+            {
+                "padding1@bb.p":
+                {
+                    "size": [ 0, 2 ]
+                }
+            },
+            {
+                "banner2@bb_common.banner":
+                {
+                    "$text": "Correct Packs Order",
+                    "$hover_text": "§e1. Extensions\n§22. Client\n§73. Rest"
+                }
+            },
+            {
+                "padding2@bb.p":
+                {
+                    "size": [ 0, 4 ]
+                }
+            } ]
+        } ]
+    }
+}

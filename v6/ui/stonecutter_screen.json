@@ -1,0 +1,14 @@
+{
+    "stonecutter_screen":
+    {
+        "force_render_below": true
+    },
+    "toolbar_panel/toolbar_background/toolbar_stack_panel":
+    {
+        "modifications": [
+        {
+            "control_name": "help_button_panel",
+            "operation": "remove"
+        } ]
+    }
+}

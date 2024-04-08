@@ -1,0 +1,1103 @@
+{
+    "namespace": "bb_anims",
+    "none":
+    {},
+    "changelog_offset_anim@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "changelog_offset_anim1"
+    },
+    "changelog_offset_anim1@bb.o":
+    {
+        "$e": "$easing",
+        "$d": "$transition_duration",
+        "$f": [ 0, 0 ],
+        "$t": [ "-100%", 0 ],
+        "$n": "changelog_offset_anim2"
+    },
+    "changelog_offset_anim2@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "changelog_offset_anim3"
+    },
+    "changelog_offset_anim3@bb.o":
+    {
+        "$e": "$easing",
+        "$d": "$transition_duration",
+        "$f": [ "-100%", 0 ],
+        "$t": [ "-200%", 0 ],
+        "$n": "changelog_offset_anim4"
+    },
+    "changelog_offset_anim4@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "changelog_offset_anim5"
+    },
+    "changelog_offset_anim5@bb.o":
+    {
+        "$e": "$easing",
+        "$d": "$transition_duration",
+        "$f": [ "-200%", 0 ],
+        "$t": [ "-300%", 0 ],
+        "$n": "changelog_offset_anim6"
+    },
+    "changelog_offset_anim6@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "changelog_offset_anim7"
+    },
+    "changelog_offset_anim7@bb.o":
+    {
+        "$e": "$easing",
+        "$d": "$transition_duration",
+        "$f": [ "-300%", 0 ],
+        "$t": [ "-400%", 0 ],
+        "$n": "changelog_offset_anim"
+    },
+    "app_slide_offset_anim@bb.w":
+    {
+        "$d": 3,
+        "$n": "app_slide_offset_anim1"
+    },
+    "app_slide_offset_anim1@bb.o":
+    {
+        "$e": "in_out_cubic",
+        "$d": 2.3,
+        "$f": [ 0, "60%" ],
+        "$t": [ 0, "0%" ],
+        "$n": "app_slide_offset_anim2"
+    },
+    "app_slide_offset_anim2@bb.w":
+    {
+        "$d": 3,
+        "$n": "app_slide_offset_anim3"
+    },
+    "app_slide_offset_anim3@bb.o":
+    {
+        "$e": "in_out_cubic",
+        "$d": 2.3,
+        "$f": [ 0, "0%" ],
+        "$t": [ 0, "-60%" ],
+        "$n": "app_slide_offset_anim4"
+    },
+    "app_slide_offset_anim4@bb.w":
+    {
+        "$d": 3,
+        "$n": "app_slide_offset_anim5"
+    },
+    "app_slide_offset_anim5@bb.o":
+    {
+        "$e": "in_out_cubic",
+        "$d": 2.3,
+        "$f": [ 0, "-60%" ],
+        "$t": [ 0, "60%" ],
+        "$n": "app_slide_offset_anim"
+    },
+    "loading_anim_1_0@bb.w":
+    {
+        "$d": 0,
+        "$n": "loading_anim_1_1"
+    },
+    "loading_anim_1_1@bb.a":
+    {
+        "$d": 0,
+        "$f": 0,
+        "$t": 1,
+        "$n": "loading_anim_1_2"
+    },
+    "loading_anim_1_2@bb.w":
+    {
+        "$d": 0.25,
+        "$n": "loading_anim_1_3"
+    },
+    "loading_anim_1_3@bb.a":
+    {
+        "$d": 0,
+        "$f": 1,
+        "$t": 0,
+        "$n": "loading_anim_1_4"
+    },
+    "loading_anim_1_4@bb.w":
+    {
+        "$d": 0.5,
+        "$n": "loading_anim_1_0"
+    },
+    "loading_anim_2_0@bb.w":
+    {
+        "$d": 0.25,
+        "$n": "loading_anim_2_1"
+    },
+    "loading_anim_2_1@bb.a":
+    {
+        "$d": 0,
+        "$f": 0,
+        "$t": 1,
+        "$n": "loading_anim_2_2"
+    },
+    "loading_anim_2_2@bb.w":
+    {
+        "$d": 0.25,
+        "$n": "loading_anim_2_3"
+    },
+    "loading_anim_2_3@bb.a":
+    {
+        "$d": 0,
+        "$f": 1,
+        "$t": 0,
+        "$n": "loading_anim_2_4"
+    },
+    "loading_anim_2_4@bb.w":
+    {
+        "$d": 0.25,
+        "$n": "loading_anim_2_0"
+    },
+    "loading_anim_3_0@bb.w":
+    {
+        "$d": 0.5,
+        "$n": "loading_anim_3_1"
+    },
+    "loading_anim_3_1@bb.a":
+    {
+        "$d": 0,
+        "$f": 0,
+        "$t": 1,
+        "$n": "loading_anim_3_2"
+    },
+    "loading_anim_3_2@bb.w":
+    {
+        "$d": 0.25,
+        "$n": "loading_anim_3_3"
+    },
+    "loading_anim_3_3@bb.a":
+    {
+        "$d": 0,
+        "$f": 1,
+        "$t": 0,
+        "$n": "loading_anim_3_4"
+    },
+    "loading_anim_3_4@bb.w":
+    {
+        "$d": 0,
+        "$n": "loading_anim_3_0"
+    },
+    "zeqa_message_1_wait_0@bb.w":
+    {
+        "$d": 0.001,
+        "$n": "zeqa_message_1_wait"
+    },
+    "zeqa_message_1_wait@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "zeqa_message_1_offset"
+    },
+    "zeqa_message_1_offset@bb.o":
+    {
+        "$e": "$easing_in",
+        "$d": "$transition_duration",
+        "$f": [ 0, 0 ],
+        "$t": [ 0, "-100%" ],
+        "$n": "zeqa_message_1_wait_2"
+    },
+    "zeqa_message_1_wait_2@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "zeqa_message_1_offset_2"
+    },
+    "zeqa_message_1_offset_2@bb.o":
+    {
+        "$e": "$easing_out",
+        "$d": "$transition_duration",
+        "$f": [ 0, "100%" ],
+        "$t": [ 0, 0 ],
+        "$n": "zeqa_message_1_wait"
+    },
+    "zeqa_message_2_wait_0@bb.w":
+    {
+        "$d": 0.001,
+        "$n": "zeqa_message_2_wait"
+    },
+    "zeqa_message_2_wait@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "zeqa_message_2_offset"
+    },
+    "zeqa_message_2_offset@bb.o":
+    {
+        "$e": "$easing_in",
+        "$d": "$transition_duration",
+        "$f": [ 0, "100%" ],
+        "$t": [ 0, 0 ],
+        "$n": "zeqa_message_2_wait_2"
+    },
+    "zeqa_message_2_wait_2@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "zeqa_message_2_offset_2"
+    },
+    "zeqa_message_2_offset_2@bb.o":
+    {
+        "$e": "$easing_out",
+        "$d": "$transition_duration",
+        "$f": [ 0, 0 ],
+        "$t": [ 0, "-100%" ],
+        "$n": "zeqa_message_2_wait"
+    },
+    "zeqa_glow_anim_0@bb.w":
+    {
+        "$d": 0.001,
+        "$n": "zeqa_glow_anim_1"
+    },
+    "zeqa_glow_anim_1@bb.o":
+    {
+        "$e": "in_cubic",
+        "$d": "$glow_transition_duration",
+        "$f": [ "-100%", "-100%" ],
+        "$t": [ "100%", "100%" ],
+        "$n": "zeqa_glow_anim_2"
+    },
+    "zeqa_glow_anim_2@bb.w":
+    {
+        "$d": "$glow_wait_duration",
+        "$n": "zeqa_glow_anim_1"
+    },
+    "ss_changelog_wait@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "ss_changelog_offset"
+    },
+    "ss_changelog_offset@bb.o":
+    {
+        "$e": "$easing_in",
+        "$d": "$transition_duration",
+        "$f": [ 0, 0 ],
+        "$t": [ 0, "-100%" ],
+        "$n": "ss_changelog_wait_2"
+    },
+    "ss_changelog_wait_2@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "ss_changelog_offset_2"
+    },
+    "ss_changelog_offset_2@bb.o":
+    {
+        "$e": "$easing_out",
+        "$d": "$transition_duration",
+        "$f": [ 0, "100%" ],
+        "$t": [ 0, 0 ],
+        "$n": "ss_changelog_wait"
+    },
+    "ss_patch_wait@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "ss_patch_offset"
+    },
+    "ss_patch_offset@bb.o":
+    {
+        "$e": "$easing_in",
+        "$d": "$transition_duration",
+        "$f": [ 0, "100%" ],
+        "$t": [ 0, 0 ],
+        "$n": "ss_patch_wait_2"
+    },
+    "ss_patch_wait_2@bb.w":
+    {
+        "$d": "$wait_duration",
+        "$n": "ss_patch_offset_2"
+    },
+    "ss_patch_offset_2@bb.o":
+    {
+        "$e": "$easing_out",
+        "$d": "$transition_duration",
+        "$f": [ 0, 0 ],
+        "$t": [ 0, "-100%" ],
+        "$n": "ss_patch_wait"
+    },
+    "smooth_text_anim@bb.a":
+    {
+        "$d": 0.25,
+        "$f": 0,
+        "$t": 1,
+        "$n": "none"
+    },
+    "actionbar_text_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "actionbar_text_wait_out"
+    },
+    "actionbar_text_wait_out@bb.a":
+    {
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_actionbar_text",
+        "$n": "none"
+    },
+    "actionbar_text_bg_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "actionbar_text_bg_out"
+    },
+    "actionbar_text_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_actionbar_text",
+        "$n": "none"
+    },
+    "hud_tip_text_dynamic_size@bb.w":
+    {
+        "$d": 3.2,
+        "$n": "hud_tip_text_dynamic_size_destroy"
+    },
+    "hud_tip_text_dynamic_size_destroy@bb.o":
+    {
+        "anim_type": "size",
+        "$d": 0.25,
+        "$f": [ "100%", "100%c" ],
+        "$t": [ "100%", 0 ],
+        "destroy_at_end": "popup_tip_text",
+        "$n": "none"
+    },
+    "tip_text_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "tip_text_out"
+    },
+    "tip_text_out@bb.a":
+    {
+        "$e": "in_expo",
+        "$d": 2,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "popup_tip_text"
+    },
+    "tip_text_bg_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "tip_text_bg_out"
+    },
+    "tip_text_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$e": "in_expo",
+        "$d": 2,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "popup_tip_text"
+    },
+    "jukebox_text_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "jukebox_text_wait_out"
+    },
+    "jukebox_text_wait_out@bb.a":
+    {
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "jukebox_text_bg_wait@bb.w":
+    {
+        "$d": 1.25,
+        "$n": "jukebox_text_bg_out"
+    },
+    "jukebox_text_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "item_name_text_dynamic_size@bb.w":
+    {
+        "$d": 3.2,
+        "$n": "item_name_text_dynamic_size_destroy"
+    },
+    "item_name_text_dynamic_size_destroy@bb.o":
+    {
+        "anim_type": "size",
+        "$d": 0.25,
+        "$f": [ "100%", "100%c" ],
+        "$t": [ "100%", 0 ],
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "item_name_text_in@bb.a":
+    {
+        "$d": 0.25,
+        "$f": 0,
+        "$t": 1,
+        "$n": "item_name_text_wait"
+    },
+    "item_name_text_wait@bb.w":
+    {
+        "$d": 1,
+        "$n": "item_name_text_out"
+    },
+    "item_name_text_out@bb.a":
+    {
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "item_name_text_offset_in@bb.o":
+    {
+        "$d": 0.25,
+        "$f": [ 0, 6.5 ],
+        "$t": [ 0, 0 ],
+        "$n": "item_name_text_offset_wait"
+    },
+    "item_name_text_offset_wait@bb.w":
+    {
+        "$d": 3,
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "item_name_bg_in@bb.a":
+    {
+        "$d": 0.25,
+        "$f": 0,
+        "$t": 1,
+        "$n": "item_name_bg_wait"
+    },
+    "item_name_bg_wait@bb.w":
+    {
+        "$d": 1,
+        "$n": "item_name_bg_out"
+    },
+    "item_name_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$d": 2,
+        "$e": "in_expo",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "item_name_text",
+        "$n": "none"
+    },
+    "title_in@bb.a":
+    {
+        "$d": 0.5,
+        "$f": 0,
+        "$t": 1,
+        "$n": "title_wait"
+    },
+    "title_wait@bb.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "title_out"
+    },
+    "title_out@bb.a":
+    {
+        "$e": "in_out_cubic",
+        "$d": 0.5,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_title_text_anim_control",
+        "end_event": "hud_title_text_complete",
+        "$n": "none"
+    },
+    "title_bg_in@bb.a":
+    {
+        "$scale_alpha": true,
+        "$d": 0.5,
+        "$f": 0,
+        "$t": 1,
+        "$n": "title_bg_wait"
+    },
+    "title_bg_wait@bb.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "title_bg_out"
+    },
+    "title_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$e": "in_out_cubic",
+        "$d": 0.5,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_title_bg_anim_control",
+        "end_event": "hud_title_text_complete",
+        "$n": "none"
+    },
+    "subtitle_in@bb.a":
+    {
+        "$d": 0.5,
+        "$f": 0,
+        "$t": 1,
+        "$n": "subtitle_wait"
+    },
+    "subtitle_wait@bb.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "subtitle_out"
+    },
+    "subtitle_out@bb.a":
+    {
+        "$e": "in_out_cubic",
+        "$d": 0.5,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_subtitle_text_anim_control",
+        "end_event": "hud_subtitle_text_complete",
+        "$n": "none"
+    },
+    "subtitle_bg_in@bb.a":
+    {
+        "$scale_alpha": true,
+        "$d": 0.5,
+        "$f": 0,
+        "$t": 1,
+        "$n": "subtitle_bg_wait"
+    },
+    "subtitle_bg_wait@bb.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "subtitle_bg_out"
+    },
+    "subtitle_bg_out@bb.a":
+    {
+        "$scale_alpha": true,
+        "$e": "in_out_cubic",
+        "$d": 0.5,
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_subtitle_bg_anim_control",
+        "end_event": "hud_subtitle_text_complete",
+        "$n": "none"
+    },
+    "client_notification_wait@bb.w":
+    {
+        "$d": 1,
+        "$n": "client_notification_wait_in"
+    },
+    "client_notification_wait_in@bb.o":
+    {
+        "$d": 0.75,
+        "$f": [ 0, -100 ],
+        "$t": [ 0, 0.5 ],
+        "$n": "client_notification_wait1"
+    },
+    "client_notification_wait1@bb.w":
+    {
+        "$d": 8,
+        "$n": "client_notification_out"
+    },
+    "client_notification_out@bb.o":
+    {
+        "$e": "in_out_cubic",
+        "$d": 0.75,
+        "$f": [ 0, 0.5 ],
+        "$t": [ 0, -100 ],
+        "$n": "none"
+    },
+    "smootchTextMessage1@bb.a":
+    {
+        "$d": 0.75,
+        "$f": 0,
+        "$t": 1,
+        "$n": "smootchTextMessage2"
+    },
+    "smootchTextMessage2@bb.w":
+    {
+        "$d": "($chat_item_lifetime - 1.5)",
+        "$n": "smootchTextMessage3"
+    },
+    "smootchTextMessage3@bb.a":
+    {
+        "$d": 0.75,
+        "$f": 1,
+        "$t": 0,
+        "$n": "none"
+    },
+    "smoothChatOffset1@bb.o":
+    {
+        "$d": 0.5,
+        "$f": [ "-50%", 0 ],
+        "$t": [ 0, 0 ],
+        "$n": "smoothChatOffset2"
+    },
+    "smoothChatOffset2@bb.w":
+    {
+        "$d": "($chat_item_lifetime - 1)",
+        "$n": "smoothChatOffset3"
+    },
+    "smoothChatOffset3@bb.o":
+    {
+        "$d": 0.5,
+        "$f": [ 0, 0 ],
+        "$t": [ "-50%", 0 ],
+        "$n": "none"
+    },
+    "smoothChatBackground1@bb.a":
+    {
+        "$d": 0.5,
+        "$f": 0,
+        "$t": 1,
+        "$n": "smoothChatBackground2"
+    },
+    "smoothChatBackground2@bb.w":
+    {
+        "$d": "($chat_item_lifetime - 1)",
+        "$n": "smoothChatBackground3"
+    },
+    "smoothChatBackground3@bb.a":
+    {
+        "scale_from_starting_alpha": true,
+        "$d": 0.5,
+        "$f": 1,
+        "$t": 0,
+        "$n": "none"
+    },
+    "chatSizeAnim@bb.o":
+    {
+        "anim_type": "size",
+        "$d": 0.25,
+        "$f": [ "100%", "0%c" ],
+        "$t": [ "100%", "100%c" ],
+        "$n": "chatSizeAnim2"
+    },
+    "chatSizeAnim2@bb.w":
+    {
+        "$d": "($chat_item_lifetime - 0.5)",
+        "$n": "none"
+    },
+    "chatSizeAnim3@bb.o":
+    {
+        "anim_type": "size",
+        "$d": 0.5,
+        "$f": [ "100%", "%c" ],
+        "$t": [ "100%", "100%c" ],
+        "$n": "none"
+    },
+    "logo_text_anim@bb.a":
+    {
+        "$d": 1.2,
+        "$f": 0,
+        "$t": 1,
+        "$n": "logo_text_anim_1"
+    },
+    "logo_text_anim_1@bb.a":
+    {
+        "$d": 1.2,
+        "$f": 1,
+        "$t": 0,
+        "$n": "logo_text_anim"
+    },
+    "chroma_color_01@bb.c":
+    {
+        "$value": [ 0.25, 1, 1 ],
+        "$n": "chroma_color_02"
+    },
+    "chroma_color_02@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.9 ],
+        "$n": "chroma_color_03"
+    },
+    "chroma_color_03@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.8 ],
+        "$n": "chroma_color_04"
+    },
+    "chroma_color_04@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.7 ],
+        "$n": "chroma_color_05"
+    },
+    "chroma_color_05@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.6 ],
+        "$n": "chroma_color_06"
+    },
+    "chroma_color_06@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.5 ],
+        "$n": "chroma_color_07"
+    },
+    "chroma_color_07@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.4 ],
+        "$n": "chroma_color_08"
+    },
+    "chroma_color_08@bb.c":
+    {
+        "$value": [ 0.25, 1, 0.25 ],
+        "$n": "chroma_color_09"
+    },
+    "chroma_color_09@bb.c":
+    {
+        "$value": [ 0.375, 1, 0.25 ],
+        "$n": "chroma_color_10"
+    },
+    "chroma_color_10@bb.c":
+    {
+        "$value": [ 0.5, 1, 0.25 ],
+        "$n": "chroma_color_11"
+    },
+    "chroma_color_11@bb.c":
+    {
+        "$value": [ 0.625, 1, 0.25 ],
+        "$n": "chroma_color_12"
+    },
+    "chroma_color_12@bb.c":
+    {
+        "$value": [ 0.75, 1, 0.25 ],
+        "$n": "chroma_color_13"
+    },
+    "chroma_color_13@bb.c":
+    {
+        "$value": [ 0.875, 1, 0.25 ],
+        "$n": "chroma_color_14"
+    },
+    "chroma_color_14@bb.c":
+    {
+        "$value": [ 1, 1, 0.25 ],
+        "$n": "chroma_color_15"
+    },
+    "chroma_color_15@bb.c":
+    {
+        "$value": [ 1, 0.9, 0.25 ],
+        "$n": "chroma_color_16"
+    },
+    "chroma_color_16@bb.c":
+    {
+        "$value": [ 1, 0.8, 0.25 ],
+        "$n": "chroma_color_17"
+    },
+    "chroma_color_17@bb.c":
+    {
+        "$value": [ 1, 0.7, 0.25 ],
+        "$n": "chroma_color_18"
+    },
+    "chroma_color_18@bb.c":
+    {
+        "$value": [ 1, 0.6, 0.25 ],
+        "$n": "chroma_color_19"
+    },
+    "chroma_color_19@bb.c":
+    {
+        "$value": [ 1, 0.5, 0.25 ],
+        "$n": "chroma_color_20"
+    },
+    "chroma_color_20@bb.c":
+    {
+        "$value": [ 1, 0.4, 0.25 ],
+        "$n": "chroma_color_21"
+    },
+    "chroma_color_21@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.25 ],
+        "$n": "chroma_color_22"
+    },
+    "chroma_color_22@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.4 ],
+        "$n": "chroma_color_23"
+    },
+    "chroma_color_23@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.5 ],
+        "$n": "chroma_color_24"
+    },
+    "chroma_color_24@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.6 ],
+        "$n": "chroma_color_25"
+    },
+    "chroma_color_25@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.7 ],
+        "$n": "chroma_color_26"
+    },
+    "chroma_color_26@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.8 ],
+        "$n": "chroma_color_27"
+    },
+    "chroma_color_27@bb.c":
+    {
+        "$value": [ 1, 0.25, 0.9 ],
+        "$n": "chroma_color_28"
+    },
+    "chroma_color_28@bb.c":
+    {
+        "$value": [ 1, 0.25, 1 ],
+        "$n": "chroma_color_29"
+    },
+    "chroma_color_29@bb.c":
+    {
+        "$value": [ 0.875, 0.25, 1 ],
+        "$n": "chroma_color_30"
+    },
+    "chroma_color_30@bb.c":
+    {
+        "$value": [ 0.75, 0.25, 1 ],
+        "$n": "chroma_color_31"
+    },
+    "chroma_color_31@bb.c":
+    {
+        "$value": [ 0.625, 0.25, 1 ],
+        "$n": "chroma_color_32"
+    },
+    "chroma_color_32@bb.c":
+    {
+        "$value": [ 0.5, 0.25, 1 ],
+        "$n": "chroma_color_33"
+    },
+    "chroma_color_33@bb.c":
+    {
+        "$value": [ 0.375, 0.25, 1 ],
+        "$n": "chroma_color_34"
+    },
+    "chroma_color_34@bb.c":
+    {
+        "$value": [ 0.25, 0.25, 1 ],
+        "$n": "chroma_color_35"
+    },
+    "chroma_color_35@bb.c":
+    {
+        "$value": [ 0.25, 0.4, 1 ],
+        "$n": "chroma_color_36"
+    },
+    "chroma_color_36@bb.c":
+    {
+        "$value": [ 0.25, 0.5, 1 ],
+        "$n": "chroma_color_37"
+    },
+    "chroma_color_37@bb.c":
+    {
+        "$value": [ 0.25, 0.6, 1 ],
+        "$n": "chroma_color_38"
+    },
+    "chroma_color_38@bb.c":
+    {
+        "$value": [ 0.25, 0.7, 1 ],
+        "$n": "chroma_color_39"
+    },
+    "chroma_color_39@bb.c":
+    {
+        "$value": [ 0.25, 0.8, 1 ],
+        "$n": "chroma_color_40"
+    },
+    "chroma_color_40@bb.c":
+    {
+        "$value": [ 0.25, 0.9, 1 ],
+        "$n": "chroma_color_01"
+    },
+    "background@bb.w":
+    {
+        "$d": 0.5,
+        "$n": "background_1"
+    },
+    "background_1@bb.s":
+    {
+        "$e": "in_out_cubic",
+        "$d": 4,
+        "$f": [ "100%", "100%" ],
+        "$t": [ "130%", "130%" ],
+        "$n": "background_2"
+    },
+    "background_2@bb.w":
+    {
+        "$d": 0.5,
+        "$n": "background_3"
+    },
+    "background_3@bb.s":
+    {
+        "$e": "in_out_cubic",
+        "$d": 4,
+        "$f": [ "130%", "130%" ],
+        "$t": [ "100%", "100%" ],
+        "$n": "background"
+    },
+    "b2_offset":
+    {
+        "anim_type": "offset",
+        "easing": "in_out_quad",
+        "duration": 1.25,
+        "from": [ "-100%", "21px" ],
+        "to": [ 0, "21px" ]
+    },
+    "b2_alpha":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 0.8,
+        "from": 0,
+        "to": 0.2
+    },
+    "b2_alpha_pulsing":
+    {
+        "anim_type": "wait",
+        "duration": 0.8,
+        "next": "@bb.b2_alpha_pulsing_1"
+    },
+    "b2_alpha_pulsing_1":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 1.5,
+        "from": 0.2,
+        "to": 0,
+        "next": "@bb.b2_alpha_pulsing_2"
+    },
+    "b2_alpha_pulsing_2":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 1.5,
+        "from": 0,
+        "to": 0.2,
+        "next": "@bb.b2_alpha_pulsing_1"
+    },
+    "background_wait1":
+    {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@bb.background_size2"
+    },
+    "background_size2":
+    {
+        "anim_type": "size",
+        "easing": "in_out_quad",
+        "duration": 4,
+        "from": [ "100%", "100%" ],
+        "to": [ "130%", "130%" ],
+        "next": "@bb.background_wait3"
+    },
+    "background_wait3":
+    {
+        "anim_type": "wait",
+        "duration": 0.5,
+        "next": "@bb.background_size4"
+    },
+    "background_size4":
+    {
+        "anim_type": "size",
+        "easing": "in_out_quad",
+        "duration": 4,
+        "from": [ "130%", "130%" ],
+        "to": [ "100%", "100%" ],
+        "next": "@bb.background_wait1"
+    },
+    "glow1z":
+    {
+        "anim_type": "alpha",
+        "duration": 0,
+        "from": 0,
+        "to": 0,
+        "next": "@bb.glow1x"
+    },
+    "glow1x":
+    {
+        "anim_type": "wait",
+        "duration": 2.25,
+        "next": "@bb.glow1xx"
+    },
+    "glow1xx":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 2.25,
+        "from": 0,
+        "to": 1,
+        "next": "@bb.glow1"
+    },
+    "glow1":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 2.25,
+        "from": 1,
+        "to": 0.1,
+        "next": "@bb.glow2"
+    },
+    "glow2":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 2.25,
+        "from": 0.1,
+        "to": 1,
+        "next": "@bb.glow1"
+    },
+    "glow_size1":
+    {
+        "anim_type": "size",
+        "duration": 0,
+        "from": [ "100%", "100%" ],
+        "to": [ "100%", "100%" ]
+    },
+    "button1":
+    {
+        "anim_type": "size",
+        "easing": "in_out_cubic",
+        "duration": 0.8,
+        "from": [ "60%", 18 ],
+        "to": [ "100% - 1px", 23 ]
+    },
+    "button_text1":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 1.2,
+        "from": 0,
+        "to": 1
+    },
+    "features_text1":
+    {
+        "anim_type": "offset",
+        "easing": "in_out_quad",
+        "duration": 0.8,
+        "from": [ "-50%", "100%c" ],
+        "to": [ "0%", "100%c" ]
+    },
+    "features_text1x":
+    {
+        "anim_type": "offset",
+        "easing": "in_out_quad",
+        "duration": 0.6,
+        "from": [ "-50%", "100%c" ],
+        "to": [ "0%", "100%c" ]
+    },
+    "features_text2":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 1.1,
+        "from": 0,
+        "to": 1
+    },
+    "testanim_1":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 2,
+        "from": 0.5,
+        "to": 0,
+        "next": "@bb.testanim_2"
+    },
+    "testanim_2":
+    {
+        "anim_type": "alpha",
+        "easing": "in_out_quad",
+        "duration": 2,
+        "from": 0,
+        "to": 0.5,
+        "next": "@bb.testanim_1"
+    }
+}

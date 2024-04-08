@@ -1,0 +1,89 @@
+{
+    "materials":
+    {
+        "version": "1.0.0",
+        "entity_alphablend:entity":
+        {
+            "+states": [ "Blending" ],
+            "vertexFields": [
+            {
+                "field": "Position"
+            },
+            {
+                "field": "Color"
+            },
+            {
+                "field": "Normal"
+            },
+            {
+                "field": "UV0"
+            } ],
+            "+samplerStates": [
+            {
+                "samplerIndex": 1,
+                "textureWrap": "Repeat",
+                "textureFilter": "Point"
+            } ],
+            "msaaSupport": "Both"
+        },
+        "entity_alphatest_one_sided:entity":
+        {
+            "+defines": [ "ALPHA_TEST" ],
+            "+samplerStates": [
+            {
+                "samplerIndex": 1,
+                "textureWrap": "Repeat",
+                "textureFilter": "Point"
+            } ],
+            "msaaSupport": "Both"
+        },
+        "entity_alphatest:entity_nocull":
+        {
+            "+defines": [ "ALPHA_TEST" ],
+            "+samplerStates": [
+            {
+                "samplerIndex": 1,
+                "textureWrap": "Repeat",
+                "textureFilter": "Point"
+            } ],
+            "msaaSupport": "Both"
+        },
+        "multitexture_alpha":
+        {
+            "fragmentShader": "shaders/entity.fragment",
+            "+defines": [ "USE_MULTITEXTURE", "ALPHA_TEST" ],
+            "+states": [ "Blending" ],
+            "blendSrc": "One",
+            "+samplerStates": [
+            {
+                "samplerIndex": 0,
+                "textureWrap": "Clamp",
+                "textureFilter": "Point"
+            },
+            {
+                "samplerIndex": 1,
+                "textureWrap": "Clamp",
+                "textureFilter": "Point"
+            } ],
+            "msaaSupport": "Both"
+        },
+        "multitexture_alpha_uv":
+        {
+            "fragmentShader": "shaders/entity.fragment",
+            "+defines": [ "USE_UV_ANIM", "ALPHA_TEST" ],
+            "+states": [ "Blending" ],
+            "blendSrc": "One",
+            "+samplerStates": [
+            {
+                "samplerIndex": 0,
+                "textureWrap": "Repeat",
+                "textureFilter": "Point"
+            },
+            {
+                "samplerIndex": 1,
+                "textureWrap": "Repeat",
+                "textureFilter": "Point"
+            } ]
+        }
+    }
+}

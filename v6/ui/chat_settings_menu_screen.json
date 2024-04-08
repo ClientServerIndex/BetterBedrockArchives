@@ -1,0 +1,54 @@
+{
+    "chat_settings_scrolling_content@bb.pyc":
+    {
+        "controls": [
+        {
+            "chat_settings_content_area@bb.sp":
+            {
+                "controls": [
+                {
+                    "1@bb.yp":
+                    {
+                        "$yps": [ "100%", 10 ]
+                    }
+                },
+                {
+                    "mute_all_toggle@chat_settings.mute_all_toggle":
+                    {}
+                },
+                {
+                    "toggles_to_font_shape@chat_settings.line_break":
+                    {}
+                },
+                {
+                    "chat_color@chat_settings.chat_color_dropdown":
+                    {}
+                },
+                {
+                    "mentions_color@chat_settings.mentions_color_dropdown":
+                    {}
+                },
+                {
+                    "toggles_to_font_shape2@chat_settings.line_break":
+                    {}
+                },
+                {
+                    "2@bb.yp":
+                    {
+                        "$yps": [ "100%", 5 ]
+                    }
+                },
+                {
+                    "reset_button@chat_settings.reset_button":
+                    {}
+                },
+                {
+                    "3@bb.yp":
+                    {
+                        "$yps": [ "100%", 10 ]
+                    }
+                } ]
+            }
+        } ]
+    }
+}

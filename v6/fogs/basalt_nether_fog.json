@@ -1,0 +1,27 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:fog_settings":
+    {
+        "description":
+        {
+            "identifier": "ambro:basalt_nether_fog"
+        },
+        "distance":
+        {
+            "air":
+            {
+                "fog_start": 10,
+                "fog_end": 96,
+                "fog_color": "#685f70",
+                "render_distance_type": "fixed"
+            },
+            "weather":
+            {
+                "fog_start": 10,
+                "fog_end": 96,
+                "fog_color": "#685f70",
+                "render_distance_type": "fixed"
+            }
+        }
+    }
+}

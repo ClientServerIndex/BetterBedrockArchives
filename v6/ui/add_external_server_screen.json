@@ -1,0 +1,108 @@
+{
+    "add_external_server_screen":
+    {
+        "$screen_content": "bb_add_server.add_server_main_panel",
+        "$screen_bg_content": "bb_common.screen_background"
+    },
+    "text_edit_group":
+    {
+        "type": "stack_panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [ "100%", "100%c+3px" ],
+        "$max_length|default": 30,
+        "$text_type|default": "ExtendedASCII",
+        "controls": [
+        {
+            "name_label":
+            {
+                "type": "label",
+                "color": "$sub_header_text_color",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 1,
+                "offset": [ 2, 0 ],
+                "size": [ "100%", "10px" ],
+                "shadow": true,
+                "text": "$header",
+                "alpha": 1
+            }
+        },
+        {
+            "edit_box@common.text_edit_box":
+            {
+                "layer": 2,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", 25 ],
+                "$text_box_name": "$text_box_name",
+                "$text_edit_box_content_binding_name": "$content_binding_name",
+                "max_length": "$max_length",
+                "text_type": "$text_type",
+                "$place_holder_control": "add_external_server.text_edit_box_place_holder_label",
+                "$text_edit_box_label_alpha": 0.85,
+                "$place_holder_text": "$placeholder_label",
+                "$text_edit_box_binding_condition": "once",
+                "$text_background_default": "add_external_server.edit_box_indent",
+                "$text_background_hover": "add_external_server.edit_box_indent_hover"
+            }
+        } ]
+    },
+    "text_edit_box_place_holder_label@bb.label":
+    {
+        "localize": true,
+        "shadow": "$shadow",
+        "color": "$place_holder_text_color",
+        "locked_color": "$text_box_locked_text_color",
+        "alpha": 0.4,
+        "locked_alpha": "$locked_text_alpha",
+        "font_size": "$font_size",
+        "text_alignment": "$text_alignment",
+        "$shadow|default": false,
+        "$text_alpha|default": 1,
+        "$locked_text_alpha|default": 0.5,
+        "$font_size|default": "normal",
+        "$text_alignment|default": "left",
+        "$text_edit_box_placeholder_content_binding_type|default": "global",
+        "$text_edit_box_placeholder_content_binding_name|default": "#text_box_item_name",
+        "$text_edit_box_placeholder_binding_condition|default": "visible",
+        "$text_box_name|default": "#text_box_name",
+        "$place_holder_text|default": "",
+        "text": "$place_holder_text",
+        "$text_edit_box_placeholder_binding_type": "global",
+        "$text_edit_box_placeholder_binding_collection_name": "",
+        "bindings": [
+        {
+            "binding_type": "$text_edit_box_placeholder_content_binding_type",
+            "binding_condition": "$text_edit_box_placeholder_binding_condition",
+            "binding_collection_name": "$text_edit_box_grid_collection_name",
+            "binding_name": "$text_edit_box_placeholder_content_binding_name"
+        } ]
+    },
+    "edit_box_indent":
+    {
+        "type": "image",
+        "texture": "AMBRO/tui/hbui/editbox/indent",
+        "alpha": "$alpha",
+        "$alpha|default": 1
+    },
+    "edit_box_indent_hover@common.edit_box_indent":
+    {
+        "texture": "AMBRO/tui/hbui/editbox/indent_hover",
+        "alpha": "$alpha",
+        "$alpha|default": 1
+    },
+    "title_text":
+    {
+        "type": "label",
+        "layer": 1,
+        "text": "#title_text",
+        "color": "$title_text_color",
+        "shadow": false,
+        "bindings": [
+        {
+            "binding_name": "#title_text",
+            "binding_condition": "once"
+        } ]
+    }
+}

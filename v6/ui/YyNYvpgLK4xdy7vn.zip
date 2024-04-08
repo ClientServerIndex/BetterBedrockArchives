@@ -1,0 +1,1245 @@
+{
+    "namespace": "bb_start",
+    "start_screen_main_panel@bb.p":
+    {
+        "$achievements_ignored|default": false,
+        "$feedback_ignored|default": false,
+        "$store_ignored|default": false,
+        "controls": [
+        {
+            "@bb_start.title":
+            {}
+        },
+        {
+            "@bb_start.main_buttons":
+            {}
+        },
+        {
+            "@bb_start.copyright_panel":
+            {}
+        },
+        {
+            "@bb_start.header":
+            {}
+        },
+        {
+            "popup_dialog_factory":
+            {
+                "type": "factory",
+                "control_ids":
+                {
+                    "cloud_upload_prompt": "@start.cloud_upload_prompt"
+                }
+            }
+        },
+        {
+            "popups@bb.p":
+            {
+                "layer": 10,
+                "controls": [
+                {
+                    "@bb_start.changelog_popup":
+                    {}
+                },
+                {
+                    "@bb_start.app_popup":
+                    {}
+                },
+                {
+                    "bg@bb_common.screen_background":
+                    {
+                        "layer": 10
+                    }
+                },
+                {
+                    "lock_all_buttons_under_popup":
+                    {
+                        "type": "button",
+                        "layer": 9
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "show_changelog_popup",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition1"
+                },
+                {
+                    "binding_type": "view",
+                    "source_control_name": "show_app_popup",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#condition2"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#condition1 or #condition2)",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "header@bb.p":
+    {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "size": [ "100%", 28 ],
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "texture": "AMBRO/tui/header",
+                "controls": [
+                {
+                    "right_side@bb.sph":
+                    {
+                        "anchor_from": "right_middle",
+                        "anchor_to": "right_middle",
+                        "offset": [ -1, 1 ],
+                        "controls": [
+                        {
+                            "feedback_button@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_open_uri",
+                                "$button_text": "F",
+                                "$hover_text": "Open Feedback Website §c(Press 2x)",
+                                "size": [ 24, 24 ],
+                                "property_bag":
+                                {
+                                    "#hyperlink": "https://aka.ms/minecraftfb"
+                                },
+                                "button_mappings": [
+                                {
+                                    "from_button_id": "button.menu_select",
+                                    "to_button_id": "$pressed_button_name",
+                                    "mapping_type": "double_pressed"
+                                },
+                                {
+                                    "from_button_id": "button.menu_ok",
+                                    "to_button_id": "$pressed_button_name",
+                                    "mapping_type": "focused"
+                                } ]
+                            }
+                        },
+                        {
+                            "realms_button@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_invite_notification",
+                                "$button_text": "R",
+                                "$hover_text": "Open Realms Notifications",
+                                "size": [ 24, 24 ]
+                            }
+                        },
+                        {
+                            "marketplace_button@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_store",
+                                "$button_text": "M",
+                                "$hover_text": "Open Marketplace",
+                                "size": [ 24, 24 ]
+                            }
+                        },
+                        {
+                            "achievements_button@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_achievements",
+                                "$button_text": "A",
+                                "$hover_text": "Open Achievements",
+                                "size": [ 24, 24 ]
+                            }
+                        },
+                        {
+                            "dressing_room_button@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.to_profile_screen",
+                                "$button_text": "D",
+                                "$hover_text": "Open Dressing Room",
+                                "size": [ 24, 24 ]
+                            }
+                        },
+                        {
+                            "close_button_mapping@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_id": "close_button_mapping",
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                                "$use_custom_content": true,
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_exit",
+                                "$hover_text": "Close Minecraft",
+                                "$custom_content": "bb_start.close_button_image_content",
+                                "size": [ 24, 24 ],
+                                "button_mappings": [
+                                {
+                                    "from_button_id": "button.menu_cancel",
+                                    "to_button_id": "button.menu_exit",
+                                    "mapping_type": "global"
+                                },
+                                {
+                                    "from_button_id": "button.menu_select",
+                                    "to_button_id": "$pressed_button_name",
+                                    "mapping_type": "pressed"
+                                },
+                                {
+                                    "from_button_id": "button.menu_ok",
+                                    "to_button_id": "$pressed_button_name",
+                                    "mapping_type": "focused"
+                                } ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "show_changelog_popup",
+                                    "source_property_name": "(not #toggle_state)",
+                                    "target_property_name": "#condition1"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "show_app_popup",
+                                    "source_property_name": "(not #toggle_state)",
+                                    "target_property_name": "#condition2"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "((#condition1 and #condition2) or (#condition2 and #condition1))",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "close_button_mapping@bb_hbui_buttons.pressed2":
+                            {
+                                "$focus_id": "close_button_mapping",
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                                "$use_custom_content": true,
+                                "$default_button": "AMBRO/tui/common/empty",
+                                "$hover_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                                "$pressed_button_name": "button.menu_exit",
+                                "$hover_text": "Close Minecraft",
+                                "$custom_content": "bb_start.close_button_image_content",
+                                "size": [ 24, 24 ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "show_changelog_popup",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#condition1"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "show_app_popup",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#condition2"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#condition1 or #condition2)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "left_side@bb.sph":
+                    {
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "offset": [ 3, 2 ],
+                        "controls": [
+                        {
+                            "gamerpic@bb.img":
+                            {
+                                "size": [ 22, 22 ],
+                                "bindings": [
+                                {
+                                    "binding_name": "#gamerpic_texture_path",
+                                    "binding_name_override": "#texture"
+                                },
+                                {
+                                    "binding_name": "#gamerpic_texture_location_type",
+                                    "binding_name_override": "#texture_file_system"
+                                } ]
+                            }
+                        },
+                        {
+                            "@bb.yp":
+                            {
+                                "$yps": [ 3, 0 ]
+                            }
+                        },
+                        {
+                            "@bb.p":
+                            {
+                                "size": [ "100%cm", 22 ],
+                                "controls": [
+                                {
+                                    "@bb.sp":
+                                    {
+                                        "offset": [ 0, 0.5 ],
+                                        "controls": [
+                                        {
+                                            "@bb.l":
+                                            {
+                                                "text": "You're playing as:",
+                                                "shadow": false,
+                                                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ]
+                                            }
+                                        },
+                                        {
+                                            "@bb.l":
+                                            {
+                                                "text": "#playername",
+                                                "shadow": false,
+                                                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                                                "bindings": [
+                                                {
+                                                    "binding_name": "#playername"
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "bg":
+                    {
+                        "layer": -1,
+                        "type": "custom",
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "renderer": "gradient_renderer",
+                        "size": [ "100%", "200%" ],
+                        "color1": [ 0, 0, 0, 0.55 ],
+                        "color2": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294, 0 ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "dressing_room_image_content@bb.img":
+    {
+        "texture": "textures/ui/dressing_room_capes",
+        "size": [ 16, 16 ]
+    },
+    "close_button_image_content@bb.img":
+    {
+        "size": [ "100% - 4px", "100% - 4px" ],
+        "texture": "AMBRO/tui/buttons/close/exit"
+    },
+    "copyright_panel@bb.p":
+    {
+        "controls": [
+        {
+            "left_side@bb.pxyc":
+            {
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 2, -2 ],
+                "controls": [
+                {
+                    "@bb.sp":
+                    {
+                        "controls": [
+                        {
+                            "@bb_start.copyright_label_template":
+                            {
+                                "text": "Copyright © 2022-2023 Better Bedrock. All rights reserved"
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "right_side@bb.pxyc":
+            {
+                "anchor_from": "bottom_right",
+                "anchor_to": "bottom_right",
+                "offset": [ -2, -2 ],
+                "controls": [
+                {
+                    "@bb.sph":
+                    {
+                        "size": [ "100%c", 8 ],
+                        "controls": [
+                        {
+                            "@bb_start.copyright_label_template":
+                            {
+                                "text": "Copyright Mojang AB. Do not distribute | "
+                            }
+                        },
+                        {
+                            "@bb_start.copyright_label_template":
+                            {
+                                "text": "#version",
+                                "bindings": [
+                                {
+                                    "binding_name": "#version"
+                                } ]
+                            }
+                        },
+                        {
+                            "@bb_start.copyright_label_template":
+                            {
+                                "text": " | v"
+                            }
+                        },
+                        {
+                            "@bb_start.copyright_label_template":
+                            {
+                                "text": "#development_version",
+                                "bindings": [
+                                {
+                                    "binding_name": "#development_version"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "copyright_label_template@bb.l":
+    {
+        "font_type": "smooth",
+        "color": [ 0.8, 0.8, 0.8 ],
+        "font_scale_factor": 0.8,
+        "alpha": 0.6
+    },
+    "main_buttons@bb.p":
+    {
+        "$yps": [ 0, 2 ],
+        "size": [ 220, "100%" ],
+        "controls": [
+        {
+            "@bb.sp":
+            {
+                "size": [ "100%", "100%c" ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 70 ]
+                    }
+                },
+                {
+                    "@bb_start.main_button_template":
+                    {
+                        "$default_focus_precedence": 10,
+                        "$pressed_text": "Play",
+                        "$default_text_color": [ 1, 1, 1 ],
+                        "$hover_text_color": [ 1, 1, 1 ],
+                        "$default_button": "AMBRO/tui/hbui/button/green/button_default",
+                        "$hover_button": "AMBRO/tui/hbui/button/green/button_hover",
+                        "$pressed_button": "AMBRO/tui/hbui/button/green/button_pressed",
+                        "size": [ "100%", 36 ],
+                        "$font_scale_factor": 1.5,
+                        "$pressed_button_name": "$play_button_target"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {}
+                },
+                {
+                    "@bb_start.main_button_template":
+                    {
+                        "$panel_offset": [ 0, 0 ],
+                        "$font_type": "default",
+                        "$pressed_text": "Settings",
+                        "$pressed_button_name": "button.menu_settings"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {}
+                },
+                {
+                    "@bb_hbui_buttons.tab":
+                    {
+                        "$radio_toggle_group": true,
+                        "$toggle_group_forced_index": 1,
+                        "$default_selector_toggle_index": 0,
+                        "$tab_view_binding_name": "show_changelog_popup",
+                        "$toggle_name": "bb_changelog_tab",
+                        "$unchecked_default_image": "AMBRO/tui/hbui/button_default",
+                        "$unchecked_hover_image": "AMBRO/tui/hbui/button_hover",
+                        "$checked_default_image": "AMBRO/tui/hbui/button_default",
+                        "$checked_hover_image": "AMBRO/tui/hbui/button_hover",
+                        "size": [ "100%", 24 ],
+                        "$tab_texture_size": [ "100%", "100% " ],
+                        "$use_tab_content": true,
+                        "$tab_text": "Changelog",
+                        "clips_children": true
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {}
+                },
+                {
+                    "@bb_hbui_buttons.tab":
+                    {
+                        "$radio_toggle_group": true,
+                        "$toggle_group_forced_index": 1,
+                        "$default_selector_toggle_index": 0,
+                        "$tab_view_binding_name": "show_app_popup",
+                        "$toggle_name": "bb_app_tab",
+                        "$unchecked_default_image": "AMBRO/tui/hbui/button_default",
+                        "$unchecked_hover_image": "AMBRO/tui/hbui/button_hover",
+                        "$checked_default_image": "AMBRO/tui/hbui/button_default",
+                        "$checked_hover_image": "AMBRO/tui/hbui/button_hover",
+                        "size": [ "100%", 24 ],
+                        "$tab_texture_size": [ "100%", "100% " ],
+                        "$use_tab_content": true,
+                        "$tab_content": "bb_start.app_tab_content",
+                        "$tab_text": "",
+                        "clips_children": true
+                    }
+                } ]
+            }
+        } ]
+    },
+    "main_button_template@bb_start.pressed":
+    {
+        "size": [ "100%", 24 ]
+    },
+    "popup_close_button_mapping@bb_hbui_buttons.tab":
+    {
+        "layer": 21,
+        "$blank": true,
+        "$toggle_group_forced_index": 4,
+        "$radio_toggle_group": true,
+        "$default_selector_toggle_index": 0,
+        "$tab_text": "",
+        "size": [ "100%", "100%" ],
+        "$toggle_button_mappings_control": [
+        {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_select",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_ok",
+            "mapping_type": "focused"
+        } ]
+    },
+    "changelog_popup@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_start.popup_close_button_mapping":
+            {
+                "$toggle_name": "bb_changelog_tab"
+            }
+        },
+        {
+            "popup@bb_popup_dialog.custom_long_modal_dialog":
+            {
+                "$custom_modal_dialog_title_content": "bb_start.custom_modal_dialog_title_changelog_content",
+                "$custom_modal_dialog_desc_img_content": "bb_start.custom_modal_dialog_desc_img_changelog_content",
+                "$custom_modal_dialog_desc_content": "bb_start.custom_modal_dialog_desc_changelog_content",
+                "$button_panel": "bb_start.changelog_button_panel"
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "show_changelog_popup",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "custom_modal_dialog_title_changelog_content@bb.p":
+    {
+        "size": [ "100%", 10 ],
+        "clips_children": true,
+        "$transition_duration": 0.75,
+        "$wait_duration": 4,
+        "$easing_in": "out_cubic",
+        "$easing_out": "out_cubic",
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "text": "Changelog",
+                "shadow": false
+            }
+        } ]
+    },
+    "custom_modal_dialog_desc_img_changelog_content@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.sph":
+            {
+                "layer": 11,
+                "size": [ "100%sm", "100%sm" ],
+                "$transition_duration": 1,
+                "$wait_duration": 8,
+                "$easing": "out_cubic",
+                "anims": [ "@bb_anims.changelog_offset_anim" ],
+                "controls": [
+                {
+                    "1@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/changelog/1"
+                    }
+                },
+                {
+                    "2@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/changelog/2"
+                    }
+                },
+                {
+                    "3@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/changelog/3"
+                    }
+                },
+                {
+                    "4@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/changelog/4"
+                    }
+                },
+                {
+                    "1x@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/changelog/1"
+                    }
+                } ]
+            }
+        },
+        {
+            "sm@bb.p":
+            {}
+        },
+        {
+            "theme":
+            {
+                "layer": 10,
+                "size": [ "100%", "100%" ],
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "color1": [ 0.4549019607843137, 0.6313725490196078, 0.9568627450980393 ],
+                "color2": [ 0.4549019607843137, 0.6313725490196078, 0.9568627450980393 ]
+            }
+        } ]
+    },
+    "custom_modal_dialog_desc_changelog_content@bb.sp":
+    {
+        "controls": [
+        {
+            "header@bb.l":
+            {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", "default" ],
+                "color": [ 0.3529411764705882, 0.6980392156862745, 0.2274509803921569 ],
+                "text": "§fWelcome to the Better Bedrock Client! After very long break we finally released new version that main target was better performance and new UI! Major changes are below and please report any bug you may find on Discord.",
+                "shadow": false
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 10 ]
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Completely reworked Mod Menu"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Optimized all modules §7(less than 2/3 sec to load)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added new modules §7(Inventory Hud, Controller Keystrokes, Tab List etc.)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added offset and size sliders to Mod Menu §7(IMPOSSIBLE!)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Reworked UI §7(OreUi style)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Reworked main screens §7(start, play, pause, chat etc.)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Rewokred hotbars grid §7(better, old style)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Reworked default popup dialogs"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added custom popup dialogs §7(like this one :D)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added listed featured servers §7(featured servers are always in one position)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added life quality features such as clickable commands etc."
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added dynamic messages"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added durability viewer in inventory for armor and offhand"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added java glass panes"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Added controller mode §7(subpacks)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Reworked fogs §7(visibility is much better, especially in nether)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Changed player lighting §7(players are much more visible in dark areas)"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Fixed blinking java chat"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Fixed major bugs from last update"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Removed panorama switcher in start screen"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 10 ]
+            }
+        },
+        {
+            "header@bb.l":
+            {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", "default" ],
+                "color": [ 0.3529411764705882, 0.6980392156862745, 0.2274509803921569 ],
+                "text": "§fNOTE: Other screens are in default style because they may be overwritten by new MCBE UI system but they will be changed in the newer versions anyway.",
+                "shadow": false
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 10 ]
+            }
+        },
+        {
+            "header@bb.l":
+            {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", "default" ],
+                "text": "SPECIAL THANKS TO",
+                "shadow": false
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "PatarHD and other content creators for reviewing and promoting Better Bedrock"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Chainsketch for help with UI and entity stuff"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "TLGM2308 for help with UI"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 5 ]
+            }
+        } ]
+    },
+    "changelog_label@bb.sph":
+    {
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+        {
+            "symbol@bb.l":
+            {
+                "text": "§l»",
+                "color": [ 0.3529411764705882, 0.6980392156862745, 0.2274509803921569 ],
+                "shadow": false
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 1, 0 ]
+            }
+        },
+        {
+            "text@bb.l":
+            {
+                "text": "$text",
+                "size": [ "100% - 8px", "default" ],
+                "shadow": false
+            }
+        } ]
+    },
+    "changelog_button_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 32 ],
+        "controls": [
+        {
+            "changelog_radio_button_template@bb_hbui_buttons.tab":
+            {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "$toggle_name": "bb_changelog_tab",
+                "$toggle_group_forced_index": 2,
+                "$default_selector_toggle_index": 0,
+                "$radio_toggle_group": true,
+                "$tab_text": "Continue",
+                "size": [ "100%", "100%" ]
+            }
+        } ]
+    },
+    "changelog_tab_content@bb.p":
+    {
+        "$transition_duration": 0.75,
+        "$wait_duration": 4,
+        "$easing_in": "out_cubic",
+        "$easing_out": "out_cubic",
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "text": "Changelog",
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                "shadow": false,
+                "anims": [ "@bb_anims.ss_changelog_wait" ]
+            }
+        },
+        {
+            "@bb.l":
+            {
+                "text": "Patch 6.0",
+                "offset": [ 0, "100%" ],
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                "shadow": false,
+                "anims": [ "@bb_anims.ss_patch_wait" ]
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 1,
+                "texture": "AMBRO/tui/hbui/button/button_bottom"
+            }
+        } ]
+    },
+    "app_popup@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_start.popup_close_button_mapping":
+            {
+                "$toggle_name": "bb_app_tab"
+            }
+        },
+        {
+            "popup@bb_popup_dialog.custom_long_modal_dialog":
+            {
+                "$custom_modal_dialog_title_content": "bb_start.custom_modal_dialog_title_app_content",
+                "$custom_modal_dialog_desc_img_content": "bb_start.custom_modal_dialog_desc_img_app_content",
+                "$custom_modal_dialog_desc_content": "bb_start.custom_modal_dialog_desc_app_content",
+                "$button_panel": "bb_start.app_button_panel"
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "show_app_popup",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "custom_modal_dialog_title_app_content@bb.p":
+    {
+        "size": [ "100%", 10 ],
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "text": "Better Bedrock App",
+                "shadow": false
+            }
+        } ]
+    },
+    "custom_modal_dialog_desc_img_app_content2@bb.img":
+    {
+        "texture": "AMBRO/tui/changelogx"
+    },
+    "custom_modal_dialog_desc_img_app_content@bb.p":
+    {
+        "controls": [
+        {
+            "1holder@bb.p":
+            {
+                "layer": 11,
+                "controls": [
+                {
+                    "1@bb.img":
+                    {
+                        "texture": "AMBRO/tui/popup_images/app/1",
+                        "size": [ "215%", "215%" ],
+                        "offset": [ 0, "60%" ],
+                        "anims": [ "@bb_anims.app_slide_offset_anim" ]
+                    }
+                } ]
+            }
+        },
+        {
+            "theme":
+            {
+                "layer": 10,
+                "size": [ "100%", "100%" ],
+                "type": "custom",
+                "renderer": "gradient_renderer",
+                "color1": [ 0.4549019607843137, 0.6313725490196078, 0.9568627450980393 ],
+                "color2": [ 0.4549019607843137, 0.6313725490196078, 0.9568627450980393 ]
+            }
+        } ]
+    },
+    "custom_modal_dialog_desc_app_content@bb.sp":
+    {
+        "controls": [
+        {
+            "header@bb.l":
+            {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ "100%", "default" ],
+                "color": [ 0.3529411764705882, 0.6980392156862745, 0.2274509803921569 ],
+                "text": "§fBetter Bedrock app is finally released! You can now edit and save config without any 3rd party text editors! Cape visible only for Better Bedrock users also isn't a problem, now you can adjust cape colors in real time! For more information downlaod Better Bedrock App! Major features are below.",
+                "shadow": false
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 10 ]
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Config and cape editor"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Listed all downloadable packs"
+            }
+        },
+        {
+            "@bb_start.changelog_label":
+            {
+                "$text": "Archived all older BB versions"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 5 ]
+            }
+        } ]
+    },
+    "app_button_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 32 ],
+        "controls": [
+        {
+            "changelog_radio_button_template@bb_hbui_buttons.tab":
+            {
+                "anchor_to": "bottom_middle",
+                "anchor_from": "bottom_middle",
+                "$toggle_name": "bb_app_tab",
+                "$toggle_group_forced_index": 2,
+                "$default_selector_toggle_index": 0,
+                "$radio_toggle_group": true,
+                "$tab_text": "Continue",
+                "size": [ "100%", "100%" ]
+            }
+        } ]
+    },
+    "app_tab_content2@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "text": "Better Bedrock App",
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                "shadow": false
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 1,
+                "texture": "AMBRO/tui/hbui/button/button_bottom"
+            }
+        } ]
+    },
+    "app_tab_content@bb.p":
+    {
+        "$transition_duration": 0.75,
+        "$wait_duration": 4,
+        "$easing_in": "out_cubic",
+        "$easing_out": "out_cubic",
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "text": "Better Bedrock App",
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                "shadow": false,
+                "anims": [ "@bb_anims.ss_changelog_wait" ]
+            }
+        },
+        {
+            "@bb.l":
+            {
+                "text": "Finally Released!",
+                "offset": [ 0, "100%" ],
+                "color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+                "shadow": false,
+                "anims": [ "@bb_anims.ss_patch_wait" ]
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 1,
+                "texture": "AMBRO/tui/hbui/button/button_bottom"
+            }
+        } ]
+    },
+    "pressed@bb_common.button":
+    {
+        "size": [ "100%", 32 ],
+        "$pressed_panel|default": "bb_start.pressed_panel",
+        "$default_button|default": "AMBRO/tui/hbui/button_default",
+        "$hover_button|default": "AMBRO/tui/hbui/button_hover",
+        "$pressed_button|default": "AMBRO/tui/hbui/button_pressed",
+        "$pressed_texture_size|default": [ "100%", "100%" ],
+        "$default_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$pressed_text_color|default": [ 1, 1, 1 ],
+        "$button_pressed_offset|default": [ 0, 1 ],
+        "$default_state|default": false,
+        "$hover_state|default": false,
+        "$pressed_state|default": false,
+        "$locked_state|default": false,
+        "controls": [
+        {
+            "default@$pressed_panel":
+            {
+                "layer": 1,
+                "$pressed_texture": "$default_button",
+                "$pressed_text_color": "$default_text_color",
+                "$default_state": true,
+                "$version_text_alpha": 0.05
+            }
+        },
+        {
+            "hover@$pressed_panel":
+            {
+                "layer": 2,
+                "$pressed_texture": "$hover_button",
+                "$pressed_text_color": "$hover_text_color",
+                "$hover_state": true,
+                "$version_text_alpha": 0.125
+            }
+        },
+        {
+            "pressed@$pressed_panel":
+            {
+                "layer": 3,
+                "$pressed_texture": "$pressed_button",
+                "$pressed_text_color": "$pressed_text_color",
+                "$pressed_text_offset": "$button_pressed_offset",
+                "$version_text_offset": [ 0, 5 ],
+                "$pressed_state": true,
+                "$version_text_alpha": 0.125
+            }
+        } ]
+    },
+    "pressed_panel@bb.p":
+    {
+        "$use_version_text|default": false,
+        "controls": [
+        {
+            "texture@bb.img":
+            {
+                "layer": 1,
+                "size": "$pressed_texture_size",
+                "texture": "$pressed_texture"
+            }
+        },
+        {
+            "label@bb.p":
+            {
+                "offset": "$panel_offset",
+                "$panel_offset|default": [ 0, -2 ],
+                "controls": [
+                {
+                    "@bb.label":
+                    {
+                        "font_type": "$font_type",
+                        "$font_type|default": "MinecraftTen",
+                        "font_scale_factor": "$font_scale_factor",
+                        "$font_scale_factor|default": 1,
+                        "layer": 3,
+                        "text": "$pressed_text",
+                        "$pressed_text|default": "pressed_text",
+                        "shadow": "$pressed_text_shadow",
+                        "$pressed_text_shadow|default": false,
+                        "color": "$pressed_text_color",
+                        "offset": "$pressed_text_offset",
+                        "$pressed_text_offset|default": [ 0, 0 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "version@bb.l":
+            {
+                "ignored": "(not $use_version_text)",
+                "layer": 2,
+                "text": "#version",
+                "font_scale_factor": "$version_text_scale_factor",
+                "$version_text_scale_factor|default": 3.2,
+                "offset": "$version_text_offset",
+                "$version_text_offset|default": [ 0, 4 ],
+                "shadow": false,
+                "alpha": "$version_text_alpha",
+                "bindings": [
+                {
+                    "binding_name": "#version"
+                } ]
+            }
+        } ]
+    },
+    "title@bb.img":
+    {
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "texture": "textures/ui/title",
+        "size": [ "55%", "18.85%x" ],
+        "offset": [ 0, "15%" ]
+    }
+}

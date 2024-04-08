@@ -1,0 +1,388 @@
+{
+    "namespace": "bb_buttons",
+    "close_button":
+    {
+        "type": "button",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [ 24, 24 ],
+        "layer": 10,
+        "$close_button_offset|default": [ -2, 2 ],
+        "offset": "$close_button_offset",
+        "$close_button_panel_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$close_button_texture_size|default": [ "100%", "100%" ],
+        "locked_control": "",
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "sound_name": "random.click",
+        "sound_volume": 1,
+        "sound_pitch": 1,
+        "$default_button_alpha|default": 1,
+        "$default_hover_alpha|default": 1,
+        "$default_pressed_alpha|default": 1,
+        "$close_button_to_button_id|default": "button.menu_exit",
+        "$close_button_visible_binding_name|default": "#close_button_visible",
+        "$close_button_visible_binding_type|default": "none",
+        "bindings": [
+        {
+            "binding_type": "$close_button_visible_binding_type",
+            "binding_name": "$close_button_visible_binding_name",
+            "binding_name_override": "#visible"
+        },
+        {
+            "binding_name": "#tts_enabled",
+            "binding_name_override": "#focus_enabled"
+        } ],
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$close_button_to_button_id",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "$close_button_to_button_id",
+            "mapping_type": "focused"
+        } ],
+        "controls": [
+        {
+            "default@bb_buttons.close_button_panel":
+            {
+                "$close_button_texture": "AMBRO/tui/common/empty"
+            }
+        },
+        {
+            "hover@bb_buttons.close_button_panel":
+            {
+                "$close_button_texture": "AMBRO/tui/buttons/close/hover_no_icon"
+            }
+        },
+        {
+            "pressed@bb_buttons.close_button_panel":
+            {
+                "$close_button_texture": "AMBRO/tui/buttons/close/hover_no_icon"
+            }
+        } ]
+    },
+    "close_button_panel@bb.p":
+    {
+        "layer": 1,
+        "size": "$close_button_panel_size",
+        "$button_alpha|default": 1,
+        "controls": [
+        {
+            "close_button_image@bb.img":
+            {
+                "size": "$close_button_texture_size",
+                "alpha": "$button_alpha",
+                "layer": 1,
+                "texture": "$close_button_texture"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 2,
+                "size": [ 20, 20 ],
+                "texture": "$close_button_main_texture",
+                "$close_button_main_texture|default": "AMBRO/tui/buttons/close/default"
+            }
+        } ]
+    },
+    "mod_tab@bb.p":
+    {
+        "size": "$mod_tab_size",
+        "$mod_tab_size|default": [ "100%", 22 ],
+        "$tab_image_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$tab_content_size|default": [ "100% - 6px", "100% - 6px" ],
+        "$panel_control|default": "bb_buttons.mod_tab_panel_control",
+        "$toggle_name": "bb_mod_tab",
+        "$tab_view_binding_name|default": "bb_tab",
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle":
+            {
+                "reset_on_focus_lost": true,
+                "controls": [
+                {
+                    "unchecked@$panel_control":
+                    {
+                        "layer": 1,
+                        "$tab_texture": "$unchecked_default_image",
+                        "$mod_tab_text_color": [ 0.4470588235294118, 0.4470588235294118, 0.4470588235294118 ],
+                        "$mod_tab_text": "DISABLED",
+                        "$tab_state": "unchecked"
+                    }
+                },
+                {
+                    "unchecked_hover@$panel_control":
+                    {
+                        "layer": 1,
+                        "$tab_texture": "$unchecked_hover_image",
+                        "$mod_tab_text_color": [ 0.4470588235294118, 0.4470588235294118, 0.4470588235294118 ],
+                        "$mod_tab_text": "DISABLED",
+                        "$tab_state": "unchecked_hover",
+                        "$is_hover_state": true
+                    }
+                },
+                {
+                    "checked@$panel_control":
+                    {
+                        "layer": 2,
+                        "$tab_texture": "$checked_default_image",
+                        "$mod_tab_text_color": [ 0.9411764705882353, 0.1019607843137255, 0.1019607843137255 ],
+                        "$mod_tab_text": "ENABLED",
+                        "$tab_state": "checked",
+                        "$is_checked_state": true
+                    }
+                },
+                {
+                    "checked_hover@$panel_control":
+                    {
+                        "layer": 2,
+                        "$tab_texture": "$checked_hover_image",
+                        "$mod_tab_text_color": [ 0.9411764705882353, 0.1019607843137255, 0.1019607843137255 ],
+                        "$mod_tab_text": "ENABLED",
+                        "$tab_state": "checked_hover",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true
+                    }
+                } ]
+            }
+        } ]
+    },
+    "mod_tab_panel_control@bb.p":
+    {
+        "$tab_content|default": "bb.p",
+        "controls": [
+        {
+            "texture@bb.img":
+            {
+                "layer": 3,
+                "texture": "$tab_texture",
+                "size": "$tab_image_size",
+                "controls": [
+                {
+                    "@bb.label":
+                    {
+                        "layer": 4,
+                        "color": "$mod_tab_text_color",
+                        "text": "$mod_tab_text"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "toggle@bb.p":
+    {
+        "size": "$toggle_size",
+        "$toggle_size|default": [ "100%", 24 ],
+        "$toggle_text|default": "",
+        "$toggle_content_size|default": [ "100% - 6px", "100% - 6px" ],
+        "$unchecked_text_color|default": [ 0.7529411764705882, 0.7529411764705882, 0.7607843137254902 ],
+        "$unchecked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$toggle_view_binding_name|default": "this_toggle",
+        "$toggle_name": "navigation_tab",
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_tab_focus_binding_type": "global",
+        "$toggle_tab_focus_binding_name": "#navigation_tab_focus_precedence",
+        "$toggle_on_hover_binding_type": "global",
+        "$toggle_on_hover_binding_name": "#toggle_on_hover",
+        "controls": [
+        {
+            "$toggle_view_binding_name@bb_buttons.toggle_default":
+            {
+                "button_mappings": "$toggle_button_mappings",
+                "$toggle_button_mappings|default": [
+                {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.menu_select",
+                    "mapping_type": "pressed"
+                },
+                {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.menu_ok",
+                    "mapping_type": "pressed"
+                } ]
+            }
+        } ]
+    },
+    "new_ui_button_panel":
+    {
+        "type": "panel",
+        "$button_alpha|default": 1,
+        "layer": 1,
+        "$button_size_override|default": [ "100%", "100%" ],
+        "size": "$button_size_override",
+        "$content_alpha|default": 1,
+        "$button_image_visible|default": true,
+        "$button_image_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$image_anchor|default": "center",
+        "$image_offset|default": [ 0, 0 ],
+        "$border_visible|default": true,
+        "$border_alpha|default": 1,
+        "$button_anchor_to|default": "center",
+        "$button_anchor_from|default": "center",
+        "anchor_to": "$button_anchor_to",
+        "anchor_from": "$button_anchor_from",
+        "$button_image_fill|default": false,
+        "$button_image_color|default": [ 1, 1, 1 ],
+        "controls": [
+        {
+            "$button_image@bb.img":
+            {
+                "texture": "$toggle_texture",
+                "$button_alpha|default": "$content_alpha",
+                "alpha": "$button_alpha",
+                "$button_image_bindings|default": [ ],
+                "bindings": "$button_image_bindings",
+                "ignored": "(not $button_image_visible)",
+                "size": "$button_image_size",
+                "offset": "$image_offset",
+                "anchor_from": "$image_anchor",
+                "anchor_to": "$image_anchor",
+                "layer": 1,
+                "fill": "$button_image_fill",
+                "color": "$button_image_color"
+            }
+        },
+        {
+            "toggle_content@bb.p":
+            {
+                "layer": 3,
+                "$toggle_content|default": "common_tabs.empty_tab_content",
+                "controls": [
+                {
+                    "toggle_content@bb.p":
+                    {
+                        "size": "$toggle_content_size",
+                        "controls": [
+                        {
+                            "use_img@bb.img":
+                            {
+                                "layer": 4,
+                                "visible": "$use_img",
+                                "$use_img|default": false,
+                                "texture": "$img_texture",
+                                "$img_texture|default": "",
+                                "size": "$img_size",
+                                "$img_size|default": [ "100%", "100%" ],
+                                "offset": "$img_offset",
+                                "$img_offset|default": [ 0, 0 ],
+                                "anchor_to": "$img_anchor",
+                                "anchor_from": "$img_anchor",
+                                "$img_anchor|default": "center"
+                            }
+                        },
+                        {
+                            "toggle_text@bb.label":
+                            {
+                                "ignored": "(not $button_image_visible)",
+                                "anchor_to": "$toggle_text_anchor",
+                                "anchor_from": "$toggle_text_anchor",
+                                "$toggle_text_anchor|default": "center",
+                                "offset": "$toggle_text_offset",
+                                "$toggle_text_offset|default": [ 0, 0 ],
+                                "layer": 5,
+                                "text": "$toggle_text",
+                                "color": "$toggle_text_color"
+                            }
+                        },
+                        {
+                            "toggle_content@$toggle_content":
+                            {
+                                "layer": 3
+                            }
+                        },
+                        {
+                            "@bb.p":
+                            {
+                                "visible": "$use_hover_text",
+                                "$use_hover_text|default": false,
+                                "offset": "$hover_text_offset",
+                                "$hover_text_offset|default": [ 0, -18 ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "layer": 6,
+                                        "visible": "$use_hover_text_control",
+                                        "$use_hover_text_control|default": false,
+                                        "texture": "AMBRO/tui/common/rounded",
+                                        "size": [ "100%c + 8px", 12 ],
+                                        "alpha": "$hover_text_img_alpha",
+                                        "$hover_text_img_alpha|default": 0.4,
+                                        "controls": [
+                                        {
+                                            "use_hover_text_control@bb.label":
+                                            {
+                                                "layer": 6,
+                                                "text": "$hover_text",
+                                                "$hover_text|default": ""
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ],
+        "variables": [
+        {
+            "requires": "($state_index = '0')",
+            "$toggle_unchecked": true,
+            "$default_state": true,
+            "layer": 1
+        },
+        {
+            "requires": "($state_index = '1')",
+            "$toggle_checked": true,
+            "$pressed_state": true,
+            "layer": 2
+        },
+        {
+            "requires": "($state_index = '2')",
+            "$toggle_unchecked_hover": true,
+            "$hover_state": true,
+            "layer": 3
+        },
+        {
+            "requires": "($state_index = '3')",
+            "$toggle_checked_hover": true,
+            "$pressed_state": true,
+            "layer": 4
+        } ]
+    },
+    "toggle_unchecked@bb_buttons.new_ui_button_panel":
+    {
+        "$toggle_text_color": "$unchecked_text_color",
+        "$toggle_texture": "$unchecked_texture",
+        "$state_index": 0
+    },
+    "toggle_checked@bb_buttons.new_ui_button_panel":
+    {
+        "$toggle_text_color": "$checked_text_color",
+        "$toggle_texture": "$checked_texture",
+        "$state_index": 1
+    },
+    "toggle_unchecked_hover@bb_buttons.new_ui_button_panel":
+    {
+        "$toggle_text_color": "$unchecked_hover_text_color",
+        "$toggle_texture": "$unchecked_hover_texture",
+        "$state_index": 2,
+        "$use_hover_text_control": true
+    },
+    "toggle_checked_hover@bb_buttons.new_ui_button_panel":
+    {
+        "$toggle_text_color": "$checked_hover_text_color",
+        "$toggle_texture": "$checked_hover_texture",
+        "$state_index": 3
+    }
+}

@@ -1,0 +1,909 @@
+{
+    "namespace": "bb_progress",
+    "progress_screen_main_panel@bb.p":
+    {
+        "controls": [
+        {
+            "@bb_start.title":
+            {}
+        },
+        {
+            "@bb_progress.progress_bar_percentage":
+            {}
+        },
+        {
+            "scan_anim@bb.p":
+            {
+                "size": [ "100%", 10 ],
+                "offset": [ 0, 20 ],
+                "clips_children": true,
+                "controls": [
+                {
+                    "@bb.l":
+                    {
+                        "text": "0 o o",
+                        "alpha": 0,
+                        "shadow": false,
+                        "anims": [ "@progress.anim1_1" ]
+                    }
+                },
+                {
+                    "@bb.l":
+                    {
+                        "text": "o 0 o",
+                        "alpha": 0,
+                        "shadow": false,
+                        "anims": [ "@progress.anim2_1" ]
+                    }
+                },
+                {
+                    "@bb.l":
+                    {
+                        "text": "o o 0",
+                        "alpha": 0,
+                        "shadow": false,
+                        "anims": [ "@progress.anim3_1" ]
+                    }
+                } ]
+            }
+        },
+        {
+            "main_sp@bb.sp":
+            {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "controls": [
+                {
+                    "progress_title_text@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "cancel_button@bb_hbui_buttons.pressed":
+                            {
+                                "$pressed_button_name": "button.menu_exit",
+                                "$pressed_text": "Cancel",
+                                "size": [ 100, 32 ],
+                                "bindings": [
+                                {
+                                    "binding_name": "#cancel_visible",
+                                    "binding_name_override": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 3 ]
+                    }
+                },
+                {
+                    "progress_title_text@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.l":
+                            {
+                                "text": "#title_text",
+                                "shadow": false,
+                                "bindings": [
+                                {
+                                    "binding_name": "#title_text"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "progress_bar_text@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.l":
+                            {
+                                "size": [ "100% - 66px", 10 ],
+                                "text": "#progress_text",
+                                "text_alignment": "center",
+                                "shadow": false,
+                                "bindings": [
+                                {
+                                    "binding_name": "#progress_text"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not (#progress_text = ''))",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 3 ]
+                    }
+                },
+                {
+                    "progress_bar@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.p":
+                            {
+                                "size": [ "100% - 18px", 5 ],
+                                "controls": [
+                                {
+                                    "full_progress_bar_icon@achievement.full_progress_bar_icon_base":
+                                    {
+                                        "layer": 2,
+                                        "bindings": [
+                                        {
+                                            "binding_name": "#loading_bar_percentage",
+                                            "binding_name_override": "#clip_ratio"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "empty_progress_bar_icon@achievement.empty_progress_bar_icon":
+                                    {
+                                        "layer": 1
+                                    }
+                                },
+                                {
+                                    "progress_bar_nub@progress.progress_bar_nub":
+                                    {
+                                        "size": [ "100% - 10px", 5 ],
+                                        "layer": 4
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 0, 9 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "popup_dialog_factory@progress.popup_dialog_factory":
+            {}
+        } ]
+    },
+    "progress_bar_percentage_control@bb.label":
+    {
+        "text": "('§z' + $text + '%')",
+        "localize": false,
+        "shadow": false,
+        "bindings": [
+        {
+            "binding_name": "#loading_bar_percentage"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(((1 - #loading_bar_percentage) * 100 > ($in_range - 1)) and ((1 - #loading_bar_percentage) * 100 < $in_range) or ((1 - #loading_bar_percentage) * 100 = $in_range))",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "progress_bar_percentage@bb.p":
+    {
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "size": [ "100%cm", 10 ],
+        "offset": [ -15.5, -17 ],
+        "$bb": "bb_progress.progress_bar_percentage_control",
+        "controls": [
+        {
+            "@$bb":
+            {
+                "$in_range": 0,
+                "$text": "0"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 1,
+                "$text": "1"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 2,
+                "$text": "2"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 3,
+                "$text": "3"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 4,
+                "$text": "4"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 5,
+                "$text": "5"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 6,
+                "$text": "6"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 7,
+                "$text": "7"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 8,
+                "$text": "8"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 9,
+                "$text": "9"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 10,
+                "$text": "10"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 11,
+                "$text": "11"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 12,
+                "$text": "12"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 13,
+                "$text": "13"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 14,
+                "$text": "14"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 15,
+                "$text": "15"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 16,
+                "$text": "16"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 17,
+                "$text": "17"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 18,
+                "$text": "18"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 19,
+                "$text": "19"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 20,
+                "$text": "20"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 21,
+                "$text": "21"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 22,
+                "$text": "22"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 23,
+                "$text": "23"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 24,
+                "$text": "24"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 25,
+                "$text": "25"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 26,
+                "$text": "26"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 27,
+                "$text": "27"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 28,
+                "$text": "28"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 29,
+                "$text": "29"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 30,
+                "$text": "30"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 31,
+                "$text": "31"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 32,
+                "$text": "32"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 33,
+                "$text": "33"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 34,
+                "$text": "34"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 35,
+                "$text": "35"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 36,
+                "$text": "36"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 37,
+                "$text": "37"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 38,
+                "$text": "38"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 39,
+                "$text": "39"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 40,
+                "$text": "40"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 41,
+                "$text": "41"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 42,
+                "$text": "42"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 43,
+                "$text": "43"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 44,
+                "$text": "44"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 45,
+                "$text": "45"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 46,
+                "$text": "46"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 47,
+                "$text": "47"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 48,
+                "$text": "48"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 49,
+                "$text": "49"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 50,
+                "$text": "50"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 51,
+                "$text": "51"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 52,
+                "$text": "52"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 53,
+                "$text": "53"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 54,
+                "$text": "54"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 55,
+                "$text": "55"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 56,
+                "$text": "56"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 57,
+                "$text": "57"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 58,
+                "$text": "58"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 59,
+                "$text": "59"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 60,
+                "$text": "60"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 61,
+                "$text": "61"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 62,
+                "$text": "62"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 63,
+                "$text": "63"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 64,
+                "$text": "64"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 65,
+                "$text": "65"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 66,
+                "$text": "66"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 67,
+                "$text": "67"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 68,
+                "$text": "68"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 69,
+                "$text": "69"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 70,
+                "$text": "70"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 71,
+                "$text": "71"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 72,
+                "$text": "72"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 73,
+                "$text": "73"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 74,
+                "$text": "74"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 75,
+                "$text": "75"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 76,
+                "$text": "76"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 77,
+                "$text": "77"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 78,
+                "$text": "78"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 79,
+                "$text": "79"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 80,
+                "$text": "80"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 81,
+                "$text": "81"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 82,
+                "$text": "82"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 83,
+                "$text": "83"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 84,
+                "$text": "84"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 85,
+                "$text": "85"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 86,
+                "$text": "86"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 87,
+                "$text": "87"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 88,
+                "$text": "88"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 89,
+                "$text": "89"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 90,
+                "$text": "90"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 91,
+                "$text": "91"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 92,
+                "$text": "92"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 93,
+                "$text": "93"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 94,
+                "$text": "94"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 95,
+                "$text": "95"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 96,
+                "$text": "96"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 97,
+                "$text": "97"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 98,
+                "$text": "98"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 99,
+                "$text": "99"
+            }
+        },
+        {
+            "@$bb":
+            {
+                "$in_range": 100,
+                "$text": "100"
+            }
+        } ]
+    }
+}

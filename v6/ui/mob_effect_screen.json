@@ -1,0 +1,13 @@
+{
+    "namespace": "mob_effect",
+    "mob_effect_screen@common.base_screen":
+    {
+        "should_steal_mouse": true,
+        "force_render_below": true,
+        "always_accepts_input": true,
+        "absorbs_input": false,
+        "is_showing_menu": false,
+        "$screen_content": "bb_effect_screen.main_panel",
+        "button_mappings": [ ]
+    }
+}

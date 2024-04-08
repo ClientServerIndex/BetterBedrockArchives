@@ -1,0 +1,82 @@
+{
+    "video_section":
+    {
+        "modifications": [
+        {
+            "control_name": "hide_paperdoll_toggle",
+            "operation": "replace",
+            "value": [
+            {
+                "hide_paperdoll_toggle@settings_common.option_toggle":
+                {
+                    "$option_label": "Hide Tab list",
+                    "$option_binding_name": "#hide_paperdoll",
+                    "$option_enabled_binding_name": "#hide_paperdoll_enabled",
+                    "$toggle_name": "hide_paperdoll"
+                }
+            } ]
+        },
+        {
+            "control_name": "ui_profile_dropdown",
+            "operation": "insert_after",
+            "value": [
+            {
+                "banner1@bb_common.banner":
+                {
+                    "$text": "Pocket UI is not supported!",
+                    "bindings": [
+                    {
+                        "binding_name": "#ui_profile_radio_pocket",
+                        "binding_name_override": "#visible"
+                    } ]
+                }
+            },
+            {
+                "padding1@bb.p":
+                {
+                    "size": [ 0, 3 ],
+                    "bindings": [
+                    {
+                        "binding_name": "#ui_profile_radio_pocket",
+                        "binding_name_override": "#visible"
+                    } ]
+                }
+            } ]
+        },
+        {
+            "control_name": "gui_scale_slider",
+            "operation": "insert_after",
+            "value": [
+            {
+                "banner2@bb_common.banner":
+                {
+                    "$text": "Recommended Gui Scale is -1",
+                    "bindings": [
+                    {
+                        "binding_name": "#gui_scale"
+                    },
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#gui_scale > 0)",
+                        "target_property_name": "#visible"
+                    } ]
+                }
+            },
+            {
+                "padding2@bb.p":
+                {
+                    "size": [ 0, 3 ],
+                    "bindings": [
+                    {
+                        "binding_name": "#gui_scale"
+                    },
+                    {
+                        "binding_type": "view",
+                        "source_property_name": "(#gui_scale > 0)",
+                        "target_property_name": "#visible"
+                    } ]
+                }
+            } ]
+        } ]
+    }
+}

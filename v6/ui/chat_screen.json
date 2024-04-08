@@ -1,0 +1,19 @@
+{
+    "chat_screen":
+    {
+        "$screen_content": "bb_chat.bb_chat_screen_main_panel",
+        "$screen_bg_content": "bb_common.screen_background"
+    },
+    "text_edit_box@common.text_edit_box":
+    {
+        "$text_edit_box_label_size": [ 10, "default" ],
+        "layer": 10,
+        "$text_edit_clipping_panel_size": [ "100% - 2px", "100%" ],
+        "$text_background_default": "bb_chat.edit_box_indent",
+        "$text_background_hover": "bb_chat.edit_box_indent_hover",
+        "$text_edit_text_control": "chat_display_text",
+        "$text_edit_box_label_anchor_point": "top_left",
+        "$text_edit_box_label_offset": [ 0, 1 ],
+        "size": [ "100% - 4px", "100%" ]
+    }
+}

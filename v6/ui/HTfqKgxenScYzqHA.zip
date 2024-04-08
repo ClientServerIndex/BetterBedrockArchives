@@ -1,0 +1,1510 @@
+{
+    "gamma_panel":
+    {
+        "$color": [ 1, 1, 1, 0.15 ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_gamma_opacity_slider",
+            "source_property_name": "(#slider_value / 10)",
+            "target_property_name": "#alpha"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_gamma",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "color1": "$color",
+        "color2": "$color",
+        "layer": -1000,
+        "renderer": "gradient_renderer",
+        "type": "custom"
+    },
+    "namespace": "bb_mod_options",
+    "options_close_button_content@bb.p":
+    {
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+        {
+            "close_button_image@bb.img":
+            {
+                "$settings_close_button|default": "AMBRO/tui/common/empty",
+                "layer": 1001,
+                "size": [ 22, 22 ],
+                "texture": "$settings_close_button"
+            }
+        },
+        {
+            "@bb.img":
+            {
+                "layer": 1002,
+                "size": [ 20, 20 ],
+                "texture": "AMBRO/tui/buttons/close/default_small"
+            }
+        } ],
+        "size": [ 22, 22 ]
+    },
+    "options_close_button@bb_hbui_buttons.mod_settings":
+    {
+        "$ignore_gear_texture": true,
+        "$settings_binding_name": "bb_mod_option_0",
+        "$settings_content": "bb_mod_options.options_close_button_content",
+        "$settings_toggle_index": 0,
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_ok"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_ok"
+        } ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_mod_option_0",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ],
+        "layer": 10,
+        "offset": [ 2, 0 ],
+        "size": [ 24, 24 ]
+    },
+    "options_main_stack_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_1",
+                "$section_panel": "1",
+                "$title_text": "Armor Hud"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_2",
+                "$section_panel": "2",
+                "$title_text": "Direction Hud"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_5",
+                "$section_panel": "5",
+                "$title_text": "Chat"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_6",
+                "$section_panel": "6",
+                "$title_text": "Debug Menu"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_7",
+                "$section_panel": "7",
+                "$title_text": "Gamma"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_8",
+                "$section_panel": "8",
+                "$title_text": "Coords"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_9",
+                "$section_panel": "9",
+                "$title_text": "Paper Doll"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_11",
+                "$section_panel": "11",
+                "$title_text": "Day Counter"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_12",
+                "$section_panel": "12",
+                "$title_text": "Day Time Viewer"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_15",
+                "$section_panel": "15",
+                "$title_text": "Speed Counter"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_16",
+                "$section_panel": "16",
+                "$title_text": "Session Timer"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_17",
+                "$section_panel": "17",
+                "$title_text": "Tab List"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_19",
+                "$section_panel": "19",
+                "$title_text": "Controller Keystrokes"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_20",
+                "$section_panel": "20",
+                "$title_text": "Inventory Hud"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_21",
+                "$section_panel": "21",
+                "$title_text": "Hotbar Numbers"
+            }
+        },
+        {
+            "@bb_mod_options.options_panel_template":
+            {
+                "$control": "bb_mod_option_22",
+                "$section_panel": "22",
+                "$title_text": "Server Display"
+            }
+        } ]
+    },
+    "options_panel_template@bb.spv":
+    {
+        "$section_panel_control|default": "('bb_mod_options.section_' + $section_panel + '_panel')",
+        "$section_panel|default": "0",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb_common.line_title_text":
+            {}
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "spv@$section_panel_control":
+                    {
+                        "size": [ "100% - 6px", "100%cm" ]
+                    }
+                } ],
+                "size": [ "100%", "100%cm" ]
+            }
+        } ]
+    },
+    "section_0_panel@bb.p":
+    {},
+    "section_1_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_armor_hud_x_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "X Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "X Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "X Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "X Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "X Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "X Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "X Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "X Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "X Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "X Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "X Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "X Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "X Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "X Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "X Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "X Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "X Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "X Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "X Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "X Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "X Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "X Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "X Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "X Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "X Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "X Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "X Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "X Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "X Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "X Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "X Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "X Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "X Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "X Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "X Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "X Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "X Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "X Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "X Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "X Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "X Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $armor_hud_x_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_armor_hud_x_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_armor_hud_y_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "Y Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "Y Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "Y Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "Y Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "Y Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "Y Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "Y Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "Y Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "Y Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "Y Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "Y Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "Y Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "Y Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "Y Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "Y Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "Y Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "Y Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "Y Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "Y Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "Y Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "Y Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "Y Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "Y Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "Y Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "Y Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "Y Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "Y Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "Y Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "Y Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "Y Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "Y Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "Y Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "Y Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "Y Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "Y Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "Y Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "Y Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "Y Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "Y Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "Y Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "Y Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $armor_hud_y_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_armor_hud_y_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_2_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_direction_hud_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $direction_hud_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_direction_hud_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_5_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_chat_x_size@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0": "X Size: 0.0% §70.0",
+                        "$slider_control_text_1": "X Size: 1.25% §70.1",
+                        "$slider_control_text_2": "X Size: 2.5% §70.2",
+                        "$slider_control_text_3": "X Size: 3.75% §70.3",
+                        "$slider_control_text_4": "X Size: 5.0% §70.4",
+                        "$slider_control_text_5": "X Size: 6.25% §70.5",
+                        "$slider_control_text_6": "X Size: 7.5% §70.6",
+                        "$slider_control_text_7": "X Size: 8.75% §70.7",
+                        "$slider_control_text_8": "X Size: 10.0% §70.8",
+                        "$slider_control_text_9": "X Size: 11.25% §70.9",
+                        "$slider_control_text_10": "X Size: 12.5% §71.0",
+                        "$slider_control_text_11": "X Size: 13.75% §71.1",
+                        "$slider_control_text_12": "X Size: 15.0% §71.2",
+                        "$slider_control_text_13": "X Size: 16.25% §71.3",
+                        "$slider_control_text_14": "X Size: 17.5% §71.4",
+                        "$slider_control_text_15": "X Size: 18.75% §71.5",
+                        "$slider_control_text_16": "X Size: 20.0% §71.6",
+                        "$slider_control_text_17": "X Size: 21.25% §71.7",
+                        "$slider_control_text_18": "X Size: 22.5% §71.8",
+                        "$slider_control_text_19": "X Size: 23.75% §71.9",
+                        "$slider_control_text_20": "X Size: 25.0% §72.0",
+                        "$slider_control_text_21": "X Size: 26.25% §72.1",
+                        "$slider_control_text_22": "X Size: 27.5% §72.2",
+                        "$slider_control_text_23": "X Size: 28.75% §72.3",
+                        "$slider_control_text_24": "X Size: 30.0% §72.4",
+                        "$slider_control_text_25": "X Size: 31.25% §72.5",
+                        "$slider_control_text_26": "X Size: 32.5% §72.6",
+                        "$slider_control_text_27": "X Size: 33.75% §72.7",
+                        "$slider_control_text_28": "X Size: 35.0% §72.8",
+                        "$slider_control_text_29": "X Size: 36.25% §72.9",
+                        "$slider_control_text_30": "X Size: 37.5% §73.0",
+                        "$slider_control_text_31": "X Size: 38.75% §73.1",
+                        "$slider_control_text_32": "X Size: 40.0% §73.2",
+                        "$slider_control_text_33": "X Size: 41.25% §73.3",
+                        "$slider_control_text_34": "X Size: 42.5% §73.4",
+                        "$slider_control_text_35": "X Size: 43.75% §73.5",
+                        "$slider_control_text_36": "X Size: 45.0% §73.6",
+                        "$slider_control_text_37": "X Size: 46.25% §73.7",
+                        "$slider_control_text_38": "X Size: 47.5% §73.8",
+                        "$slider_control_text_39": "X Size: 48.75% §73.9",
+                        "$slider_control_text_40": "X Size: 50.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $chat_x_size) * 10)",
+                        "$slider_text_source_control_name": "bb_chat_x_size",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_chat_y_size@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0": "Y Size: 0.0% §70.0",
+                        "$slider_control_text_1": "Y Size: 1.25% §70.1",
+                        "$slider_control_text_2": "Y Size: 2.5% §70.2",
+                        "$slider_control_text_3": "Y Size: 3.75% §70.3",
+                        "$slider_control_text_4": "Y Size: 5.0% §70.4",
+                        "$slider_control_text_5": "Y Size: 6.25% §70.5",
+                        "$slider_control_text_6": "Y Size: 7.5% §70.6",
+                        "$slider_control_text_7": "Y Size: 8.75% §70.7",
+                        "$slider_control_text_8": "Y Size: 10.0% §70.8",
+                        "$slider_control_text_9": "Y Size: 11.25% §70.9",
+                        "$slider_control_text_10": "Y Size: 12.5% §71.0",
+                        "$slider_control_text_11": "Y Size: 13.75% §71.1",
+                        "$slider_control_text_12": "Y Size: 15.0% §71.2",
+                        "$slider_control_text_13": "Y Size: 16.25% §71.3",
+                        "$slider_control_text_14": "Y Size: 17.5% §71.4",
+                        "$slider_control_text_15": "Y Size: 18.75% §71.5",
+                        "$slider_control_text_16": "Y Size: 20.0% §71.6",
+                        "$slider_control_text_17": "Y Size: 21.25% §71.7",
+                        "$slider_control_text_18": "Y Size: 22.5% §71.8",
+                        "$slider_control_text_19": "Y Size: 23.75% §71.9",
+                        "$slider_control_text_20": "Y Size: 25.0% §72.0",
+                        "$slider_control_text_21": "Y Size: 26.25% §72.1",
+                        "$slider_control_text_22": "Y Size: 27.5% §72.2",
+                        "$slider_control_text_23": "Y Size: 28.75% §72.3",
+                        "$slider_control_text_24": "Y Size: 30.0% §72.4",
+                        "$slider_control_text_25": "Y Size: 31.25% §72.5",
+                        "$slider_control_text_26": "Y Size: 32.5% §72.6",
+                        "$slider_control_text_27": "Y Size: 33.75% §72.7",
+                        "$slider_control_text_28": "Y Size: 35.0% §72.8",
+                        "$slider_control_text_29": "Y Size: 36.25% §72.9",
+                        "$slider_control_text_30": "Y Size: 37.5% §73.0",
+                        "$slider_control_text_31": "Y Size: 38.75% §73.1",
+                        "$slider_control_text_32": "Y Size: 40.0% §73.2",
+                        "$slider_control_text_33": "Y Size: 41.25% §73.3",
+                        "$slider_control_text_34": "Y Size: 42.5% §73.4",
+                        "$slider_control_text_35": "Y Size: 43.75% §73.5",
+                        "$slider_control_text_36": "Y Size: 45.0% §73.6",
+                        "$slider_control_text_37": "Y Size: 46.25% §73.7",
+                        "$slider_control_text_38": "Y Size: 47.5% §73.8",
+                        "$slider_control_text_39": "Y Size: 48.75% §73.9",
+                        "$slider_control_text_40": "Y Size: 50.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $chat_y_size) * 10)",
+                        "$slider_text_source_control_name": "bb_chat_y_size",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_chat_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $chat_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_chat_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$chat_bottom_chat",
+                "$toggle_text": "Bottom Chat",
+                "$toggle_view_binding_name": "bb_bottom_chat"
+            }
+        } ]
+    },
+    "section_6_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_debug_menu_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $debug_menu_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_debug_menu_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$debug_menu_items_section",
+                "$toggle_text": "Items Section",
+                "$toggle_view_binding_name": "bb_items_section"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$debug_menu_recovery_compass",
+                "$toggle_text": "Recovery Compass §7(May crash game on servers)",
+                "$toggle_view_binding_name": "bb_recovery_compass"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$debug_menu_text_factories",
+                "$toggle_text": "Text Factories §7(With raw input)",
+                "$toggle_view_binding_name": "bb_text_factories"
+            }
+        } ]
+    },
+    "section_7_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_gamma_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Gamma Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Gamma Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Gamma Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Gamma Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Gamma Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Gamma Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Gamma Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Gamma Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Gamma Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Gamma Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Gamma Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $gamma_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_gamma_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_8_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_coords_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $coords_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_coords_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$coords_simple_coords",
+                "$toggle_text": "Simple Coords",
+                "$toggle_view_binding_name": "bb_coords_simple_coords"
+            }
+        } ]
+    },
+    "section_9_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_paper_doll_x_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "X Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "X Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "X Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "X Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "X Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "X Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "X Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "X Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "X Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "X Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "X Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "X Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "X Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "X Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "X Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "X Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "X Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "X Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "X Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "X Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "X Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "X Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "X Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "X Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "X Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "X Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "X Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "X Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "X Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "X Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "X Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "X Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "X Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "X Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "X Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "X Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "X Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "X Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "X Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "X Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "X Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $paper_doll_x_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_paper_doll_x_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_paper_doll_y_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "Y Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "Y Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "Y Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "Y Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "Y Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "Y Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "Y Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "Y Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "Y Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "Y Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "Y Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "Y Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "Y Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "Y Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "Y Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "Y Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "Y Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "Y Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "Y Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "Y Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "Y Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "Y Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "Y Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "Y Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "Y Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "Y Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "Y Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "Y Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "Y Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "Y Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "Y Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "Y Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "Y Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "Y Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "Y Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "Y Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "Y Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "Y Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "Y Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "Y Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "Y Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $paper_doll_y_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_paper_doll_y_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$paper_doll_wrap_empty_space",
+                "$toggle_text": "Wrap Empty Space",
+                "$toggle_view_binding_name": "bb_paper_doll_wrap_empty_space"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$paper_doll_live_model",
+                "$toggle_text": "Live Model",
+                "$toggle_view_binding_name": "bb_paper_doll_live_model"
+            }
+        } ]
+    },
+    "section_11_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_day_counter_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $day_counter_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_day_counter_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_12_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_day_time_viewer_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $day_time_viewer_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_day_time_viewer_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_13_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_potion_counter_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $potion_counter_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_potion_counter_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_14_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_free_slots_counter_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $free_slots_counter_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_free_slots_counter_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_15_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_speed_counter_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $speed_counter_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_speed_counter_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_16_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_session_timer_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $session_timer_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_session_timer_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_17_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_tab_list_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $tab_list_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_tab_list_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$tab_list_hold_mode",
+                "$toggle_text": "Hold Mode §7(ONLY PC, hold Tab key)",
+                "$toggle_view_binding_name": "bb_tab_list_hold_mode"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$tab_list_compact_mode",
+                "$toggle_text": "Compact Mode",
+                "$toggle_view_binding_name": "bb_tab_list_compact_mode"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$tab_list_players_avatars",
+                "$toggle_text": "Players Avatars",
+                "$toggle_view_binding_name": "bb_players_avatars"
+            }
+        } ]
+    },
+    "section_19_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_keystrokes_x_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "X Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "X Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "X Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "X Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "X Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "X Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "X Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "X Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "X Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "X Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "X Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "X Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "X Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "X Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "X Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "X Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "X Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "X Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "X Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "X Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "X Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "X Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "X Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "X Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "X Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "X Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "X Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "X Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "X Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "X Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "X Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "X Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "X Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "X Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "X Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "X Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "X Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "X Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "X Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "X Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "X Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $controller_keystrokes_x_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_keystrokes_x_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_keystrokes_y_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "Y Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "Y Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "Y Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "Y Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "Y Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "Y Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "Y Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "Y Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "Y Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "Y Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "Y Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "Y Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "Y Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "Y Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "Y Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "Y Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "Y Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "Y Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "Y Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "Y Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "Y Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "Y Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "Y Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "Y Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "Y Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "Y Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "Y Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "Y Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "Y Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "Y Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "Y Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "Y Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "Y Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "Y Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "Y Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "Y Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "Y Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "Y Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "Y Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "Y Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "Y Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $controller_keystrokes_y_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_keystrokes_y_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_controller_keystrokes_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $controller_keystrokes_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_controller_keystrokes_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$controller_keystrokes_arrow_style",
+                "$toggle_text": "Arrow Style",
+                "$toggle_view_binding_name": "bb_controller_keystrokes_arrow_style"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$controller_keystrokes_chroma_color",
+                "$toggle_text": "Chroma Color",
+                "$toggle_view_binding_name": "bb_controller_keystrokes_chroma_color"
+            }
+        } ]
+    },
+    "section_20_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_inventory_hud_x_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "X Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "X Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "X Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "X Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "X Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "X Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "X Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "X Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "X Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "X Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "X Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "X Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "X Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "X Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "X Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "X Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "X Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "X Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "X Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "X Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "X Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "X Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "X Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "X Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "X Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "X Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "X Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "X Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "X Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "X Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "X Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "X Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "X Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "X Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "X Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "X Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "X Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "X Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "X Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "X Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "X Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $inventory_hud_x_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_inventory_hud_x_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_inventory_hud_y_offset@bb_hbui_buttons.offset_slider":
+                    {
+                        "$slider_control_text_0|default": "Y Offset: 0.0% §70.0",
+                        "$slider_control_text_1|default": "Y Offset: 2.5% §70.1",
+                        "$slider_control_text_2|default": "Y Offset: 5.0% §70.2",
+                        "$slider_control_text_3|default": "Y Offset: 7.5% §70.3",
+                        "$slider_control_text_4|default": "Y Offset: 10.0% §70.4",
+                        "$slider_control_text_5|default": "Y Offset: 12.5% §70.5",
+                        "$slider_control_text_6|default": "Y Offset: 15.0% §70.6",
+                        "$slider_control_text_7|default": "Y Offset: 17.5% §70.7",
+                        "$slider_control_text_8|default": "Y Offset: 20.0% §70.8",
+                        "$slider_control_text_9|default": "Y Offset: 22.5% §70.9",
+                        "$slider_control_text_10|default": "Y Offset: 25.0% §71.0",
+                        "$slider_control_text_11|default": "Y Offset: 27.5% §71.1",
+                        "$slider_control_text_12|default": "Y Offset: 30.0% §71.2",
+                        "$slider_control_text_13|default": "Y Offset: 32.5% §71.3",
+                        "$slider_control_text_14|default": "Y Offset: 35.0% §71.4",
+                        "$slider_control_text_15|default": "Y Offset: 37.5% §71.5",
+                        "$slider_control_text_16|default": "Y Offset: 40.0% §71.6",
+                        "$slider_control_text_17|default": "Y Offset: 42.5% §71.7",
+                        "$slider_control_text_18|default": "Y Offset: 45.0% §71.8",
+                        "$slider_control_text_19|default": "Y Offset: 47.5% §71.9",
+                        "$slider_control_text_20|default": "Y Offset: 50.0% §72.0",
+                        "$slider_control_text_21|default": "Y Offset: 52.5% §72.1",
+                        "$slider_control_text_22|default": "Y Offset: 55.0% §72.2",
+                        "$slider_control_text_23|default": "Y Offset: 57.5% §72.3",
+                        "$slider_control_text_24|default": "Y Offset: 60.0% §72.4",
+                        "$slider_control_text_25|default": "Y Offset: 62.5% §72.5",
+                        "$slider_control_text_26|default": "Y Offset: 65.0% §72.6",
+                        "$slider_control_text_27|default": "Y Offset: 67.5% §72.7",
+                        "$slider_control_text_28|default": "Y Offset: 70.0% §72.8",
+                        "$slider_control_text_29|default": "Y Offset: 72.5% §72.9",
+                        "$slider_control_text_30|default": "Y Offset: 75.0% §73.0",
+                        "$slider_control_text_31|default": "Y Offset: 77.5% §73.1",
+                        "$slider_control_text_32|default": "Y Offset: 80.0% §73.2",
+                        "$slider_control_text_33|default": "Y Offset: 82.5% §73.3",
+                        "$slider_control_text_34|default": "Y Offset: 85.0% §73.4",
+                        "$slider_control_text_35|default": "Y Offset: 87.5% §73.5",
+                        "$slider_control_text_36|default": "Y Offset: 90.0% §73.6",
+                        "$slider_control_text_37|default": "Y Offset: 92.5% §73.7",
+                        "$slider_control_text_38|default": "Y Offset: 95.0% §73.8",
+                        "$slider_control_text_39|default": "Y Offset: 97.5% §73.9",
+                        "$slider_control_text_40|default": "Y Offset: 100.0% §74.0",
+                        "$slider_source_property_name": "((#slider_value + $inventory_hud_y_offset) * 10)",
+                        "$slider_text_source_control_name": "bb_inventory_hud_y_offset",
+                        "property_bag":
+                        {
+                            "#slider_steps": 41
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_inventory_hud_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $inventory_hud_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_inventory_hud_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_inventory_hud_text_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Text Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Text Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Text Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Text Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Text Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Text Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Text Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Text Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Text Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Text Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Text Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $inventory_hud_text_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_inventory_hud_text_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$inventory_hud_hotbar_numbers",
+                "$toggle_text": "Hotbar Numbers",
+                "$toggle_view_binding_name": "bb_inventory_hud_hotbar_numbers"
+            }
+        },
+        {
+            "@bb_hbui_buttons.toggle":
+            {
+                "$toggle_default_state": "$inventory_hud_horizontal_grid_style",
+                "$toggle_text": "Horizontal Grid Style",
+                "$toggle_view_binding_name": "bb_9x3_grid_style"
+            }
+        } ]
+    },
+    "section_21_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_hotbar_numbers_text_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Text Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Text Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Text Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Text Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Text Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Text Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Text Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Text Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Text Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Text Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Text Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $hotbar_numbers_text_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_hotbar_numbers_text_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    },
+    "section_22_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "bb_server_display_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_source_property_name": "((#slider_value + $server_display_opacity_slider) * 10)",
+                        "$slider_text_source_control_name": "bb_server_display_opacity_slider",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ],
+                "size": [ "100%", 18 ]
+            }
+        } ]
+    }
+}
