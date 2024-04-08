@@ -1,0 +1,250 @@
+{
+    "namespace": "bb_mod_more",
+    "more@bb_mod_menu.section_spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Creators",
+                "$section_panel": "section_creators"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Contact",
+                "$section_panel": "section_contact"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Mod Menu",
+                "$section_panel": "section_mod_menu"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Mobile App",
+                "$section_panel": "section_mobile_app"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Config",
+                "$section_panel": "section_config"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Issues",
+                "$section_panel": "section_issues"
+            }
+        },
+        {
+            "@bb_mod_more.section_template":
+            {
+                "$title_text": "Donate",
+                "$section_panel": "section_donate"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 5 ]
+            }
+        } ],
+        "$control": "bb_button_more"
+    },
+    "symbol_label@bb_common.button":
+    {
+        "size": [ "100%", "100%cm" ],
+        "$pressed_button_name": "",
+        "controls": [
+        {
+            "symbol_label@bb.sph":
+            {
+                "size": [ "100%", "100%cm" ],
+                "controls": [
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ 1, 0 ]
+                    }
+                },
+                {
+                    "@bb.l":
+                    {
+                        "text": "§l»",
+                        "shadow": false,
+                        "color": [ 0.3529411764705882, 0.6980392156862745, 0.2274509803921569 ]
+                    }
+                },
+                {
+                    "@bb.l":
+                    {
+                        "shadow": false,
+                        "size": [ "100% - 6px", "default" ],
+                        "$text|default": "",
+                        "text": "$text"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "section_template@bb.p":
+    {
+        "size": [ "100%", "50%c" ],
+        "$section_panel|default": "bb.p",
+        "controls": [
+        {
+            "@bb.spv":
+            {
+                "controls": [
+                {
+                    "@bb_common.line_title_text":
+                    {}
+                },
+                {
+                    "@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "spv@bb_mod_more.$section_panel":
+                            {
+                                "size": [ "100% - 6px", "100%c" ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 2 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "button@bb.b":
+            {
+                "layer": 1,
+                "hover_control": "hover",
+                "pressed_control": "",
+                "default_control": "",
+                "size": [ "100%", "100%sm" ],
+                "consume_hover_events": false,
+                "controls": [
+                {
+                    "hover@bb.img":
+                    {
+                        "texture": "AMBRO/tui/common/white",
+                        "size": [ "100%", "100%" ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_selected_section_opacity_slider",
+                            "source_property_name": "(#slider_value / 20)",
+                            "target_property_name": "#alpha"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "section_creators@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "AmBro§7: Texture Pack",
+                "$focus_id": "first_more_label"
+            }
+        },
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "iDarkQ§7: Mobile App"
+            }
+        } ]
+    },
+    "section_contact@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "YouTube§7: youtube.com/c/AmBro69"
+            }
+        },
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "Discord§7: discord.gg/ZGK5WYXnEY"
+            }
+        } ]
+    },
+    "section_mobile_app@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "Better Bedrock App§7: Our app is finally released! You can now edit and save config without any 3rd party text editors! Cape visible only for Better Bedrock users also isn't a problem, now you can adjust cape colors in real time! For more information downlaod Better Bedrock App!"
+            }
+        } ]
+    },
+    "section_config@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "How to Save Mods§7: Locate Better Bedrock Client in local files (com.mojang/resource_packs/bb/ui/_global_variables.json) After that, you will be able to modify extra content (such as custom hotbar numbers etc.) and all default mods states"
+            }
+        } ]
+    },
+    "section_issues@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "Laggy Gameplay§7: To improve performance disable Dynamic Mods in Mods tab"
+            }
+        },
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "Long Hud Loading Time§7: We also can't fix this issue because Better Bedrock Client renders loads of things on screen, which later are loaded when you join the world"
+            }
+        } ]
+    },
+    "section_mod_menu@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "Gray Values Next To The Sliders§7: These values indicate the config value to make editing easier"
+            }
+        } ]
+    },
+    "section_donate@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_mod_more.symbol_label":
+            {
+                "$text": "AmBro§7: axmbro@gmail.com",
+                "$focus_id": "last_more_label",
+                "$focus_override_down": "more"
+            }
+        } ]
+    }
+}

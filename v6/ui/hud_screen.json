@@ -1,0 +1,603 @@
+{
+    "namespace": "hud",
+    "hud_screen@common.base_screen2":
+    {
+        "is_showing_menu": false,
+        "should_steal_mouse": true,
+        "low_frequency_rendering": true,
+        "absorbs_input": false,
+        "send_telemetry": false,
+        "always_accepts_input": true,
+        "$screen_content": "hud.hud_content",
+        "$screen_bg_content": "bb_mod_options.gamma_panel",
+        "button_mappings": [
+        {
+            "from_button_id": "button.scoreboard",
+            "to_button_id": "button.scoreboard",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.inventory_left",
+            "to_button_id": "button.hotbar_inventory_left",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.inventory_right",
+            "to_button_id": "button.hotbar_inventory_right",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.hide_gui",
+            "to_button_id": "button.hide_gui_all",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.hide_tooltips",
+            "to_button_id": "button.hide_tooltips_hud",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.hide_paperdoll",
+            "to_button_id": "button.hide_paperdoll_hud",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot1",
+            "to_button_id": "button.slot_1",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot2",
+            "to_button_id": "button.slot_2",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot3",
+            "to_button_id": "button.slot_3",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot4",
+            "to_button_id": "button.slot_4",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot5",
+            "to_button_id": "button.slot_5",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot6",
+            "to_button_id": "button.slot_6",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot7",
+            "to_button_id": "button.slot_7",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot8",
+            "to_button_id": "button.slot_8",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot9",
+            "to_button_id": "button.slot_9",
+            "mapping_type": "global"
+        },
+        {
+            "from_button_id": "button.slot0",
+            "to_button_id": "button.slot_0",
+            "mapping_type": "global"
+        } ]
+    },
+    "hud_content@bb.p":
+    {
+        "variables": [ ],
+        "controls": [
+        {
+            "main_panel@bb_hud.main_panel":
+            {}
+        } ]
+    },
+    "chatSizeFix":
+    {
+        "anim_type": "wait",
+        "duration": "($chat_item_lifetime - 0.05)",
+        "next": "@hud.chatSizeFix1"
+    },
+    "chatSizeFix1":
+    {
+        "anim_type": "size",
+        "easing": "out_expo",
+        "duration": 0,
+        "from": [ "100%", "100%c" ],
+        "to": [ "100%", 0 ],
+        "destroy_at_end": "chat_grid_item"
+    },
+    "anim_chat_bg_alpha":
+    {
+        "anim_type": "alpha",
+        "easing": "in_quart",
+        "destroy_at_end": "chat_grid_ite",
+        "duration": 1.1,
+        "from": 0.7,
+        "to": 0
+    },
+    "gui_hotbar_slot_button_prototype@bb_common.button":
+    {
+        "variables": [
+        {
+            "requires": "($subpack = '1')",
+            "$focus_enabled": "$game_pad"
+        },
+        {
+            "requires": "($subpack = '2')",
+            "$focus_enabled": false
+        } ],
+        "$hotbar_select|default": "button.hotbar_select",
+        "$focus_id|default": "",
+        "$focus_override_down|default": "",
+        "$focus_override_up|default": "",
+        "$focus_override_left|default": "",
+        "$focus_override_right|default": "",
+        "focus_identifier": "$focus_id",
+        "focus_change_down": "$focus_override_down",
+        "focus_change_up": "$focus_override_up",
+        "focus_change_left": "$focus_override_left",
+        "focus_change_right": "$focus_override_right",
+        "focus_enabled": "$focus_enabled",
+        "layer": 2,
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$hotbar_select",
+            "mapping_type": "pressed",
+            "button_up_right_of_first_refusal": true
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.hotbar_ok",
+            "mapping_type": "focused"
+        },
+        {
+            "to_button_id": "button.slot_pressed",
+            "mapping_type": "pressed"
+        } ],
+        "controls": [
+        {
+            "hud_item_game_tip@game_tip.hud_item_game_tip":
+            {
+                "bindings": [
+                {
+                    "binding_name": "#game_tip_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$hotbar_collection_name"
+                } ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_collection_name": "$hotbar_collection_name",
+            "binding_type": "collection_details"
+        } ]
+    },
+    "hotbar_panel@bb.sph":
+    {
+        "size": [ "100%c", 22 ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "controls": [
+        {
+            "hotbar_start_cap@bb.img":
+            {
+                "ignored": "$touch",
+                "texture": "textures/ui/hotbar_start_cap",
+                "size": [ 1, 22 ],
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_hotbars_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ]
+            }
+        },
+        {
+            "hotbar_start_cap_touch@bb.p":
+            {
+                "size": [ 1, 22 ],
+                "ignored": "(not $touch)",
+                "controls": [
+                {
+                    "1@bb.img":
+                    {
+                        "texture": "textures/ui/hotbar_start_cap",
+                        "size": [ 1, 22 ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbars_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        },
+                        {
+                            "binding_name": "#hotbar_elipses_right_visible",
+                            "binding_name_override": "#condition2",
+                            "binding_type": "global"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_show_inventory_button_texture",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#condition1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#condition1 or #condition2)",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "hotbar_elipses_panel_left@hud.hotbar_elipses_panel_left_content":
+            {}
+        },
+        {
+            "hotbar_grid@bb_hud.hotbar_grid":
+            {}
+        },
+        {
+            "hotbar_elipses_panel_right@hud.hotbar_elipses_panel_right_content":
+            {}
+        },
+        {
+            "hotbar_end_cap_touch@bb.p":
+            {
+                "size": [ 1, 22 ],
+                "ignored": "(not $touch)",
+                "controls": [
+                {
+                    "1@bb.img":
+                    {
+                        "texture": "textures/ui/hotbar_end_cap",
+                        "size": [ 1, 22 ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbars_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        },
+                        {
+                            "binding_name": "#hotbar_elipses_left_visible",
+                            "binding_name_override": "#condition2",
+                            "binding_type": "global"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_show_inventory_button_texture",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#condition1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#condition1 or #condition2)",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "hotbar_end_cap@bb.img":
+            {
+                "ignored": "$touch",
+                "texture": "textures/ui/hotbar_end_cap",
+                "size": [ 1, 22 ],
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_hotbars_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#show_survival_ui",
+            "binding_name_override": "#condition2"
+        },
+        {
+            "binding_name": "#is_creative_mode",
+            "binding_name_override": "#condition3"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#condition2 or #condition3)",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "hotbar_elipses_panel_left_content@bb.p":
+    {
+        "size": [ 0, 22 ],
+        "controls": [
+        {
+            "1@bb.sph":
+            {
+                "size": [ 0, 22 ],
+                "offset": [ -21, 0 ],
+                "controls": [
+                {
+                    "hotbar_end_cap@bb.img":
+                    {
+                        "texture": "textures/ui/hotbar_start_cap",
+                        "size": [ 1, 22 ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbars_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_show_inventory_button_texture",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "hotbar_elipses_panel_right_art@bb.p":
+                    {
+                        "size": [ 20, 22 ],
+                        "layer": 4,
+                        "$hotbar_elipses_panel_right_art_size|default": [ 20, 22 ],
+                        "controls": [
+                        {
+                            "default@bb.p":
+                            {
+                                "size": "$hotbar_elipses_panel_right_art_size",
+                                "controls": [
+                                {
+                                    "slot@hud.hotbar_slot_image":
+                                    {
+                                        "layer": 2,
+                                        "$hotbar_slot_image_size": "$hotbar_elipses_panel_right_art_size",
+                                        "texture": "textures/ui/hotbar_8",
+                                        "bindings": [
+                                        {
+                                            "binding_type": "view",
+                                            "source_control_name": "bb_hotbars_opacity_slider",
+                                            "source_property_name": "(#slider_value / 10)",
+                                            "target_property_name": "#alpha"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "button@hud.hotbar_elipses_button2":
+                                    {}
+                                } ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bb_show_inventory_button_texture",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "hidden@bb.p":
+                            {
+                                "offset": [ 1, 0 ],
+                                "size": "$hotbar_elipses_panel_right_art_size",
+                                "controls": [
+                                {
+                                    "button@hud.hotbar_elipses_button_hidden":
+                                    {}
+                                } ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bb_show_inventory_button_texture",
+                                    "source_property_name": "(not #toggle_state)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#hotbar_elipses_left_visible",
+            "binding_name_override": "#visible",
+            "binding_type": "global"
+        } ]
+    },
+    "hotbar_elipses_panel_right_content@bb.p":
+    {
+        "size": [ 0, 22 ],
+        "controls": [
+        {
+            "sph@bb.sph":
+            {
+                "size": [ 0, 22 ],
+                "controls": [
+                {
+                    "hotbar_elipses_panel_right_art@bb.p":
+                    {
+                        "size": [ 20, 22 ],
+                        "layer": 4,
+                        "$hotbar_elipses_panel_right_art_size|default": [ 20, 22 ],
+                        "controls": [
+                        {
+                            "default@bb.p":
+                            {
+                                "size": "$hotbar_elipses_panel_right_art_size",
+                                "controls": [
+                                {
+                                    "slot@hud.hotbar_slot_image":
+                                    {
+                                        "layer": 2,
+                                        "$hotbar_slot_image_size": "$hotbar_elipses_panel_right_art_size",
+                                        "texture": "textures/ui/hotbar_8",
+                                        "bindings": [
+                                        {
+                                            "binding_type": "view",
+                                            "source_control_name": "bb_hotbars_opacity_slider",
+                                            "source_property_name": "(#slider_value / 10)",
+                                            "target_property_name": "#alpha"
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "button@hud.hotbar_elipses_button2":
+                                    {}
+                                } ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bb_show_inventory_button_texture",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "hidden@bb.p":
+                            {
+                                "offset": [ 1, 0 ],
+                                "size": "$hotbar_elipses_panel_right_art_size",
+                                "controls": [
+                                {
+                                    "button@hud.hotbar_elipses_button_hidden":
+                                    {}
+                                } ],
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "bb_show_inventory_button_texture",
+                                    "source_property_name": "(not #toggle_state)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "hotbar_end_cap@bb.img":
+                    {
+                        "texture": "textures/ui/hotbar_end_cap",
+                        "size": [ 1, 22 ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_hotbars_opacity_slider",
+                            "source_property_name": "(#slider_value / 10)",
+                            "target_property_name": "#alpha"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_show_inventory_button_texture",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#hotbar_elipses_right_visible",
+            "binding_name_override": "#visible",
+            "binding_type": "global"
+        } ]
+    },
+    "borderless_button2@common.button":
+    {
+        "propagate_alpha": true,
+        "controls": [
+        {
+            "default@default_borderless_button_layout":
+            {}
+        },
+        {
+            "hover@hover_borderless_button_layout":
+            {}
+        },
+        {
+            "pressed@pressed_borderless_button_layout":
+            {}
+        },
+        {
+            "elipses@elipses_image":
+            {}
+        } ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_hotbars_opacity_slider",
+            "source_property_name": "(#slider_value / 10)",
+            "target_property_name": "#alpha"
+        } ]
+    },
+    "hotbar_elipses_button2@borderless_button2":
+    {
+        "$pressed_button_name": "button.hotbar_inventory_button",
+        "$hotbar_elipses_button_size|default": [ 16, 16 ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": "$hotbar_elipses_button_size",
+        "layer": 3,
+        "focus_enabled": false,
+        "default_focus_precedence": 10,
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$pressed_button_name",
+            "mapping_type": "pressed"
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#inventory_touch_button",
+            "binding_name_override": "#visible",
+            "binding_type": "global"
+        } ]
+    },
+    "hotbar_elipses_button_hidden@common.button":
+    {
+        "$pressed_button_name": "button.hotbar_inventory_button",
+        "$hotbar_elipses_button_size|default": [ 16, 16 ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": "$hotbar_elipses_button_size",
+        "layer": 3,
+        "focus_enabled": false,
+        "default_focus_precedence": 10,
+        "locked_control": "",
+        "default_control": "",
+        "hover_control": "",
+        "pressed_control": "",
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$pressed_button_name",
+            "mapping_type": "pressed"
+        } ],
+        "bindings": [
+        {
+            "binding_name": "#inventory_touch_button",
+            "binding_name_override": "#visible",
+            "binding_type": "global"
+        } ]
+    }
+}

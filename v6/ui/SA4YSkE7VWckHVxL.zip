@@ -1,0 +1,786 @@
+{
+    "namespace": "bb_mod_elements",
+    "elements@bb_mod_menu.section_spv":
+    {
+        "controls": [
+        {
+            "section_bossbar@bb_mod_elements.section_template":
+            {
+                "$title_text": "Bossbar",
+                "$section_panel": "bb_mod_elements.section_bossbar_panel"
+            }
+        },
+        {
+            "section_scoreboard@bb_mod_elements.section_template":
+            {
+                "$title_text": "Scoreboard",
+                "$section_panel": "bb_mod_elements.section_scoreboard_panel"
+            }
+        },
+        {
+            "section_title@bb_mod_elements.section_template":
+            {
+                "$title_text": "Title",
+                "$section_panel": "bb_mod_elements.section_title_panel"
+            }
+        },
+        {
+            "section_subtitle@bb_mod_elements.section_template":
+            {
+                "$title_text": "Subitle",
+                "$section_panel": "bb_mod_elements.section_subtitle_panel"
+            }
+        },
+        {
+            "section_tip@bb_mod_elements.section_template":
+            {
+                "$title_text": "Tip",
+                "$section_panel": "bb_mod_elements.section_tip_panel"
+            }
+        },
+        {
+            "section_actionbar@bb_mod_elements.section_template":
+            {
+                "$title_text": "actionbar",
+                "$section_panel": "bb_mod_elements.section_actionbar_panel"
+            }
+        },
+        {
+            "section_item_name@bb_mod_elements.section_template":
+            {
+                "$title_text": "Item Name",
+                "$section_panel": "bb_mod_elements.section_item_name_panel"
+            }
+        },
+        {
+            "section_jukebox@bb_mod_elements.section_template":
+            {
+                "$title_text": "Jukebox",
+                "$section_panel": "bb_mod_elements.section_jukebox_panel"
+            }
+        },
+        {
+            "section_rest@bb_mod_elements.section_template":
+            {
+                "$title_text": "Other",
+                "$section_panel": "bb_mod_elements.section_other_panel"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 5 ]
+            }
+        } ],
+        "$control": "bb_button_elements"
+    },
+    "section_template@bb.p":
+    {
+        "size": [ "100%", "50%c" ],
+        "$section_panel|default": "bb.p",
+        "controls": [
+        {
+            "@bb.spv":
+            {
+                "controls": [
+                {
+                    "@bb_common.line_title_text":
+                    {}
+                },
+                {
+                    "@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "spv@$section_panel":
+                            {
+                                "size": [ "100% - 6px", "100%c" ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 2 ]
+                    }
+                } ]
+            }
+        },
+        {
+            "button@bb.b":
+            {
+                "layer": 1,
+                "hover_control": "hover",
+                "pressed_control": "",
+                "default_control": "",
+                "size": [ "100%", "100%sm" ],
+                "consume_hover_events": false,
+                "controls": [
+                {
+                    "hover@bb.img":
+                    {
+                        "texture": "AMBRO/tui/common/white",
+                        "size": [ "100%", "100%" ],
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "bb_selected_section_opacity_slider",
+                            "source_property_name": "(#slider_value / 20)",
+                            "target_property_name": "#alpha"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "section_bossbar_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$focus_id": "first_settings_checkbox",
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_bossbar_0",
+                "$checkbox_state": "$bossbar_show_element"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Percentages",
+                "$tab_view_binding_name": "bb_boss_bar_percentages",
+                "$checkbox_state": "$bossbar_percentages"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Centered Percentages Position",
+                "$tab_view_binding_name": "bb_centered_boss_bar_percentages",
+                "$checkbox_state": "$bossbar_centered_percentages_position"
+            }
+        } ]
+    },
+    "section_scoreboard_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_sb_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_sb_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $scoreboard_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_scoreboard_0",
+                "$checkbox_state": "$scoreboard_show_element"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Numbers",
+                "$tab_view_binding_name": "bb_checkbox_scoreboard_1",
+                "$checkbox_state": "$scoreboard_show_numbers"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Override Server Scoreboard",
+                "$tab_view_binding_name": "bb_checkbox_scoreboard_3",
+                "$checkbox_state": "$scoreboard_override_server_scoreboard"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Overridden Scoreboard Objective Name",
+                "$tab_view_binding_name": "bb_checkbox_scoreboard_4",
+                "$checkbox_state": "$scoreboard_overridden_scoreboard_objective_name"
+            }
+        } ]
+    },
+    "section_title_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_title_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_title_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $title_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_messages_title_0",
+                "$checkbox_state": "$title_show_element"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$tab_view_binding_name": "bb_checkbox_messages_title_2",
+                "$checkbox_text": "Small Font Size",
+                "$checkbox_state": "$title_small_font_size"
+            }
+        } ]
+    },
+    "section_subtitle_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_subtitle_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_subtitle_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $subtitle_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_messages_subtitle_0",
+                "$checkbox_state": "$subtitle_show_element"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$tab_view_binding_name": "bb_checkbox_messages_subtitle_2",
+                "$checkbox_text": "Small Font Size",
+                "$checkbox_state": "$subtitle_small_font_size"
+            }
+        } ]
+    },
+    "section_tip_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_tip_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_tip_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $tip_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_messages_tip_0",
+                "$checkbox_state": "$tip_show_element"
+            }
+        } ]
+    },
+    "section_actionbar_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_actionbar_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_actionbar_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $actionbar_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_messages_actionbar_0",
+                "$checkbox_state": "$actionbar_show_element"
+            }
+        } ]
+    },
+    "section_item_name_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_item_name_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0",
+                        "$slider_text_source_control_name": "bb_item_name_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $item_name_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        }
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_messages_item_name_0",
+                "$checkbox_state": "$item_name_show_element"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$tab_view_binding_name": "bb_checkbox_messages_item_name_4",
+                "$checkbox_text": "Java Style Layout",
+                "$checkbox_state": "$item_name_java_style_layout"
+            }
+        } ]
+    },
+    "section_jukebox_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_jukebox_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_jukebox_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $jukebox_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Background Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Background Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Background Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Background Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Background Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Background Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Background Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Background Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Background Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Background Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Background Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Element",
+                "$tab_view_binding_name": "bb_checkbox_jukebox_0",
+                "$checkbox_state": "$jukebox_show_element"
+            }
+        } ]
+    },
+    "section_other_panel@bb.spv":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_selected_section_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_selected_section_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $selected_section_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Selected Section Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Selected Section Opacity: 5% §70.1",
+                        "$slider_control_text_2": "Selected Section Opacity: 10% §70.2",
+                        "$slider_control_text_3": "Selected Section Opacity: 15% §70.3",
+                        "$slider_control_text_4": "Selected Section Opacity: 20% §70.4",
+                        "$slider_control_text_5": "Selected Section Opacity: 25% §70.5",
+                        "$slider_control_text_6": "Selected Section Opacity: 30% §70.6",
+                        "$slider_control_text_7": "Selected Section Opacity: 35% §70.7",
+                        "$slider_control_text_8": "Selected Section Opacity: 40% §70.8",
+                        "$slider_control_text_9": "Selected Section Opacity: 45% §70.9",
+                        "$slider_control_text_10": "Selected Section Opacity: 50% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_hotbars_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_hotbars_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $hotbars_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Hotbars Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Hotbars Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Hotbars Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Hotbars Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Hotbars Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Hotbars Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Hotbars Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Hotbars Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Hotbars Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Hotbars Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Hotbars Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", 16 ],
+                "controls": [
+                {
+                    "bb_selected_hotbar_opacity_slider@bb_hbui_buttons.option_slider":
+                    {
+                        "$slider_text_source_control_name": "bb_selected_hotbar_opacity_slider",
+                        "$slider_source_property_name": "((#slider_value + $selected_hotbar_opacity_slider) * 10)",
+                        "property_bag":
+                        {
+                            "#slider_steps": 11
+                        },
+                        "$slider_control_text_0": "Selected Hotbar Opacity: 0% §70.0",
+                        "$slider_control_text_1": "Selected Hotbar Opacity: 10% §70.1",
+                        "$slider_control_text_2": "Selected Hotbar Opacity: 20% §70.2",
+                        "$slider_control_text_3": "Selected Hotbar Opacity: 30% §70.3",
+                        "$slider_control_text_4": "Selected Hotbar Opacity: 40% §70.4",
+                        "$slider_control_text_5": "Selected Hotbar Opacity: 50% §70.5",
+                        "$slider_control_text_6": "Selected Hotbar Opacity: 60% §70.6",
+                        "$slider_control_text_7": "Selected Hotbar Opacity: 70% §70.7",
+                        "$slider_control_text_8": "Selected Hotbar Opacity: 80% §70.8",
+                        "$slider_control_text_9": "Selected Hotbar Opacity: 90% §70.9",
+                        "$slider_control_text_10": "Selected Hotbar Opacity: 100% §71.0"
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Show Inventory Button Texture §7(Mobile Only)",
+                "$tab_view_binding_name": "bb_show_inventory_button_texture",
+                "$checkbox_state": "$show_inventory_button"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Stack Count In Creative Mode",
+                "$tab_view_binding_name": "bb_hotbar_numbers_stack_count_in_gm1",
+                "$checkbox_state": "$stack_count_in_creative_mode"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Xp Percentages",
+                "$tab_view_binding_name": "bb_xp_percentages",
+                "$checkbox_state": "$xp_percentages"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Xp Bar In Creative Mode",
+                "$tab_view_binding_name": "bb_xp_bar_in_creative_mode",
+                "$checkbox_state": "$xp_bar_in_creative_mode"
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$checkbox_text": "Back To Top Button §7(May be buggy)",
+                "$tab_view_binding_name": "bb_show_back_to_top_button",
+                "$checkbox_state": "$show_back_to_top_button",
+                "bindings": [
+                {
+                    "binding_type": "global",
+                    "binding_name": "(not #is_using_gamepad)",
+                    "binding_name_override": "#visible"
+                } ]
+            }
+        },
+        {
+            "@bb_hbui_buttons.checkbox":
+            {
+                "$focus_id": "last_settings_checkbox",
+                "$focus_override_down": "settings",
+                "$checkbox_text": "Accessibility Crosshair §7(Recommended for controllers)",
+                "$tab_view_binding_name": "bb_accessibility_crosshair",
+                "$checkbox_state": "$accessibility_crosshair",
+                "bindings": [
+                {
+                    "binding_type": "global",
+                    "binding_name": "#is_using_gamepad",
+                    "binding_name_override": "#visible"
+                } ]
+            }
+        } ]
+    }
+}

@@ -1,0 +1,704 @@
+{
+    "namespace": "bb_popup_dialog",
+    "modal_dialog_with_buttons@bb.p":
+    {
+        "size": [ 280, "100%" ],
+        "controls": [
+        {
+            "@bb.sp":
+            {
+                "controls": [
+                {
+                    "title@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "texture": "AMBRO/tui/hbui/popup/pop_up_title",
+                                        "size": [ "100% - 2px", "300%c" ],
+                                        "offset": [ 0, 1 ],
+                                        "controls": [
+                                        {
+                                            "modal_title_text@bb.l":
+                                            {
+                                                "layer": 2,
+                                                "text": "#text",
+                                                "size": [ "100%", 10 ],
+                                                "text_alignment": "center",
+                                                "shadow": false,
+                                                "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "$visibility_source_control_name",
+                                                    "source_property_name": "#modal_title_text",
+                                                    "target_property_name": "#text"
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "desc@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "size": [ "100% - 2px", "100%cm - 2px" ],
+                                        "texture": "AMBRO/tui/common/white",
+                                        "color": [ 0.192156862745098, 0.196078431372549, 0.2 ],
+                                        "controls": [
+                                        {
+                                            "@bb.sp":
+                                            {
+                                                "controls": [
+                                                {
+                                                    "@bb.yp":
+                                                    {
+                                                        "$yps": [ "100%", 10 ]
+                                                    }
+                                                },
+                                                {
+                                                    "@bb.p":
+                                                    {
+                                                        "size": [ "100%", "100%cm + 1px" ],
+                                                        "controls": [
+                                                        {
+                                                            "modal_scrolling_panel@bb_popup_dialog.modal_scrolling_panel":
+                                                            {
+                                                                "$scrolling_content": "bb_popup_dialog.modal_label_text"
+                                                            }
+                                                        },
+                                                        {
+                                                            "modal_scrolling_panel_clip_label@bb_popup_dialog.modal_scrolling_panel_clip_label":
+                                                            {
+                                                                "$text": "#text",
+                                                                "$bindings": [
+                                                                {
+                                                                    "binding_type": "view",
+                                                                    "source_control_name": "$visibility_source_control_name",
+                                                                    "source_property_name": "#modal_label_text",
+                                                                    "target_property_name": "#text"
+                                                                } ]
+                                                            }
+                                                        } ]
+                                                    }
+                                                },
+                                                {
+                                                    "@bb.yp":
+                                                    {
+                                                        "$yps": [ "100%", 10 ]
+                                                    }
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "buttons@bb.pyc":
+                    {
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "anchor_from": "bottom_middle",
+                                        "anchor_to": "bottom_middle",
+                                        "texture": "AMBRO/tui/hbui/popup/pop_up_title_bottom",
+                                        "size": [ "100% - 2px", "100%c + 4px" ],
+                                        "offset": [ 0, -1 ],
+                                        "controls": [
+                                        {
+                                            "@bb.p":
+                                            {
+                                                "size": [ "100% - 4px", "100%c" ],
+                                                "controls": [
+                                                {
+                                                    "button_panel@$button_panel":
+                                                    {
+                                                        "offset": [ 0, 0 ],
+                                                        "ignored": false
+                                                    }
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "modal_label_text@bb.sp":
+    {
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                {
+                    "@bb.l":
+                    {
+                        "size": [ "100% - 50px", "default" ],
+                        "text_alignment": "center",
+                        "text": "#text",
+                        "shadow": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$visibility_source_control_name",
+                            "source_property_name": "#modal_label_text",
+                            "target_property_name": "#text"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "custom_modal_dialog_with_buttons@bb.p":
+    {
+        "layer": 20,
+        "size": [ 280, "100%" ],
+        "$modal_title_text|default": "modal_title_text",
+        "$modal_label_text|default": "modal_label_text",
+        "$modal_label_text_color|default": [ 1, 1, 1 ],
+        "$button_panel|default": "bb.p",
+        "controls": [
+        {
+            "@bb.sp":
+            {
+                "controls": [
+                {
+                    "title@bb.pyc":
+                    {
+                        "layer": 2,
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "texture": "AMBRO/tui/hbui/popup/pop_up_title",
+                                        "size": [ "100% - 2px", "300%c" ],
+                                        "offset": [ 0, 1 ],
+                                        "controls": [
+                                        {
+                                            "modal_title_text@bb.l":
+                                            {
+                                                "layer": 2,
+                                                "text": "$modal_title_text",
+                                                "size": [ "100%", 10 ],
+                                                "text_alignment": "center",
+                                                "shadow": false
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "desc@bb.pyc":
+                    {
+                        "layer": 1,
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "size": [ "100% - 2px", "100%cm - 2px" ],
+                                        "texture": "AMBRO/tui/common/white",
+                                        "color": [ 0.192156862745098, 0.196078431372549, 0.2 ],
+                                        "controls": [
+                                        {
+                                            "@bb.sp":
+                                            {
+                                                "controls": [
+                                                {
+                                                    "@bb.yp":
+                                                    {
+                                                        "$yps": [ "100%", 10 ]
+                                                    }
+                                                },
+                                                {
+                                                    "@bb.p":
+                                                    {
+                                                        "size": [ "100%", "100%cm + 1px" ],
+                                                        "controls": [
+                                                        {
+                                                            "modal_scrolling_panel@bb_popup_dialog.modal_scrolling_panel":
+                                                            {
+                                                                "$scrolling_content": "bb_popup_dialog.custom_modal_label_text"
+                                                            }
+                                                        },
+                                                        {
+                                                            "modal_scrolling_panel_clip_label@bb_popup_dialog.modal_scrolling_panel_clip_label":
+                                                            {
+                                                                "$text": "$modal_label_text"
+                                                            }
+                                                        } ]
+                                                    }
+                                                },
+                                                {
+                                                    "@bb.yp":
+                                                    {
+                                                        "$yps": [ "100%", 10 ]
+                                                    }
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "buttons@bb.pyc":
+                    {
+                        "layer": 3,
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "anchor_from": "bottom_middle",
+                                        "anchor_to": "bottom_middle",
+                                        "texture": "AMBRO/tui/hbui/popup/pop_up_title_bottom",
+                                        "size": [ "100% - 2px", "100%c + 4px" ],
+                                        "offset": [ 0, -1 ],
+                                        "controls": [
+                                        {
+                                            "@bb.p":
+                                            {
+                                                "size": [ "100% - 4px", "100%c" ],
+                                                "controls": [
+                                                {
+                                                    "button_panel@$button_panel":
+                                                    {
+                                                        "layer": 22,
+                                                        "offset": [ 0, 0 ],
+                                                        "ignored": false
+                                                    }
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "custom_modal_label_text@bb.p":
+    {
+        "size": [ "100%", "100%c" ],
+        "controls": [
+        {
+            "@bb.l":
+            {
+                "size": [ "100% - 50px", "default" ],
+                "text_alignment": "center",
+                "text": "$modal_label_text",
+                "color": "$modal_label_text_color",
+                "shadow": false
+            }
+        } ]
+    },
+    "custom_long_modal_dialog@bb.p":
+    {
+        "layer": 20,
+        "size": "$menu_size",
+        "$modal_label_text_color|default": [ 1, 1, 1 ],
+        "$button_panel|default": "bb_popup_dialog.single_button_panel",
+        "$custom_modal_dialog_title_content|default": "bb.p",
+        "$custom_modal_dialog_desc_content|default": "bb.p",
+        "$custom_modal_dialog_desc_img_content|default": "bb.p",
+        "variables": [
+        {
+            "requires": "$desktop_screen",
+            "$menu_size": [ 280, "100% - 84px" ]
+        },
+        {
+            "requires": "($pocket_screen or $pocket_edition or $apple_os or $google_os or $is_ios or $is_android)",
+            "$menu_size": [ 280, "100% - 44px" ]
+        } ],
+        "controls": [
+        {
+            "@bb.sp":
+            {
+                "size": [ "100%", "100%" ],
+                "controls": [
+                {
+                    "title@bb.img":
+                    {
+                        "texture": "AMBRO/tui/common/black",
+                        "size": [ "100%", 30 ],
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": 2,
+                                "texture": "AMBRO/tui/hbui/popup/pop_up_title",
+                                "size": [ "100% - 2px", "100%" ],
+                                "offset": [ 0, 1 ],
+                                "controls": [
+                                {
+                                    "custom_modal_dialog_title_content@$custom_modal_dialog_title_content":
+                                    {}
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "desc@bb.p":
+                    {
+                        "size": [ "100%", "100% - 62px" ],
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "size": [ "100% - 2px", "100%" ],
+                                        "texture": "AMBRO/tui/common/white",
+                                        "color": [ 0.192156862745098, 0.196078431372549, 0.2 ],
+                                        "controls": [
+                                        {
+                                            "modal_scrolling_panel@common.scrolling_panel":
+                                            {
+                                                "anchor_from": "top_middle",
+                                                "anchor_to": "top_middle",
+                                                "size": [ "100% + 1px", "100% - 2px" ],
+                                                "offset": [ 0, 1 ],
+                                                "$scroll_size": [ 5, "100% - 10px" ],
+                                                "$scrolling_content": "bb_popup_dialog.custom_long_modal_dialog_scrolling_desc",
+                                                "$scroll_bar_right_padding_size": [ 4, 0 ],
+                                                "$scroll_track_offset": [ -2, 0 ],
+                                                "clips_children": true,
+                                                "$show_background": false
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "buttons@bb.pyc":
+                    {
+                        "layer": 3,
+                        "controls": [
+                        {
+                            "@bb.img":
+                            {
+                                "layer": -1,
+                                "texture": "AMBRO/tui/common/black",
+                                "size": [ "100%", "100%c" ],
+                                "controls": [
+                                {
+                                    "@bb.img":
+                                    {
+                                        "anchor_from": "bottom_middle",
+                                        "anchor_to": "bottom_middle",
+                                        "texture": "AMBRO/tui/hbui/popup/pop_up_title_bottom",
+                                        "size": [ "100% - 2px", "100%c + 4px" ],
+                                        "offset": [ 0, -1 ],
+                                        "controls": [
+                                        {
+                                            "@bb.p":
+                                            {
+                                                "size": [ "100% - 4px", "100%c" ],
+                                                "controls": [
+                                                {
+                                                    "button_panel@$button_panel":
+                                                    {
+                                                        "layer": 22,
+                                                        "offset": [ 0, 0 ],
+                                                        "ignored": false
+                                                    }
+                                                } ]
+                                            }
+                                        } ]
+                                    }
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "custom_long_modal_dialog_scrolling_desc@bb.sp":
+    {
+        "$modal_size|default": [ "100%", "50%x - 1px" ],
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, 5 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "size": "$modal_size",
+                "controls": [
+                {
+                    "@bb.img":
+                    {
+                        "anchor_from": "top_middle",
+                        "anchor_to": "top_middle",
+                        "texture": "AMBRO/tui/common/black",
+                        "size": [ "100% - 10px", "100% - 10px" ],
+                        "controls": [
+                        {
+                            "@bb.p":
+                            {
+                                "size": [ "100% - 2px", "100% - 2px" ],
+                                "clips_children": true,
+                                "controls": [
+                                {
+                                    "custom_modal_dialog_desc_img_content@$custom_modal_dialog_desc_img_content":
+                                    {}
+                                } ]
+                            }
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ 0, -6 ]
+            }
+        },
+        {
+            "@bb.p":
+            {
+                "size": [ "100%", "100%c" ],
+                "controls": [
+                {
+                    "@bb.p":
+                    {
+                        "size": [ "100% - 10px", "100%c" ],
+                        "controls": [
+                        {
+                            "custom_modal_dialog_desc_content@$custom_modal_dialog_desc_content":
+                            {}
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "modal_scrolling_panel@common.scrolling_panel":
+    {
+        "size": [ "100% - 2px", "100%sm +1px" ],
+        "$always_handle_scrolling": true,
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [ 0, 1 ],
+        "$scroll_size": [ 5, "100%" ],
+        "$scrolling_content": "bb_popup_dialog.custom_long_modal_dialog_scrolling_desc",
+        "$scroll_bar_right_padding_size": [ 4, 0 ],
+        "$scroll_track_offset": [ -2, 0 ],
+        "clips_children": true,
+        "$show_background": false
+    },
+    "modal_scrolling_panel_clip_label@bb.l":
+    {
+        "max_size": [ "100% - 50px", 120 ],
+        "size": [ "100% - 50px", "default" ],
+        "text_alignment": "center",
+        "text": "$text",
+        "shadow": false,
+        "alpha": 0,
+        "bindings": "$bindings",
+        "$bindings|default": [ ]
+    },
+    "single_button_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 32 ],
+        "controls": [
+        {
+            "middle@bb_popup_dialog.modal_middle_button":
+            {}
+        } ]
+    },
+    "two_buttons_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 64 ],
+        "controls": [
+        {
+            "left@bb_popup_dialog.modal_left_button":
+            {}
+        },
+        {
+            "right@bb_popup_dialog.modal_rightcancel_button":
+            {}
+        } ]
+    },
+    "destructive_two_buttons_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 64 ],
+        "controls": [
+        {
+            "left@bb_popup_dialog.modal_left_button":
+            {}
+        },
+        {
+            "right@bb_popup_dialog.modal_rightcancel_button":
+            {}
+        } ]
+    },
+    "three_buttons_panel":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 96 ],
+        "controls": [
+        {
+            "left@bb_popup_dialog.modal_left_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        },
+        {
+            "middle@bb_popup_dialog.modal_middle_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        },
+        {
+            "right@bb_popup_dialog.modal_rightcancel_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        } ]
+    },
+    "destructive_three_buttons_panel@bb.p":
+    {
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", 96 ],
+        "controls": [
+        {
+            "left@bb_popup_dialog.modal_left_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        },
+        {
+            "middle@bb_popup_dialog.modal_middle_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        },
+        {
+            "right@bb_popup_dialog.modal_rightcancel_button":
+            {
+                "size": [ "100%", "33%" ]
+            }
+        } ]
+    },
+    "modal_left_button@bb_hbui_buttons.pressed":
+    {
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "size": [ "100%", "50%" ],
+        "$pressed_button_name": "$popup_dialog_left_button_name",
+        "$pressed_text": "#modal_left_button_text"
+    },
+    "modal_rightcancel_button@bb_hbui_buttons.pressed":
+    {
+        "$default_text_color": [ 1, 1, 1 ],
+        "$hover_text_color": [ 1, 1, 1 ],
+        "$default_button": "AMBRO/tui/hbui/button/green/button_default",
+        "$hover_button": "AMBRO/tui/hbui/button/green/button_hover",
+        "$pressed_button": "AMBRO/tui/hbui/button/green/button_pressed",
+        "anchor_to": "bottom_middle",
+        "anchor_from": "bottom_middle",
+        "size": [ "100%", "50%" ],
+        "$pressed_button_name": "$popup_dialog_rightcancel_button_name",
+        "$pressed_text": "#modal_rightcancel_button_text"
+    },
+    "modal_middle_button@bb_hbui_buttons.pressed":
+    {
+        "$default_text_color": [ 1, 1, 1 ],
+        "$hover_text_color": [ 1, 1, 1 ],
+        "$default_button": "AMBRO/tui/hbui/button/green/button_default",
+        "$hover_button": "AMBRO/tui/hbui/button/green/button_hover",
+        "$pressed_button": "AMBRO/tui/hbui/button/green/button_pressed",
+        "size": [ "100%", "100%" ],
+        "$pressed_button_name": "$popup_dialog_middle_button_name",
+        "$pressed_text": "#modal_middle_button_text"
+    }
+}

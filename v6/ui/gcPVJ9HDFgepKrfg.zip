@@ -1,0 +1,2165 @@
+{
+    "checkbox_panel@bb.p":
+    {
+        "controls": [
+        {
+            "button_texture@bb.img":
+            {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 1,
+                "size": [ 16, 16 ],
+                "texture": "$checkbox_texture"
+            }
+        },
+        {
+            "checkbox_text@bb.label":
+            {
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "layer": 2,
+                "offset": [ 18, 0 ],
+                "shadow": false,
+                "size": [ "100% - 18px", 10 ],
+                "text": "$checkbox_text"
+            }
+        } ]
+    },
+    "checkbox@bb.p":
+    {
+        "$checkbox_panel": "bb_hbui_buttons.checkbox_panel",
+        "$checkbox_size|default": [ "100%", 16 ],
+        "$checkbox_state|default": false,
+        "$checked_default_image": "AMBRO/tui/hbui/checkbox/pressed",
+        "$checked_hover_image": "AMBRO/tui/hbui/checkbox/pressed_hover",
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$default_selector_toggle_index|default": 0,
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$tab_view_binding_name|default": "hbui_checkbox",
+        "$toggle_default_state": "$checkbox_state",
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_checkbox",
+        "$unchecked_default_image": "AMBRO/tui/hbui/checkbox/default",
+        "$unchecked_hover_image": "AMBRO/tui/hbui/checkbox/hover",
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle":
+            {
+                "controls": [
+                {
+                    "unchecked@$checkbox_panel":
+                    {
+                        "$checkbox_texture": "$unchecked_default_image",
+                        "$tab_state": "unchecked",
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$checkbox_panel":
+                    {
+                        "$checkbox_texture": "$unchecked_hover_image",
+                        "$is_hover_state": true,
+                        "$tab_state": "unchecked_hover",
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$checkbox_panel":
+                    {
+                        "$checkbox_texture": "$checked_default_image",
+                        "$is_checked_state": true,
+                        "$tab_state": "checked",
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$checkbox_panel":
+                    {
+                        "$checkbox_texture": "$checked_hover_image",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_state": "checked_hover",
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "size": "$checkbox_size"
+    },
+    "long_option_slider@bb_hbui_buttons.slider":
+    {
+        "$slider_control_text_0|default": "Size: 0 §70x0",
+        "$slider_control_text_1|default": "Size: 1 §74x4",
+        "$slider_control_text_2|default": "Size: 2 §78x8",
+        "$slider_control_text_3|default": "Size: 3 §712x12",
+        "$slider_control_text_4|default": "Size: 4 §716x16",
+        "$slider_control_text_5|default": "Size: 5 §720x20",
+        "$slider_control_text_6|default": "Size: 6 §724x24",
+        "$slider_control_text_7|default": "Size: 7 §728x28",
+        "$slider_control_text_8|default": "Size: 8 §732x32",
+        "$slider_control_text_9|default": "Size: 9 §736x36",
+        "$slider_control_text_10|default": "Size: 10 §740x40",
+        "$slider_control_text_11|default": "Size: 11 §744x44",
+        "$slider_control_text_12|default": "Size: 12 §748x48",
+        "$slider_control_text_13|default": "Size: 13 §752x52",
+        "$slider_control_text_14|default": "Size: 14 §756x56",
+        "$slider_control_text_15|default": "Size: 15 §760x60",
+        "$slider_control_text_16|default": "Size: 16 §764x64",
+        "$slider_control_text_17|default": "Size: 17 §768x68",
+        "$slider_control_text_18|default": "Size: 18 §772x72",
+        "$slider_control_text_19|default": "Size: 19 §776x76",
+        "$slider_control_text_20|default": "Size: 20 §780x80",
+        "$slider_control_text_21|default": "Size: 21 §784x84",
+        "$slider_control_text_22|default": "Size: 22 §788x88",
+        "$slider_control_text_23|default": "Size: 23 §792x92",
+        "$slider_control_text_24|default": "Size: 24 §796x96",
+        "$slider_control_text_25|default": "Size: 25 §7100x100",
+        "$slider_name": "hbui_slider",
+        "$slider_source_property_name|default": "",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "bindings": [
+        {
+            "binding_name": "#slider_steps",
+            "binding_name_override": "#slider_steps"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "option_slider",
+            "source_property_name": "$slider_source_property_name",
+            "target_property_name": "#slider_value"
+        } ],
+        "controls": [
+        {
+            "slider_box@bb_hbui_buttons.slider_box":
+            {
+                "$slider_box_size": "$slider_box_size",
+                "$slider_track_button": "$slider_name"
+            }
+        },
+        {
+            "slider_bar_default@bb_hbui_buttons.slider_bar_default":
+            {}
+        },
+        {
+            "slider_bar_hover@bb_hbui_buttons.slider_bar_hover":
+            {}
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 0)",
+                "text": "$slider_control_text_0"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 1)",
+                "text": "$slider_control_text_1"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 2)",
+                "text": "$slider_control_text_2"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 3)",
+                "text": "$slider_control_text_3"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 4)",
+                "text": "$slider_control_text_4"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 5)",
+                "text": "$slider_control_text_5"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 6)",
+                "text": "$slider_control_text_6"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 7)",
+                "text": "$slider_control_text_7"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 8)",
+                "text": "$slider_control_text_8"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 9)",
+                "text": "$slider_control_text_9"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 10)",
+                "text": "$slider_control_text_10"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 11)",
+                "text": "$slider_control_text_11"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 12)",
+                "text": "$slider_control_text_12"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 13)",
+                "text": "$slider_control_text_13"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 14)",
+                "text": "$slider_control_text_14"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 15)",
+                "text": "$slider_control_text_15"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 16)",
+                "text": "$slider_control_text_16"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 17)",
+                "text": "$slider_control_text_17"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 18)",
+                "text": "$slider_control_text_18"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 19)",
+                "text": "$slider_control_text_19"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 20)",
+                "text": "$slider_control_text_20"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 21)",
+                "text": "$slider_control_text_21"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 22)",
+                "text": "$slider_control_text_22"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 23)",
+                "text": "$slider_control_text_23"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 24)",
+                "text": "$slider_control_text_24"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 25)",
+                "text": "$slider_control_text_25"
+            }
+        } ],
+        "offset": [ -8, 0 ],
+        "size": [ "46% - 1.5px", 18 ]
+    },
+    "mod_panel@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "button_texture@bb.img":
+                    {
+                        "ignored": "(not $use_button_texture",
+                        "layer": 1,
+                        "size": "$texture_size",
+                        "texture": "$button_texture"
+                    }
+                },
+                {
+                    "button_text@bb.l":
+                    {
+                        "color": "$button_text_color",
+                        "layer": 2,
+                        "offset": "$button_text_offset",
+                        "shadow": false,
+                        "text": "$button_text"
+                    }
+                },
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "$hover_text|default": "",
+                        "allow_clipping": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ],
+                        "layer": 1000000,
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "size": [ "100%", "100%" ],
+                        "visible": "$is_hover_state"
+                    }
+                },
+                {
+                    "custom_content@$custom_content":
+                    {
+                        "ignored": "(not $use_custom_content)",
+                        "layer": 3
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "mod_settings_panel@bb.p":
+    {
+        "$settings_content|default": "common_tabs.empty_tab_content",
+        "controls": [
+        {
+            "button_texture@bb.img":
+            {
+                "$ignore_gear_texture|default": false,
+                "$settings_texture|default": "AMBRO/tui/common/empty",
+                "layer": 1,
+                "size": [ 16, 16 ],
+                "texture": "$settings_texture",
+                "visible": "(not $ignore_gear_texture)"
+            }
+        },
+        {
+            "settings_content@$settings_content":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_button_gameplay",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "layer": 2
+            }
+        } ]
+    },
+    "mod_settings@bb.p":
+    {
+        "$button_panel": "bb_hbui_buttons.mod_settings_panel",
+        "$checked_default_image": "AMBRO/tui/hbui/more/option_default",
+        "$checked_hover_image": "AMBRO/tui/hbui/more/option_default",
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$radio_toggle_group": true,
+        "$settings_binding_name|default": "",
+        "$settings_toggle_index|default": -1,
+        "$tab_view_binding_name": "$settings_binding_name",
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "button.menu_ok"
+        } ],
+        "$toggle_group_default_selected": 0,
+        "$toggle_group_forced_index": "$settings_toggle_index",
+        "$toggle_name": "hbui_mod_settings",
+        "$unchecked_default_image": "AMBRO/tui/hbui/more/option_default",
+        "$unchecked_hover_image": "AMBRO/tui/hbui/more/option_hover",
+        "$use_settings|default": false,
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$button_panel":
+                    {
+                        "$settings_close_button": "AMBRO/tui/common/empty",
+                        "$settings_texture": "$unchecked_default_image",
+                        "$tab_state": "unchecked",
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$button_panel":
+                    {
+                        "$is_hover_state": true,
+                        "$settings_close_button": "AMBRO/tui/buttons/close/hover_no_icon",
+                        "$settings_texture": "$unchecked_hover_image",
+                        "$tab_state": "unchecked_hover",
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$button_panel":
+                    {
+                        "$is_checked_state": true,
+                        "$tab_state": "checked",
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$button_panel":
+                    {
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_state": "checked_hover",
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "layer": 100,
+        "size": [ 23, 23 ],
+        "visible": "$use_settings"
+    },
+    "mod@bb.p":
+    {
+        "$blank|default": false,
+        "$button_panel|default": "bb_hbui_buttons.mod_panel",
+        "$button_text_offset|default": [ 0, 0 ],
+        "$button_text_pressed_offset|default": [ 0, 1 ],
+        "$button_text|default": "",
+        "$checked_black_button_text|default": false,
+        "$checked_default_image|default": "AMBRO/tui/hbui/button_pressed",
+        "$checked_default_text": "Enabled",
+        "$checked_hover_image|default": "AMBRO/tui/hbui/button_pressed_hover",
+        "$checked_hover_text": "Enabled",
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$custom_content|default": "common_tabs.empty_tab_content",
+        "$default_selector_toggle_index|default": 0,
+        "$hover_text|default": "&hover_text",
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$mod_state|default": false,
+        "$tab_view_binding_name|default": "hbui_mod",
+        "$texture_size|default": [ "100%", "100%" ],
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "button.menu_ok"
+        } ],
+        "$toggle_default_state": "$mod_state",
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_mod",
+        "$unchecked_default_image|default": "AMBRO/tui/hbui/button_default",
+        "$unchecked_default_text": "Disabled",
+        "$unchecked_hover_image|default": "AMBRO/tui/hbui/button_hover",
+        "$unchecked_hover_text": "Disabled",
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$use_button_texture|default": true,
+        "$use_custom_content|default": false,
+        "$white_button_text|default": false,
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$button_panel":
+                    {
+                        "$button_text": "$unchecked_default_text",
+                        "$button_text_color": "$unchecked_text_color",
+                        "$button_texture": "$unchecked_default_image",
+                        "$tab_state": "unchecked",
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$button_panel":
+                    {
+                        "$button_text": "$unchecked_hover_text",
+                        "$button_text_color": "$unchecked_hover_text_color",
+                        "$button_texture": "$unchecked_hover_image",
+                        "$is_hover_state": true,
+                        "$tab_state": "unchecked_hover",
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$button_panel":
+                    {
+                        "$button_text": "$checked_default_text",
+                        "$button_text_color": "$checked_text_color",
+                        "$button_text_offset": "$button_text_pressed_offset",
+                        "$button_texture": "$checked_default_image",
+                        "$is_checked_state": true,
+                        "$tab_state": "checked",
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$button_panel":
+                    {
+                        "$button_text": "$checked_hover_text",
+                        "$button_text_color": "$checked_hover_text_color",
+                        "$button_text_offset": "$button_text_pressed_offset",
+                        "$button_texture": "$checked_hover_image",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_state": "checked_hover",
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "size": [ "100%", 21 ]
+    },
+    "namespace": "bb_hbui_buttons",
+    "offset_slider@bb_hbui_buttons.slider":
+    {
+        "$slider_control_text_0|default": "0 §70.0%",
+        "$slider_control_text_1|default": "1 §72.5%",
+        "$slider_control_text_2|default": "2 §75.0%",
+        "$slider_control_text_3|default": "3 §77.5%",
+        "$slider_control_text_4|default": "4 §710.0%",
+        "$slider_control_text_5|default": "5 §712.5%",
+        "$slider_control_text_6|default": "6 §715.0%",
+        "$slider_control_text_7|default": "7 §717.5%",
+        "$slider_control_text_8|default": "8 §720.0%",
+        "$slider_control_text_9|default": "9 §722.5%",
+        "$slider_control_text_10|default": "10 §725.0%",
+        "$slider_control_text_11|default": "11 §727.5%",
+        "$slider_control_text_12|default": "12 §730.0%",
+        "$slider_control_text_13|default": "13 §732.5%",
+        "$slider_control_text_14|default": "14 §735.0%",
+        "$slider_control_text_15|default": "15 §737.5%",
+        "$slider_control_text_16|default": "16 §740.0%",
+        "$slider_control_text_17|default": "17 §742.5%",
+        "$slider_control_text_18|default": "18 §745.0%",
+        "$slider_control_text_19|default": "19 §747.5%",
+        "$slider_control_text_20|default": "20 §750.0%",
+        "$slider_control_text_21|default": "21 §752.5%",
+        "$slider_control_text_22|default": "22 §755.0%",
+        "$slider_control_text_23|default": "23 §757.5%",
+        "$slider_control_text_24|default": "24 §760.0%",
+        "$slider_control_text_25|default": "25 §762.5%",
+        "$slider_control_text_26|default": "26 §765.0%",
+        "$slider_control_text_27|default": "27 §767.5%",
+        "$slider_control_text_28|default": "28 §770.0%",
+        "$slider_control_text_29|default": "29 §772.5%",
+        "$slider_control_text_30|default": "30 §775.0%",
+        "$slider_control_text_31|default": "31 §777.5%",
+        "$slider_control_text_32|default": "32 §780.0%",
+        "$slider_control_text_33|default": "33 §782.5%",
+        "$slider_control_text_34|default": "34 §785.0%",
+        "$slider_control_text_35|default": "35 §787.5%",
+        "$slider_control_text_36|default": "36 §790.0%",
+        "$slider_control_text_37|default": "37 §792.5%",
+        "$slider_control_text_38|default": "38 §795.0%",
+        "$slider_control_text_39|default": "39 §797.5%",
+        "$slider_control_text_40|default": "40 §7100.0%",
+        "$slider_name": "hbui_slider",
+        "$slider_source_property_name|default": "",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "bindings": [
+        {
+            "binding_name": "#slider_steps",
+            "binding_name_override": "#slider_steps"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "option_slider",
+            "source_property_name": "$slider_source_property_name",
+            "target_property_name": "#slider_value"
+        } ],
+        "controls": [
+        {
+            "slider_box@bb_hbui_buttons.slider_box":
+            {
+                "$slider_box_size": "$slider_box_size",
+                "$slider_track_button": "$slider_name"
+            }
+        },
+        {
+            "slider_bar_default@bb_hbui_buttons.slider_bar_default":
+            {}
+        },
+        {
+            "slider_bar_hover@bb_hbui_buttons.slider_bar_hover":
+            {}
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 0)",
+                "text": "$slider_control_text_0"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 1)",
+                "text": "$slider_control_text_1"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 2)",
+                "text": "$slider_control_text_2"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 3)",
+                "text": "$slider_control_text_3"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 4)",
+                "text": "$slider_control_text_4"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 5)",
+                "text": "$slider_control_text_5"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 6)",
+                "text": "$slider_control_text_6"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 7)",
+                "text": "$slider_control_text_7"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 8)",
+                "text": "$slider_control_text_8"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 9)",
+                "text": "$slider_control_text_9"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 10)",
+                "text": "$slider_control_text_10"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 11)",
+                "text": "$slider_control_text_11"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 12)",
+                "text": "$slider_control_text_12"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 13)",
+                "text": "$slider_control_text_13"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 14)",
+                "text": "$slider_control_text_14"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 15)",
+                "text": "$slider_control_text_15"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 16)",
+                "text": "$slider_control_text_16"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 17)",
+                "text": "$slider_control_text_17"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 18)",
+                "text": "$slider_control_text_18"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 19)",
+                "text": "$slider_control_text_19"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 20)",
+                "text": "$slider_control_text_20"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 21)",
+                "text": "$slider_control_text_21"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 22)",
+                "text": "$slider_control_text_22"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 23)",
+                "text": "$slider_control_text_23"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 24)",
+                "text": "$slider_control_text_24"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 25)",
+                "text": "$slider_control_text_25"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 26)",
+                "text": "$slider_control_text_26"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 27)",
+                "text": "$slider_control_text_27"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 28)",
+                "text": "$slider_control_text_28"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 29)",
+                "text": "$slider_control_text_29"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 30)",
+                "text": "$slider_control_text_30"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 30)",
+                "text": "$slider_control_text_30"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 31)",
+                "text": "$slider_control_text_31"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 32)",
+                "text": "$slider_control_text_32"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 33)",
+                "text": "$slider_control_text_33"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 34)",
+                "text": "$slider_control_text_34"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 35)",
+                "text": "$slider_control_text_35"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 36)",
+                "text": "$slider_control_text_36"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 37)",
+                "text": "$slider_control_text_37"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 38)",
+                "text": "$slider_control_text_38"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 39)",
+                "text": "$slider_control_text_39"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 40)",
+                "text": "$slider_control_text_40"
+            }
+        } ],
+        "offset": [ -8, 0 ],
+        "size": [ "46% - 1.5px", 16 ]
+    },
+    "option_slider@bb_hbui_buttons.slider":
+    {
+        "$slider_control_text_0|default": "0%",
+        "$slider_control_text_1|default": "10%",
+        "$slider_control_text_2|default": "20%",
+        "$slider_control_text_3|default": "30%",
+        "$slider_control_text_4|default": "40%",
+        "$slider_control_text_5|default": "50%",
+        "$slider_control_text_6|default": "60%",
+        "$slider_control_text_7|default": "70%",
+        "$slider_control_text_8|default": "80%",
+        "$slider_control_text_9|default": "90%",
+        "$slider_control_text_10|default": "100%",
+        "$slider_name": "hbui_slider",
+        "$slider_source_property_name|default": "",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "bindings": [
+        {
+            "binding_name": "#slider_steps",
+            "binding_name_override": "#slider_steps"
+        },
+        {
+            "binding_type": "view",
+            "source_control_name": "option_slider",
+            "source_property_name": "$slider_source_property_name",
+            "target_property_name": "#slider_value"
+        } ],
+        "controls": [
+        {
+            "slider_box@bb_hbui_buttons.slider_box":
+            {
+                "$slider_box_size": "$slider_box_size",
+                "$slider_track_button": "$slider_name"
+            }
+        },
+        {
+            "slider_bar_default@bb_hbui_buttons.slider_bar_default":
+            {}
+        },
+        {
+            "slider_bar_hover@bb_hbui_buttons.slider_bar_hover":
+            {}
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 0)",
+                "text": "$slider_control_text_0"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 1)",
+                "text": "$slider_control_text_1"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 2)",
+                "text": "$slider_control_text_2"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 3)",
+                "text": "$slider_control_text_3"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 4)",
+                "text": "$slider_control_text_4"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 5)",
+                "text": "$slider_control_text_5"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 6)",
+                "text": "$slider_control_text_6"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 7)",
+                "text": "$slider_control_text_7"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 8)",
+                "text": "$slider_control_text_8"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 9)",
+                "text": "$slider_control_text_9"
+            }
+        },
+        {
+            "@bb_hbui_buttons.slider_control_text":
+            {
+                "$slider_text_source_property_name": "(#slider_value = 10)",
+                "text": "$slider_control_text_10"
+            }
+        } ],
+        "offset": [ -8, 0 ],
+        "size": [ "46% - 1.5px", 16 ]
+    },
+    "pressed_panel@bb.p":
+    {
+        "$ignore_pressed_text|default": false,
+        "$pressed_content|default": "common_tabs.empty_tab_content",
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "$hover_text|default": "",
+                        "allow_clipping": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ],
+                        "layer": 1000000,
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "size": [ "100%", "100%" ],
+                        "visible": "$hover_state"
+                    }
+                },
+                {
+                    "pressed_content@$pressed_content":
+                    {
+                        "$pressed_content_offset|default": [ 0, 0 ],
+                        "layer": 3,
+                        "offset": "$pressed_content_offset"
+                    }
+                },
+                {
+                    "button_texture@bb.img":
+                    {
+                        "$pressed_alpha|default": 1,
+                        "alpha": "$pressed_alpha",
+                        "ignored": "$ignore_pressed_texture",
+                        "layer": 1,
+                        "size": "$pressed_texture_size",
+                        "texture": "$pressed_texture"
+                    }
+                },
+                {
+                    "button_label@bb.label":
+                    {
+                        "$pressed_text_bindings|default": [ ],
+                        "$pressed_text_offset|default": [ 0, 0 ],
+                        "$pressed_text_shadow|default": false,
+                        "$pressed_text|default": "pressed_text",
+                        "bindings": "$pressed_text_bindings",
+                        "color": "$pressed_text_color",
+                        "ignored": "($ignore_pressed_text)",
+                        "layer": 2,
+                        "offset": "$pressed_text_offset",
+                        "shadow": "$pressed_text_shadow",
+                        "text": "$pressed_text"
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "pressed_panel2@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "button_texture@bb.img":
+                    {
+                        "ignored": "(not $use_button_texture",
+                        "layer": 1,
+                        "size": "$texture_size",
+                        "texture": "$button_texture"
+                    }
+                },
+                {
+                    "button_text@bb.l":
+                    {
+                        "color": "$button_text_color",
+                        "layer": 2,
+                        "offset": "$button_text_offset",
+                        "shadow": false,
+                        "text": "$button_text"
+                    }
+                },
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "$hover_text|default": "",
+                        "allow_clipping": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ],
+                        "layer": 1000000,
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "size": [ "100%", "100%" ],
+                        "visible": "$hover_state"
+                    }
+                },
+                {
+                    "custom_content@$custom_content":
+                    {
+                        "$custom_content_offset|default": [ 0, 0 ],
+                        "ignored": "(not $use_custom_content)",
+                        "layer": 3,
+                        "offset": "$custom_content_offset"
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "pressed@common.button":
+    {
+        "$blank|default": false,
+        "$button_pressed_content_offset|default": [ 0, 2 ],
+        "$button_pressed_offset|default": [ 0, 1 ],
+        "$default_button|default": "AMBRO/tui/hbui/button_default",
+        "$default_state|default": false,
+        "$default_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$hover_button|default": "AMBRO/tui/hbui/button_hover",
+        "$hover_state|default": false,
+        "$hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$ignore_hover_panel|default": true,
+        "$ignore_pressed_texture|default": false,
+        "$locked_button|default": "AMBRO/tui/hbui/button_locked",
+        "$locked_state|default": false,
+        "$locked_text_color|default": [ 0.2823529411764706, 0.2823529411764706, 0.2823529411764706 ],
+        "$pressed_button_name|default": "",
+        "$pressed_button|default": "AMBRO/tui/hbui/button_pressed",
+        "$pressed_panel|default": "bb_hbui_buttons.pressed_panel",
+        "$pressed_size|default": [ "100%", 32 ],
+        "$pressed_state|default": false,
+        "$pressed_text_color|default": [ 1, 1, 1 ],
+        "$pressed_texture_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$use_hover_text|default": false,
+        "$visible_hover_panel|default": false,
+        "controls": [
+        {
+            "default@$pressed_panel":
+            {
+                "$default_state": true,
+                "$pressed_text_color": "$default_text_color",
+                "$pressed_texture": "$default_button",
+                "layer": 1
+            }
+        },
+        {
+            "hover@$pressed_panel":
+            {
+                "$hover_state": true,
+                "$pressed_text_color": "$hover_text_color",
+                "$pressed_texture": "$hover_button",
+                "$visible_hover_panel": true,
+                "layer": 2
+            }
+        },
+        {
+            "pressed@$pressed_panel":
+            {
+                "$pressed_content_offset": "$button_pressed_content_offset",
+                "$pressed_state": true,
+                "$pressed_text_color": "$pressed_text_color",
+                "$pressed_text_offset": "$button_pressed_offset",
+                "$pressed_texture": "$pressed_button",
+                "layer": 3
+            }
+        } ],
+        "size": "$pressed_size"
+    },
+    "pressed2@common.button":
+    {
+        "$blank|default": false,
+        "$button_panel|default": "bb_hbui_buttons.pressed_panel2",
+        "$button_text_offset|default": [ 0, 0 ],
+        "$button_text_pressed_offset|default": [ 0, 1 ],
+        "$button_text|default": "",
+        "$custom_content|default": "common_tabs.empty_tab_content",
+        "$default_button|default": "AMBRO/tui/hbui/button_default",
+        "$default_state|default": false,
+        "$default_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$hover_button|default": "AMBRO/tui/hbui/button_hover",
+        "$hover_state|default": false,
+        "$hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$hover_text|default": "&hover_text",
+        "$locked_button|default": "AMBRO/tui/hbui/button_locked",
+        "$locked_state|default": false,
+        "$pressed_button_name|default": "",
+        "$pressed_button|default": "AMBRO/tui/hbui/button_pressed",
+        "$pressed_state|default": false,
+        "$pressed_text_color|default": [ 1, 1, 1 ],
+        "$texture_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$use_button_texture|default": true,
+        "$use_custom_content|default": false,
+        "controls": [
+        {
+            "default@$button_panel":
+            {
+                "$button_text_color": "$default_text_color",
+                "$button_texture": "$default_button",
+                "$default_state": true,
+                "layer": 1
+            }
+        },
+        {
+            "hover@$button_panel":
+            {
+                "$button_text_color": "$hover_text_color",
+                "$button_texture": "$hover_button",
+                "$hover_state": true,
+                "layer": 2
+            }
+        },
+        {
+            "pressed@$button_panel":
+            {
+                "$button_text_color": "$pressed_text_color",
+                "$button_text_offset": "$button_text_pressed_offset",
+                "$button_texture": "$pressed_button",
+                "$pressed_state": true,
+                "layer": 3
+            }
+        } ],
+        "size": [ "100%", 32 ]
+    },
+    "slider":
+    {
+        "$default_focus_precedence|default": 0,
+        "$focus_id|default": "",
+        "$focus_override_down|default": "",
+        "$focus_override_left|default": "",
+        "$focus_override_right|default": "",
+        "$focus_override_up|default": "",
+        "$slider_binding_condition|default": "visible",
+        "$slider_binding_type|default": "global",
+        "$slider_box_hover_layout|default": "bb_hbui_buttons.slider_button_hover_layout",
+        "$slider_box_indent_layout|default": "bb_hbui_buttons.slider_button_indent_layout",
+        "$slider_box_layout|default": "bb_hbui_buttons.slider_button_layout",
+        "$slider_box_locked_layout|default": "bb_hbui_buttons.slider_button_locked_layout",
+        "$slider_box_size|default": [ 16, 16 ],
+        "$slider_collection_name|default": "",
+        "$slider_deselected_button|default": "slider.deselected",
+        "$slider_direction|default": "horizontal",
+        "$slider_enabled_binding_condition|default": "visible",
+        "$slider_enabled_binding_name|default": "#slider_enabled",
+        "$slider_enabled_binding_type|default": "none",
+        "$slider_name": "slider",
+        "$slider_select_on_hover|default": false,
+        "$slider_selected_button|default": "slider.selected",
+        "$slider_small_decrease_button|default": "slider.small_decrease",
+        "$slider_small_increase_button|default": "slider.small_increase",
+        "$slider_step_factory_control_ids":
+        {
+            "slider_step": "@bb_hbui_buttons.slider_step",
+            "slider_step_hover": "@bb_hbui_buttons.slider_step",
+            "slider_step_progress": "@bb_hbui_buttons.slider_step",
+            "slider_step_progress_hover": "@bb_hbui_buttons.slider_step"
+        },
+        "$slider_steps_binding_condition|default": "visible",
+        "$slider_steps_binding_name|default": "#slider_steps",
+        "$slider_steps_binding_type|default": "global",
+        "$slider_steps|default": 1,
+        "$slider_track_button|default": "button.slider_skip_track",
+        "$slider_value_binding_name|default": "#slider_value",
+        "always_handle_pointer": true,
+        "always_listen_to_input": false,
+        "background_control": "slider_background",
+        "background_hover_control": "slider_background_hover",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "$slider_control_name",
+            "source_property_name": "$slider_source_property_name",
+            "target_property_name": "#slider_value"
+        },
+        {
+            "binding_collection_name": "$slider_collection_name",
+            "binding_condition": "$slider_steps_binding_condition",
+            "binding_name": "$slider_steps_binding_name",
+            "binding_name_override": "#slider_steps",
+            "binding_type": "$slider_steps_binding_type"
+        },
+        {
+            "binding_collection_name": "$slider_collection_name",
+            "binding_condition": "$slider_binding_condition",
+            "binding_name": "$slider_value_binding_name",
+            "binding_name_override": "#slider_value",
+            "binding_type": "$slider_binding_type"
+        },
+        {
+            "binding_collection_name": "$slider_collection_name",
+            "binding_condition": "$slider_enabled_binding_condition",
+            "binding_name": "$slider_enabled_binding_name",
+            "binding_name_override": "#enabled",
+            "binding_type": "$slider_enabled_binding_type"
+        },
+        {
+            "binding_collection_name": "$slider_collection_name",
+            "binding_condition": "$slider_tts_binding_condition",
+            "binding_name": "$slider_tts_text_value",
+            "binding_type": "$slider_tts_binding_type"
+        },
+        {
+            "binding_collection_name": "$slider_header_collection_name",
+            "binding_condition": "$slider_tts_header_binding_condition",
+            "binding_name": "$slider_tts_header",
+            "binding_type": "$slider_tts_header_binding_type"
+        } ],
+        "button_mappings": [
+        {
+            "button_up_right_of_first_refusal": true,
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "$slider_name"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "$slider_selected_button"
+        },
+        {
+            "from_button_id": "button.menu_cancel",
+            "mapping_type": "focused",
+            "to_button_id": "$slider_deselected_button"
+        },
+        {
+            "from_button_id": "button.menu_left",
+            "ignore_input_scope": true,
+            "ignored": "($slider_direction = 'vertical')",
+            "input_mode_condition": "not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$slider_small_decrease_button"
+        },
+        {
+            "from_button_id": "button.menu_up",
+            "ignore_input_scope": true,
+            "ignored": "($slider_direction = 'horizontal')",
+            "input_mode_condition": "not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$slider_small_decrease_button"
+        },
+        {
+            "from_button_id": "button.menu_right",
+            "ignore_input_scope": true,
+            "ignored": "($slider_direction = 'vertical')",
+            "input_mode_condition": "not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$slider_small_increase_button"
+        },
+        {
+            "from_button_id": "button.menu_down",
+            "ignore_input_scope": true,
+            "ignored": "($slider_direction = 'horizontal')",
+            "input_mode_condition": "not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$slider_small_increase_button"
+        } ],
+        "controls": [
+        {
+            "slider_box@bb_hbui_buttons.slider_box":
+            {
+                "$slider_box_size": "$slider_box_size",
+                "$slider_track_button": "$slider_name"
+            }
+        },
+        {
+            "slider_bar_default@bb_hbui_buttons.slider_bar_default":
+            {}
+        },
+        {
+            "slider_bar_hover@bb_hbui_buttons.slider_bar_hover":
+            {}
+        } ],
+        "default_control": "slider_bar_default",
+        "default_focus_precedence": "$default_focus_precedence",
+        "factory":
+        {
+            "control_ids": "$slider_step_factory_control_ids",
+            "name": "slider_step_factory"
+        },
+        "focus_change_down": "$focus_override_down",
+        "focus_change_left": "$focus_override_left",
+        "focus_change_right": "$focus_override_right",
+        "focus_change_up": "$focus_override_up",
+        "focus_enabled": true,
+        "focus_identifier": "$focus_id",
+        "hover_control": "slider_bar_hover",
+        "layer": 1,
+        "progress_control": "slider_progress",
+        "progress_hover_control": "slider_progress_hover",
+        "property_bag":
+        {
+            "#slider_steps": 1,
+            "#slider_value": 0
+        },
+        "size": [ "100%", 18 ],
+        "slider_box_control": "slider_box",
+        "slider_collection_name": "$slider_collection_name",
+        "slider_deselected_button": "$slider_deselected_button",
+        "slider_direction": "$slider_direction",
+        "slider_name": "$slider_name",
+        "slider_select_on_hover": "$slider_select_on_hover",
+        "slider_selected_button": "$slider_selected_button",
+        "slider_small_decrease_button": "$slider_small_decrease_button",
+        "slider_small_increase_button": "$slider_small_increase_button",
+        "slider_steps": "$slider_steps",
+        "slider_track_button": "$slider_name",
+        "type": "slider"
+    },
+    "slider_background_hover@bb.img":
+    {
+        "texture": "AMBRO/tui/hbui/slider/background"
+    },
+    "slider_background@bb.img":
+    {
+        "texture": "AMBRO/tui/hbui/slider/background"
+    },
+    "slider_bar_default@bb.p":
+    {
+        "$background_control_name|default": "slider_background",
+        "$background_control|default": "bb_hbui_buttons.slider_background",
+        "$progress_clip_direction|default": "left",
+        "$progress_control_name|default": "slider_progress",
+        "$progress_control|default": "bb_hbui_buttons.slider_progress",
+        "controls": [
+        {
+            "sizing_panel":
+            {
+                "controls": [
+                {
+                    "$background_control_name@$background_control":
+                    {
+                        "layer": 1
+                    }
+                },
+                {
+                    "$progress_control_name@$progress_control":
+                    {
+                        "clip_direction": "$progress_clip_direction",
+                        "clip_pixelperfect": false,
+                        "layer": 3
+                    }
+                } ],
+                "size": [ "100%", 6 ],
+                "type": "panel"
+            }
+        } ]
+    },
+    "slider_bar_hover@bb_hbui_buttons.slider_bar_default":
+    {
+        "$background_control": "bb_hbui_buttons.slider_background_hover",
+        "$background_control_name": "slider_background_hover",
+        "$progress_control": "bb_hbui_buttons.slider_progress_hover",
+        "$progress_control_name": "slider_progress_hover"
+    },
+    "slider_box":
+    {
+        "$slider_box_offset|default": [ 0, 0 ],
+        "controls": [
+        {
+            "default@$slider_box_layout":
+            {
+                "layer": 2
+            }
+        },
+        {
+            "hover@$slider_box_hover_layout":
+            {
+                "layer": 3
+            }
+        },
+        {
+            "indent@$slider_box_indent_layout":
+            {
+                "layer": 4
+            }
+        } ],
+        "default_control": "default",
+        "hover_control": "hover",
+        "indent_control": "indent",
+        "layer": 4,
+        "locked_control": "",
+        "offset": "$slider_box_offset",
+        "size": "$slider_box_size",
+        "type": "slider_box"
+    },
+    "slider_button_hover_layout@bb_hbui_buttons.slider_button_state":
+    {
+        "texture": "AMBRO/tui/hbui/button_hover"
+    },
+    "slider_button_indent_layout@bb_hbui_buttons.slider_button_state":
+    {
+        "texture": "AMBRO/tui/hbui/button_hover"
+    },
+    "slider_button_layout@bb_hbui_buttons.slider_button_state":
+    {
+        "texture": "AMBRO/tui/hbui/button_default"
+    },
+    "slider_button_locked_layout@bb_hbui_buttons.slider_button_state":
+    {
+        "texture": "AMBRO/tui/hbui/button_default"
+    },
+    "slider_button_state@bb.img":
+    {
+        "layer": 2,
+        "texture": "textures/ui/slider_button_default"
+    },
+    "slider_control_text@bb.label":
+    {
+        "$slider_control_text_localize|default": false,
+        "$slider_control_text_offset|default": [ "-115% + 2px", 0 ],
+        "$slider_text_source_control_name|default": "",
+        "$slider_text_source_property_name|default": "",
+        "$slider_text_target_property_name|default": "#visible",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "$slider_text_source_control_name",
+            "source_property_name": "$slider_text_source_property_name",
+            "target_property_name": "$slider_text_target_property_name"
+        } ],
+        "localize": "$slider_control_text_localize",
+        "offset": "$slider_control_text_offset",
+        "shadow": false
+    },
+    "slider_progress_hover@bb.img":
+    {
+        "texture": "AMBRO/tui/hbui/slider/progress"
+    },
+    "slider_progress@bb.img":
+    {
+        "texture": "AMBRO/tui/hbui/slider/progress"
+    },
+    "slider_step@bb.img":
+    {
+        "layer": 4,
+        "offset": "$step_offset",
+        "size": [ 1, 6 ],
+        "texture": "AMBRO/tui/hbui/slider/step"
+    },
+    "tab_panel@bb.p":
+    {
+        "$ignore_button_label|default": false,
+        "$ignore_button_texture|default": false,
+        "$tab_content|default": "common_tabs.empty_tab_content",
+        "$tab_crosshair_content|default": "bb.p",
+        "$use_exit_texture|default": false,
+        "$use_tab_content|default": false,
+        "$use_tab_crosshair_content|default": false,
+        "$visible_hover_panel|default": false,
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "$hover_text|default": "",
+                        "allow_clipping": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ],
+                        "layer": 1000000,
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "size": [ "100%", "100%" ],
+                        "visible": "$is_hover_state"
+                    }
+                },
+                {
+                    "button_texture@bb.img":
+                    {
+                        "ignored": "$ignore_button_texture",
+                        "layer": 1,
+                        "size": "$tab_texture_size",
+                        "texture": "$tab_texture"
+                    }
+                },
+                {
+                    "use_img@bb.img":
+                    {
+                        "$img_offset|default": [ 0, 0 ],
+                        "$img_size|default": [ "100%", "100%" ],
+                        "$texture|default": "",
+                        "$use_img|default": false,
+                        "layer": 4,
+                        "offset": "$img_offset",
+                        "size": "$img_size",
+                        "texture": "$texture",
+                        "visible": "$use_img"
+                    }
+                },
+                {
+                    "exit_texture@bb.img":
+                    {
+                        "$exit_texture|default": "AMBRO/tui/common/empty",
+                        "layer": 1,
+                        "texture": "$exit_texture",
+                        "visible": "$use_exit_texture"
+                    }
+                },
+                {
+                    "tab_content@$tab_content":
+                    {
+                        "ignored": "(not $use_tab_content)",
+                        "layer": 2
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "$tab_text_panel_offset|default": [ 0, 0 ],
+                        "controls": [
+                        {
+                            "button_label@bb.label":
+                            {
+                                "$tab_text_bindings|default": [ ],
+                                "$tab_text_offset|default": [ 0, 0 ],
+                                "$tab_text_shadow|default": false,
+                                "bindings": "$tab_text_bindings",
+                                "color": "$tab_text_color",
+                                "layer": 2,
+                                "offset": "$tab_text_offset",
+                                "shadow": "$tab_text_shadow",
+                                "text": "$tab_text_control"
+                            }
+                        } ],
+                        "ignored": "($use_tab_crosshair_content or $ignore_button_label)",
+                        "layer": 5,
+                        "offset": "$tab_text_panel_offset"
+                    }
+                },
+                {
+                    "crosshair_content@$tab_crosshair_content":
+                    {
+                        "$tab_crosshair_content_color|default": [ 0, 0, 0 ],
+                        "$tab_crosshair_content_offset|default": [ 0, 0 ],
+                        "color": "$tab_crosshair_content_color",
+                        "ignored": "(not $use_tab_crosshair_content)",
+                        "offset": "$tab_crosshair_content_offset"
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "tab_panel2@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "button_texture@bb.img":
+                    {
+                        "ignored": "(not $use_button_texture",
+                        "layer": 1,
+                        "size": "$texture_size",
+                        "texture": "$button_texture"
+                    }
+                },
+                {
+                    "button_text@bb.l":
+                    {
+                        "color": "$button_text_color",
+                        "layer": 2,
+                        "offset": "$button_text_offset",
+                        "shadow": false,
+                        "text": "$button_text"
+                    }
+                },
+                {
+                    "hover_panel@common.hover_text":
+                    {
+                        "$hover_text|default": "",
+                        "allow_clipping": false,
+                        "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "#hover_text_control",
+                            "target_property_name": "#hover_text"
+                        } ],
+                        "layer": 1000000,
+                        "property_bag":
+                        {
+                            "#hover_text_control": "$hover_text"
+                        },
+                        "size": [ "100%", "100%" ],
+                        "visible": "$is_hover_state"
+                    }
+                },
+                {
+                    "custom_content@$custom_content":
+                    {
+                        "ignored": "(not $use_custom_content)",
+                        "layer": 3
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "tab@bb.p":
+    {
+        "$blank|default": false,
+        "$checked_default_image": "AMBRO/tui/hbui/button_pressed",
+        "$checked_hover_image": "AMBRO/tui/hbui/button_pressed_hover",
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$default_selector_toggle_index|default": 0,
+        "$hover_text_visible_when_checked|default": true,
+        "$ignore_hover_panel|default": true,
+        "$img_checked_hover_state|default": [ 0, 0 ],
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$tab_panel": "bb_hbui_buttons.tab_panel",
+        "$tab_size|default": [ "100%", 32 ],
+        "$tab_text_checked_hover|default": "$tab_text",
+        "$tab_text_checked|default": "$tab_text",
+        "$tab_text_offset_pressed|default": [ 0, 1 ],
+        "$tab_text_unchecked_hover|default": "$tab_text",
+        "$tab_text_unchecked|default": "$tab_text",
+        "$tab_texture_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$tab_view_binding_name|default": "hbui_tab",
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "button.menu_ok"
+        },
+        {
+            "from_button_id": "button.controller_back",
+            "ignored": "(not $allow_controller_back_button_mapping)",
+            "mapping_type": "focused",
+            "to_button_id": "button.controller_back"
+        },
+        {
+            "from_button_id": "button.menu_left",
+            "ignored": "(not $enable_directional_toggling)",
+            "input_mode_condition": "gamepad_and_not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$toggle_off_button"
+        },
+        {
+            "from_button_id": "button.menu_right",
+            "ignored": "(not $enable_directional_toggling)",
+            "input_mode_condition": "gamepad_and_not_gaze",
+            "mapping_type": "pressed",
+            "to_button_id": "$toggle_on_button"
+        } ],
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_tab",
+        "$unchecked_default_image": "AMBRO/tui/hbui/button_default",
+        "$unchecked_hover_image": "AMBRO/tui/hbui/button_hover",
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$tab_panel":
+                    {
+                        "$exit_texture": "AMBRO/tui/common/empty",
+                        "$tab_state": "unchecked",
+                        "$tab_text_color": "$unchecked_text_color",
+                        "$tab_text_control": "$tab_text_unchecked",
+                        "$tab_texture": "$unchecked_default_image",
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$tab_panel":
+                    {
+                        "$exit_texture": "AMBRO/tui/buttons/close/hover_no_icon",
+                        "$is_hover_state": true,
+                        "$tab_state": "unchecked_hover",
+                        "$tab_text_color": "$unchecked_hover_text_color",
+                        "$tab_text_control": "$tab_text_unchecked_hover",
+                        "$tab_texture": "$unchecked_hover_image",
+                        "$visible_hover_panel": true,
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$tab_panel":
+                    {
+                        "$img_offset": "$img_checked_hover_state",
+                        "$is_checked_state": true,
+                        "$tab_crosshair_content_color": [ 1, 1, 1 ],
+                        "$tab_crosshair_content_offset": [ 0, 1 ],
+                        "$tab_state": "checked",
+                        "$tab_text_color": "$checked_text_color",
+                        "$tab_text_control": "$tab_text_checked",
+                        "$tab_text_offset": "$tab_text_offset_pressed",
+                        "$tab_texture": "$checked_default_image",
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$tab_panel":
+                    {
+                        "$img_offset": "$img_checked_hover_state",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_crosshair_content_color": [ 1, 1, 1 ],
+                        "$tab_crosshair_content_offset": [ 0, 1 ],
+                        "$tab_state": "checked_hover",
+                        "$tab_text_color": "$checked_hover_text_color",
+                        "$tab_text_control": "$tab_text_checked_hover",
+                        "$tab_text_offset": "$tab_text_offset_pressed",
+                        "$tab_texture": "$checked_hover_image",
+                        "$visible_hover_panel": "$hover_text_visible_when_checked",
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "size": "$tab_size"
+    },
+    "tab2@bb.p":
+    {
+        "$blank|default": false,
+        "$button_panel|default": "bb_hbui_buttons.tab_panel2",
+        "$button_text_offset|default": [ 0, 0 ],
+        "$button_text_pressed_offset|default": [ 0, 1 ],
+        "$button_text|default": "",
+        "$checked_black_button_text|default": false,
+        "$checked_default_image|default": "AMBRO/tui/hbui/button_pressed",
+        "$checked_hover_image|default": "AMBRO/tui/hbui/button_pressed_hover",
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$custom_content|default": "common_tabs.empty_tab_content",
+        "$default_selector_toggle_index|default": 0,
+        "$hover_text|default": "&hover_text",
+        "$is_checked_state|default": false,
+        "$is_hover_state|default": false,
+        "$tab_view_binding_name|default": "hbui_tab2",
+        "$texture_size|default": [ "100% - 2px", "100% - 2px" ],
+        "$toggle_button_mappings_control|default": [
+        {
+            "from_button_id": "button.menu_select",
+            "mapping_type": "pressed",
+            "to_button_id": "button.menu_select"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "mapping_type": "focused",
+            "to_button_id": "button.menu_ok"
+        } ],
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_tab2",
+        "$unchecked_default_image|default": "AMBRO/tui/hbui/button_default",
+        "$unchecked_hover_image|default": "AMBRO/tui/hbui/button_hover",
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$use_button_texture|default": true,
+        "$use_custom_content|default": false,
+        "$white_button_text|default": false,
+        "controls": [
+        {
+            "$tab_view_binding_name@common.toggle2":
+            {
+                "$toggle_button_mappings": "$toggle_button_mappings_control",
+                "controls": [
+                {
+                    "unchecked@$button_panel":
+                    {
+                        "$button_text_color": "$unchecked_text_color",
+                        "$button_texture": "$unchecked_default_image",
+                        "$tab_state": "unchecked",
+                        "layer": 1
+                    }
+                },
+                {
+                    "unchecked_hover@$button_panel":
+                    {
+                        "$button_text_color": "$unchecked_hover_text_color",
+                        "$button_texture": "$unchecked_hover_image",
+                        "$is_hover_state": true,
+                        "$tab_state": "unchecked_hover",
+                        "layer": 1
+                    }
+                },
+                {
+                    "checked@$button_panel":
+                    {
+                        "$button_text_color": "$checked_text_color",
+                        "$button_text_offset": "$button_text_pressed_offset",
+                        "$button_texture": "$checked_default_image",
+                        "$is_checked_state": true,
+                        "$tab_state": "checked",
+                        "layer": 2
+                    }
+                },
+                {
+                    "checked_hover@$button_panel":
+                    {
+                        "$button_text_color": "$checked_hover_text_color",
+                        "$button_text_offset": "$button_text_pressed_offset",
+                        "$button_texture": "$checked_hover_image",
+                        "$is_checked_state": true,
+                        "$is_hover_state": true,
+                        "$tab_state": "checked_hover",
+                        "layer": 2
+                    }
+                } ],
+                "reset_on_focus_lost": false
+            }
+        } ],
+        "size": [ "100%", 32 ],
+        "variables": [
+        {
+            "$unchecked_hover_text_color": [ 1, 1, 1 ],
+            "$unchecked_text_color": [ 1, 1, 1 ],
+            "requires": "$white_button_text"
+        },
+        {
+            "$checked_hover_text_color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+            "$checked_text_color": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+            "requires": "$checked_black_button_text"
+        } ]
+    },
+    "toggle_checked_hover@bb_hbui_buttons.toggle_panel":
+    {
+        "$pressed_state": true,
+        "$toggle_checked_hover": true,
+        "$toggle_texture": "$checked_hover_default_image",
+        "layer": 2
+    },
+    "toggle_checked@bb_hbui_buttons.toggle_panel":
+    {
+        "$pressed_state": true,
+        "$toggle_checked": true,
+        "$toggle_texture": "$checked_default_image",
+        "layer": 2
+    },
+    "toggle_panel@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "button_texture@bb.img":
+                    {
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "size": "$toggle_texture_size",
+                        "texture": "$toggle_texture"
+                    }
+                },
+                {
+                    "button_text@bb.p":
+                    {
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "controls": [
+                        {
+                            "button_text@bb.label":
+                            {
+                                "$toggle_text_bindings|default": [ ],
+                                "$toggle_text_color|default": [ 1, 1, 1 ],
+                                "$toggle_text_offset|default": [ 0, 0 ],
+                                "$toggle_text_shadow|default": false,
+                                "$toggle_text|default": "toggle_text",
+                                "bindings": "$toggle_text_bindings",
+                                "color": "$toggle_text_color",
+                                "layer": 2,
+                                "offset": "$toggle_text_offset",
+                                "shadow": "$toggle_text_shadow",
+                                "text": "$toggle_text"
+                            }
+                        } ],
+                        "offset": [ 34, 0 ],
+                        "size": [ "100%c", "100%c" ]
+                    }
+                } ],
+                "visible": "(not $blank)"
+            }
+        } ]
+    },
+    "toggle_unchecked_hover@bb_hbui_buttons.toggle_panel":
+    {
+        "$hover_state": true,
+        "$toggle_texture": "$unchecked_hover_default_image",
+        "$toggle_unchecked_hover": true,
+        "layer": 1
+    },
+    "toggle_unchecked@bb_hbui_buttons.toggle_panel":
+    {
+        "$default_state": true,
+        "$toggle_texture": "$unchecked_default_image",
+        "$toggle_unchecked": true,
+        "layer": 1
+    },
+    "toggle@bb.p":
+    {
+        "$blank|default": false,
+        "$checked_control": "bb_hbui_buttons.toggle_checked",
+        "$checked_default_image": "AMBRO/tui/hbui/toggle/on",
+        "$checked_hover_control": "bb_hbui_buttons.toggle_checked_hover",
+        "$checked_hover_default_image": "AMBRO/tui/hbui/toggle/on_hover",
+        "$checked_hover_text_color|default": [ 1, 1, 1 ],
+        "$checked_locked_control|default": "",
+        "$checked_locked_hover_control|default": "",
+        "$checked_text_color|default": [ 1, 1, 1 ],
+        "$default_selector_toggle_index|default": 0,
+        "$tab_panel": "bb_hbui_buttons.tab_panel",
+        "$toggle_group_default_selected": "$default_selector_toggle_index",
+        "$toggle_name|default": "hbui_toggle",
+        "$toggle_size|default": [ "100%", 18 ],
+        "$toggle_texture_size": [ 30, 16 ],
+        "$toggle_view_binding_name|default": "hbui_toggle",
+        "$unchecked_control": "bb_hbui_buttons.toggle_unchecked",
+        "$unchecked_default_image": "AMBRO/tui/hbui/toggle/off",
+        "$unchecked_hover_control": "bb_hbui_buttons.toggle_unchecked_hover",
+        "$unchecked_hover_default_image": "AMBRO/tui/hbui/toggle/off_hover",
+        "$unchecked_hover_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "$unchecked_locked_control|default": "",
+        "$unchecked_locked_hover_control|default": "",
+        "$unchecked_text_color|default": [ 0.1176470588235294, 0.1176470588235294, 0.1176470588235294 ],
+        "controls": [
+        {
+            "$toggle_view_binding_name@common.toggle":
+            {}
+        } ],
+        "size": "$toggle_size"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "small_chest_screen":
+    {
+        "force_render_below": true
+    },
+    "large_chest_screen":
+    {
+        "force_render_below": true
+    },
+    "ender_chest_screen":
+    {
+        "force_render_below": true
+    },
+    "shulker_box_screen":
+    {
+        "force_render_below": true
+    },
+    "barrel_screen":
+    {
+        "force_render_below": true
+    }
+}

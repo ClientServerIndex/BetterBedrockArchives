@@ -1,0 +1,14 @@
+{
+    "dispenser_screen":
+    {
+        "force_render_below": true
+    },
+    "dropper_screen":
+    {
+        "force_render_below": true
+    },
+    "hopper_screen":
+    {
+        "force_render_below": true
+    }
+}

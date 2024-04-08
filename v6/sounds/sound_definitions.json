@@ -1,0 +1,63 @@
+{
+    "damage.fallbig":
+    {
+        "category": "player",
+        "sounds": [
+        {
+            "name": "sounds/damage/fallbig",
+            "volume": 0,
+            "load_on_low_memory": true
+        } ]
+    },
+    "damage.fallsmall":
+    {
+        "category": "player",
+        "sounds": [
+        {
+            "name": "sounds/damage/fallsmall",
+            "volume": 0,
+            "load_on_low_memory": true
+        } ]
+    },
+    "game.player.attack.nodamage":
+    {
+        "sounds": [
+        {
+            "name": "sounds/mob/player/attack/weak1",
+            "volume": 0
+        },
+        {
+            "name": "sounds/mob/player/attack/weak2",
+            "volume": 0,
+            "load_on_low_memory": true
+        },
+        {
+            "name": "sounds/mob/player/attack/weak3",
+            "volume": 0
+        },
+        {
+            "name": "sounds/mob/player/attack/weak4",
+            "volume": 0
+        } ]
+    },
+    "game.player.hurt":
+    {
+        "category": "player",
+        "sounds": [
+        {
+            "name": "sounds/damage/hit1",
+            "volume": 0.5,
+            "load_on_low_memory": true
+        },
+        {
+            "name": "sounds/damage/hit2",
+            "volume": 0.5,
+            "load_on_low_memory": true
+        },
+        {
+            "name": "sounds/damage/hit3",
+            "volume": 0.5,
+            "load_on_low_memory": true
+        } ]
+    }
+}

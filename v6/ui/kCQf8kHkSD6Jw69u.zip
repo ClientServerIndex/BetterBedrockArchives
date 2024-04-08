@@ -1,0 +1,445 @@
+{
+    "button_template@bb.p":
+    {
+        "controls": [
+        {
+            "main_bg@bb.img":
+            {
+                "controls": [
+                {
+                    "mod_button@bb_hbui_buttons.mod":
+                    {}
+                },
+                {
+                    "mod_settings@bb_hbui_buttons.mod_settings":
+                    {}
+                },
+                {
+                    "mod_content@bb.sp":
+                    {
+                        "controls": [
+                        {
+                            "mod_icon_panel@bb.p":
+                            {
+                                "controls": [
+                                {
+                                    "mod_icon@bb.img":
+                                    {
+                                        "$icon_offset|default": [ 0, 0 ],
+                                        "$mod_icon_size|default": [ 22, 22 ],
+                                        "$mod_icon|default": "empty",
+                                        "layer": 4,
+                                        "offset": "$icon_offset",
+                                        "size": "$mod_icon_size",
+                                        "texture": "('AMBRO/tui/icons/' + $mod_icon)"
+                                    }
+                                } ],
+                                "size": [ "100%", "100%c" ]
+                            }
+                        },
+                        {
+                            "padding1@bb.yp":
+                            {
+                                "$yps": [ "100%", 3 ]
+                            }
+                        },
+                        {
+                            "mod_name@bb.l":
+                            {
+                                "$mod_name_alpha|default": 1,
+                                "$mod_name|default": "",
+                                "alpha": "$mod_name_alpha",
+                                "shadow": false,
+                                "size": [ "100%", 10 ],
+                                "text": "$mod_name",
+                                "text_alignment": "center"
+                            }
+                        } ],
+                        "layer": 3,
+                        "offset": [ 0, -6 ],
+                        "size": [ "100%", "100%c" ]
+                    }
+                } ],
+                "size": [ "100% - 3px", "100% - 3px" ],
+                "texture": "AMBRO/tui/hbui/more/mod_bg"
+            }
+        } ],
+        "size": [ "33.3333333333333333%", 76 ]
+    },
+    "gameplay@bb.spv":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_button_gameplay",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "controls": [
+        {
+            "@bb_mod_options.options_main_stack_panel":
+            {}
+        },
+        {
+            "gameplay@bb.spv":
+            {
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_mod_option_0",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ],
+                "controls": [
+                {
+                    "@bb_common.line_title_text":
+                    {
+                        "$title_text": "Dynamic Mods"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", -1.25 ]
+                    }
+                },
+                {
+                    "section_1@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "1"
+                    }
+                },
+                {
+                    "section_2@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "2"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", -1.5 ]
+                    }
+                },
+                {
+                    "@bb_common.line_title_text":
+                    {
+                        "$title_text": "Normal Mods"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", -1.25 ]
+                    }
+                },
+                {
+                    "section_3@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "5"
+                    }
+                },
+                {
+                    "section_3@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "6"
+                    }
+                },
+                {
+                    "section_3@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "7"
+                    }
+                },
+                {
+                    "section_3@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "8"
+                    }
+                },
+                {
+                    "section_3@bb_mod_gameplay.section_template":
+                    {
+                        "$section_panel": "9"
+                    }
+                },
+                {
+                    "@bb.yp":
+                    {
+                        "$yps": [ "100%", 3.25 ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "namespace": "bb_mod_gameplay",
+    "section_1_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$focus_id": "first_mod",
+                "$mod_icon": "armor",
+                "$mod_name": "Armor HUD",
+                "$mod_state": "$armor_hud",
+                "$settings_binding_name": "bb_mod_option_1",
+                "$settings_toggle_index": 1,
+                "$tab_view_binding_name": "bb_armor_hud",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "direction",
+                "$mod_name": "Direction HUD",
+                "$mod_state": "$direction_hud",
+                "$settings_binding_name": "bb_mod_option_2",
+                "$settings_toggle_index": 2,
+                "$tab_view_binding_name": "bb_direction",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "day",
+                "$mod_name": "Day Counter",
+                "$mod_state": "$day_counter",
+                "$settings_binding_name": "bb_mod_option_11",
+                "$settings_toggle_index": 11,
+                "$tab_view_binding_name": "bb_day_counter",
+                "$use_settings": true
+            }
+        } ]
+    },
+    "section_2_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "day_time",
+                "$mod_name": "Day Time Viewer",
+                "$mod_state": "$day_time_viewer",
+                "$settings_binding_name": "bb_mod_option_12",
+                "$settings_toggle_index": 12,
+                "$tab_view_binding_name": "bb_day_time_viewer",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "speed",
+                "$mod_name": "Speed Counter",
+                "$mod_state": "$speed_counter",
+                "$settings_binding_name": "bb_mod_option_15",
+                "$settings_toggle_index": 15,
+                "$tab_view_binding_name": "bb_speed_counter",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "session",
+                "$mod_name": "Session Timer",
+                "$mod_state": "$session_timer",
+                "$settings_binding_name": "bb_mod_option_16",
+                "$settings_toggle_index": 16,
+                "$tab_view_binding_name": "bb_session_timer",
+                "$use_settings": true
+            }
+        } ]
+    },
+    "section_5_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "server_display",
+                "$mod_name": "Server Display",
+                "$mod_state": "$server_display",
+                "$settings_binding_name": "bb_mod_option_22",
+                "$settings_toggle_index": 22,
+                "$tab_view_binding_name": "bb_server_display",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "keystrokes",
+                "$mod_name": "Controller Keystrokes",
+                "$mod_state": "$controller_keystrokes",
+                "$settings_binding_name": "bb_mod_option_19",
+                "$settings_toggle_index": 19,
+                "$tab_view_binding_name": "bb_controller_keystrokes",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "tab_list",
+                "$mod_name": "Tab List (F8)",
+                "$mod_state": "$tab_list",
+                "$settings_binding_name": "bb_mod_option_17",
+                "$settings_toggle_index": 17,
+                "$tab_view_binding_name": "bb_tab_list",
+                "$use_settings": true
+            }
+        } ]
+    },
+    "section_6_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "inventory_hud",
+                "$mod_name": "Inventory HUD",
+                "$mod_state": "$inventory_hud",
+                "$settings_binding_name": "bb_mod_option_20",
+                "$settings_toggle_index": 20,
+                "$tab_view_binding_name": "bb_inventory_hud",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "debug",
+                "$mod_name": "Debug Menu",
+                "$mod_state": "$debug_menu",
+                "$settings_binding_name": "bb_mod_option_6",
+                "$settings_toggle_index": 6,
+                "$tab_view_binding_name": "bb_debug",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "durability",
+                "$mod_name": "Durability Viewer",
+                "$mod_state": "$durability_viewer",
+                "$tab_view_binding_name": "bb_durability_viewer"
+            }
+        } ]
+    },
+    "section_7_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "doll",
+                "$mod_name": "Paper Doll",
+                "$mod_state": "$paper_doll",
+                "$settings_binding_name": "bb_mod_option_9",
+                "$settings_toggle_index": 9,
+                "$tab_view_binding_name": "bb_paper_doll",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "coords",
+                "$mod_name": "Coords",
+                "$mod_state": "$coords",
+                "$settings_binding_name": "bb_mod_option_8",
+                "$settings_toggle_index": 8,
+                "$tab_view_binding_name": "bb_coords",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "chat",
+                "$mod_name": "Chat",
+                "$mod_state": "$chat",
+                "$settings_binding_name": "bb_mod_option_5",
+                "$settings_toggle_index": 5,
+                "$tab_view_binding_name": "bb_chat",
+                "$use_settings": true
+            }
+        } ]
+    },
+    "section_8_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "hotbar",
+                "$mod_name": "Hotbar Numbers",
+                "$mod_state": "$hotbar_numbers",
+                "$settings_binding_name": "bb_mod_option_21",
+                "$settings_toggle_index": 21,
+                "$tab_view_binding_name": "bb_hotbar_numbers",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "gamma",
+                "$mod_name": "Gamma",
+                "$mod_state": "$gamma",
+                "$settings_binding_name": "bb_mod_option_7",
+                "$settings_toggle_index": 7,
+                "$tab_view_binding_name": "bb_gamma",
+                "$use_settings": true
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "effects",
+                "$mod_name": "Effects Icons",
+                "$mod_state": "$effects_icons",
+                "$tab_view_binding_name": "bb_effects_icons"
+            }
+        } ]
+    },
+    "section_9_panel@bb.sph":
+    {
+        "controls": [
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "vignette",
+                "$mod_name": "Vignette",
+                "$mod_state": "$vignette",
+                "$tab_view_binding_name": "bb_vignette"
+            }
+        },
+        {
+            "@bb_mod_gameplay.button_template":
+            {
+                "$mod_icon": "buttons",
+                "$mod_name": "Mobile Shortcuts",
+                "$mod_state": "$mobile_shortcuts",
+                "$tab_view_binding_name": "bb_shortcuts"
+            }
+        } ]
+    },
+    "section_template@bb.p":
+    {
+        "$section_panel_control|default": "('bb_mod_gameplay.section_' + $section_panel + '_panel')",
+        "controls": [
+        {
+            "sph@$section_panel_control":
+            {
+                "size": [ "100% - 3px", "100%cm" ]
+            }
+        } ],
+        "size": [ "100%", "100%cm" ]
+    }
+}

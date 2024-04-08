@@ -1,0 +1,1149 @@
+{
+    "a":
+    {
+        "$d|default": 1,
+        "$e|default": "out_cubic",
+        "$f|default": 0,
+        "$scale_alpha|default": false,
+        "$t|default": 0,
+        "anim_type": "alpha",
+        "duration": "$d",
+        "easing": "$e",
+        "from": "$f",
+        "next": "('@bb_anims.' + $n)",
+        "scale_from_starting_alpha": "$scale_alpha",
+        "to": "$t"
+    },
+    "a1@bb_messages_new.a":
+    {
+        "anim_type": "alpha"
+    },
+    "b":
+    {
+        "type": "button"
+    },
+    "c":
+    {
+        "$chroma_crosshair_anim_duration|default": 0.1,
+        "anim_type": "color",
+        "duration": "$chroma_crosshair_anim_duration",
+        "from": "$value",
+        "next": "('@bb_anims.' + $n)",
+        "to": "$value"
+    },
+    "c2":
+    {
+        "type": "custom"
+    },
+    "checkbox_image@bb.img":
+    {
+        "bindings": [
+        {
+            "$control|default": "",
+            "$property|default": "",
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "$property",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "checkbox@bb.p":
+    {
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "size": [ 16, 16 ]
+    },
+    "color":
+    {
+        "$chroma_crosshair_anim_duration|default": 0.1,
+        "$color_value_01": [ 0.25, 1, 1 ],
+        "$color_value_02": [ 0.25, 1, 0.9 ],
+        "$color_value_03": [ 0.25, 1, 0.8 ],
+        "$color_value_04": [ 0.25, 1, 0.7 ],
+        "$color_value_05": [ 0.25, 1, 0.6 ],
+        "$color_value_06": [ 0.25, 1, 0.5 ],
+        "$color_value_07": [ 0.25, 1, 0.4 ],
+        "$color_value_08": [ 0.25, 1, 0.25 ],
+        "$color_value_09": [ 0.375, 1, 0.25 ],
+        "$color_value_10": [ 0.5, 1, 0.25 ],
+        "$color_value_11": [ 0.625, 1, 0.25 ],
+        "$color_value_12": [ 0.75, 1, 0.25 ],
+        "$color_value_13": [ 0.875, 1, 0.25 ],
+        "$color_value_14": [ 1, 1, 0.25 ],
+        "$color_value_15": [ 1, 0.9, 0.25 ],
+        "$color_value_16": [ 1, 0.8, 0.25 ],
+        "$color_value_17": [ 1, 0.7, 0.25 ],
+        "$color_value_18": [ 1, 0.6, 0.25 ],
+        "$color_value_19": [ 1, 0.5, 0.25 ],
+        "$color_value_20": [ 1, 0.4, 0.25 ],
+        "$color_value_21": [ 1, 0.25, 0.25 ],
+        "$color_value_22": [ 1, 0.25, 0.4 ],
+        "$color_value_23": [ 1, 0.25, 0.5 ],
+        "$color_value_24": [ 1, 0.25, 0.6 ],
+        "$color_value_25": [ 1, 0.25, 0.7 ],
+        "$color_value_26": [ 1, 0.25, 0.8 ],
+        "$color_value_27": [ 1, 0.25, 0.9 ],
+        "$color_value_28": [ 1, 0.25, 1 ],
+        "$color_value_29": [ 0.875, 0.25, 1 ],
+        "$color_value_30": [ 0.75, 0.25, 1 ],
+        "$color_value_31": [ 0.625, 0.25, 1 ],
+        "$color_value_32": [ 0.5, 0.25, 1 ],
+        "$color_value_33": [ 0.375, 0.25, 1 ],
+        "$color_value_34": [ 0.25, 0.25, 1 ],
+        "$color_value_35": [ 0.25, 0.4, 1 ],
+        "$color_value_36": [ 0.25, 0.5, 1 ],
+        "$color_value_37": [ 0.25, 0.6, 1 ],
+        "$color_value_38": [ 0.25, 0.7, 1 ],
+        "$color_value_39": [ 0.25, 0.8, 1 ],
+        "$color_value_40": [ 0.25, 0.9, 1 ],
+        "$value|default": 0,
+        "anim_type": "color",
+        "duration": "$chroma_crosshair_anim_duration",
+        "from": "$value",
+        "next": "('@' + $namespace + '.' + $n)",
+        "to": "$value"
+    },
+    "custom":
+    {
+        "$r|default": "",
+        "layer": 999,
+        "renderer": "$r",
+        "size": [ 16, 16 ],
+        "type": "custom"
+    },
+    "element_overlay@bb.img":
+    {
+        "$size|default": [ "50%", "50%" ],
+        "alpha": 0.5,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": -9,
+        "size": "$size",
+        "texture": "AMBRO/tui/new/element_overlay"
+    },
+    "f":
+    {
+        "type": "factory"
+    },
+    "g":
+    {
+        "type": "grid"
+    },
+    "global_bg@bb.img":
+    {
+        "alpha": 0.3,
+        "fill": true,
+        "layer": -10,
+        "texture": "AMBRO/tui/new/global_bg"
+    },
+    "header_title@bb_gameplay_features.header_title":
+    {},
+    "i@bb.img":
+    {},
+    "img":
+    {
+        "type": "image"
+    },
+    "img0":
+    {
+        "alpha": 0,
+        "type": "image"
+    },
+    "l@bb.label":
+    {},
+    "label":
+    {
+        "$paragraph1": "§fInfo!",
+        "$paragraph2": "§fHow To Enable?",
+        "$paragraph3": "§f*Note",
+        "$shadow|default": true,
+        "$space1": "       ",
+        "$space2": "                    ",
+        "$space3": "        ",
+        "localize": true,
+        "shadow": "$shadow",
+        "type": "label"
+    },
+    "labelb":
+    {
+        "$paragraph1": "§fInfo!",
+        "$paragraph2": "§fHow To Enable?",
+        "$paragraph3": "§f*Note",
+        "$shadow|default": true,
+        "$space1": "       ",
+        "$space2": "                    ",
+        "$space3": "        ",
+        "bindings": [
+        {
+            "$binding_type1|default": "view",
+            "$name1|default": "",
+            "$target_property_name1|default": "#visible",
+            "$toggle1|default": "#toggle_state",
+            "binding_type": "$binding_type1",
+            "source_control_name": "$name1",
+            "source_property_name": "$toggle1",
+            "target_property_name": "$target_property_name1"
+        },
+        {
+            "$binding_type2|default": "view",
+            "$name2|default": "",
+            "$target_property_name2|default": "#visible",
+            "$toggle2|default": "#toggle_state",
+            "binding_type": "$binding_type2",
+            "source_control_name": "$name2",
+            "source_property_name": "$toggle2",
+            "target_property_name": "$target_property_name2"
+        },
+        {
+            "$not_binding_type1|default": "view",
+            "$not_name1|default": "",
+            "$not_target_property_name1|default": "#visible",
+            "$not_toggle1|default": "(not #toggle_state)",
+            "binding_type": "$not_binding_type1",
+            "source_control_name": "$not_name1",
+            "source_property_name": "$not_toggle1",
+            "target_property_name": "$not_target_property_name1"
+        },
+        {
+            "$not_binding_type2|default": "view",
+            "$not_name2|default": "",
+            "$not_target_property_name2|default": "#visible",
+            "$not_toggle2|default": "(not #toggle_state)",
+            "binding_type": "$not_binding_type2",
+            "source_control_name": "$not_name2",
+            "source_property_name": "$not_toggle2",
+            "target_property_name": "$not_target_property_name2"
+        } ],
+        "localize": true,
+        "shadow": "$shadow",
+        "type": "label"
+    },
+    "labels@bb_start_buttons.label_status":
+    {},
+    "namespace": "bb",
+    "o":
+    {
+        "$d|default": "",
+        "$e|default": "out_cubic",
+        "$f|default": 0,
+        "$t|default": 0,
+        "anim_type": "offset",
+        "duration": "$d",
+        "easing": "$e",
+        "from": "$f",
+        "next": "('@bb_anims.' + $n)",
+        "to": "$t"
+    },
+    "o1@bb_messages_new.o":
+    {
+        "anim_type": "offset"
+    },
+    "p":
+    {
+        "$dev|default": false,
+        "type": "panel"
+    },
+    "paragraph_bold_text@bb_gameplay_features.paragraph_bold_text":
+    {},
+    "paragraph@bb.sp":
+    {
+        "controls": [
+        {
+            "symbol_1@bb.label":
+            {
+                "color": [ 0.8980392156862745, 0, 0 ],
+                "controls": [
+                {
+                    "1@bb.label":
+                    {
+                        "alpha": 0,
+                        "anims": [ "@label_anims.paragraph" ],
+                        "color": [ 0.8392156862745098, 0.8392156862745098, 0.8392156862745098 ],
+                        "layer": 2,
+                        "text": "§l»",
+                        "text_alignment": "left"
+                    }
+                } ],
+                "layer": 1,
+                "text": "§l»",
+                "text_alignment": "left"
+            }
+        },
+        {
+            "padding_1@bb.p":
+            {
+                "size": [ "1px", "-10px" ]
+            }
+        },
+        {
+            "text@bb.label":
+            {
+                "color": [ 0.8980392156862745, 0, 0 ],
+                "size": [ "100%", "default" ],
+                "text": "$text",
+                "text_alignment": "left"
+            }
+        } ],
+        "orientation": "horizontal",
+        "size": [ "98%", "100%c" ]
+    },
+    "pb":
+    {
+        "bindings": [
+        {
+            "$binding_type1|default": "view",
+            "$name1|default": "",
+            "$target_property_name1|default": "#visible",
+            "$toggle1|default": "#toggle_state",
+            "binding_type": "$binding_type1",
+            "source_control_name": "$name1",
+            "source_property_name": "$toggle1",
+            "target_property_name": "$target_property_name1"
+        },
+        {
+            "$binding_type2|default": "view",
+            "$name2|default": "",
+            "$target_property_name2|default": "#visible",
+            "$toggle2|default": "#toggle_state",
+            "binding_type": "$binding_type2",
+            "source_control_name": "$name2",
+            "source_property_name": "$toggle2",
+            "target_property_name": "$target_property_name2"
+        },
+        {
+            "$not_binding_type1|default": "view",
+            "$not_name1|default": "",
+            "$not_target_property_name1|default": "#visible",
+            "$not_toggle1|default": "(not #toggle_state)",
+            "binding_type": "$not_binding_type1",
+            "source_control_name": "$not_name1",
+            "source_property_name": "$not_toggle1",
+            "target_property_name": "$not_target_property_name1"
+        },
+        {
+            "$not_binding_type2|default": "view",
+            "$not_name2|default": "",
+            "$not_target_property_name2|default": "#visible",
+            "$not_toggle2|default": "(not #toggle_state)",
+            "binding_type": "$not_binding_type2",
+            "source_control_name": "$not_name2",
+            "source_property_name": "$not_toggle2",
+            "target_property_name": "$not_target_property_name2"
+        } ],
+        "type": "panel"
+    },
+    "percentage_text_factory@bb.p":
+    {
+        "$in_range_0": 0,
+        "$in_range_100": 100,
+        "$percentage_text_control|default": "@bb.l",
+        "controls": [
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": "$in_range_0",
+                "$text": "0"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 1,
+                "$text": "1"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 2,
+                "$text": "2"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 3,
+                "$text": "3"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 4,
+                "$text": "4"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 5,
+                "$text": "5"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 6,
+                "$text": "6"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 7,
+                "$text": "7"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 8,
+                "$text": "9"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 9,
+                "$text": "9"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 10,
+                "$text": "10"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 11,
+                "$text": "11"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 12,
+                "$text": "12"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 13,
+                "$text": "13"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 14,
+                "$text": "14"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 15,
+                "$text": "15"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 16,
+                "$text": "16"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 17,
+                "$text": "17"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 18,
+                "$text": "18"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 19,
+                "$text": "19"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 20,
+                "$text": "20"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 21,
+                "$text": "21"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 22,
+                "$text": "22"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 23,
+                "$text": "23"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 24,
+                "$text": "24"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 25,
+                "$text": "25"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 26,
+                "$text": "26"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 27,
+                "$text": "27"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 28,
+                "$text": "28"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 29,
+                "$text": "29"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 30,
+                "$text": "30"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 31,
+                "$text": "31"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 32,
+                "$text": "32"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 33,
+                "$text": "33"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 34,
+                "$text": "34"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 35,
+                "$text": "35"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 36,
+                "$text": "36"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 37,
+                "$text": "37"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 38,
+                "$text": "38"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 39,
+                "$text": "39"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 40,
+                "$text": "40"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 41,
+                "$text": "41"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 42,
+                "$text": "42"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 43,
+                "$text": "43"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 44,
+                "$text": "44"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 45,
+                "$text": "45"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 46,
+                "$text": "46"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 47,
+                "$text": "47"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 48,
+                "$text": "48"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 49,
+                "$text": "49"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 50,
+                "$text": "50"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 51,
+                "$text": "51"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 52,
+                "$text": "52"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 53,
+                "$text": "53"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 54,
+                "$text": "54"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 55,
+                "$text": "55"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 56,
+                "$text": "56"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 57,
+                "$text": "57"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 58,
+                "$text": "58"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 59,
+                "$text": "59"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 60,
+                "$text": "60"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 61,
+                "$text": "61"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 62,
+                "$text": "62"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 63,
+                "$text": "63"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 64,
+                "$text": "64"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 65,
+                "$text": "65"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 66,
+                "$text": "66"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 67,
+                "$text": "67"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 68,
+                "$text": "68"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 69,
+                "$text": "69"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 70,
+                "$text": "70"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 71,
+                "$text": "71"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 72,
+                "$text": "72"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 73,
+                "$text": "73"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 74,
+                "$text": "74"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 75,
+                "$text": "75"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 76,
+                "$text": "76"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 77,
+                "$text": "77"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 78,
+                "$text": "78"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 79,
+                "$text": "79"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 80,
+                "$text": "80"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 81,
+                "$text": "81"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 82,
+                "$text": "82"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 83,
+                "$text": "83"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 84,
+                "$text": "84"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 85,
+                "$text": "85"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 86,
+                "$text": "86"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 87,
+                "$text": "87"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 88,
+                "$text": "88"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 89,
+                "$text": "89"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 90,
+                "$text": "90"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 91,
+                "$text": "91"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 92,
+                "$text": "92"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 93,
+                "$text": "93"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 94,
+                "$text": "94"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 95,
+                "$text": "95"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 96,
+                "$text": "96"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 97,
+                "$text": "97"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 98,
+                "$text": "98"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": 99,
+                "$text": "99"
+            }
+        },
+        {
+            "@$percentage_text_control":
+            {
+                "$in_range": "$in_range_100",
+                "$text": "100"
+            }
+        } ]
+    },
+    "pxc@bb.b":
+    {
+        "size": [ "100%c", "100%" ]
+    },
+    "pxyc@bb.b":
+    {
+        "size": [ "100%c", "100%c" ]
+    },
+    "pyc@bb.b":
+    {
+        "size": [ "100%", "100%c" ]
+    },
+    "sp":
+    {
+        "type": "stack_panel"
+    },
+    "sph":
+    {
+        "orientation": "horizontal",
+        "type": "stack_panel"
+    },
+    "spv":
+    {
+        "orientation": "vertical",
+        "size": [ "100%", "100%c" ],
+        "type": "stack_panel"
+    },
+    "spvb":
+    {
+        "bindings": [
+        {
+            "$control|default": "",
+            "binding_type": "view",
+            "source_control_name": "$control",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ],
+        "orientation": "vertical",
+        "size": [ "100%", "100%c" ],
+        "type": "stack_panel"
+    },
+    "test@bb.label":
+    {
+        "text": "test text"
+    },
+    "title@bb.p":
+    {
+        "controls": [
+        {
+            "text@bb.label":
+            {
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "anims": [ "@bb_anims.button_text1" ],
+                "font_scale_factor": 1.5,
+                "font_type": "MinecraftTen",
+                "layer": 2,
+                "offset": [ 0, -2 ],
+                "size": [ "100%", "default" ],
+                "text": "$text",
+                "text_alignment": "center"
+            }
+        },
+        {
+            "bg@bb.img":
+            {
+                "anims": [ "@bb_anims.button1" ],
+                "layer": 1,
+                "size": [ "100%", "100% - 5px" ],
+                "texture": "AMBRO/tui/border"
+            }
+        } ],
+        "size": [ "100%", 30 ]
+    },
+    "w":
+    {
+        "$d|default": 1,
+        "$e|default": "out_cubic",
+        "anim_type": "wait",
+        "duration": "$d",
+        "easing": "$e",
+        "next": "('@bb_anims.' + $n)"
+    },
+    "w1@bb_messages_new.w":
+    {
+        "anim_type": "wait"
+    },
+    "yp@bb.p":
+    {
+        "$yps|default": [ "100%", 2 ],
+        "size": "$yps"
+    },
+    "yp1@bb.p":
+    {
+        "size": [ "100%", 1 ]
+    },
+    "yp2@bb.p":
+    {
+        "size": [ "100%", 2 ]
+    }
+}

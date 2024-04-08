@@ -1,0 +1,45 @@
+{
+    "lapis_image@enchanting.enchanting_image":
+    {
+        "anchor_to": "top_left",
+        "anchor_from": "top_left",
+        "layer": 1,
+        "offset": [ 1, 1 ],
+        "size": [ 16, 16 ],
+        "texture": "textures/ui/lapis_image",
+        "controls": [
+        {
+            "1@bb.img":
+            {
+                "texture": "AMBRO/tui/common/black",
+                "size": [ "100%c + 2px", "100%c" ],
+                "offset": [ -10, 15 ],
+                "alpha": 0.3,
+                "controls": [
+                {
+                    "level_label@enchanting_pocket.generic_label":
+                    {
+                        "text": "#text",
+                        "bindings": [
+                        {
+                            "binding_name": "#player_level_info"
+                        },
+                        {
+                            "binding_name": "#player_level_color",
+                            "binding_name_override": "#color"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "('Level: ' + #player_level_info)",
+                            "target_property_name": "#text"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "enchanting_screen":
+    {
+        "force_render_below": true
+    }
+}

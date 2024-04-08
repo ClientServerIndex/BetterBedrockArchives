@@ -1,0 +1,1285 @@
+{
+    "namespace": "bb_debug",
+    "debug_menu@bb.p":
+    {
+        "layer": 60,
+        "size": [ "100% - 8px", "100% - 8px" ],
+        "$hotbar_collection_name|default": "hotbar_items",
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "controls": [
+                {
+                    "top_right@bb.sp":
+                    {
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "controls": [
+                        {
+                            "text_factories@bb.sp":
+                            {
+                                "controls": [
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.objective_name_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.objective_name_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.boss_bar_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.boss_bar_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.title_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.title_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.subtitle_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.subtitle_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.actionbar_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.tip_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.tip_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.jukebox_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.jukebox_0":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.item_1":
+                                            {}
+                                        } ]
+                                    }
+                                },
+                                {
+                                    "@bb.pyc":
+                                    {
+                                        "controls": [
+                                        {
+                                            "@bb_debug.item_0":
+                                            {}
+                                        } ]
+                                    }
+                                } ],
+                                "bindings": [
+                                {
+                                    "source_control_name": "bb_text_factories",
+                                    "binding_type": "view",
+                                    "source_property_name": "#toggle_state",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "@bb.pyc":
+                            {
+                                "controls": [
+                                {
+                                    "@bb_debug.boss_bar_1":
+                                    {}
+                                } ]
+                            }
+                        } ]
+                    }
+                },
+                {
+                    "top_left@bb.sp":
+                    {
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "controls": [
+                        {
+                            "@bb_debug.bb_client_version":
+                            {}
+                        },
+                        {
+                            "@bb_debug.coords_0":
+                            {}
+                        },
+                        {
+                            "@bb_debug.coords_1":
+                            {}
+                        },
+                        {
+                            "@bb_debug.gamemode":
+                            {}
+                        },
+                        {
+                            "@bb_debug.world_name":
+                            {}
+                        },
+                        {
+                            "@bb_debug.world_type":
+                            {}
+                        },
+                        {
+                            "@bb_debug.input":
+                            {}
+                        },
+                        {
+                            "@bb_debug.os":
+                            {}
+                        },
+                        {
+                            "@bb_debug.xp":
+                            {}
+                        },
+                        {
+                            "@bb_debug.aux_id":
+                            {}
+                        },
+                        {
+                            "@bb_debug.item_id":
+                            {}
+                        },
+                        {
+                            "@bb_debug.items":
+                            {}
+                        } ]
+                    }
+                } ]
+            }
+        } ],
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_debug",
+            "source_property_name": "#toggle_state",
+            "target_property_name": "#visible"
+        } ]
+    },
+    "h@bb.sph":
+    {
+        "layer": 5,
+        "size": [ "100%c", 10 ]
+    },
+    "img":
+    {
+        "type": "image",
+        "layer": -5,
+        "size": [ "100%c + 4px", "100%cm" ],
+        "texture": "AMBRO/tui/common/black",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_debug_menu_opacity_slider",
+            "source_property_name": "(#slider_value / 10)",
+            "target_property_name": "#alpha"
+        } ]
+    },
+    "imgr":
+    {
+        "type": "image",
+        "layer": -5,
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [ "100%c + 4px", "100%cm" ],
+        "texture": "AMBRO/tui/common/black",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_debug_menu_opacity_slider",
+            "source_property_name": "(#slider_value / 10)",
+            "target_property_name": "#alpha"
+        } ]
+    },
+    "l":
+    {
+        "type": "label",
+        "localize": false,
+        "shadow": true,
+        "bindings": [
+        {
+            "binding_name": "$name",
+            "$name|default": "",
+            "binding_name_override": "$override",
+            "$override|default": "#visible"
+        } ]
+    },
+    "world_type@img":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "ignored": "$is_on_3p_server",
+                "text": "§7World Type: §rWorld/3rd Party Server"
+            }
+        },
+        {
+            "@l":
+            {
+                "ignored": "(not $is_on_3p_server)",
+                "text": "§7World Type: §rFeatured Server"
+            }
+        } ]
+    },
+    "world_name@img":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#player_list_title"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "('§7World Name: §r' + #player_list_title)",
+                    "target_property_name": "#text"
+                } ]
+            }
+        } ]
+    },
+    "objective_name_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Objective Name:",
+                "bindings": [
+                {
+                    "binding_name": "#objective_sidebar_name",
+                    "binding_type": "global"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#objective_sidebar_name = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "tip_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Tip:",
+                "bindings": [
+                {
+                    "binding_name": "#tip_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#tip_text = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "boss_bar_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7BossBar:",
+                "bindings": [
+                {
+                    "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#bossName = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "title_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Title:",
+                "bindings": [
+                {
+                    "binding_name": "#hud_title_text_string"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#hud_title_text_string = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "subtitle_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Subitle:",
+                "bindings": [
+                {
+                    "binding_name": "#hud_subtitle_text_string"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#hud_subtitle_text_string = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "jukebox_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Jukebox:",
+                "bindings": [
+                {
+                    "binding_name": "#jukebox_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#jukebox_text = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "jukebox_1@imgr":
+    {
+        "size": [ "100%c + 4px", "100%c" ],
+        "controls": [
+        {
+            "@bb_debug.h":
+            {
+                "size": [ "100%c", "100%c - 10px" ],
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Jukebox: "
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "#text",
+                        "bindings": [
+                        {
+                            "binding_name": "#jukebox_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#jukebox_text + '§r') + (#jukebox_text - '§'))",
+                            "target_property_name": "#text"
+                        } ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#jukebox_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#jukebox_text = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "item_0@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "§7Item:",
+                "bindings": [
+                {
+                    "binding_name": "#item_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#item_text = '')",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "item_1@imgr":
+    {
+        "size": [ "100%c + 4px", "100%c" ],
+        "controls": [
+        {
+            "item_1@bb_debug.h":
+            {
+                "size": [ "100%c", "100%c - 10px" ],
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Item: "
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "#text",
+                        "bindings": [
+                        {
+                            "binding_name": "#item_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#item_text + '§r') + (#item_text - '§'))",
+                            "target_property_name": "#text"
+                        } ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#item_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#item_text = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "bb_client_version@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb_debug.l":
+            {
+                "text": "Better Bedrock Client §cv6.0"
+            }
+        } ]
+    },
+    "coords_0@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%c", "100%c" ],
+                "controls": [
+                {
+                    "@bb_debug.h":
+                    {
+                        "controls": [
+                        {
+                            "@bb_debug.l":
+                            {
+                                "text": "§7XYZ:"
+                            }
+                        } ],
+                        "bindings": [
+                        {
+                            "binding_name": "(not #player_position_visible)",
+                            "binding_name_override": "#visible",
+                            "binding_condition": "always",
+                            "binding_type": "global"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "coords_1@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb.p":
+            {
+                "size": [ "100%c", "100%c" ],
+                "controls": [
+                {
+                    "@bb_debug.h":
+                    {
+                        "controls": [
+                        {
+                            "@bb_debug.l":
+                            {
+                                "text": "§7XYZ: "
+                            }
+                        },
+                        {
+                            "@bb_debug.l":
+                            {
+                                "text": "#text",
+                                "bindings": [
+                                {
+                                    "binding_name": "#player_position_text",
+                                    "binding_name_override": "#text",
+                                    "binding_condition": "always_when_visible",
+                                    "binding_type": "global"
+                                } ]
+                            }
+                        } ],
+                        "bindings": [
+                        {
+                            "binding_name": "#player_position_visible",
+                            "binding_name_override": "#visible",
+                            "binding_condition": "always",
+                            "binding_type": "global"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "gamemode@bb_debug.img":
+    {
+        "controls": [
+        {
+            "gamemode@bb_debug.h":
+            {
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Gamemode: §r1 (Creative)",
+                        "bindings": [
+                        {
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Gamemode: §r0 (Survival)",
+                        "bindings": [
+                        {
+                            "binding_name": "#show_survival_ui",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Gamemode: §rSpectator",
+                        "bindings": [
+                        {
+                            "binding_name": "#show_survival_ui",
+                            "binding_name_override": "#condition1"
+                        },
+                        {
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#condition2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#condition1 or #condition2))",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "xp@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb_debug.h":
+            {
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7XP Level: "
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "#level_number",
+                        "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "#level_number"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "input@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb_debug.h":
+            {
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Input: §rMouse and Keyboard",
+                        "ignored": "(not $mouse)",
+                        "bindings": [
+                        {
+                            "binding_name": "(not #is_using_gamepad)",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Input: §rController",
+                        "bindings": [
+                        {
+                            "binding_name": "#is_using_gamepad",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Input: §rTouch",
+                        "ignored": "(not $touch)",
+                        "bindings": [
+                        {
+                            "binding_name": "(not #is_using_gamepad)",
+                            "binding_name_override": "#visible"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "os@bb_debug.img":
+    {
+        "controls": [
+        {
+            "@bb_debug.h":
+            {
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rWindows",
+                        "ignored": "(not $win10_edition)"
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rMacOS",
+                        "ignored": "(not $osx_edition)"
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rAndroid",
+                        "ignored": "(not $is_android)"
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rIOS",
+                        "ignored": "(not $is_ios)"
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rConsole (Playstation/Xbox)",
+                        "ignored": "(not $console_edition)"
+                    }
+                },
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7OS: §rNintendo Switch",
+                        "ignored": "(not $nx_os)"
+                    }
+                } ]
+            }
+        } ]
+    },
+    "aux_id@bb.p":
+    {
+        "size": [ "100%c", 10 ],
+        "controls": [
+        {
+            "grid":
+            {
+                "type": "grid",
+                "grid_item_template": "bb_debug.aux_id_grid",
+                "grid_dimension_binding": "#hotbar_grid_dimensions",
+                "collection_name": "$hotbar_collection_name",
+                "bindings": [
+                {
+                    "binding_name": "#hotbar_grid_dimensions",
+                    "binding_type": "global"
+                } ]
+            }
+        } ]
+    },
+    "aux_id_grid@bb.p":
+    {
+        "size": [ 0, 0 ],
+        "controls": [
+        {
+            "selected_slot@bb.p":
+            {
+                "$item_collection_name": "$hotbar_collection_name",
+                "controls": [
+                {
+                    "@bb_debug.img":
+                    {
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "offset": [ 0, -5 ],
+                        "controls": [
+                        {
+                            "item_aux_id_1@bb.label":
+                            {
+                                "text": "#text",
+                                "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$hotbar_collection_name"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "('§7Item Aux ID: §r' + #item_id_aux)",
+                                    "target_property_name": "#text"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not (#item_id_aux = -1))",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        },
+                        {
+                            "item_aux_id_0@bb.label":
+                            {
+                                "text": "§7Item Aux ID:",
+                                "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$hotbar_collection_name"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#item_id_aux = -1)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#slot_selected",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "#slot_selected",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "item_id@bb.p":
+    {
+        "size": [ "100%c", 10 ],
+        "controls": [
+        {
+            "grid":
+            {
+                "type": "grid",
+                "grid_item_template": "bb_debug.item_id_grid",
+                "grid_dimension_binding": "#hotbar_grid_dimensions",
+                "collection_name": "$hotbar_collection_name",
+                "bindings": [
+                {
+                    "binding_name": "#hotbar_grid_dimensions",
+                    "binding_type": "global"
+                } ]
+            }
+        } ]
+    },
+    "item_id_grid@bb.p":
+    {
+        "size": [ 0, 0 ],
+        "controls": [
+        {
+            "selected_slot@bb.p":
+            {
+                "$item_collection_name": "$hotbar_collection_name",
+                "controls": [
+                {
+                    "@bb_debug.img":
+                    {
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left",
+                        "offset": [ 0, -5 ],
+                        "controls": [
+                        {
+                            "item_aux_id_1@bb.label":
+                            {
+                                "text": "#text",
+                                "$id": "(#item_id_aux / 65536)",
+                                "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$hotbar_collection_name"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "('§7Item ID: §r' + (#item_id_aux / 65536) + ':' + (#item_id_aux - #subid))",
+                                    "target_property_name": "#text"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not (#item_id_aux = -1))",
+                                    "target_property_name": "#visible"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not (#item_id_aux = -1))",
+                                    "target_property_name": "#visible"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(65536 - (#item_id_aux / (#item_id_aux / 65536)) * (#item_id_aux / 65536))",
+                                    "target_property_name": "#subid"
+                                } ]
+                            }
+                        },
+                        {
+                            "item_aux_id_0@bb.label":
+                            {
+                                "text": "§7Item ID:",
+                                "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "$hotbar_collection_name"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#item_id_aux = -1)",
+                                    "target_property_name": "#visible"
+                                } ]
+                            }
+                        } ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#slot_selected",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "#slot_selected",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "items@bb_debug.img":
+    {
+        "size": [ "100%c + 4px", "100%cm" ],
+        "controls": [
+        {
+            "@bb_debug.h":
+            {
+                "size": [ "100%c", "100%cm" ],
+                "controls": [
+                {
+                    "@bb_debug.l":
+                    {
+                        "text": "§7Items: "
+                    }
+                },
+                {
+                    "compass@bb_hud_features.item_renderer":
+                    {
+                        "property_bag":
+                        {
+                            "#item_id_aux": "(392 * 65536.0)"
+                        },
+                        "$size": [ 16, 16 ]
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "size": [ 2, 0 ]
+                    }
+                },
+                {
+                    "clock@bb_hud_features.item_renderer":
+                    {
+                        "property_bag":
+                        {
+                            "#item_id_aux": "(394 * 65536.0)"
+                        }
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "size": [ 2.5, 0 ]
+                    }
+                },
+                {
+                    "@bb.p":
+                    {
+                        "size": [ "100%c", "100%cm" ],
+                        "controls": [
+                        {
+                            "recovery@bb_hud_features.item_renderer":
+                            {
+                                "property_bag":
+                                {
+                                    "#item_id_aux": "(652 * 65536.0)"
+                                }
+                            }
+                        } ],
+                        "bindings": [
+                        {
+                            "source_control_name": "bb_recovery_compass",
+                            "binding_type": "view",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        } ]
+                    }
+                } ],
+                "bindings": [
+                {
+                    "source_control_name": "bb_items_section",
+                    "binding_type": "view",
+                    "source_property_name": "#toggle_state",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "player_list@bb.p":
+    {
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "texture": "AMBRO/tui/common/black",
+                "size": [ "100%", "100%c" ],
+                "alpha": 0.6,
+                "bindings": [
+                {
+                    "binding_type": "view",
+                    "source_control_name": "bb_debug_menu_opacity_slider",
+                    "source_property_name": "(#slider_value / 10)",
+                    "target_property_name": "#alpha"
+                } ],
+                "controls": [
+                {
+                    "@bb.label":
+                    {
+                        "alpha": 2,
+                        "text": "#gamertag",
+                        "size": [ "100%", 6 ],
+                        "font_scale_factor": 0.6,
+                        "offset": [ 0.5, 0 ],
+                        "text_alignment": "center",
+                        "bindings": [
+                        {
+                            "binding_name": "#gamertag",
+                            "binding_type": "collection",
+                            "binding_collection_name": "players_collection"
+                        } ]
+                    }
+                } ]
+            }
+        } ]
+    },
+    "actionbar_1@bb.sp":
+    {
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "size": [ "100%c", "100%c" ],
+        "factory":
+        {
+            "name": "hud_actionbar_text_factory",
+            "control_ids":
+            {
+                "hud_actionbar_text": "@bb_debug.actionbar_factory"
+            }
+        }
+    },
+    "actionbar_factory@imgr":
+    {
+        "controls": [
+        {
+            "@bb.label":
+            {
+                "$actionbar": "$actionbar_text",
+                "text": "(('§7Actionbar: §r' + $actionbar + '§r\n             ') + ('' + $actionbar - '§')"
+            }
+        } ]
+    },
+    "subtitle_1@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#hud_subtitle_text_string"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(('§7Subitle: §r' + #hud_subtitle_text_string + '§r\n         ') + ('' + #hud_subtitle_text_string - '§'))",
+                    "target_property_name": "#text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#hud_subtitle_text_string = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "title_1@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#hud_title_text_string"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(('§7Title: §r' + #hud_title_text_string + '§r\n      ') + ('' + #hud_title_text_string - '§'))",
+                    "target_property_name": "#text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#hud_title_text_string = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "boss_bar_1@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(('§7BossBar: §r' + #bossName + '§r\n           ') + ('' + #bossName - '§'))",
+                    "target_property_name": "#text"
+                },
+                {
+                    "binding_name": "#bossName",
+                    "binding_type": "collection",
+                    "binding_collection_name": "boss_bars"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#bossName = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "tip_1@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#tip_text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(('§7Tip: §r' + #tip_text + '§r\n    ') + ('' + #tip_text - '§'))",
+                    "target_property_name": "#text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#tip_text = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    },
+    "objective_name_1@imgr":
+    {
+        "controls": [
+        {
+            "@l":
+            {
+                "text": "#text",
+                "bindings": [
+                {
+                    "binding_name": "#objective_sidebar_name",
+                    "binding_type": "global"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "('§7Objective Name: §r' + #objective_sidebar_name + '§r\n                    ') + ('' + #objective_sidebar_name - '§'))",
+                    "target_property_name": "#text"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(not (#objective_sidebar_name = ''))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    }
+}

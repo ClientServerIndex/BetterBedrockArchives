@@ -1,0 +1,46 @@
+{
+    "namespace": "pause",
+    "pause_screen@common.base_screen2":
+    {
+        "low_frequency_rendering": true,
+        "force_render_below": true,
+        "absorbs_input": false,
+        "$screen_content": "bb_pause.main_panel",
+        "$screen_bg_content": "pause.pause_screen_background",
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_vr_realign",
+            "to_button_id": "button.menu_vr_realign",
+            "mapping_type": "global",
+            "scope": "controller"
+        },
+        {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.to_profile_or_skins_screen",
+            "mapping_type": "global",
+            "scope": "controller"
+        },
+        {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.menu_tab_left",
+            "mapping_type": "global",
+            "scope": "view"
+        },
+        {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.menu_tab_right",
+            "mapping_type": "global",
+            "scope": "view"
+        } ]
+    },
+    "pause_screen_background@bb_common.screen_background":
+    {
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_control_name": "bb_mod_menu",
+            "source_property_name": "(not #toggle_state)",
+            "target_property_name": "#visible"
+        } ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "emote_wheel_screen_deprecated":
+    {
+        "$screen_bg_content": "emote_wheel_touch_zone2"
+    },
+    "emote_wheel_touch_zone2@bb_hbui_buttons.pressed":
+    {
+        "$blank": true,
+        "size": [ "100%", "100%" ],
+        "$pressed_button_name": "button.menu_exit"
+    }
+}

@@ -1,0 +1,291 @@
+{
+    "inventory_screen_base":
+    {
+        "low_frequency_rendering": true,
+        "force_render_below": true
+    },
+    "toolbar_panel/toolbar_background/toolbar_stack_panel":
+    {
+        "modifications": [
+        {
+            "control_name": "help_button_panel",
+            "operation": "remove"
+        } ]
+    },
+    "quick_craft_button@common_buttons.light_content_button":
+    {
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "size": [ 18, 18 ],
+        "offset": [ 1, 2 ],
+        "$button_content": "crafting.quick_craft_button_content",
+        "property_bag":
+        {
+            "#collection_name": "crafting_output_items",
+            "#collection_index": 0
+        },
+        "button_mappings": [
+        {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.crafting_output_tertiary",
+            "mapping_type": "pressed"
+        },
+        {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.crafting_output_tertiary",
+            "mapping_type": "pressed"
+        } ]
+    },
+    "quick_craft_button_content":
+    {
+        "type": "image",
+        "size": [ 16, 16 ],
+        "texture": "AMBRO/tui/quick_craft"
+    },
+    "crafting_arrow":
+    {
+        "controls": [
+        {
+            "quick_craft_button@crafting.quick_craft_button":
+            {}
+        } ]
+    },
+    "crafting_arrow_large":
+    {
+        "controls": [
+        {
+            "quick_craft_button@crafting.quick_craft_button":
+            {
+                "size": [ 24, 24 ],
+                "offset": [ 2, 8 ]
+            }
+        } ]
+    },
+    "player_armor_panel":
+    {
+        "modifications": [
+        {
+            "array_name": "controls",
+            "operation": "insert_front",
+            "value": [
+            {
+                "bb_percentages_grid":
+                {
+                    "type": "grid",
+                    "size": [ 18, 90 ],
+                    "offset": [ 144, 11.5 ],
+                    "grid_dimensions": [ 1, 5 ],
+                    "collection_name": "armor_items",
+                    "controls": [
+                    {
+                        "head_grid_item@crafting.percentages_renderer":
+                        {
+                            "grid_position": [ 0, 0 ],
+                            "$binding_collection_name": "armor_items"
+                        }
+                    },
+                    {
+                        "chest_grid_item@crafting.percentages_renderer":
+                        {
+                            "grid_position": [ 0, 1 ],
+                            "$binding_collection_name": "armor_items"
+                        }
+                    },
+                    {
+                        "legs_grid_item@crafting.percentages_renderer":
+                        {
+                            "grid_position": [ 0, 2 ],
+                            "$binding_collection_name": "armor_items"
+                        }
+                    },
+                    {
+                        "feet_grid_item@crafting.percentages_renderer":
+                        {
+                            "grid_position": [ 0, 3 ],
+                            "$binding_collection_name": "armor_items"
+                        }
+                    },
+                    {
+                        "offhand_grid_item@crafting.percentages_renderer":
+                        {
+                            "grid_position": [ 0, 4 ],
+                            "$binding_collection_name": "offhand_items"
+                        }
+                    } ]
+                }
+            } ]
+        } ]
+    },
+    "percentages_renderer@bb.sph":
+    {
+        "size": [ "100%cm", "100%cm" ],
+        "controls": [
+        {
+            "1":
+            {
+                "type": "custom",
+                "renderer": "inventory_item_renderer",
+                "size": [ 16, 16 ],
+                "bindings": [
+                {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#item_id_aux",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#charged_item",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#item_custom_color",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#item_pickup_time",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#show_item_pickup",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#banner_patterns",
+                    "binding_condition": "visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#banner_colors",
+                    "binding_condition": "visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#banner_type",
+                    "binding_condition": "visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_type": "collection",
+                    "binding_name": "#show_item",
+                    "binding_name_override": "#visible",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#inactive_item",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name",
+                    "binding_name_override": "#disabled_filter_visible",
+                    "binding_condition": "visible"
+                },
+                {
+                    "binding_name": "#shield_is_active",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#item_lodestone_tracking_handle",
+                    "binding_condition": "visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                } ],
+                "controls": [
+                {
+                    "1@bb.l":
+                    {
+                        "layer": 2,
+                        "anchor_to": "bottom_right",
+                        "anchor_from": "bottom_right",
+                        "text": "#inventory_stack_count",
+                        "offset": [ 1, 2 ],
+                        "shadow": true,
+                        "bindings": [
+                        {
+                            "binding_name": "#inventory_stack_count",
+                            "binding_type": "collection",
+                            "binding_collection_name": "$binding_collection_name"
+                        } ]
+                    }
+                } ]
+            }
+        },
+        {
+            "p@bb.yp":
+            {
+                "$yps": [ 3, 0 ]
+            }
+        },
+        {
+            "2@bb_common.percentages_factory_stack_panel":
+            {
+                "$panel_size": [ "100%cm", "100%cm" ],
+                "$low_panel_size": [ "100%cm", "100%cm" ],
+                "$label_offset": [ 0, 3 ],
+                "$low_label_offset": [ 0, 3 ],
+                "$label_bindings": [
+                {
+                    "binding_name": "#item_durability_current_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#item_durability_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(((#item_durability_current_amount / #item_durability_total_amount * 100 > ($in_range - 1))) and (#item_durability_current_amount / #item_durability_total_amount * 100 < $in_range) or (#item_durability_current_amount / #item_durability_total_amount * 100 = $in_range))",
+                    "target_property_name": "#visible"
+                } ],
+                "$low_label_bindings": [
+                {
+                    "binding_name": "#item_durability_current_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#item_durability_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "(#item_durability_current_amount = $in_low_range)",
+                    "target_property_name": "#visible"
+                } ],
+                "bindings": [
+                {
+                    "binding_name": "#item_durability_current_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_name": "#item_durability_total_amount",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$binding_collection_name"
+                },
+                {
+                    "binding_type": "view",
+                    "source_property_name": "((not (#item_durability_total_amount = 0) or (#item_durability_current_amount > 0.01)) or (#item_id_aux = -1))",
+                    "target_property_name": "#visible"
+                } ]
+            }
+        } ]
+    }
+}

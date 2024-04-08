@@ -1,0 +1,290 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers":
+    {
+        "controller.render.player.bb.direction_hud":
+        {
+            "geometry": "geometry.direction_hud",
+            "materials": [
+            {
+                "*": "material.alpha_uv"
+            } ],
+            "textures": [ "texture.direction_hud" ],
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "ignore_lighting": true,
+            "filter_lighting": true,
+            "uv_anim":
+            {
+                "offset": [ "1/360 * q.camera_rotation(1)", 0 ],
+                "scale": [ 1, 1 ]
+            }
+        },
+        "controller.render.player.bb.direction_hud_value":
+        {
+            "geometry": "geometry.direction_hud_value",
+            "materials": [
+            {
+                "*": "material.alpha"
+            } ],
+            "textures": [ "texture.empty2", "-q.camera_rotation(1) >= 170 ? array.textures_0_9[-q.camera_rotation(1)] : (-q.camera_rotation(1) >= 80 ? array.textures_10_99[-q.camera_rotation(1)] : (-q.camera_rotation(1) > 0 ? array.textures_0_179[-q.camera_rotation(1)] : array.textures_180_360[q.camera_rotation(1)]))", "-q.camera_rotation(1) > 0 ? array.textures_0_17[-q.camera_rotation(1)/10] : array.textures_18_35[q.camera_rotation(1)/10]" ],
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "arrays":
+            {
+                "textures":
+                {
+                    "array.textures_0_9": [ "texture.num2_9", "texture.num2_8", "texture.num2_7", "texture.num2_6", "texture.num2_5", "texture.num2_4", "texture.num2_3", "texture.num2_2", "texture.num2_1", "texture.num2_0" ],
+                    "array.textures_10_99": [ "texture.dh2num_9", "texture.dh2num_8", "texture.dh2num_7", "texture.dh2num_6", "texture.dh2num_5", "texture.dh2num_4", "texture.dh2num_3", "texture.dh2num_2", "texture.dh2num_1", "texture.dh2num_0" ],
+                    "array.textures_0_179": [ "texture.num1_9", "texture.num1_8", "texture.num1_7", "texture.num1_6", "texture.num1_5", "texture.num1_4", "texture.num1_3", "texture.num1_2", "texture.num1_1", "texture.num1_0" ],
+                    "array.textures_180_360": [ "texture.num1_0", "texture.num1_1", "texture.num1_2", "texture.num1_3", "texture.num1_4", "texture.num1_5", "texture.num1_6", "texture.num1_7", "texture.num1_8", "texture.num1_9" ],
+                    "array.textures_0_17": [ "texture.dhnum_17", "texture.dhnum_16", "texture.dhnum_15", "texture.dhnum_14", "texture.dhnum_13", "texture.dhnum_12", "texture.dhnum_11", "texture.dhnum_10", "texture.dhnum_9", "texture.dhnum_8", "texture.dhnum_7", "texture.dhnum_6", "texture.dhnum_5", "texture.dhnum_4", "texture.dhnum_3", "texture.dhnum_2", "texture.dhnum_1", "texture.empty2" ],
+                    "array.textures_18_35": [ "texture.dhnum_18", "texture.dhnum_19", "texture.dhnum_20", "texture.dhnum_21", "texture.dhnum_22", "texture.dhnum_23", "texture.dhnum_24", "texture.dhnum_25", "texture.dhnum_26", "texture.dhnum_27", "texture.dhnum_28", "texture.dhnum_29", "texture.dhnum_30", "texture.dhnum_31", "texture.dhnum_32", "texture.dhnum_33", "texture.dhnum_34", "texture.dhnum_35" ]
+                }
+            }
+        },
+        "controller.render.player.bb.speed_counter":
+        {
+            "geometry": "geometry.speed_counter",
+            "materials": [
+            {
+                "*": "Material.alpha"
+            } ],
+            "textures": [ "array.num1[q.ground_speed*10]", "array.num2[q.ground_speed]", "array.num3[q.ground_speed/10]" ],
+            "light_color_multiplier": 1.25,
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "arrays":
+            {
+                "textures":
+                {
+                    "array.num1": [ "texture.num1_0", "texture.num1_1", "texture.num1_2", "texture.num1_3", "texture.num1_4", "texture.num1_5", "texture.num1_6", "texture.num1_7", "texture.num1_8", "texture.num1_9" ],
+                    "array.num2": [ "texture.num2_0", "texture.num2_1", "texture.num2_2", "texture.num2_3", "texture.num2_4", "texture.num2_5", "texture.num2_6", "texture.num2_7", "texture.num2_8", "texture.num2_9" ],
+                    "array.num3": [ "texture.num3_0", "texture.num3_1", "texture.num3_2", "texture.num3_3", "texture.num3_4", "texture.num3_5", "texture.num3_6", "texture.num3_7", "texture.num3_8", "texture.num3_9" ]
+                }
+            }
+        },
+        "controller.render.player.bb.session_timer":
+        {
+            "geometry": "geometry.session_timer",
+            "materials": [
+            {
+                "*": "Material.alpha"
+            } ],
+            "textures": [ "array.num1[q.life_time/60]", "q.life_time/600 >= 1 ? array.num2[q.life_time/600] : texture.empty2", "q.life_time/6000 >= 1 ? array.num3[q.life_time/6000] : texture.empty2" ],
+            "light_color_multiplier": 1.25,
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "arrays":
+            {
+                "textures":
+                {
+                    "array.num1": [ "texture.num1_0", "texture.num1_1", "texture.num1_2", "texture.num1_3", "texture.num1_4", "texture.num1_5", "texture.num1_6", "texture.num1_7", "texture.num1_8", "texture.num1_9" ],
+                    "array.num2": [ "texture.num2_0", "texture.num2_1", "texture.num2_2", "texture.num2_3", "texture.num2_4", "texture.num2_5", "texture.num2_6", "texture.num2_7", "texture.num2_8", "texture.num2_9" ],
+                    "array.num3": [ "texture.num3_0", "texture.num3_1", "texture.num3_2", "texture.num3_3", "texture.num3_4", "texture.num3_5", "texture.num3_6", "texture.num3_7", "texture.num3_8", "texture.num3_9" ]
+                }
+            }
+        },
+        "controller.render.player.bb.day_time":
+        {
+            "geometry": "geometry.day_time",
+            "materials": [
+            {
+                "*": "material.alpha"
+            } ],
+            "textures": [ "array.num1[q.time_of_day*100]", "q.time_of_day*10 >= 1 ? array.num2[q.time_of_day*10] : texture.empty2", "q.time_of_day <= 0.20 ? texture.midnight : (q.time_of_day <= 0.29 ? texture.sunrise : (q.time_of_day <= 0.50 ? texture.day : (q.time_of_day <= 0.74 ? texture.noon : (q.time_of_day <= 0.79 ? texture.sunset : (q.time_of_day <= 0.99 ? texture.night : texture.midnight)))))" ],
+            "light_color_multiplier": 1.25,
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "arrays":
+            {
+                "textures":
+                {
+                    "array.num1": [ "texture.num1_0", "texture.num1_1", "texture.num1_2", "texture.num1_3", "texture.num1_4", "texture.num1_5", "texture.num1_6", "texture.num1_7", "texture.num1_8", "texture.num1_9" ],
+                    "array.num2": [ "texture.num2_0", "texture.num2_1", "texture.num2_2", "texture.num2_3", "texture.num2_4", "texture.num2_5", "texture.num2_6", "texture.num2_7", "texture.num2_8", "texture.num2_9" ]
+                }
+            }
+        },
+        "controller.render.player.bb.day":
+        {
+            "geometry": "geometry.day",
+            "materials": [
+            {
+                "*": "material.alpha"
+            } ],
+            "textures": [ "array.num1[q.day]", "q.day >= 10 ? array.num2[q.day/10] : texture.empty2", "q.day >= 100 ? array.num3[q.day/100] : texture.empty2" ],
+            "light_color_multiplier": 1.25,
+            "is_hurt_color":
+            {},
+            "on_fire_color":
+            {},
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "arrays":
+            {
+                "textures":
+                {
+                    "array.num1": [ "texture.num1_0", "texture.num1_1", "texture.num1_2", "texture.num1_3", "texture.num1_4", "texture.num1_5", "texture.num1_6", "texture.num1_7", "texture.num1_8", "texture.num1_9" ],
+                    "array.num2": [ "texture.num2_0", "texture.num2_1", "texture.num2_2", "texture.num2_3", "texture.num2_4", "texture.num2_5", "texture.num2_6", "texture.num2_7", "texture.num2_8", "texture.num2_9" ],
+                    "array.num3": [ "texture.num3_0", "texture.num3_1", "texture.num3_2", "texture.num3_3", "texture.num3_4", "texture.num3_5", "texture.num3_6", "texture.num3_7", "texture.num3_8", "texture.num3_9" ]
+                }
+            }
+        },
+        "controller.render.player.bb.armor_hud_helmet":
+        {
+            "geometry": "geometry.armor_hud_helmet",
+            "materials": [
+            {
+                "*": "material.default"
+            } ],
+            "textures": [ "q.armor_texture_slot(0) == 0 ? texture.helmet_leather : (q.armor_texture_slot(0) == 1 ? texture.helmet_chain : (q.armor_texture_slot(0) == 2 ? texture.helmet_iron : (q.armor_texture_slot(0) == 3 ? texture.helmet_diamond : (q.armor_texture_slot(0) == 4 ? texture.helmet_gold : (q.armor_texture_slot(0) == 6 ? texture.helmet_turtle : (q.armor_texture_slot(0) == 7 ? texture.helmet_netherite : texture.helmet_empty))))))" ],
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "overlay_color":
+            {
+                "r": "0 + v.helmet ? 0.4",
+                "g": "0",
+                "b": "0 + v.helmet ? 1",
+                "a": "0 + v.helmet ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "is_hurt_color":
+            {
+                "r": "0 + v.helmet ? 0.4",
+                "g": "0",
+                "b": "0 + v.helmet ? 1",
+                "a": "0 + v.helmet ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "on_fire_color":
+            {
+                "r": "0 + v.helmet ? 0.4",
+                "g": "0",
+                "b": "0 + v.helmet ? 1",
+                "a": "0 + v.helmet ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            }
+        },
+        "controller.render.player.bb.armor_hud_chestplate":
+        {
+            "geometry": "geometry.armor_hud_chestplate",
+            "materials": [
+            {
+                "*": "material.default"
+            } ],
+            "textures": [ "q.armor_texture_slot(1) == 0 ? texture.chestplate_leather : (q.armor_texture_slot(1) == 1 ? texture.chestplate_chain : (q.armor_texture_slot(1) == 2 ? texture.chestplate_iron : (q.armor_texture_slot(1) == 3 ? texture.chestplate_diamond : (q.armor_texture_slot(1) == 4 ? texture.chestplate_gold : (q.armor_texture_slot(1) == 5 ? texture.elytra : (q.armor_texture_slot(1) == 7 ? texture.chestplate_netherite : texture.chestplate_empty))))))" ],
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "overlay_color":
+            {
+                "r": "0 + v.chestplate ? 0.4",
+                "g": "0",
+                "b": "0 + v.chestplate ? 1",
+                "a": "0 + v.chestplate ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "is_hurt_color":
+            {
+                "r": "0 + v.chestplate ? 0.4",
+                "g": "0",
+                "b": "0 + v.chestplate ? 1",
+                "a": "0 + v.chestplate ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "on_fire_color":
+            {
+                "r": "0 + v.chestplate ? 0.4",
+                "g": "0",
+                "b": "0 + v.chestplate ? 1",
+                "a": "0 + v.chestplate ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            }
+        },
+        "controller.render.player.bb.armor_hud_leggings":
+        {
+            "geometry": "geometry.armor_hud_leggings",
+            "materials": [
+            {
+                "*": "material.default"
+            } ],
+            "textures": [ "q.armor_texture_slot(2) == 0 ? texture.leggings_leather : (q.armor_texture_slot(2) == 1 ? texture.leggings_chain : (q.armor_texture_slot(2) == 2 ? texture.leggings_iron : (q.armor_texture_slot(2) == 3 ? texture.leggings_diamond : (q.armor_texture_slot(2) == 4 ? texture.leggings_gold : (q.armor_texture_slot(2) == 7 ? texture.leggings_netherite : texture.leggings_empty)))))" ],
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "overlay_color":
+            {
+                "r": "0 + v.leggings ? 0.4",
+                "g": "0",
+                "b": "0 + v.leggings ? 1",
+                "a": "0 + v.leggings ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "is_hurt_color":
+            {
+                "r": "0 + v.leggings ? 0.4",
+                "g": "0",
+                "b": "0 + v.leggings ? 1",
+                "a": "0 + v.leggings ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "on_fire_color":
+            {
+                "r": "0 + v.leggings ? 0.4",
+                "g": "0",
+                "b": "0 + v.leggings ? 1",
+                "a": "0 + v.leggings ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            }
+        },
+        "controller.render.player.bb.armor_hud_boots":
+        {
+            "geometry": "geometry.armor_hud_boots",
+            "materials": [
+            {
+                "*": "material.default"
+            } ],
+            "textures": [ "q.armor_texture_slot(3) == 0 ? texture.boots_leather : (q.armor_texture_slot(3) == 1 ? texture.boots_chain : (q.armor_texture_slot(3) == 2 ? texture.boots_iron : (q.armor_texture_slot(3) == 3 ? texture.boots_diamond : (q.armor_texture_slot(3) == 4 ? texture.boots_gold : (q.armor_texture_slot(3) == 7 ? texture.boots_netherite : texture.boots_empty)))))" ],
+            "filter_lighting": true,
+            "ignore_lighting": true,
+            "overlay_color":
+            {
+                "r": "0 + v.boots ? 0.4",
+                "g": "0",
+                "b": "0 + v.boots ? 1",
+                "a": "0 + v.boots ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "is_hurt_color":
+            {
+                "r": "0 + v.boots ? 0.4",
+                "g": "0",
+                "b": "0 + v.boots ? 1",
+                "a": "0 + v.boots ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            },
+            "on_fire_color":
+            {
+                "r": "0 + v.boots ? 0.4",
+                "g": "0",
+                "b": "0 + v.boots ? 1",
+                "a": "0 + v.boots ? 0.05 * math.cos(q.life_time * 450) + 0.35"
+            }
+        },
+        "controller.render.bb.cape":
+        {
+            "geometry": "geometry.custom",
+            "materials": [
+            {
+                "*": "material.default"
+            } ],
+            "textures": [ "texture.default" ],
+            "ignore_lighting": true
+        }
+    }
+}

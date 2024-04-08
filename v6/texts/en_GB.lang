@@ -1,0 +1,5 @@
+resourcePack.subpackResolution=%s
+map.position=%s %s %s
+options.maxFramerate=FPS
+options.guiScale.optionName=GUI Scale
+options.renderDistanceRecommendedFormat=%s chunks

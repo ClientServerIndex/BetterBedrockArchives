@@ -1,0 +1,1565 @@
+{
+    "banner@bb_common.button":
+    {
+        "controls": [
+        {
+            "banner@bb.img":
+            {
+                "color": [ 1, 0.9098039215686275, 0.4 ],
+                "controls": [
+                {
+                    "text@bb.l":
+                    {
+                        "color": [ 0.1215686274509804, 0.1215686274509804, 0.1215686274509804 ],
+                        "layer": 1,
+                        "shadow": false,
+                        "text": "$text",
+                        "text_alignment": "center"
+                    }
+                },
+                {
+                    "hover_button@bb_common.button":
+                    {
+                        "$hover_text|default": "",
+                        "controls": [
+                        {
+                            "hover_text@common.hover_text":
+                            {
+                                "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "#hover_text_control",
+                                    "target_property_name": "#hover_text"
+                                } ],
+                                "property_bag":
+                                {
+                                    "#hover_text_control": "$hover_text"
+                                }
+                            }
+                        } ],
+                        "hover_control": "hover_text",
+                        "layer": 100,
+                        "size": [ "100%", "100%sm + 6px" ]
+                    }
+                } ],
+                "size": [ "100%", "100%cm" ],
+                "texture": "AMBRO/tui/common/white"
+            }
+        } ],
+        "size": [ "100%", "100%c" ]
+    },
+    "black_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485775,
+        "$texture": "textures/blocks/glass_black"
+    },
+    "blue_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485771,
+        "$texture": "textures/blocks/glass_blue"
+    },
+    "brown_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485772,
+        "$texture": "textures/blocks/glass_brown"
+    },
+    "button@common.button":
+    {
+        "$default_focus_precedence|default": 1,
+        "$pressed_button_name|default": "",
+        "default_focus_precedence": "$default_focus_precedence"
+    },
+    "cyan_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485769,
+        "$texture": "textures/blocks/glass_cyan"
+    },
+    "default_item_renderer":
+    {
+        "$item_renderer_binding_condition|default": "none",
+        "bindings": [
+        {
+            "binding_type": "view",
+            "source_property_name": "(not ((#item_id_aux > 10485759 and #item_id_aux < 10485776) or #item_id_aux = 6684672))",
+            "target_property_name": "#visible"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_type": "collection_details"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_name": "#item_id_aux",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "$item_renderer_binding_condition",
+            "binding_name": "#charged_item",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "$item_renderer_binding_condition",
+            "binding_name": "#item_custom_color",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "visible",
+            "binding_name": "#banner_patterns",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "visible",
+            "binding_name": "#banner_colors",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "visible",
+            "binding_name": "#banner_type",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "$item_renderer_binding_condition",
+            "binding_name": "#show_item",
+            "binding_name_override": "#visible",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "$item_renderer_binding_condition",
+            "binding_name": "#inactive_item",
+            "binding_name_override": "#disabled_filter_visible",
+            "binding_type": "collection"
+        },
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_condition": "visible",
+            "binding_name": "#item_lodestone_tracking_handle",
+            "binding_type": "collection"
+        } ],
+        "renderer": "inventory_item_renderer",
+        "type": "custom"
+    },
+    "glass_image_renderer@bb.img":
+    {
+        "$glass_image_renderer|default": [ 16, 16 ],
+        "bindings": [
+        {
+            "binding_collection_name": "$item_collection_name",
+            "binding_name": "#item_id_aux",
+            "binding_type": "collection"
+        },
+        {
+            "binding_type": "view",
+            "source_property_name": "(#item_id_aux = $id)",
+            "target_property_name": "#visible"
+        } ],
+        "size": "$glass_image_renderer",
+        "texture": "$texture"
+    },
+    "gray_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485767,
+        "$texture": "textures/blocks/glass_gray"
+    },
+    "green_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485773,
+        "$texture": "textures/blocks/glass_green"
+    },
+    "header_label@bb.label":
+    {
+        "$font_scale|default": 1.5,
+        "$header_text|default": "",
+        "$shadow": false,
+        "font_scale_factor": "$font_scale",
+        "font_type": "MinecraftTen",
+        "text": "$header_text"
+    },
+    "header@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "$border_size|default": [ "100% - 6px", "100%" ],
+                "controls": [
+                {
+                    "@bb_common.header_label":
+                    {
+                        "layer": 2,
+                        "offset": [ 0, -2 ]
+                    }
+                },
+                {
+                    "@bb_common.header_label":
+                    {
+                        "alpha": 0.4,
+                        "color": [ 0, 0, 0 ],
+                        "layer": 1,
+                        "offset": [ 2, 0 ]
+                    }
+                } ],
+                "size": "$border_size",
+                "texture": "AMBRO/tui/border"
+            }
+        } ],
+        "size": [ "100%", 22 ]
+    },
+    "light_blue_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485763,
+        "$texture": "textures/blocks/glass_light_blue"
+    },
+    "light_grey_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485768,
+        "$texture": "textures/blocks/glass_silver"
+    },
+    "lime_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485765,
+        "$texture": "textures/blocks/glass_lime"
+    },
+    "line_title_text@bb.sp":
+    {
+        "$p1_size|default": [ 3.5, 0 ],
+        "$p2_size|default": [ 3, 0 ],
+        "controls": [
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        },
+        {
+            "sph@bb.sph":
+            {
+                "controls": [
+                {
+                    "p1@bb.p":
+                    {
+                        "size": "$p1_size"
+                    }
+                },
+                {
+                    "label@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "label@bb.label":
+                            {
+                                "font_type": "MinecraftTen",
+                                "offset": [ 0, -1.25 ],
+                                "shadow": false,
+                                "text": "$title_text"
+                            }
+                        } ],
+                        "size": [ "100%c", 10 ]
+                    }
+                },
+                {
+                    "p2@bb.p":
+                    {
+                        "size": "$p2_size"
+                    }
+                },
+                {
+                    "renderer@bb.p":
+                    {
+                        "controls": [
+                        {
+                            "renderer":
+                            {
+                                "color1": [ 1, 1, 1, 0.2 ],
+                                "color2": [ 1, 1, 1, 0.2 ],
+                                "renderer": "gradient_renderer",
+                                "size": [ "100%", 1 ],
+                                "type": "custom"
+                            }
+                        } ],
+                        "size": [ "fill", 10 ]
+                    }
+                } ],
+                "size": [ "100%", 10 ]
+            }
+        },
+        {
+            "@bb.yp":
+            {
+                "$yps": [ "100%", 2 ]
+            }
+        } ]
+    },
+    "loading_anim_label@bb.l":
+    {
+        "alpha": 0,
+        "shadow": false
+    },
+    "loading_anim@bb.p":
+    {
+        "$loading_anim_offset|default": [ 0, 0 ],
+        "$loading_anim_size|default": [ "100%cm", 10 ],
+        "clips_children": true,
+        "controls": [
+        {
+            "1@bb_common.loading_anim_label":
+            {
+                "anims": [ "@bb_anims.loading_anim_1_0" ],
+                "text": "0 o o"
+            }
+        },
+        {
+            "2@bb_common.loading_anim_label":
+            {
+                "anims": [ "@bb_anims.loading_anim_2_0" ],
+                "text": "o 0 o"
+            }
+        } ],
+        "offset": "$loading_anim_offset",
+        "size": "$loading_anim_size"
+    },
+    "low_durability_factory_label@bb.label":
+    {
+        "$low_label_anchor|default": "top_left",
+        "$low_label_bindings|default": [ ],
+        "$low_label_color|default": [ 1, 1, 1 ],
+        "$low_label_offset|default": [ 0, 0 ],
+        "$low_label_text|default": "(' §c' + $low_factory_text + '')",
+        "anchor_from": "$low_label_anchor",
+        "anchor_to": "$low_label_anchor",
+        "bindings": "$low_label_bindings",
+        "color": "$low_label_color",
+        "localize": false,
+        "offset": "$low_label_offset",
+        "text": "$low_label_text"
+    },
+    "low_durability_factory_panel@bb.p":
+    {
+        "$in_low_range|default": -1,
+        "$low_factory_text|default": "?",
+        "$low_label_control|default": "bb_common.low_durability_factory_label",
+        "$low_panel_offset|default": [ 0, 0 ],
+        "$low_panel_size|default": [ "100%cm", "100%cm" ],
+        "controls": [
+        {
+            "000@$low_label_control":
+            {
+                "$in_low_range": 0,
+                "$low_factory_text": "0"
+            }
+        },
+        {
+            "001@$low_label_control":
+            {
+                "$in_low_range": 1,
+                "$low_factory_text": "1"
+            }
+        },
+        {
+            "002@$low_label_control":
+            {
+                "$in_low_range": 2,
+                "$low_factory_text": "2"
+            }
+        },
+        {
+            "003@$low_label_control":
+            {
+                "$in_low_range": 3,
+                "$low_factory_text": "3"
+            }
+        },
+        {
+            "004@$low_label_control":
+            {
+                "$in_low_range": 4,
+                "$low_factory_text": "4"
+            }
+        },
+        {
+            "005@$low_label_control":
+            {
+                "$in_low_range": 5,
+                "$low_factory_text": "5"
+            }
+        },
+        {
+            "006@$low_label_control":
+            {
+                "$in_low_range": 6,
+                "$low_factory_text": "6"
+            }
+        },
+        {
+            "007@$low_label_control":
+            {
+                "$in_low_range": 7,
+                "$low_factory_text": "7"
+            }
+        },
+        {
+            "008@$low_label_control":
+            {
+                "$in_low_range": 8,
+                "$low_factory_text": "9"
+            }
+        },
+        {
+            "009@$low_label_control":
+            {
+                "$in_low_range": 9,
+                "$low_factory_text": "9"
+            }
+        },
+        {
+            "010@$low_label_control":
+            {
+                "$in_low_range": 10,
+                "$low_factory_text": "10"
+            }
+        },
+        {
+            "011@$low_label_control":
+            {
+                "$in_low_range": 11,
+                "$low_factory_text": "11"
+            }
+        },
+        {
+            "012@$low_label_control":
+            {
+                "$in_low_range": 12,
+                "$low_factory_text": "12"
+            }
+        },
+        {
+            "013@$low_label_control":
+            {
+                "$in_low_range": 13,
+                "$low_factory_text": "13"
+            }
+        },
+        {
+            "014@$low_label_control":
+            {
+                "$in_low_range": 14,
+                "$low_factory_text": "14"
+            }
+        },
+        {
+            "015@$low_label_control":
+            {
+                "$in_low_range": 15,
+                "$low_factory_text": "15"
+            }
+        },
+        {
+            "016@$low_label_control":
+            {
+                "$in_low_range": 16,
+                "$low_factory_text": "16"
+            }
+        },
+        {
+            "017@$low_label_control":
+            {
+                "$in_low_range": 17,
+                "$low_factory_text": "17"
+            }
+        },
+        {
+            "018@$low_label_control":
+            {
+                "$in_low_range": 18,
+                "$low_factory_text": "18"
+            }
+        },
+        {
+            "019@$low_label_control":
+            {
+                "$in_low_range": 19,
+                "$low_factory_text": "19"
+            }
+        },
+        {
+            "020@$low_label_control":
+            {
+                "$in_low_range": 20,
+                "$low_factory_text": "20"
+            }
+        },
+        {
+            "021@$low_label_control":
+            {
+                "$in_low_range": 21,
+                "$low_factory_text": "21"
+            }
+        },
+        {
+            "022@$low_label_control":
+            {
+                "$in_low_range": 22,
+                "$low_factory_text": "22"
+            }
+        },
+        {
+            "023@$low_label_control":
+            {
+                "$in_low_range": 23,
+                "$low_factory_text": "23"
+            }
+        },
+        {
+            "024@$low_label_control":
+            {
+                "$in_low_range": 24,
+                "$low_factory_text": "24"
+            }
+        },
+        {
+            "025@$low_label_control":
+            {
+                "$in_low_range": 25,
+                "$low_factory_text": "25"
+            }
+        },
+        {
+            "026@$low_label_control":
+            {
+                "$in_low_range": 26,
+                "$low_factory_text": "26"
+            }
+        },
+        {
+            "027@$low_label_control":
+            {
+                "$in_low_range": 27,
+                "$low_factory_text": "27"
+            }
+        },
+        {
+            "028@$low_label_control":
+            {
+                "$in_low_range": 28,
+                "$low_factory_text": "28"
+            }
+        },
+        {
+            "029@$low_label_control":
+            {
+                "$in_low_range": 29,
+                "$low_factory_text": "29"
+            }
+        },
+        {
+            "030@$low_label_control":
+            {
+                "$in_low_range": 30,
+                "$low_factory_text": "30"
+            }
+        } ],
+        "offset": "$low_panel_offset",
+        "size": "$low_panel_size"
+    },
+    "magenta_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485762,
+        "$texture": "textures/blocks/glass_magenta"
+    },
+    "namespace": "bb_common",
+    "orange_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485761,
+        "$texture": "textures/blocks/glass_orange"
+    },
+    "percentages_factory_label@bb.label":
+    {
+        "$in_range|default": -1,
+        "$label_anchor|default": "top_left",
+        "$label_bindings|default": [ ],
+        "$label_color|default": [ 1, 1, 1 ],
+        "$label_offset|default": [ 0, 0 ],
+        "$label_text|default": "('§' + $factory_text + '%')",
+        "anchor_from": "$label_anchor",
+        "anchor_to": "$label_anchor",
+        "bindings": "$label_bindings",
+        "color": "$label_color",
+        "localize": false,
+        "offset": "$label_offset",
+        "text": "$label_text"
+    },
+    "percentages_factory_panel@bb.p":
+    {
+        "$factory_text|default": "?",
+        "$label_control|default": "bb_common.percentages_factory_label",
+        "$panel_offset|default": [ 0, 0 ],
+        "$panel_size|default": [ "100%cm", "100%cm" ],
+        "controls": [
+        {
+            "000@$label_control":
+            {
+                "$factory_text": "c0",
+                "$in_range": 0
+            }
+        },
+        {
+            "001@$label_control":
+            {
+                "$factory_text": "c1",
+                "$in_range": 1
+            }
+        },
+        {
+            "002@$label_control":
+            {
+                "$factory_text": "c2",
+                "$in_range": 2
+            }
+        },
+        {
+            "003@$label_control":
+            {
+                "$factory_text": "c3",
+                "$in_range": 3
+            }
+        },
+        {
+            "004@$label_control":
+            {
+                "$factory_text": "c4",
+                "$in_range": 4
+            }
+        },
+        {
+            "005@$label_control":
+            {
+                "$factory_text": "c5",
+                "$in_range": 5
+            }
+        },
+        {
+            "006@$label_control":
+            {
+                "$factory_text": "c6",
+                "$in_range": 6
+            }
+        },
+        {
+            "007@$label_control":
+            {
+                "$factory_text": "c7",
+                "$in_range": 7
+            }
+        },
+        {
+            "008@$label_control":
+            {
+                "$factory_text": "c9",
+                "$in_range": 8
+            }
+        },
+        {
+            "009@$label_control":
+            {
+                "$factory_text": "c9",
+                "$in_range": 9
+            }
+        },
+        {
+            "010@$label_control":
+            {
+                "$factory_text": "c10",
+                "$in_range": 10
+            }
+        },
+        {
+            "011@$label_control":
+            {
+                "$factory_text": "c11",
+                "$in_range": 11
+            }
+        },
+        {
+            "012@$label_control":
+            {
+                "$factory_text": "c12",
+                "$in_range": 12
+            }
+        },
+        {
+            "013@$label_control":
+            {
+                "$factory_text": "c13",
+                "$in_range": 13
+            }
+        },
+        {
+            "014@$label_control":
+            {
+                "$factory_text": "c14",
+                "$in_range": 14
+            }
+        },
+        {
+            "015@$label_control":
+            {
+                "$factory_text": "c15",
+                "$in_range": 15
+            }
+        },
+        {
+            "016@$label_control":
+            {
+                "$factory_text": "c16",
+                "$in_range": 16
+            }
+        },
+        {
+            "017@$label_control":
+            {
+                "$factory_text": "c17",
+                "$in_range": 17
+            }
+        },
+        {
+            "018@$label_control":
+            {
+                "$factory_text": "c18",
+                "$in_range": 18
+            }
+        },
+        {
+            "019@$label_control":
+            {
+                "$factory_text": "c19",
+                "$in_range": 19
+            }
+        },
+        {
+            "020@$label_control":
+            {
+                "$factory_text": "c20",
+                "$in_range": 20
+            }
+        },
+        {
+            "021@$label_control":
+            {
+                "$factory_text": "c21",
+                "$in_range": 21
+            }
+        },
+        {
+            "022@$label_control":
+            {
+                "$factory_text": "c22",
+                "$in_range": 22
+            }
+        },
+        {
+            "023@$label_control":
+            {
+                "$factory_text": "c23",
+                "$in_range": 23
+            }
+        },
+        {
+            "024@$label_control":
+            {
+                "$factory_text": "c24",
+                "$in_range": 24
+            }
+        },
+        {
+            "025@$label_control":
+            {
+                "$factory_text": "625",
+                "$in_range": 25
+            }
+        },
+        {
+            "026@$label_control":
+            {
+                "$factory_text": "626",
+                "$in_range": 26
+            }
+        },
+        {
+            "027@$label_control":
+            {
+                "$factory_text": "627",
+                "$in_range": 27
+            }
+        },
+        {
+            "028@$label_control":
+            {
+                "$factory_text": "628",
+                "$in_range": 28
+            }
+        },
+        {
+            "029@$label_control":
+            {
+                "$factory_text": "629",
+                "$in_range": 29
+            }
+        },
+        {
+            "030@$label_control":
+            {
+                "$factory_text": "630",
+                "$in_range": 30
+            }
+        },
+        {
+            "031@$label_control":
+            {
+                "$factory_text": "631",
+                "$in_range": 31
+            }
+        },
+        {
+            "032@$label_control":
+            {
+                "$factory_text": "632",
+                "$in_range": 32
+            }
+        },
+        {
+            "033@$label_control":
+            {
+                "$factory_text": "633",
+                "$in_range": 33
+            }
+        },
+        {
+            "034@$label_control":
+            {
+                "$factory_text": "634",
+                "$in_range": 34
+            }
+        },
+        {
+            "035@$label_control":
+            {
+                "$factory_text": "635",
+                "$in_range": 35
+            }
+        },
+        {
+            "036@$label_control":
+            {
+                "$factory_text": "636",
+                "$in_range": 36
+            }
+        },
+        {
+            "037@$label_control":
+            {
+                "$factory_text": "637",
+                "$in_range": 37
+            }
+        },
+        {
+            "038@$label_control":
+            {
+                "$factory_text": "638",
+                "$in_range": 38
+            }
+        },
+        {
+            "039@$label_control":
+            {
+                "$factory_text": "639",
+                "$in_range": 39
+            }
+        },
+        {
+            "040@$label_control":
+            {
+                "$factory_text": "640",
+                "$in_range": 40
+            }
+        },
+        {
+            "041@$label_control":
+            {
+                "$factory_text": "641",
+                "$in_range": 41
+            }
+        },
+        {
+            "042@$label_control":
+            {
+                "$factory_text": "642",
+                "$in_range": 42
+            }
+        },
+        {
+            "043@$label_control":
+            {
+                "$factory_text": "643",
+                "$in_range": 43
+            }
+        },
+        {
+            "044@$label_control":
+            {
+                "$factory_text": "644",
+                "$in_range": 44
+            }
+        },
+        {
+            "045@$label_control":
+            {
+                "$factory_text": "645",
+                "$in_range": 45
+            }
+        },
+        {
+            "046@$label_control":
+            {
+                "$factory_text": "646",
+                "$in_range": 46
+            }
+        },
+        {
+            "047@$label_control":
+            {
+                "$factory_text": "647",
+                "$in_range": 47
+            }
+        },
+        {
+            "048@$label_control":
+            {
+                "$factory_text": "648",
+                "$in_range": 48
+            }
+        },
+        {
+            "049@$label_control":
+            {
+                "$factory_text": "649",
+                "$in_range": 49
+            }
+        },
+        {
+            "050@$label_control":
+            {
+                "$factory_text": "650",
+                "$in_range": 50
+            }
+        },
+        {
+            "051@$label_control":
+            {
+                "$factory_text": "e51",
+                "$in_range": 51
+            }
+        },
+        {
+            "052@$label_control":
+            {
+                "$factory_text": "e52",
+                "$in_range": 52
+            }
+        },
+        {
+            "053@$label_control":
+            {
+                "$factory_text": "e53",
+                "$in_range": 53
+            }
+        },
+        {
+            "054@$label_control":
+            {
+                "$factory_text": "e54",
+                "$in_range": 54
+            }
+        },
+        {
+            "055@$label_control":
+            {
+                "$factory_text": "e55",
+                "$in_range": 55
+            }
+        },
+        {
+            "056@$label_control":
+            {
+                "$factory_text": "e56",
+                "$in_range": 56
+            }
+        },
+        {
+            "057@$label_control":
+            {
+                "$factory_text": "e57",
+                "$in_range": 57
+            }
+        },
+        {
+            "058@$label_control":
+            {
+                "$factory_text": "e58",
+                "$in_range": 58
+            }
+        },
+        {
+            "059@$label_control":
+            {
+                "$factory_text": "e59",
+                "$in_range": 59
+            }
+        },
+        {
+            "060@$label_control":
+            {
+                "$factory_text": "e60",
+                "$in_range": 60
+            }
+        },
+        {
+            "061@$label_control":
+            {
+                "$factory_text": "e61",
+                "$in_range": 61
+            }
+        },
+        {
+            "062@$label_control":
+            {
+                "$factory_text": "e62",
+                "$in_range": 62
+            }
+        },
+        {
+            "063@$label_control":
+            {
+                "$factory_text": "e63",
+                "$in_range": 63
+            }
+        },
+        {
+            "064@$label_control":
+            {
+                "$factory_text": "e64",
+                "$in_range": 64
+            }
+        },
+        {
+            "065@$label_control":
+            {
+                "$factory_text": "e65",
+                "$in_range": 65
+            }
+        },
+        {
+            "066@$label_control":
+            {
+                "$factory_text": "e66",
+                "$in_range": 66
+            }
+        },
+        {
+            "067@$label_control":
+            {
+                "$factory_text": "e67",
+                "$in_range": 67
+            }
+        },
+        {
+            "068@$label_control":
+            {
+                "$factory_text": "e68",
+                "$in_range": 68
+            }
+        },
+        {
+            "069@$label_control":
+            {
+                "$factory_text": "e69",
+                "$in_range": 69
+            }
+        },
+        {
+            "070@$label_control":
+            {
+                "$factory_text": "e70",
+                "$in_range": 70
+            }
+        },
+        {
+            "071@$label_control":
+            {
+                "$factory_text": "e71",
+                "$in_range": 71
+            }
+        },
+        {
+            "072@$label_control":
+            {
+                "$factory_text": "e72",
+                "$in_range": 72
+            }
+        },
+        {
+            "073@$label_control":
+            {
+                "$factory_text": "e73",
+                "$in_range": 73
+            }
+        },
+        {
+            "074@$label_control":
+            {
+                "$factory_text": "e74",
+                "$in_range": 74
+            }
+        },
+        {
+            "075@$label_control":
+            {
+                "$factory_text": "a75",
+                "$in_range": 75
+            }
+        },
+        {
+            "076@$label_control":
+            {
+                "$factory_text": "a76",
+                "$in_range": 76
+            }
+        },
+        {
+            "077@$label_control":
+            {
+                "$factory_text": "a77",
+                "$in_range": 77
+            }
+        },
+        {
+            "078@$label_control":
+            {
+                "$factory_text": "a78",
+                "$in_range": 78
+            }
+        },
+        {
+            "079@$label_control":
+            {
+                "$factory_text": "a79",
+                "$in_range": 79
+            }
+        },
+        {
+            "080@$label_control":
+            {
+                "$factory_text": "a80",
+                "$in_range": 80
+            }
+        },
+        {
+            "081@$label_control":
+            {
+                "$factory_text": "a81",
+                "$in_range": 81
+            }
+        },
+        {
+            "082@$label_control":
+            {
+                "$factory_text": "a82",
+                "$in_range": 82
+            }
+        },
+        {
+            "083@$label_control":
+            {
+                "$factory_text": "a83",
+                "$in_range": 83
+            }
+        },
+        {
+            "084@$label_control":
+            {
+                "$factory_text": "a84",
+                "$in_range": 84
+            }
+        },
+        {
+            "085@$label_control":
+            {
+                "$factory_text": "a85",
+                "$in_range": 85
+            }
+        },
+        {
+            "086@$label_control":
+            {
+                "$factory_text": "a86",
+                "$in_range": 86
+            }
+        },
+        {
+            "087@$label_control":
+            {
+                "$factory_text": "a87",
+                "$in_range": 87
+            }
+        },
+        {
+            "088@$label_control":
+            {
+                "$factory_text": "a88",
+                "$in_range": 88
+            }
+        },
+        {
+            "089@$label_control":
+            {
+                "$factory_text": "a89",
+                "$in_range": 89
+            }
+        },
+        {
+            "090@$label_control":
+            {
+                "$factory_text": "a90",
+                "$in_range": 90
+            }
+        },
+        {
+            "091@$label_control":
+            {
+                "$factory_text": "a91",
+                "$in_range": 91
+            }
+        },
+        {
+            "092@$label_control":
+            {
+                "$factory_text": "a92",
+                "$in_range": 92
+            }
+        },
+        {
+            "093@$label_control":
+            {
+                "$factory_text": "a93",
+                "$in_range": 93
+            }
+        },
+        {
+            "094@$label_control":
+            {
+                "$factory_text": "a94",
+                "$in_range": 94
+            }
+        },
+        {
+            "095@$label_control":
+            {
+                "$factory_text": "a95",
+                "$in_range": 95
+            }
+        },
+        {
+            "096@$label_control":
+            {
+                "$factory_text": "a96",
+                "$in_range": 96
+            }
+        },
+        {
+            "097@$label_control":
+            {
+                "$factory_text": "a97",
+                "$in_range": 97
+            }
+        },
+        {
+            "098@$label_control":
+            {
+                "$factory_text": "a98",
+                "$in_range": 98
+            }
+        },
+        {
+            "099@$label_control":
+            {
+                "$factory_text": "a99",
+                "$in_range": 99
+            }
+        },
+        {
+            "100@$label_control":
+            {
+                "$factory_text": "a100",
+                "$in_range": 100
+            }
+        } ],
+        "offset": "$panel_offset",
+        "size": "$panel_size"
+    },
+    "percentages_factory_stack_panel@bb.sph":
+    {
+        "$stack_panel_offset|default": [ 0, 0 ],
+        "$stack_panel_size|default": [ "100%", "100%" ],
+        "controls": [
+        {
+            "percentages_factory_panel@bb_common.percentages_factory_panel":
+            {}
+        },
+        {
+            "low_durability_factory_panel@bb_common.low_durability_factory_panel":
+            {}
+        } ],
+        "offset": "$stack_panel_offset",
+        "size": "$stack_panel_size"
+    },
+    "pink_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485766,
+        "$texture": "textures/blocks/glass_pink"
+    },
+    "purple_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485770,
+        "$texture": "textures/blocks/glass_purple"
+    },
+    "red_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485774,
+        "$texture": "textures/blocks/glass_red"
+    },
+    "regular_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 6684672,
+        "$texture": "textures/blocks/glass"
+    },
+    "screen_background@bb.img":
+    {
+        "alpha": 0.5,
+        "size": [ "120%", "120%" ],
+        "texture": "AMBRO/tui/common/black"
+    },
+    "screen_header@bb.p":
+    {
+        "$font_scale_factor": 1.6,
+        "$ignore_close_button|default": false,
+        "$screen_header_text|default": "$screen_header_text",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "controls": [
+                {
+                    "close_button@bb_buttons.close_button":
+                    {
+                        "$close_button_offset": [ 1, -1 ],
+                        "anchor_from": "left_middle",
+                        "anchor_to": "left_middle",
+                        "ignored": "$ignore_close_button",
+                        "layer": 2
+                    }
+                },
+                {
+                    "@bb.label":
+                    {
+                        "color": [ 0, 0, 0 ],
+                        "font_scale_factor": "$font_scale_factor",
+                        "font_type": "MinecraftTen",
+                        "layer": 2,
+                        "offset": [ 0, -2 ],
+                        "shadow": false,
+                        "text": "$screen_header_text"
+                    }
+                } ],
+                "texture": "AMBRO/tui/header"
+            }
+        } ],
+        "size": [ "100%", 28 ]
+    },
+    "selected_black_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485775,
+        "$texture": "textures/blocks/glass_black"
+    },
+    "selected_blue_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485771,
+        "$texture": "textures/blocks/glass_blue"
+    },
+    "selected_brown_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485772,
+        "$texture": "textures/blocks/glass_brown"
+    },
+    "selected_cyan_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485769,
+        "$texture": "textures/blocks/glass_cyan"
+    },
+    "selected_default_item_renderer@bb_common.default_item_renderer":
+    {
+        "bindings": [
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_item",
+            "binding_name_override": "#item_id_aux"
+        },
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_item_charged_item",
+            "binding_name_override": "#charged_item"
+        },
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_item_color",
+            "binding_name_override": "#item_custom_color"
+        },
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_banner_patterns",
+            "binding_name_override": "#banner_patterns"
+        },
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_banner_colors",
+            "binding_name_override": "#banner_colors"
+        },
+        {
+            "binding_condition": "always_when_visible",
+            "binding_name": "#inventory_selected_banner_type",
+            "binding_name_override": "#banner_type"
+        } ]
+    },
+    "selected_glass_image_renderer@bb.img":
+    {
+        "bindings": [
+        {
+            "binding_condition": "always",
+            "binding_name": "(#inventory_selected_item = $id)",
+            "binding_name_override": "#visible"
+        } ],
+        "size": [ 16, 16 ],
+        "texture": "$texture"
+    },
+    "selected_gray_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485767,
+        "$texture": "textures/blocks/glass_gray"
+    },
+    "selected_green_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485773,
+        "$texture": "textures/blocks/glass_green"
+    },
+    "selected_light_blue_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485763,
+        "$texture": "textures/blocks/glass_light_blue"
+    },
+    "selected_light_grey_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485768,
+        "$texture": "textures/blocks/glass_silver"
+    },
+    "selected_lime_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485765,
+        "$texture": "textures/blocks/glass_lime"
+    },
+    "selected_magenta_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485762,
+        "$texture": "textures/blocks/glass_magenta"
+    },
+    "selected_orange_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485761,
+        "$texture": "textures/blocks/glass_orange"
+    },
+    "selected_pink_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485766,
+        "$texture": "textures/blocks/glass_pink"
+    },
+    "selected_purple_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485770,
+        "$texture": "textures/blocks/glass_purple"
+    },
+    "selected_red_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485774,
+        "$texture": "textures/blocks/glass_red"
+    },
+    "selected_regular_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 6684672,
+        "$texture": "textures/blocks/glass"
+    },
+    "selected_white_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485760,
+        "$texture": "textures/blocks/glass_white"
+    },
+    "selected_yellow_glass@bb_common.selected_glass_image_renderer":
+    {
+        "$id": 10485764,
+        "$texture": "textures/blocks/glass_yellow"
+    },
+    "settings_header@bb.p":
+    {
+        "controls": [
+        {
+            "@bb.img":
+            {
+                "$border_size|default": [ "100% - 2px", "100% - 4px" ],
+                "controls": [
+                {
+                    "@bb_common.header_label":
+                    {
+                        "layer": 2,
+                        "offset": [ 0, -2 ]
+                    }
+                },
+                {
+                    "@bb_common.header_label":
+                    {
+                        "alpha": 0.4,
+                        "color": [ 0, 0, 0 ],
+                        "layer": 1,
+                        "offset": [ 2, 0 ]
+                    }
+                } ],
+                "size": "$border_size",
+                "texture": "AMBRO/tui/border"
+            }
+        } ],
+        "size": [ "100%", 26 ]
+    },
+    "white_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485760,
+        "$texture": "textures/blocks/glass_white"
+    },
+    "yellow_glass@bb_common.glass_image_renderer":
+    {
+        "$id": 10485764,
+        "$texture": "textures/blocks/glass_yellow"
+    }
+}

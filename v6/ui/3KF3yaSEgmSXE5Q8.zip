@@ -1,0 +1,209 @@
+{
+    "namespace": "bb_hud_anims",
+    "none":
+    {},
+    "w@bb.w":
+    {
+        "next": "('@bb_hud_anims.' + $n)"
+    },
+    "o@bb.o":
+    {
+        "next": "('@bb_hud_anims.' + $n)"
+    },
+    "a@bb.a":
+    {
+        "next": "('@bb_hud_anims.' + $n)"
+    },
+    "test1@bb_hud_anims.a":
+    {
+        "$d": 1,
+        "$f": 1,
+        "$t": 0.5,
+        "$n": "test2"
+    },
+    "test2@bb_hud_anims.a":
+    {
+        "$d": 1,
+        "$f": 0.5,
+        "$t": 1,
+        "$n": "test1"
+    },
+    "title_in@bb_hud_anims.a":
+    {
+        "$e": "linear",
+        "$d": "$title_fade_in_time",
+        "$f": 0,
+        "$t": 1,
+        "$n": "title_stay"
+    },
+    "title_stay@bb_hud_anims.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "title_out"
+    },
+    "title_out@bb_hud_anims.a":
+    {
+        "$e": "linear",
+        "$d": "$title_fade_out_time",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "hud_title_text",
+        "end_event": "hud_title_text_complete",
+        "$n": "none"
+    },
+    "title_in_bg@bb_hud_anims.a":
+    {
+        "$e": "linear",
+        "$d": "$title_fade_in_time",
+        "$f": 0,
+        "$t": 0.6,
+        "$n": "title_stay_bg"
+    },
+    "title_stay_bg@bb_hud_anims.w":
+    {
+        "$d": "$title_stay_time",
+        "$n": "title_out_bg"
+    },
+    "title_out_bg@bb_hud_anims.a":
+    {
+        "$e": "linear",
+        "$d": "$title_fade_out_time",
+        "$f": 0.6,
+        "$t": 0,
+        "destroy_at_end": "hud_title_text",
+        "end_event": "hud_title_text_complete",
+        "$n": "none"
+    },
+    "chat_wait@bb_hud_anims.w":
+    {
+        "$d": "$chat_item_lifetime",
+        "$n": "chat_out"
+    },
+    "chat_out@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_out",
+        "$f": 0.6,
+        "$t": 0,
+        "destroy_at_end": "chat_grid_item",
+        "$n": "none"
+    },
+    "default_chat_text_wait@bb_hud_anims.w":
+    {
+        "$d": "$chat_item_lifetime",
+        "$n": "default_chat_text_out"
+    },
+    "default_chat_text_out@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_out",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "chat_grid_item",
+        "$n": "none"
+    },
+    "chat_text_smooth_in@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_smooth_in",
+        "$f": 0,
+        "$t": 1,
+        "$n": "chat_text_smooth_wait"
+    },
+    "chat_text_smooth_wait@bb_hud_anims.w":
+    {
+        "$d": "($chat_item_lifetime - $bb_anim_chat_out)",
+        "$n": "chat_text_smooth_out"
+    },
+    "chat_text_smooth_out@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_out",
+        "$f": 1,
+        "$t": 0,
+        "destroy_at_end": "chat_grid_item",
+        "$n": "none"
+    },
+    "chat_bg_smooth_in@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_smooth_in",
+        "$f": 0,
+        "$t": 0.6,
+        "$n": "chat_bg_smooth_wait"
+    },
+    "chat_bg_smooth_wait@bb_hud_anims.w":
+    {
+        "$d": "($chat_item_lifetime - $bb_anim_chat_out)",
+        "$n": "chat_bg_smooth_out"
+    },
+    "chat_bg_smooth_out@bb_hud_anims.a":
+    {
+        "$e": "out_cubic",
+        "$d": "$bb_anim_chat_out",
+        "$f": 0.6,
+        "$t": 0,
+        "destroy_at_end": "chat_grid_item",
+        "$n": "none"
+    },
+    "auto_save_animation":
+    {
+        "anim_type": "flip_book",
+        "initial_uv": [ 0, 0 ],
+        "frame_count": 9,
+        "frame_step": 18,
+        "fps": 10,
+        "reversible": true,
+        "easing": "linear"
+    },
+    "pu_message_1@bb_hud_anims.w":
+    {
+        "$d": 0.5,
+        "$n": "pu_message_1_1"
+    },
+    "pu_message_1_1@bb_hud_anims.o":
+    {
+        "$d": 0.8,
+        "$f": [ 0, -140 ],
+        "$t": [ 0, 0 ],
+        "$n": "pu_message_1_2"
+    },
+    "pu_message_1_2@bb_hud_anims.w":
+    {
+        "$d": 8,
+        "$n": "pu_message_1_3"
+    },
+    "pu_message_1_3@bb_hud_anims.o":
+    {
+        "$d": 0.8,
+        "$f": [ 0, 0 ],
+        "$t": [ 0, -140 ],
+        "$e": "in_cubic",
+        "$n": "none"
+    },
+    "pu_message_2@bb_hud_anims.w":
+    {
+        "$d": 10.5,
+        "$n": "pu_message_2_1"
+    },
+    "pu_message_2_1@bb_hud_anims.o":
+    {
+        "$d": 0.8,
+        "$f": [ 0, -140 ],
+        "$t": [ 0, 0 ],
+        "$n": "pu_message_2_2"
+    },
+    "pu_message_2_2@bb_hud_anims.w":
+    {
+        "$d": 8,
+        "$n": "pu_message_2_3"
+    },
+    "pu_message_2_3@bb_hud_anims.o":
+    {
+        "$d": 0.8,
+        "$f": [ 0, 0 ],
+        "$t": [ 0, -140 ],
+        "$e": "in_cubic",
+        "$n": "none"
+    }
+}
